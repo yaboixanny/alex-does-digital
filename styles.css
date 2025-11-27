@@ -1209,6 +1209,10 @@ body {
     font-weight: 300;
 }
 
+.hero-cta {
+    margin-top: 2rem;
+}
+
 .case-studies-listing {
     padding: 6rem 0;
     background: var(--color-bg-light);
