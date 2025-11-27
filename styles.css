@@ -1383,6 +1383,125 @@ body {
     transform: translateX(4px);
 }
 
+/* Industries Page Styles */
+.industries-listing {
+    padding: 6rem 0;
+    background: var(--color-bg-light);
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.industry-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.industry-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-magenta)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 217, 255, 0.2);
+}
+
+.industry-card:hover::before {
+    opacity: 1;
+}
+
+.industry-image {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-surface) 100%);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.industry-image .image-placeholder {
+    color: var(--color-accent-cyan);
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+.industry-card:hover .industry-image .image-placeholder {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.industry-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.industry-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--color-text-dark);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.industry-description {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.industry-link-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent-cyan);
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.industry-card:hover .industry-link-text {
+    gap: 0.75rem;
+    color: var(--color-accent-magenta);
+}
+
+.industry-link-text svg {
+    transition: transform 0.3s ease;
+}
+
+.industry-card:hover .industry-link-text svg {
+    transform: translateX(4px);
+}
+
 /* Pagination */
 .pagination {
     display: flex;
