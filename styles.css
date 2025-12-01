@@ -52,18 +52,6 @@ body {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 217, 255, 0.15);
-    animation: navSlideDown 0.6s ease-out;
-}
-
-@keyframes navSlideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .nav-wrapper {
@@ -143,12 +131,7 @@ body {
         repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 217, 255, 0.03) 2px, rgba(0, 217, 255, 0.03) 4px),
         repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 0, 110, 0.03) 2px, rgba(255, 0, 110, 0.03) 4px);
     pointer-events: none;
-    animation: gridPulse 8s ease-in-out infinite;
-}
-
-@keyframes gridPulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
+    opacity: 0.4;
 }
 
 .bg-decoration::before {
@@ -546,14 +529,23 @@ body {
     margin-bottom: 3rem;
 }
 
+.case-study-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
 .case-study-card {
     background: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     position: relative;
+    height: 100%;
+    cursor: pointer;
 }
 
 .case-study-card::before {
@@ -567,17 +559,17 @@ body {
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
 }
 
-.case-study-card:hover {
-    transform: translateY(-8px) scale(1.02);
+.case-study-card-link:hover .case-study-card {
+    transform: translateY(-8px);
     box-shadow:
         0 12px 40px rgba(0, 217, 255, 0.2),
         0 0 0 1px rgba(0, 217, 255, 0.3);
 }
 
-.case-study-card:hover::before {
+.case-study-card-link:hover .case-study-card::before {
     opacity: 1;
 }
 
