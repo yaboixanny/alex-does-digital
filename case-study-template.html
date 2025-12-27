@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SEO_TITLE}} | Alex Does Digital</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Results</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero-section">
+        <div class="container">
+            <div class="case-study-hero-content">
+                <div class="case-study-meta-tags">
+                    <span class="meta-tag">{{META_TAG_1}}</span>
+                    <span class="meta-tag">{{META_TAG_2}}</span>
+                    <span class="meta-tag">{{META_TAG_3}}</span>
+                </div>
+
+                <h1 class="case-study-hero-title">
+                    {{HERO_TITLE_PREFIX}} <span class="gradient-text">{{HERO_TITLE_HIGHLIGHT}}</span>
+                    {{HERO_TITLE_SUFFIX}}
+                </h1>
+
+                <p class="case-study-hero-description">
+                    {{HERO_DESCRIPTION}}
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#contact-cta" class="btn btn-primary btn-large">Get These Results</a>
+                </div>
+
+                <!-- Key Metrics Cards -->
+                <div class="metrics-grid-hero">
+                    <div class="metric-card-hero">
+                        <div class="metric-icon">{{METRIC_1_ICON}}</div>
+                        <div class="metric-value-large">{{METRIC_1_VALUE}}</div>
+                        <div class="metric-label-large">{{METRIC_1_LABEL}}</div>
+                    </div>
+                    <div class="metric-card-hero">
+                        <div class="metric-icon">{{METRIC_2_ICON}}</div>
+                        <div class="metric-value-large">{{METRIC_2_VALUE}}</div>
+                        <div class="metric-label-large">{{METRIC_2_LABEL}}</div>
+                    </div>
+                    <div class="metric-card-hero">
+                        <div class="metric-icon">{{METRIC_3_ICON}}</div>
+                        <div class="metric-value-large">{{METRIC_3_VALUE}}</div>
+                        <div class="metric-label-large">{{METRIC_3_LABEL}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <h2 class="section-heading">{{VIDEO_SECTION_HEADING}}</h2>
+                <div class="video-wrapper">
+                    <iframe src="{{YOUTUBE_EMBED_URL}}" title="{{VIDEO_TITLE}}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="challenge-section">
+        <div class="container">
+            <div class="challenge-content">
+                <h2 class="section-heading">The Challenge</h2>
+                <div class="challenge-grid">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">{{CHALLENGE_1_ICON}}</div>
+                        <h3>{{CHALLENGE_1_TITLE}}</h3>
+                        <p>{{CHALLENGE_1_DESCRIPTION}}</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">{{CHALLENGE_2_ICON}}</div>
+                        <h3>{{CHALLENGE_2_TITLE}}</h3>
+                        <p>{{CHALLENGE_2_DESCRIPTION}}</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">{{CHALLENGE_3_ICON}}</div>
+                        <h3>{{CHALLENGE_3_TITLE}}</h3>
+                        <p>{{CHALLENGE_3_DESCRIPTION}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section class="strategy-section">
+        <div class="container">
+            <h2 class="section-heading">The Strategy</h2>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-number">01</div>
+                    <h3>{{STRATEGY_1_TITLE}}</h3>
+                    <p>{{STRATEGY_1_DESCRIPTION}}</p>
+                    {{#if STRATEGY_1_LIST}}
+                    <ul class="strategy-list">
+                        {{#each STRATEGY_1_LIST}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">02</div>
+                    <h3>{{STRATEGY_2_TITLE}}</h3>
+                    <p>{{STRATEGY_2_DESCRIPTION}}</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">03</div>
+                    <h3>{{STRATEGY_3_TITLE}}</h3>
+                    <p>{{STRATEGY_3_DESCRIPTION}}</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">04</div>
+                    <h3>{{STRATEGY_4_TITLE}}</h3>
+                    <p>{{STRATEGY_4_DESCRIPTION}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-heading">The Results</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">{{RESULT_1_ICON}}</div>
+                    <div class="result-stat">{{RESULT_1_VALUE}}</div>
+                    <div class="result-label">{{RESULT_1_LABEL}}</div>
+                    <p class="result-description">{{RESULT_1_DESCRIPTION}}</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">{{RESULT_2_ICON}}</div>
+                    <div class="result-stat">{{RESULT_2_VALUE}}</div>
+                    <div class="result-label">{{RESULT_2_LABEL}}</div>
+                    <p class="result-description">{{RESULT_2_DESCRIPTION}}</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">{{RESULT_3_ICON}}</div>
+                    <div class="result-stat">{{RESULT_3_VALUE}}</div>
+                    <div class="result-label">{{RESULT_3_LABEL}}</div>
+                    <p class="result-description">{{RESULT_3_DESCRIPTION}}</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">{{RESULT_4_ICON}}</div>
+                    <div class="result-stat">{{RESULT_4_VALUE}}</div>
+                    <div class="result-label">{{RESULT_4_LABEL}}</div>
+                    <p class="result-description">{{RESULT_4_DESCRIPTION}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps Section -->
+    <section class="next-steps-section">
+        <div class="container">
+            <h2 class="section-heading">Next Steps for Scaling</h2>
+            <div class="next-steps-content">
+                <div class="next-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>{{STEP_1_TITLE}}</h3>
+                        <p>{{STEP_1_DESCRIPTION}}</p>
+                    </div>
+                </div>
+                <div class="next-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>{{STEP_2_TITLE}}</h3>
+                        <p>{{STEP_2_DESCRIPTION}}</p>
+                    </div>
+                </div>
+                <div class="next-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>{{STEP_3_TITLE}}</h3>
+                        <p>{{STEP_3_DESCRIPTION}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="case-study-cta-section" id="contact-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2 class="cta-heading">{{CTA_HEADING}}</h2>
+                <p class="cta-subheading">
+                    {{CTA_SUBHEADING}}
+                </p>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>{{CTA_FEATURE_1}}</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>{{CTA_FEATURE_2}}</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>{{CTA_FEATURE_3}}</span>
+                    </div>
+                </div>
+                <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary btn-large">Book Your Free
+                    Strategy Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-brand">Alex Does Digital</div>
+                    <p class="footer-mission">
+                        Helping service-based businesses generate qualified leads through proven Google Ads, Facebook
+                        Ads, and SEO strategies.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="footer-stat">
+                            <strong>$2M+</strong>
+                            <span>Ad Spend Managed</span>
+                        </div>
+                        <div class="footer-stat">
+                            <strong>50+</strong>
+                            <span>Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                    </ul>
+                </div>
+                <!-- ... other footer columns from original ... -->
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alex Does Digital. All rights reserved.</p>
+                <span class="footer-badge">Performance Marketing Expert</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
