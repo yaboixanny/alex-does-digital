@@ -149,9 +149,19 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(50px, -50px) scale(1.1); }
-    66% { transform: translate(-30px, 30px) scale(0.9); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(50px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-30px, 30px) scale(0.9);
+    }
 }
 
 .bg-decoration::after {
@@ -188,6 +198,7 @@ body {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -212,8 +223,15 @@ body {
 }
 
 @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .hero-subheadline {
@@ -243,15 +261,36 @@ body {
     animation: starPulse 2s ease-in-out infinite;
 }
 
-.star:nth-child(1) { animation-delay: 0s; }
-.star:nth-child(2) { animation-delay: 0.1s; }
-.star:nth-child(3) { animation-delay: 0.2s; }
-.star:nth-child(4) { animation-delay: 0.3s; }
-.star:nth-child(5) { animation-delay: 0.4s; }
+.star:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.star:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.star:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.star:nth-child(5) {
+    animation-delay: 0.4s;
+}
 
 @keyframes starPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
 }
 
 .trust-text {
@@ -406,8 +445,13 @@ body {
 }
 
 @keyframes gradientSlide {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 200% 0%; }
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
 }
 
 .form-title {
@@ -740,7 +784,7 @@ body {
 .photo-wrapper {
     position: relative;
     width: 100%;
-    max-width: 320px;
+    max-width: 420px;
 }
 
 .about-photo {
@@ -2669,6 +2713,7 @@ body {
         font-size: 0.8rem;
     }
 }
+
 /* Wedding Photography Leads Page */
 .wedding-hero {
     padding: 8rem 0 6rem;
@@ -2915,7 +2960,8 @@ body {
 .resource-card {
     background: var(--color-bg-light);
     border-radius: 8px;
-    padding: 1.5rem; /* Reduced padding to accommodate image */
+    padding: 1.5rem;
+    /* Reduced padding to accommodate image */
     text-decoration: none;
     color: inherit;
     border: 1px solid rgba(0, 0, 0, 0.05);
