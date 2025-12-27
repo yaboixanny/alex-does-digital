@@ -3,7 +3,7 @@
   <!-- Main Pages -->
   <url>
     <loc>https://alxdoesdigital.com/</loc>
-    <lastmod>2024-12-02</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -38,6 +38,13 @@
   </url>
 
   <!-- Industry Landing Pages -->
+  <url>
+    <loc>https://alxdoesdigital.com/appliance-repair-leads.html</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://alxdoesdigital.com/towing-leads.html</loc>
     <lastmod>2024-12-02</lastmod>
@@ -82,7 +89,7 @@
 
   <url>
     <loc>https://alxdoesdigital.com/handyman-leads.html</loc>
-    <lastmod>2024-12-02</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
