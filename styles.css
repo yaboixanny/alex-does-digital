@@ -3354,6 +3354,7 @@ body {
         font-size: 2.25rem;
     }
 }
+
 /* --- Case Study Interactive Elements --- */
 
 /* 1. Results Dashboard (Hero Section) */
@@ -3407,7 +3408,7 @@ body {
     background: white;
     padding: 3rem;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin: 4rem 0;
     border: 1px solid rgba(0, 217, 255, 0.1);
 }
@@ -3521,13 +3522,16 @@ body {
         padding: 1rem 1.25rem;
         gap: 1rem;
     }
+
     .floating-cta.hidden {
         transform: translateY(100%);
         opacity: 0;
     }
+
     .floating-cta-text {
         font-size: 0.9rem;
     }
+
     .floating-cta .btn {
         padding: 0.75rem 1.25rem;
         font-size: 0.8rem;
@@ -3548,7 +3552,7 @@ body {
     aspect-ratio: 16/9;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(0, 217, 255, 0.1);
 }
 
@@ -3595,7 +3599,7 @@ body {
     justify-content: center;
     font-weight: bold;
     font-size: 1.5rem;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .ab-label {
@@ -3613,8 +3617,13 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.label-before { right: 1.5rem; }
-.label-after { left: 1.5rem; }
+.label-before {
+    right: 1.5rem;
+}
+
+.label-after {
+    left: 1.5rem;
+}
 
 .winner-badge {
     position: absolute;
@@ -3635,6 +3644,7 @@ body {
     .dashboard-card {
         padding: 2rem;
     }
+
     .dashboard-metric .metric-value {
         font-size: 3rem;
     }
@@ -3645,7 +3655,239 @@ body {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .roi-calculator, .ab-test-container {
+
+    .roi-calculator,
+    .ab-test-container {
         padding: 2rem 1.5rem;
+    }
+}
+
+/* --- About Page Specific Styles --- */
+
+.about-hero {
+    padding: 120px 0 80px;
+    background-color: var(--color-bg-dark);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.about-page-content {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.bio-header {
+    margin-bottom: 40px;
+}
+
+.bio-label {
+    display: block;
+    color: var(--color-accent-magenta);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+.bio-header h2 {
+    font-size: 3rem;
+    color: var(--color-text-dark);
+    line-height: 1.1;
+}
+
+.bio-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 25px;
+}
+
+.bio-intro {
+    font-size: 1.4rem !important;
+    color: var(--color-text-dark) !important;
+    font-weight: 500;
+    margin-bottom: 30px !important;
+}
+
+.bio-closing {
+    font-weight: 700;
+    color: var(--color-text-dark) !important;
+    border-left: 4px solid var(--color-accent-cyan);
+    padding-left: 20px;
+}
+
+.about-visuals {
+    position: relative;
+}
+
+.about-image-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.main-about-image {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image-card:hover .main-about-image {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--color-bg-dark);
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.experience-badge .years {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-accent-cyan);
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.stats-mini-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.mini-stat {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mini-stat .stat-num {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-bg-dark);
+}
+
+.mini-stat .stat-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 100px 0;
+    background: var(--color-bg-light);
+}
+
+.section-header-centered {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.philosophy-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+}
+
+.phil-icon {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.philosophy-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--color-text-dark);
+}
+
+.philosophy-card p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* CTA Box */
+.cta-box-gradient {
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, #152055 100%);
+    padding: 80px 40px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box-gradient h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-box-gradient p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-visuals {
+        order: -1;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-box-gradient h2 {
+        font-size: 2.5rem;
     }
 }
