@@ -3891,3 +3891,123 @@ body {
         font-size: 2.5rem;
     }
 }
+/* Proven Results Section Styles */
+.proven-results {
+    padding: 100px 0;
+    background: var(--color-bg-darker);
+    position: relative;
+    overflow: hidden;
+}
+
+.proven-results::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-accent-cyan) 0%, transparent 70%);
+    opacity: 0.1;
+    filter: blur(100px);
+    transform: translate(-50%, -50%);
+}
+
+.results-split {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.results-text {
+    color: white;
+}
+
+.section-headline {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.section-description {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin: 30px 0;
+    line-height: 1.6;
+}
+
+.results-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    background: rgba(0, 217, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.metric-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--color-accent-cyan);
+    margin-bottom: 5px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.metric-name {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    font-weight: 700;
+}
+
+.results-video-box {
+    position: relative;
+}
+
+.video-wrapper-large {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-wrapper-large iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 992px) {
+    .results-split {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .section-headline {
+        font-size: 2.5rem;
+    }
+}
