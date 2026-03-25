@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get More Leads with YouTube — Alex Does Digital</title>
+  <meta name="description" content="Tell us about your business and we'll show you how to use YouTube to generate consistent leads." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ─── Design Tokens ─────────────────────────────────────── */
+    :root {
+      --color-bg-dark:        #0a0e27;
+      --color-bg-darker:      #050816;
+      --color-accent-cyan:    #00d9ff;
+      --color-accent-magenta: #ff006e;
+      --color-accent-yellow:  #ffbe0b;
+      --color-text-light:     #e8edf3;
+      --color-text-muted:     #8892ab;
+      --color-surface:        #141b2d;
+      --color-surface-light:  #1e2740;
+
+      --transition-slide: 420ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ─── Base ───────────────────────────────────────────────── */
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--color-bg-dark);
+      color: var(--color-text-light);
+      overflow: hidden;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ─── Progress Bar ───────────────────────────────────────── */
+    .progress-bar-track {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.08);
+      z-index: 200;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-accent-cyan), var(--color-accent-magenta));
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0%;
+    }
+
+    /* ─── Top Nav ────────────────────────────────────────────── */
+    .top-nav {
+      position: fixed;
+      top: 3px;
+      left: 0;
+      width: 100%;
+      padding: 1.2rem 2rem 0.6rem;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .logo-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--color-accent-cyan) 0%, var(--color-accent-magenta) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: opacity 0.2s;
+    }
+
+    .logo-text:hover {
+      opacity: 0.8;
+    }
+
+    .back-btn {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s;
+      visibility: hidden;
+      opacity: 0;
+      transition: color 0.2s, opacity 0.3s, visibility 0.3s;
+    }
+
+    .back-btn:hover {
+      color: var(--color-text-light);
+    }
+
+    .back-btn.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* ─── Stage / Step Container ─────────────────────────────── */
+    .stage {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem 3rem;
+      overflow: hidden;
+    }
+
+    /* ─── Individual Steps ───────────────────────────────────── */
+    .step {
+      position: absolute;
+      width: 100%;
+      max-width: 620px;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      /* initial state — below and invisible */
+      opacity: 0;
+      transform: translateY(60px);
+      pointer-events: none;
+      transition:
+        opacity var(--transition-slide),
+        transform var(--transition-slide);
+    }
+
+    .step.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .step.exit {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+
+    /* ─── Step Label ─────────────────────────────────────────── */
+    .step-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--color-accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* ─── Question Text ──────────────────────────────────────── */
+    .question {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text-light);
+    }
+
+    /* ─── Underline Text Input ───────────────────────────────── */
+    .field-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .underline-input {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid rgba(232, 237, 243, 0.2);
+      color: var(--color-text-light);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 500;
+      padding: 0.6rem 0 0.8rem;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.25s;
+      caret-color: var(--color-accent-cyan);
+    }
+
+    .underline-input::placeholder {
+      color: var(--color-text-muted);
+      font-weight: 300;
+    }
+
+    .underline-input:focus {
+      border-bottom-color: var(--color-accent-cyan);
+    }
+
+    .input-hint {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .input-hint kbd {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      background: var(--color-surface-light);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+      padding: 1px 5px;
+      color: var(--color-text-muted);
+    }
+
+    /* ─── Multiple Choice Grid ───────────────────────────────── */
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .choice-btn {
+      background: var(--color-surface);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: var(--color-text-light);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.9rem 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+    }
+
+    .choice-btn:hover {
+      border-color: var(--color-accent-cyan);
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--color-accent-cyan);
+    }
+
+    .choice-btn.selected {
+      border-color: var(--color-accent-cyan);
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--color-accent-cyan);
+    }
+
+    /* ─── Continue Button ────────────────────────────────────── */
+    .continue-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-accent-cyan);
+      color: #050816;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      align-self: flex-start;
+      letter-spacing: 0.01em;
+    }
+
+    .continue-btn:hover {
+      background: #33e2ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 217, 255, 0.35);
+    }
+
+    .continue-btn:active {
+      transform: translateY(0);
+    }
+
+    .continue-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* ─── Thank You Screen ───────────────────────────────────── */
+    #step-thanks .question {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      background: linear-gradient(135deg, var(--color-accent-cyan) 0%, var(--color-accent-magenta) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .thanks-sub {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--color-accent-cyan) 0%, var(--color-accent-magenta) 100%);
+      color: #050816;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 1rem 2.2rem;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 35px rgba(0, 217, 255, 0.3), 0 4px 16px rgba(255, 0, 110, 0.2);
+      opacity: 0.93;
+    }
+
+    /* ─── Step Counter Footer ────────────────────────────────── */
+    .step-counter {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── Error Message ──────────────────────────────────────── */
+    .error-msg {
+      font-size: 0.82rem;
+      color: var(--color-accent-magenta);
+      min-height: 1.1em;
+      transition: opacity 0.2s;
+    }
+
+    /* ─── Subtle bg decoration ───────────────────────────────── */
+    .bg-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow-1 {
+      width: 600px;
+      height: 600px;
+      top: -200px;
+      right: -150px;
+      background: rgba(0, 217, 255, 0.05);
+    }
+
+    .bg-glow-2 {
+      width: 500px;
+      height: 500px;
+      bottom: -150px;
+      left: -100px;
+      background: rgba(255, 0, 110, 0.05);
+    }
+
+    /* ─── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .stage {
+        padding: 5.5rem 1.5rem 3rem;
+        align-items: flex-start;
+        padding-top: 7rem;
+      }
+
+      .step {
+        padding: 0;
+      }
+
+      .top-nav {
+        padding: 1rem 1.5rem 0.5rem;
+      }
+
+      .choice-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      }
+
+      .step-counter {
+        bottom: 1.2rem;
+        right: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background ambient glows -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="progress-bar-fill" id="progressFill"></div>
+  </div>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="logo-text">Alex Does Digital</a>
+    <button class="back-btn" id="backBtn" aria-label="Go back to previous step" onclick="goBack()">
+      ← Back
+    </button>
+  </nav>
+
+  <!-- ─── Netlify Form Wrapper ────────────────────────────────── -->
+  <!--
+    Hidden Netlify form — all fields get populated by JS as user progresses.
+    The form is submitted programmatically on the final step.
+  -->
+  <form
+    name="youtube-leads"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    id="netlifyForm"
+    style="display:none;"
+  >
+    <input type="hidden" name="form-name" value="youtube-leads" />
+    <!-- Honeypot -->
+    <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+    <!-- Collected fields -->
+    <input type="hidden" name="first-name"  id="f-name"     />
+    <input type="hidden" name="business"    id="f-business" />
+    <input type="hidden" name="industry"    id="f-industry" />
+    <input type="hidden" name="website"     id="f-website"  />
+    <input type="hidden" name="email"       id="f-email"    />
+    <input type="hidden" name="phone"       id="f-phone"    />
+  </form>
+
+  <!-- ─── Stage (all steps live here) ────────────────────────── -->
+  <div class="stage" id="stage">
+
+    <!-- Step 1: Name -->
+    <div class="step active" id="step-1" data-step="1">
+      <span class="step-label">Step 1 of 6</span>
+      <h1 class="question">What's your name?</h1>
+      <div class="field-wrap">
+        <input
+          class="underline-input"
+          id="input-name"
+          type="text"
+          placeholder="Your first name"
+          autocomplete="given-name"
+          spellcheck="false"
+        />
+        <span class="error-msg" id="err-1"></span>
+        <p class="input-hint">Press <kbd>Enter ↵</kbd> to continue</p>
+      </div>
+      <button class="continue-btn" onclick="advance(1)">Continue →</button>
+    </div>
+
+    <!-- Step 2: Business Name -->
+    <div class="step" id="step-2" data-step="2">
+      <span class="step-label">Step 2 of 6</span>
+      <h1 class="question">What's your business called?</h1>
+      <div class="field-wrap">
+        <input
+          class="underline-input"
+          id="input-business"
+          type="text"
+          placeholder="Business name"
+          autocomplete="organization"
+          spellcheck="false"
+        />
+        <span class="error-msg" id="err-2"></span>
+        <p class="input-hint">Press <kbd>Enter ↵</kbd> to continue</p>
+      </div>
+      <button class="continue-btn" onclick="advance(2)">Continue →</button>
+    </div>
+
+    <!-- Step 3: Industry (multiple choice, auto-advances) -->
+    <div class="step" id="step-3" data-step="3">
+      <span class="step-label">Step 3 of 6</span>
+      <h1 class="question">What industry are you in?</h1>
+      <div class="choice-grid" id="industry-grid">
+        <button class="choice-btn" onclick="selectIndustry(this, 'Towing')">Towing</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Pool Service')">Pool Service</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Plumbing')">Plumbing</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'HVAC')">HVAC</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Lawn Care')">Lawn Care</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Roofing')">Roofing</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Electrician')">Electrician</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Car Detailing')">Car Detailing</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Wedding Photography')">Wedding Photography</button>
+        <button class="choice-btn" onclick="selectIndustry(this, 'Other')">Other</button>
+      </div>
+      <span class="error-msg" id="err-3"></span>
+    </div>
+
+    <!-- Step 4: Website -->
+    <div class="step" id="step-4" data-step="4">
+      <span class="step-label">Step 4 of 6</span>
+      <h1 class="question">What's your business website?</h1>
+      <div class="field-wrap">
+        <input
+          class="underline-input"
+          id="input-website"
+          type="url"
+          placeholder="https://yourbusiness.com"
+          autocomplete="url"
+          spellcheck="false"
+        />
+        <span class="error-msg" id="err-4"></span>
+        <p class="input-hint">Press <kbd>Enter ↵</kbd> to continue</p>
+      </div>
+      <button class="continue-btn" onclick="advance(4)">Continue →</button>
+    </div>
+
+    <!-- Step 5: Email -->
+    <div class="step" id="step-5" data-step="5">
+      <span class="step-label">Step 5 of 6</span>
+      <h1 class="question">What's your email address?</h1>
+      <div class="field-wrap">
+        <input
+          class="underline-input"
+          id="input-email"
+          type="email"
+          placeholder="you@yourbusiness.com"
+          autocomplete="email"
+          spellcheck="false"
+        />
+        <span class="error-msg" id="err-5"></span>
+        <p class="input-hint">Press <kbd>Enter ↵</kbd> to continue</p>
+      </div>
+      <button class="continue-btn" onclick="advance(5)">Continue →</button>
+    </div>
+
+    <!-- Step 6: Phone -->
+    <div class="step" id="step-6" data-step="6">
+      <span class="step-label">Step 6 of 6</span>
+      <h1 class="question">What's your phone number?</h1>
+      <div class="field-wrap">
+        <input
+          class="underline-input"
+          id="input-phone"
+          type="tel"
+          placeholder="555-000-0000"
+          autocomplete="tel"
+          spellcheck="false"
+        />
+        <span class="error-msg" id="err-6"></span>
+        <p class="input-hint">Press <kbd>Enter ↵</kbd> to submit</p>
+      </div>
+      <button class="continue-btn" id="submitBtn" onclick="advance(6)">Submit →</button>
+    </div>
+
+    <!-- Thank You Screen -->
+    <div class="step" id="step-thanks">
+      <span class="step-label" style="color: var(--color-accent-magenta);">You're in!</span>
+      <h1 class="question" id="thanks-headline">You're all set!</h1>
+      <p class="thanks-sub">
+        We're reviewing your info and will be in touch within 24 hours.
+      </p>
+      <!-- TODO: add conditional logic here to route qualified vs unqualified leads -->
+      <a
+        href="https://cal.com/alexanderstefanseo/agency"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-btn"
+      >
+        Book Your Strategy Call →
+      </a>
+    </div>
+
+  </div><!-- /.stage -->
+
+  <!-- Step Counter -->
+  <div class="step-counter" id="stepCounter" aria-live="polite">1 / 6</div>
+
+  <script>
+    // ─── State ───────────────────────────────────────────────────
+    const TOTAL_STEPS = 6;
+    let currentStep  = 1;
+
+    const answers = {
+      name:     '',
+      business: '',
+      industry: '',
+      website:  '',
+      email:    '',
+      phone:    ''
+    };
+
+    // ─── DOM Refs ────────────────────────────────────────────────
+    const progressFill  = document.getElementById('progressFill');
+    const progressTrack = document.querySelector('.progress-bar-track');
+    const stepCounter   = document.getElementById('stepCounter');
+    const backBtn       = document.getElementById('backBtn');
+
+    // ─── Progress ────────────────────────────────────────────────
+    function updateProgress(step) {
+      const pct = ((step - 1) / TOTAL_STEPS) * 100;
+      progressFill.style.width = pct + '%';
+      progressTrack.setAttribute('aria-valuenow', Math.round(pct));
+    }
+
+    // ─── Show / Hide Steps ───────────────────────────────────────
+    function showStep(nextStep) {
+      const currentEl = document.getElementById(
+        currentStep === 'thanks' ? 'step-thanks' : 'step-' + currentStep
+      );
+      const nextId    = nextStep === 'thanks' ? 'step-thanks' : 'step-' + nextStep;
+      const nextEl    = document.getElementById(nextId);
+
+      // Exit current
+      currentEl.classList.remove('active');
+      currentEl.classList.add('exit');
+
+      // Clean up exit class after transition
+      setTimeout(() => {
+        currentEl.classList.remove('exit');
+      }, 450);
+
+      // Enter next
+      setTimeout(() => {
+        nextEl.classList.add('active');
+        // Focus first input on the new step
+        const firstInput = nextEl.querySelector('input, button.choice-btn');
+        if (firstInput) firstInput.focus();
+      }, 50);
+
+      currentStep = nextStep;
+
+      // Update UI chrome
+      if (nextStep === 'thanks') {
+        updateProgress(TOTAL_STEPS + 1);
+        progressFill.style.width = '100%';
+        stepCounter.style.display = 'none';
+        backBtn.classList.remove('visible');
+      } else {
+        updateProgress(nextStep);
+        stepCounter.textContent = nextStep + ' / ' + TOTAL_STEPS;
+        backBtn.classList.toggle('visible', nextStep > 1);
+      }
+    }
+
+    // ─── Validation ──────────────────────────────────────────────
+    function clearError(step) {
+      const el = document.getElementById('err-' + step);
+      if (el) el.textContent = '';
+    }
+
+    function showError(step, msg) {
+      const el = document.getElementById('err-' + step);
+      if (el) el.textContent = msg;
+    }
+
+    function isValidEmail(val) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+    }
+
+    function isValidURL(val) {
+      try {
+        new URL(val.trim());
+        return true;
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function isValidPhone(val) {
+      return val.replace(/\D/g, '').length >= 7;
+    }
+
+    // ─── Advance ─────────────────────────────────────────────────
+    function advance(fromStep) {
+      clearError(fromStep);
+
+      switch (fromStep) {
+
+        case 1: {
+          const val = document.getElementById('input-name').value.trim();
+          if (!val) { showError(1, 'Please enter your first name.'); return; }
+          answers.name = val;
+          document.getElementById('f-name').value = val;
+          // Personalize thank-you headline
+          document.getElementById('thanks-headline').textContent = "You're all set, " + val + "!";
+          showStep(2);
+          break;
+        }
+
+        case 2: {
+          const val = document.getElementById('input-business').value.trim();
+          if (!val) { showError(2, 'Please enter your business name.'); return; }
+          answers.business = val;
+          document.getElementById('f-business').value = val;
+          showStep(3);
+          break;
+        }
+
+        // Step 3 is handled by selectIndustry()
+
+        case 4: {
+          let val = document.getElementById('input-website').value.trim();
+          // Be lenient — prepend https:// if missing
+          if (val && !val.startsWith('http')) val = 'https://' + val;
+          if (val && !isValidURL(val)) {
+            showError(4, 'Please enter a valid URL (e.g. https://yourbusiness.com)');
+            return;
+          }
+          answers.website = val;
+          document.getElementById('f-website').value = val;
+          showStep(5);
+          break;
+        }
+
+        case 5: {
+          const val = document.getElementById('input-email').value.trim();
+          if (!val)              { showError(5, 'Please enter your email address.'); return; }
+          if (!isValidEmail(val)){ showError(5, 'Please enter a valid email address.'); return; }
+          answers.email = val;
+          document.getElementById('f-email').value = val;
+          showStep(6);
+          break;
+        }
+
+        case 6: {
+          const val = document.getElementById('input-phone').value.trim();
+          if (!val)               { showError(6, 'Please enter your phone number.'); return; }
+          if (!isValidPhone(val)) { showError(6, 'Please enter a valid phone number.'); return; }
+          answers.phone = val;
+          document.getElementById('f-phone').value = val;
+          submitForm();
+          break;
+        }
+      }
+    }
+
+    // ─── Industry Choice (auto-advance) ──────────────────────────
+    function selectIndustry(btn, value) {
+      // Visual feedback for a beat before advancing
+      document.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      answers.industry = value;
+      document.getElementById('f-industry').value = value;
+      setTimeout(() => showStep(4), 280);
+    }
+
+    // ─── Back ────────────────────────────────────────────────────
+    function goBack() {
+      if (currentStep <= 1 || currentStep === 'thanks') return;
+
+      const prevEl = document.getElementById('step-' + currentStep);
+      const prevStep = currentStep - 1;
+
+      // Reverse animation: slide down instead of up
+      prevEl.classList.remove('active');
+      prevEl.style.transform = 'translateY(60px)';
+      prevEl.style.opacity   = '0';
+
+      setTimeout(() => {
+        prevEl.style.transform = '';
+        prevEl.style.opacity   = '';
+      }, 450);
+
+      const targetEl = document.getElementById('step-' + prevStep);
+      setTimeout(() => {
+        targetEl.classList.add('active');
+        const firstInput = targetEl.querySelector('input');
+        if (firstInput) firstInput.focus();
+      }, 50);
+
+      currentStep = prevStep;
+      updateProgress(prevStep);
+      stepCounter.textContent = prevStep + ' / ' + TOTAL_STEPS;
+      backBtn.classList.toggle('visible', prevStep > 1);
+    }
+
+    // ─── Form Submission ─────────────────────────────────────────
+    function submitForm() {
+      const form = document.getElementById('netlifyForm');
+
+      // Show thank-you first (optimistic), then submit in background
+      showStep('thanks');
+
+      // Submit the Netlify form
+      const formData = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      }).catch(err => console.warn('Form submission error:', err));
+    }
+
+    // ─── Keyboard: Enter to Advance ──────────────────────────────
+    document.addEventListener('keydown', function(e) {
+      if (e.key !== 'Enter') return;
+      // Skip if focus is inside a textarea (not used here, but future-safe)
+      if (document.activeElement && document.activeElement.tagName === 'TEXTAREA') return;
+      // Skip if focused on a choice button (choice buttons use click)
+      if (document.activeElement && document.activeElement.classList.contains('choice-btn')) return;
+      // Don't double-fire if the focused element is the continue button itself
+      if (document.activeElement && document.activeElement.classList.contains('continue-btn')) return;
+
+      if (typeof currentStep === 'number' && currentStep >= 1 && currentStep <= TOTAL_STEPS) {
+        // Skip step 3 (multiple choice — no Enter)
+        if (currentStep === 3) return;
+        advance(currentStep);
+      }
+    });
+
+    // ─── Init ────────────────────────────────────────────────────
+    (function init() {
+      updateProgress(1);
+      // Auto-focus first input
+      setTimeout(() => {
+        const firstInput = document.getElementById('input-name');
+        if (firstInput) firstInput.focus();
+      }, 100);
+    })();
+  </script>
+</body>
+</html>
