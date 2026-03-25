@@ -299,6 +299,66 @@
       box-shadow: none;
     }
 
+    /* ─── Intro Screen ───────────────────────────────────────── */
+    .intro-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--color-accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .intro-headline {
+      font-size: clamp(2rem, 5.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--color-text-light);
+    }
+
+    .intro-headline span {
+      background: linear-gradient(135deg, var(--color-accent-cyan) 0%, var(--color-accent-magenta) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro-sub {
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .intro-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .intro-bullets li {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .intro-bullets li::before {
+      content: '✓';
+      color: var(--color-accent-cyan);
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .intro-meta {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      opacity: 0.6;
+    }
+
     /* ─── Thank You Screen ───────────────────────────────────── */
     #step-thanks .question {
       font-size: clamp(1.8rem, 5vw, 3rem);
@@ -457,8 +517,26 @@
   <!-- ─── Stage (all steps live here) ────────────────────────── -->
   <div class="stage" id="stage">
 
+    <!-- Intro Screen -->
+    <div class="step active" id="step-intro">
+      <span class="intro-eyebrow">Alex Does Digital</span>
+      <h1 class="intro-headline">See if YouTube Ads<br>can <span>grow your business</span></h1>
+      <p class="intro-sub">
+        Answer 6 quick questions and we'll put together a custom lead generation strategy for your business — free.
+      </p>
+      <ul class="intro-bullets">
+        <li>Takes less than 2 minutes</li>
+        <li>No credit card or commitment required</li>
+        <li>Get a free strategy call if you qualify</li>
+      </ul>
+      <button class="continue-btn" onclick="startForm()" style="font-size:1.05rem; padding: 1rem 2.5rem;">
+        Let's Go →
+      </button>
+      <p class="intro-meta">Trusted by 150+ small businesses across North America</p>
+    </div>
+
     <!-- Step 1: Name -->
-    <div class="step active" id="step-1" data-step="1">
+    <div class="step" id="step-1" data-step="1">
       <span class="step-label">Step 1 of 6</span>
       <h1 class="question">What's your name?</h1>
       <div class="field-wrap">
@@ -597,7 +675,7 @@
   <script>
     // ─── State ───────────────────────────────────────────────────
     const TOTAL_STEPS = 6;
-    let currentStep  = 1;
+    let currentStep  = 'intro';
 
     const answers = {
       name:     '',
@@ -619,6 +697,27 @@
       const pct = ((step - 1) / TOTAL_STEPS) * 100;
       progressFill.style.width = pct + '%';
       progressTrack.setAttribute('aria-valuenow', Math.round(pct));
+    }
+
+    // ─── Start Form (intro → step 1) ─────────────────────────────
+    function startForm() {
+      const introEl = document.getElementById('step-intro');
+      introEl.classList.remove('active');
+      introEl.classList.add('exit');
+      setTimeout(() => introEl.classList.remove('exit'), 450);
+
+      const step1 = document.getElementById('step-1');
+      setTimeout(() => {
+        step1.classList.add('active');
+        const input = document.getElementById('input-name');
+        if (input) input.focus();
+      }, 50);
+
+      currentStep = 1;
+      updateProgress(1);
+      stepCounter.textContent = '1 / ' + TOTAL_STEPS;
+      stepCounter.style.display = '';
+      backBtn.classList.remove('visible');
     }
 
     // ─── Show / Hide Steps ───────────────────────────────────────
@@ -657,7 +756,7 @@
       } else {
         updateProgress(nextStep);
         stepCounter.textContent = nextStep + ' / ' + TOTAL_STEPS;
-        backBtn.classList.toggle('visible', nextStep > 1);
+        backBtn.classList.add('visible');
       }
     }
 
@@ -765,10 +864,9 @@
 
     // ─── Back ────────────────────────────────────────────────────
     function goBack() {
-      if (currentStep <= 1 || currentStep === 'thanks') return;
+      if (currentStep === 'intro' || currentStep === 'thanks') return;
 
       const prevEl = document.getElementById('step-' + currentStep);
-      const prevStep = currentStep - 1;
 
       // Reverse animation: slide down instead of up
       prevEl.classList.remove('active');
@@ -780,17 +878,29 @@
         prevEl.style.opacity   = '';
       }, 450);
 
-      const targetEl = document.getElementById('step-' + prevStep);
-      setTimeout(() => {
-        targetEl.classList.add('active');
-        const firstInput = targetEl.querySelector('input');
-        if (firstInput) firstInput.focus();
-      }, 50);
-
-      currentStep = prevStep;
-      updateProgress(prevStep);
-      stepCounter.textContent = prevStep + ' / ' + TOTAL_STEPS;
-      backBtn.classList.toggle('visible', prevStep > 1);
+      if (currentStep === 1) {
+        // Back to intro
+        const introEl = document.getElementById('step-intro');
+        setTimeout(() => {
+          introEl.classList.add('active');
+        }, 50);
+        currentStep = 'intro';
+        progressFill.style.width = '0%';
+        stepCounter.style.display = 'none';
+        backBtn.classList.remove('visible');
+      } else {
+        const prevStep = currentStep - 1;
+        const targetEl = document.getElementById('step-' + prevStep);
+        setTimeout(() => {
+          targetEl.classList.add('active');
+          const firstInput = targetEl.querySelector('input');
+          if (firstInput) firstInput.focus();
+        }, 50);
+        currentStep = prevStep;
+        updateProgress(prevStep);
+        stepCounter.textContent = prevStep + ' / ' + TOTAL_STEPS;
+        backBtn.classList.toggle('visible', prevStep > 1);
+      }
     }
 
     // ─── Form Submission ─────────────────────────────────────────
@@ -828,12 +938,10 @@
 
     // ─── Init ────────────────────────────────────────────────────
     (function init() {
-      updateProgress(1);
-      // Auto-focus first input
-      setTimeout(() => {
-        const firstInput = document.getElementById('input-name');
-        if (firstInput) firstInput.focus();
-      }, 100);
+      // Start on intro — progress bar at 0, counter hidden
+      progressFill.style.width = '0%';
+      stepCounter.style.display = 'none';
+      backBtn.classList.remove('visible');
     })();
   </script>
 </body>
