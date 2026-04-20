@@ -23,45 +23,17 @@
             margin: 0 auto 2rem;
         }
 
-        .hero-meta-bar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-meta-item {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            color: var(--color-text-muted);
-            letter-spacing: 0.06em;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .hero-meta-item::before {
-            content: '';
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--color-accent-cyan);
-        }
-
         /* ── Section ────────────────────────────────────────────── */
         .industries-section {
-            background: var(--color-bg-darker);
-            padding: 5rem 0 6rem;
+            background: #f0f2f7;
+            padding: 4.5rem 0 5.5rem;
         }
 
         /* ── Grid ───────────────────────────────────────────────── */
         .industries-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.25rem;
+            gap: 1rem;
         }
 
         /* ── Card ───────────────────────────────────────────────── */
@@ -69,217 +41,126 @@
             aspect-ratio: 1;
             position: relative;
             overflow: hidden;
-            border-radius: 16px;
-            background: var(--color-surface);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            display: block;
             text-decoration: none;
             color: inherit;
-            display: block;
-            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
-        .industry-card:hover {
-            border-color: rgba(0, 217, 255, 0.45);
-            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.1),
-                        0 24px 60px rgba(0, 0, 0, 0.5);
+        /* Photo */
+        .industry-card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
 
-        /* Subtle gradient overlay always present */
-        .industry-card::after {
+        .industry-card:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Permanent gradient at bottom so text is always readable */
+        .industry-card::before {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(
                 to top,
-                rgba(5, 8, 22, 0.92) 0%,
-                rgba(5, 8, 22, 0.3) 50%,
+                rgba(0, 0, 0, 0.72) 0%,
+                rgba(0, 0, 0, 0.2) 45%,
                 transparent 100%
             );
-            pointer-events: none;
             z-index: 1;
+            transition: background 0.35s;
         }
 
-        /* ── Card: background accent glow ─────────────────────── */
-        .industry-card-glow {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transition: opacity 0.4s;
-            background: radial-gradient(circle at 50% 40%, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
-            z-index: 0;
+        .industry-card:hover::before {
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.82) 0%,
+                rgba(0, 0, 0, 0.45) 55%,
+                rgba(0, 0, 0, 0.1) 100%
+            );
         }
 
-        .industry-card:hover .industry-card-glow {
-            opacity: 1;
-        }
-
-        /* ── Icon ───────────────────────────────────────────────── */
-        .industry-icon {
-            position: absolute;
-            top: 38%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: clamp(2.6rem, 4vw, 3.6rem);
-            line-height: 1;
-            z-index: 2;
-            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                        opacity 0.35s;
-        }
-
-        .industry-card:hover .industry-icon {
-            transform: translate(-50%, -60%) scale(0.8);
-            opacity: 0.4;
-        }
-
-        /* ── Base info (always visible) ─────────────────────────── */
-        .industry-base {
+        /* ── Bottom content ─────────────────────────────────────── */
+        .industry-info {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 1.4rem 1.5rem;
-            z-index: 3;
+            padding: 1.1rem 1.2rem;
+            z-index: 2;
         }
 
         .industry-tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
-            font-weight: 700;
+            font-size: 0.62rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--color-accent-cyan);
-            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.55);
             display: block;
-            margin-bottom: 0.3rem;
-            transition: opacity 0.3s;
-        }
-
-        .industry-card:hover .industry-tag {
-            opacity: 0;
+            margin-bottom: 0.25rem;
         }
 
         .industry-title {
-            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-size: clamp(0.9rem, 1.3vw, 1.05rem);
             font-weight: 800;
-            color: var(--color-text-light);
+            color: #fff;
             line-height: 1.2;
             letter-spacing: -0.01em;
         }
 
-        /* ── Hover overlay ──────────────────────────────────────── */
-        .industry-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 4;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 1.5rem;
-            background: linear-gradient(
-                to top,
-                rgba(5, 8, 22, 0.97) 0%,
-                rgba(5, 8, 22, 0.75) 60%,
-                rgba(5, 8, 22, 0.1) 100%
-            );
+        /* Arrow — hidden until hover */
+        .industry-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 0.55rem;
             opacity: 0;
-            transform: translateY(8px);
-            transition: opacity 0.3s, transform 0.3s;
+            transform: translateY(4px);
+            transition: opacity 0.25s, transform 0.25s;
         }
 
-        .industry-card:hover .industry-overlay {
+        .industry-card:hover .industry-arrow {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .industry-overlay-title {
-            font-size: clamp(1rem, 1.3vw, 1.15rem);
-            font-weight: 800;
-            color: var(--color-text-light);
-            margin-bottom: 0.6rem;
-            letter-spacing: -0.01em;
-        }
-
-        .industry-description {
-            font-size: clamp(0.75rem, 1vw, 0.85rem);
-            color: var(--color-text-muted);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .industry-link-text {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--color-accent-cyan);
-            transition: gap 0.2s;
-        }
-
-        .industry-card:hover .industry-link-text {
-            gap: 0.65rem;
-        }
-
-        /* ── No-industry CTA strip ──────────────────────────────── */
+        /* ── "Don't see your industry" strip ────────────────────── */
         .industries-cta-strip {
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             text-align: center;
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px dashed rgba(0, 217, 255, 0.2);
-            background: rgba(0, 217, 255, 0.02);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #d8dde8;
+            background: #fff;
         }
 
         .industries-cta-strip p {
-            color: var(--color-text-muted);
+            color: #555d70;
             font-size: 1rem;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.1rem;
         }
 
         .industries-cta-strip strong {
-            color: var(--color-text-light);
+            color: var(--color-text-dark);
         }
 
         /* ── Responsive ─────────────────────────────────────────── */
         @media (max-width: 1100px) {
-            .industries-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .industries-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
-        @media (max-width: 720px) {
-            .industries-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-
-            .industry-overlay {
-                opacity: 1;
-                transform: none;
-                background: linear-gradient(
-                    to top,
-                    rgba(5, 8, 22, 0.95) 0%,
-                    rgba(5, 8, 22, 0.5) 60%,
-                    transparent 100%
-                );
-            }
-
-            .industry-icon {
-                top: 32%;
-                font-size: 2.2rem;
-            }
-
-            .industry-overlay-title { display: none; }
-        }
-
-        @media (max-width: 440px) {
-            .industries-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.75rem;
-            }
+        @media (max-width: 700px) {
+            .industries-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+            .industry-arrow { opacity: 1; transform: none; }
         }
     </style>
 </head>
@@ -306,11 +187,6 @@
     <!-- Hero -->
     <section class="industries-hero">
         <div class="container">
-            <div class="hero-meta-bar">
-                <span class="hero-meta-item">12 Industries</span>
-                <span class="hero-meta-item">150+ Businesses Helped</span>
-                <span class="hero-meta-item">North America</span>
-            </div>
             <h1 class="page-headline">
                 Industry-Specific <br>
                 <span class="gradient-text">Expertise</span>
@@ -328,189 +204,116 @@
         <div class="container">
             <div class="industries-grid">
 
-                <!-- Towing -->
                 <a href="towing-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🚛</span>
-                    <div class="industry-base">
-                        <span class="industry-tag">Local Service</span>
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop" alt="Towing Services" loading="lazy">
+                    <div class="industry-info">
+                        <span class="industry-tag">Automotive</span>
                         <h3 class="industry-title">Towing Services</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Towing Services</h3>
-                        <p class="industry-description">Capture emergency calls and roadside assistance requests with geo-targeted campaigns that reach drivers when they need help most.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Pool Service -->
                 <a href="pool-service-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🏊</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=600&h=600&fit=crop" alt="Pool Service" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Seasonal Service</span>
                         <h3 class="industry-title">Pool Service & Cleaning</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Pool Service & Cleaning</h3>
-                        <p class="industry-description">Generate recurring service contracts and one-time cleaning jobs with seasonal campaigns targeting pool owners in your area.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- HVAC -->
                 <a href="hvac-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">❄️</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=600&fit=crop" alt="HVAC Services" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Home Services</span>
                         <h3 class="industry-title">HVAC Services</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">HVAC Services</h3>
-                        <p class="industry-description">Capture seasonal repair and replacement demand with targeted campaigns focused on emergency service and maintenance contracts.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Plumbing -->
                 <a href="plumbing-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🔧</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&h=600&fit=crop" alt="Plumbing" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Home Services</span>
                         <h3 class="industry-title">Plumbing Services</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Plumbing Services</h3>
-                        <p class="industry-description">Generate emergency calls and scheduled service leads with geo-targeted campaigns that reach homeowners when plumbing issues strike.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Car Detailing -->
                 <a href="car-detailing-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">✨</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=600&h=600&fit=crop" alt="Car Detailing" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Automotive</span>
                         <h3 class="industry-title">Car Detailing</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Car Detailing</h3>
-                        <p class="industry-description">Convert car owners into recurring customers with campaigns focused on convenience, quality, and premium detailing services.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Electricians -->
                 <a href="electrician-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">⚡</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&h=600&fit=crop" alt="Electricians" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Home Services</span>
                         <h3 class="industry-title">Electricians</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Electricians</h3>
-                        <p class="industry-description">Book more electrical jobs with local search campaigns targeting homeowners and businesses needing repairs, installations, and upgrades.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Garage Doors -->
                 <a href="garage-door-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🚪</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop" alt="Garage Doors" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Home Services</span>
                         <h3 class="industry-title">Garage Door Services</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Garage Door Services</h3>
-                        <p class="industry-description">Generate high-intent leads for repairs, installations, and maintenance with local campaigns that capture homeowners at the right moment.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Handyman -->
                 <a href="handyman-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🔨</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&h=600&fit=crop" alt="Handyman" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Home Services</span>
                         <h3 class="industry-title">Handyman Services</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Handyman Services</h3>
-                        <p class="industry-description">Fill your schedule with home repair and improvement jobs through local campaigns targeting homeowners and property managers.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Carpet Cleaning -->
                 <a href="carpet-cleaning-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🧹</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1581578017093-cd30ed87c780?w=600&h=600&fit=crop" alt="Carpet Cleaning" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Home Services</span>
                         <h3 class="industry-title">Carpet Cleaning</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Carpet Cleaning</h3>
-                        <p class="industry-description">Build recurring revenue with campaigns targeting homeowners and businesses needing carpet, upholstery, and floor cleaning services.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Epoxy Flooring -->
                 <a href="epoxy-flooring-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🏗️</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=600&h=600&fit=crop" alt="Epoxy Flooring" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Specialty Trade</span>
                         <h3 class="industry-title">Epoxy Flooring</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Epoxy Flooring</h3>
-                        <p class="industry-description">Book high-ticket garage and commercial flooring projects with campaigns showcasing transformations and targeting homeowners and businesses.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Appliance Repair -->
                 <a href="appliance-repair-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">🔌</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=600&fit=crop" alt="Appliance Repair" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Home Services</span>
                         <h3 class="industry-title">Appliance Repair</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Appliance Repair</h3>
-                        <p class="industry-description">Generate high-intent leads for refrigerator, washer, and dryer repairs with targeted local campaigns that reach homeowners during appliance emergencies.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
-                <!-- Wedding Photography -->
                 <a href="wedding-photography-leads.html" class="industry-card">
-                    <div class="industry-card-glow"></div>
-                    <span class="industry-icon">📷</span>
-                    <div class="industry-base">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop" alt="Wedding Photography" loading="lazy">
+                    <div class="industry-info">
                         <span class="industry-tag">Creative Services</span>
                         <h3 class="industry-title">Wedding Photography</h3>
-                    </div>
-                    <div class="industry-overlay">
-                        <h3 class="industry-overlay-title">Wedding Photography</h3>
-                        <p class="industry-description">Book more weddings with strategic Facebook and Instagram campaigns that showcase your portfolio and connect with engaged couples.</p>
-                        <span class="industry-link-text">View Strategy →</span>
+                        <span class="industry-arrow">View Strategy →</span>
                     </div>
                 </a>
 
             </div>
 
-            <!-- Don't see your industry -->
             <div class="industries-cta-strip">
                 <p><strong>Don't see your industry?</strong> I work with any service-based business that needs more qualified leads.</p>
                 <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Let's Talk</a>
