@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<!--
+════════════════════════════════════════════════════════
+  FACEBOOK ADS POST TEMPLATE
+════════════════════════════════════════════════════════
+  This template includes styled components for "Facebook Ads for [Industry]" posts:
+
+  Available components:
+  - .post-quote — indented italic text for example copy
+  - .callout-warning — magenta-accented callout for big mistakes/warnings
+  - .callout — cyan-accented callout for key insights
+  - .offer-list — arrow-decorated list of offers/options
+  - .funnel-steps — numbered step cards (01, 02, 03...)
+  - .stat-block — dark card with stat numbers and labels
+  - .factor-grid — 3-column grid for 3 factors (auto-stacks to 1 col on mobile)
+
+  Setup:
+  1. Copy this file: cp facebook-ads-post-template.html facebook-ads-for-[industry].html
+  2. Replace all [REPLACE THIS] placeholders
+  3. Add entry to posts.json with slug, title, excerpt, date, category, readTime
+  4. Use the styled components below to structure content
+════════════════════════════════════════════════════════
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[REPLACE THIS: Facebook Ads for INDUSTRY] | Alex Does Digital</title>
+    <meta name="description" content="[REPLACE THIS: 1-2 sentence meta description]">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+        .post-body a { color: #0069cc; text-decoration: underline; }
+
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        .post-quote {
+            border-left: 3px solid #d0d5e8;
+            padding: 0.5rem 1.25rem;
+            margin: 1rem 0 1rem 0.5rem;
+        }
+
+        .post-quote p {
+            color: #6b7490 !important;
+            font-style: italic;
+            margin: 0 !important;
+            font-size: 0.97rem !important;
+        }
+
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .funnel-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .funnel-step {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 10px;
+            padding: 1.25rem 1.4rem;
+            display: flex;
+            gap: 1.1rem;
+            align-items: flex-start;
+        }
+
+        .funnel-step-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            background: var(--color-bg-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .funnel-step-body h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f1528;
+            margin-bottom: 0.35rem;
+        }
+
+        .funnel-step-body p {
+            font-size: 0.93rem !important;
+            color: #555d70 !important;
+            margin: 0 !important;
+            line-height: 1.6 !important;
+        }
+
+        .stat-block {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            background: var(--color-bg-dark);
+            border-radius: 12px;
+            padding: 1.75rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-block .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .stat-block .stat-value {
+            font-size: 2rem;
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-block .stat-label {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .factor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .factor-card {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 10px;
+            padding: 1.25rem;
+        }
+
+        .factor-card .factor-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .factor-card h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin-bottom: 0.4rem;
+        }
+
+        .factor-card p {
+            font-size: 0.88rem !important;
+            color: #6b7490 !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+        }
+
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+            .factor-grid { grid-template-columns: 1fr; }
+            .stat-block { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Results</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Facebook Ads</span>
+                    <span class="post-hero-date">[REPLACE THIS: Month DD, YYYY]</span>
+                    <span class="post-hero-read-time">[REPLACE THIS: X min read]</span>
+                </div>
+                <h1>[REPLACE THIS: Facebook Ads for [Industry]: Full Title Here]</h1>
+                <p class="post-hero-lede">
+                    [REPLACE THIS: 1-2 sentence hook/lede]
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+
+                <p>[REPLACE THIS: Opening paragraph establishing the problem]</p>
+
+                <hr class="post-divider">
+
+                <h2>[REPLACE THIS: Section 1 Heading]</h2>
+
+                <p>[REPLACE THIS: Body content]</p>
+
+                <!-- Example: Quote block for ad copy examples -->
+                <div class="post-quote">
+                    <p>"[REPLACE THIS: Example ad copy or quote]"</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>[REPLACE THIS: Common Mistake Section]</h2>
+
+                <p>[REPLACE THIS: Context about the mistake]</p>
+
+                <!-- Example: Warning callout for mistakes -->
+                <div class="callout-warning">
+                    <p><strong>[REPLACE THIS: Problem title]:</strong> [REPLACE THIS: Explanation of why this doesn't work]</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>[REPLACE THIS: Solutions/Offers Section]</h2>
+
+                <p>[REPLACE THIS: Intro about the solution]</p>
+
+                <!-- Example: Offer list -->
+                <ul class="offer-list">
+                    <li>[REPLACE THIS: Offer 1]</li>
+                    <li>[REPLACE THIS: Offer 2]</li>
+                    <li>[REPLACE THIS: Offer 3]</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>[REPLACE THIS: Key insight]:</strong> [REPLACE THIS: Explanation]</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>[REPLACE THIS: Funnel/Steps Section]</h2>
+
+                <p>[REPLACE THIS: Intro about the funnel structure]</p>
+
+                <!-- Example: Funnel steps (copy the whole div for each step) -->
+                <div class="funnel-steps">
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">1</div>
+                        <div class="funnel-step-body">
+                            <h4>[REPLACE THIS: Step 1 Title]</h4>
+                            <p>[REPLACE THIS: Step 1 description]</p>
+                        </div>
+                    </div>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">2</div>
+                        <div class="funnel-step-body">
+                            <h4>[REPLACE THIS: Step 2 Title]</h4>
+                            <p>[REPLACE THIS: Step 2 description]</p>
+                        </div>
+                    </div>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">3</div>
+                        <div class="funnel-step-body">
+                            <h4>[REPLACE THIS: Step 3 Title]</h4>
+                            <p>[REPLACE THIS: Step 3 description]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>[REPLACE THIS: Budget/Numbers Section]</h2>
+
+                <!-- Example: Stat block -->
+                <div class="stat-block">
+                    <div class="stat">
+                        <span class="stat-value">[REPLACE THIS: $XX]</span>
+                        <span class="stat-label">[REPLACE THIS: Budget label]</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">[REPLACE THIS: XX%]</span>
+                        <span class="stat-label">[REPLACE THIS: Result label]</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">[REPLACE THIS: XX]</span>
+                        <span class="stat-label">[REPLACE THIS: Metric label]</span>
+                    </div>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>[REPLACE THIS: Key Factors Section]</h2>
+
+                <!-- Example: 3-factor grid -->
+                <div class="factor-grid">
+                    <div class="factor-card">
+                        <span class="factor-num">Factor 01</span>
+                        <h4>[REPLACE THIS: Factor 1 Title]</h4>
+                        <p>[REPLACE THIS: Factor 1 description]</p>
+                    </div>
+                    <div class="factor-card">
+                        <span class="factor-num">Factor 02</span>
+                        <h4>[REPLACE THIS: Factor 2 Title]</h4>
+                        <p>[REPLACE THIS: Factor 2 description]</p>
+                    </div>
+                    <div class="factor-card">
+                        <span class="factor-num">Factor 03</span>
+                        <h4>[REPLACE THIS: Factor 3 Title]</h4>
+                        <p>[REPLACE THIS: Factor 3 description]</p>
+                    </div>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>[REPLACE THIS: Closing Section]</h2>
+
+                <p>[REPLACE THIS: Final thoughts/summary]</p>
+
+                <!-- CTA at the end -->
+                <div class="post-cta">
+                    <h3>[REPLACE THIS: CTA Headline]</h3>
+                    <p>
+                        [REPLACE THIS: CTA description/value prop]
+                    </p>
+                    <a href="https://cal.com/alexanderstefanseo/15min" class="btn btn-primary">
+                        Book a Free 15-Min Call
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-brand">Alex Does Digital</h3>
+                    <p class="footer-mission">
+                        Helping small to medium businesses generate more qualified leads through proven
+                        Google Ads, Facebook Ads, and SEO strategies.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="footer-stat"><strong>150+</strong><span>Businesses Helped</span></div>
+                        <div class="footer-stat"><strong>300%</strong><span>Average ROI</span></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="google-ads-for-service-businesses.html">Google Ads Management</a></li>
+                        <li><a href="facebook-ads-lead-generation.html">Facebook Ads Campaigns</a></li>
+                        <li><a href="conversion-rate-optimization.html">Conversion Optimization</a></li>
+                        <li><a href="industries.html">Industry Hubs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="https://cal.com/alexanderstefanseo/agency">Free Strategy Call</a></li>
+                        <li><a href="about.html">About Alex</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li><strong>Email:</strong><br><a href="mailto:alex@alexdoesdigital.com">alex@alexdoesdigital.com</a></li>
+                        <li><strong>Phone:</strong><br><a href="tel:+17163903081">716-390-3081</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
+                <p class="footer-badge">Certified Google Ads & Facebook Ads Expert</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
