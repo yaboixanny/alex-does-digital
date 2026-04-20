@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ads for Yoga Studios: How to Get More Clients Consistently | Alex Does Digital</title>
+    <meta name="description" content="Learn how yoga studios can use Facebook Ads to generate consistent leads, fill classes, and grow memberships — without relying on referrals or hoping posts go viral.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Mistake callout (magenta) ───────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Quote block ─────────────────────────────────────────── */
+        .post-quote {
+            border-left: 3px solid #d0d5e8;
+            padding: 0.5rem 1.25rem;
+            margin: 1rem 0 1rem 0.5rem;
+        }
+
+        .post-quote p {
+            color: #6b7490 !important;
+            font-style: italic;
+            margin: 0 !important;
+            font-size: 0.97rem !important;
+        }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Funnel steps ────────────────────────────────────────── */
+        .funnel-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .funnel-step {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 10px;
+            padding: 1.25rem 1.4rem;
+            display: flex;
+            gap: 1.1rem;
+            align-items: flex-start;
+        }
+
+        .funnel-step-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            background: var(--color-bg-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .funnel-step-body h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f1528;
+            margin-bottom: 0.35rem;
+        }
+
+        .funnel-step-body p {
+            font-size: 0.93rem !important;
+            color: #555d70 !important;
+            margin: 0 !important;
+            line-height: 1.6 !important;
+        }
+
+        /* ── Stat block ──────────────────────────────────────────── */
+        .stat-block {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            background: var(--color-bg-dark);
+            border-radius: 12px;
+            padding: 1.75rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-block .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .stat-block .stat-value {
+            font-size: 2rem;
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-block .stat-label {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        /* ── 3-factor grid ───────────────────────────────────────── */
+        .factor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .factor-card {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 10px;
+            padding: 1.25rem;
+        }
+
+        .factor-card .factor-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .factor-card h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin-bottom: 0.4rem;
+        }
+
+        .factor-card p {
+            font-size: 0.88rem !important;
+            color: #6b7490 !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+            .factor-grid { grid-template-columns: 1fr; }
+            .stat-block { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Results</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Facebook Ads</span>
+                    <span class="post-hero-date">April 20, 2026</span>
+                    <span class="post-hero-read-time">7 min read</span>
+                </div>
+                <h1>Facebook Ads for Yoga Studios: How to Get More Clients Consistently</h1>
+                <p class="post-hero-lede">
+                    Referrals help. Instagram helps. But neither gives you consistent, predictable growth.
+                    Here's the exact Facebook Ads playbook yoga studios should be running in 2026.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+
+                <p>If you run a yoga studio, you already know the biggest challenge isn't teaching great classes — it's keeping a steady flow of new students coming through the door.</p>
+
+                <p>Referrals are unpredictable. Instagram reach is declining. Neither gives you a reliable system you can turn up or down like a tap.</p>
+
+                <p>That's where Facebook Ads come in. When done right, they can bring you new students every single week — without relying on word of mouth or hoping a post goes viral.</p>
+
+                <hr class="post-divider">
+
+                <h2>Why Facebook Ads Work So Well for Yoga Studios</h2>
+
+                <p>Yoga is a <em>local</em>, <em>visual</em>, and <em>emotion-driven</em> service — exactly what Facebook and Instagram are built for. You're not just selling a class. You're selling:</p>
+
+                <ul>
+                    <li>Stress relief and mental clarity</li>
+                    <li>Better physical health</li>
+                    <li>A sense of community</li>
+                    <li>A lifestyle people aspire to</li>
+                </ul>
+
+                <p>Facebook lets you put that in front of people who are already interested in yoga, pilates, meditation, and wellness — and target them <strong>within a few miles of your studio</strong>. That combination is hard to beat for local businesses.</p>
+
+                <hr class="post-divider">
+
+                <h2>The Biggest Mistake Yoga Studios Make</h2>
+
+                <p>Most studios run ads that look something like this:</p>
+
+                <div class="post-quote">
+                    <p>"Join our yoga class today! Sign up for a membership."</p>
+                </div>
+
+                <p>That doesn't work — and here's why.</p>
+
+                <div class="callout-warning">
+                    <p><strong>The problem:</strong> People don't wake up thinking "I should sign up for a yoga membership today." You're interrupting their scroll. Asking for a full commitment upfront creates friction that kills conversions.</p>
+                </div>
+
+                <p>You need a <strong>low-friction entry offer</strong> that gets them in the door first — then let the experience sell the membership.</p>
+
+                <hr class="post-divider">
+
+                <h2>Offers That Actually Convert</h2>
+
+                <p>Instead of pushing memberships from the first ad, lead with something easy to say yes to:</p>
+
+                <ul class="offer-list">
+                    <li>$19 for 2 weeks unlimited</li>
+                    <li>Free first class</li>
+                    <li>7-day beginner yoga program</li>
+                    <li>Intro pack — 3 classes for $15–$30</li>
+                </ul>
+
+                <p>These work because they remove risk and make it easy to try. Your only goal with the ad is to get them through the door once. The experience converts them into a long-term member — not the ad.</p>
+
+                <div class="callout">
+                    <p><strong>The mindset shift:</strong> Your ad sells the first visit. Your studio sells the membership.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>The Funnel (Simpler Than You Think)</h2>
+
+                <p>You don't need a complicated marketing funnel. Here's the three-step structure that consistently works for local studios:</p>
+
+                <div class="funnel-steps">
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">1</div>
+                        <div class="funnel-step-body">
+                            <h4>The Ad — Hook them with the offer</h4>
+                            <p>Lead with the intro offer directly. Use real photos of your studio and real students — not stock images. Smiling faces, natural light, welcoming environment. Copy example: <em>"New to yoga? Try 2 weeks unlimited for $19 at [Studio Name]."</em></p>
+                        </div>
+                    </div>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">2</div>
+                        <div class="funnel-step-body">
+                            <h4>Facebook Lead Form — Capture without friction</h4>
+                            <p>Instead of sending people to your website, use Facebook's native Lead Forms. They pre-fill contact details, convert better on mobile, and keep people in the app. Collect name, email, and phone number — nothing else.</p>
+                        </div>
+                    </div>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">3</div>
+                        <div class="funnel-step-body">
+                            <h4>Instant Follow-Up — This is where studios lose money</h4>
+                            <p>Text them within minutes of the lead coming in. Call if possible. Send booking instructions immediately. Speed is everything — a lead that goes cold within an hour is mostly lost. The faster you respond, the higher your show rate.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Targeting Strategy</h2>
+
+                <p>Keep it simple. Overcomplicating targeting almost always hurts performance on a local budget.</p>
+
+                <ul>
+                    <li><strong>Location:</strong> 3–8 km radius around your studio</li>
+                    <li><strong>Age:</strong> 25–55</li>
+                    <li><strong>Interests:</strong> Yoga, Pilates, Meditation, Wellness, Fitness</li>
+                </ul>
+
+                <p>That's it. Start there, let it run for 7–10 days before making changes, and optimize based on what the data tells you — not assumptions.</p>
+
+                <hr class="post-divider">
+
+                <h2>Budget: What You Actually Need</h2>
+
+                <div class="stat-block">
+                    <div class="stat">
+                        <span class="stat-value">$15–30</span>
+                        <span class="stat-label">Minimum daily budget</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">$30–50</span>
+                        <span class="stat-label">Ideal daily budget</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">5–15</span>
+                        <span class="stat-label">Leads per day (typical)</span>
+                    </div>
+                </div>
+
+                <p>At the ideal range you should see a consistent flow of new student enquiries every week. If your budget is too low, the algorithm doesn't get enough data to optimize and results become inconsistent.</p>
+
+                <hr class="post-divider">
+
+                <h2>What Separates Ads That Work From Ads That Don't</h2>
+
+                <p>After running campaigns for dozens of local businesses, it almost always comes down to these three things:</p>
+
+                <div class="factor-grid">
+                    <div class="factor-card">
+                        <span class="factor-num">Factor 01</span>
+                        <h4>The Offer</h4>
+                        <p>Weak offer = nothing works, no matter how good the ad. A strong, low-risk intro offer is non-negotiable.</p>
+                    </div>
+                    <div class="factor-card">
+                        <span class="factor-num">Factor 02</span>
+                        <h4>The Creative</h4>
+                        <p>Real photos of real people in your actual studio. Natural lighting. No stock images. Authenticity outperforms polish every time.</p>
+                    </div>
+                    <div class="factor-card">
+                        <span class="factor-num">Factor 03</span>
+                        <h4>The Hook</h4>
+                        <p>Call out your audience directly: "Stressed? Try yoga for 2 weeks…" or "New to yoga? Start here…" Make them feel like the ad was written for them.</p>
+                    </div>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Turning Leads Into Paying Members</h2>
+
+                <p>Getting leads into the form is only half the job. Here's what actually closes them:</p>
+
+                <ul>
+                    <li><strong>Follow up within 5 minutes</strong> — response time is the biggest variable in show rates</li>
+                    <li><strong>Be human, not salesy</strong> — a friendly text beats a scripted sales pitch every time</li>
+                    <li><strong>Focus on getting them booked</strong> — one specific class, one specific time, keep it simple</li>
+                    <li><strong>Make the first class exceptional</strong> — that's what converts a trial into a membership</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>The Bottom Line</h2>
+
+                <p>Facebook Ads aren't magic — but for yoga studios, they're one of the most reliable growth channels when executed correctly. The model is straightforward: a low-risk intro offer, simple local targeting, and fast follow-up.</p>
+
+                <p>Once that system is running and converting, scaling is just a matter of increasing budget. The hard part is getting the foundation right — and that's exactly what I help with.</p>
+
+                <div class="post-cta">
+                    <h3>Want to Set This Up for Your Studio?</h3>
+                    <p>
+                        I'll review your current setup, build out the offer, and map out exactly what a Facebook Ads campaign would look like for your specific market. Free, no pressure.
+                    </p>
+                    <a href="https://cal.com/alexanderstefanseo/15min" class="btn btn-primary">
+                        Book a Free 15-Min Call
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-brand">Alex Does Digital</h3>
+                    <p class="footer-mission">
+                        Helping small to medium businesses generate more qualified leads through proven
+                        Google Ads, Facebook Ads, and SEO strategies.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="footer-stat"><strong>150+</strong><span>Businesses Helped</span></div>
+                        <div class="footer-stat"><strong>300%</strong><span>Average ROI</span></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="google-ads-for-service-businesses.html">Google Ads Management</a></li>
+                        <li><a href="facebook-ads-lead-generation.html">Facebook Ads Campaigns</a></li>
+                        <li><a href="conversion-rate-optimization.html">Conversion Optimization</a></li>
+                        <li><a href="industries.html">Industry Hubs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="https://cal.com/alexanderstefanseo/agency">Free Strategy Call</a></li>
+                        <li><a href="about.html">About Alex</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li><strong>Email:</strong><br><a href="mailto:alex@alexdoesdigital.com">alex@alexdoesdigital.com</a></li>
+                        <li><strong>Phone:</strong><br><a href="tel:+17163903081">716-390-3081</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
+                <p class="footer-badge">Certified Google Ads & Facebook Ads Expert</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
