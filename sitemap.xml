@@ -105,7 +105,7 @@
   <!-- Industry Landing Pages -->
   <url>
     <loc>https://alxdoesdigital.com/appliance-repair-leads.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -154,7 +154,7 @@
 
   <url>
     <loc>https://alxdoesdigital.com/handyman-leads.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -204,6 +204,35 @@
   <url>
     <loc>https://alxdoesdigital.com/seo-for-pool-service.html</loc>
     <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://alxdoesdigital.com/blog.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-yoga-studios.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-lawyers.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/youtube-leads.html</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
