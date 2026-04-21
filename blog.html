@@ -65,56 +65,7 @@
             padding: 4rem 0 5rem;
         }
 
-        /* ── Featured Post ──────────────────────────────────────── */
-        .featured-post {
-            background: var(--color-bg-dark);
-            border-radius: 16px;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-bottom: 3rem;
-            border: 1px solid rgba(0, 217, 255, 0.12);
-            transition: border-color 0.25s, box-shadow 0.25s;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .featured-post:hover {
-            border-color: rgba(0, 217, 255, 0.35);
-            box-shadow: 0 8px 40px rgba(0, 217, 255, 0.08);
-        }
-
-        .featured-post-img {
-            background: linear-gradient(135deg, #0d1533 0%, #1a2a4a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 280px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .featured-post-img::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(0,217,255,0.08) 0%, rgba(255,0,110,0.06) 100%);
-        }
-
-        .featured-post-img-icon {
-            font-size: 4rem;
-            z-index: 1;
-            opacity: 0.6;
-        }
-
-        .featured-post-body {
-            padding: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1rem;
-        }
-
+        /* ── Blog Styles ────────────────────────────────────────── */
         .post-meta {
             display: flex;
             align-items: center;
@@ -150,27 +101,6 @@
             margin-right: 0.75rem;
         }
 
-        .featured-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--color-accent-magenta);
-        }
-
-        .featured-post-body h2 {
-            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-            font-weight: 800;
-            line-height: 1.25;
-            color: var(--color-text-light);
-        }
-
-        .featured-post-body p {
-            font-size: 0.95rem;
-            color: var(--color-text-muted);
-            line-height: 1.7;
-        }
-
         .read-more {
             font-size: 0.9rem;
             font-weight: 700;
@@ -181,7 +111,6 @@
             transition: gap 0.2s;
         }
 
-        .featured-post:hover .read-more,
         .post-card:hover .read-more {
             gap: 0.7rem;
         }
@@ -304,14 +233,6 @@
             .posts-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .featured-post {
-                grid-template-columns: 1fr;
-            }
-
-            .featured-post-img {
-                min-height: 200px;
-            }
         }
 
         @media (max-width: 600px) {
@@ -384,16 +305,6 @@
         <div class="container">
             <!-- Loading skeletons shown while fetching -->
             <div id="postsLoading">
-                <div class="featured-post" style="margin-bottom:3rem; min-height:280px;">
-                    <div class="skeleton skeleton-img" style="min-height:280px;"></div>
-                    <div class="skeleton-body" style="padding:2.5rem; background:var(--color-bg-dark); flex:1;">
-                        <div class="skeleton skeleton-line w-40"></div>
-                        <div class="skeleton skeleton-line w-80" style="height:28px;"></div>
-                        <div class="skeleton skeleton-line w-80"></div>
-                        <div class="skeleton skeleton-line w-60"></div>
-                        <div class="skeleton skeleton-line w-40"></div>
-                    </div>
-                </div>
                 <div class="posts-grid">
                     <div class="skeleton-card"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
                     <div class="skeleton-card"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
@@ -494,26 +405,6 @@
             return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
         }
 
-        function buildFeaturedCard(post) {
-            return `
-            <a href="${post.slug}" class="featured-post">
-                <div class="featured-post-img">
-                    <span class="featured-post-img-icon">${getIcon(post.category)}</span>
-                </div>
-                <div class="featured-post-body">
-                    <span class="featured-label">Featured Post</span>
-                    <div class="post-meta">
-                        <span class="post-category">${post.category}</span>
-                        <span class="post-date">${formatDate(post.date)}</span>
-                        <span class="post-read-time">${post.readTime}</span>
-                    </div>
-                    <h2>${post.title}</h2>
-                    <p>${post.excerpt}</p>
-                    <span class="read-more">Read Post →</span>
-                </div>
-            </a>`;
-        }
-
         function buildPostCard(post) {
             return `
             <a href="${post.slug}" class="post-card" data-category="${post.category}">
@@ -543,18 +434,8 @@
             // Sort by date descending
             const sorted = [...filtered].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            // Featured: the post marked featured (or the first one) when showing all
-            let html = '';
-            if (activeFilter === 'all') {
-                const featured = sorted.find(p => p.featured) || sorted[0];
-                const rest = sorted.filter(p => p !== featured);
-                html += buildFeaturedCard(featured);
-                if (rest.length > 0) {
-                    html += `<div class="posts-grid">${rest.map(buildPostCard).join('')}</div>`;
-                }
-            } else {
-                html += `<div class="posts-grid">${sorted.map(buildPostCard).join('')}</div>`;
-            }
+            // Display all posts in grid
+            const html = `<div class="posts-grid">${sorted.map(buildPostCard).join('')}</div>`;
 
             return html;
         }
