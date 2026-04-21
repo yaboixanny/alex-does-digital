@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { JSDOM } = require('jsdom');
 
 // List of files to exclude from blog posts
 const EXCLUDED_FILES = new Set([
@@ -27,42 +26,38 @@ function getSlugFromFilename(filename) {
 function extractMetadataFromHtml(htmlPath, filename) {
   try {
     const htmlContent = fs.readFileSync(htmlPath, 'utf8');
-    const dom = new JSDOM(htmlContent);
-    const doc = dom.window.document;
 
-    // Extract title from <title> tag
-    const titleTag = doc.querySelector('title')?.textContent || '';
+    // Extract title from <title> tag using regex
+    const titleMatch = htmlContent.match(/<title>([^<]+)<\/title>/i);
+    const titleTag = titleMatch ? titleMatch[1] : '';
     const title = titleTag.replace(' | Alex Does Digital', '').trim();
 
     // Extract meta description
-    const description = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+    const descMatch = htmlContent.match(/<meta name="description" content="([^"]+)"/i);
+    const description = descMatch ? descMatch[1] : '';
 
-    // Extract date from article schema
+    // Extract date from article schema (JSON-LD)
     let date = '';
-    const scriptTags = Array.from(doc.querySelectorAll('script[type="application/ld+json"]'));
-    for (const script of scriptTags) {
-      try {
-        const json = JSON.parse(script.textContent);
-        if (json['@type'] === 'NewsArticle' || json['@type'] === 'Article') {
-          date = json.datePublished || '';
-          break;
-        }
-      } catch (e) {
-        // Skip parsing errors
-      }
+    const schemaMatch = htmlContent.match(/"datePublished":\s*"([^"]+)"/);
+    if (schemaMatch) {
+      date = schemaMatch[1].split('T')[0];
     }
 
     // Fallback: try to extract from meta tag
     if (!date) {
-      const metaDate = doc.querySelector('meta[property="article:published_time"]')?.getAttribute('content') || '';
-      date = metaDate.split('T')[0];
+      const metaDateMatch = htmlContent.match(/<meta property="article:published_time" content="([^"]+)"/);
+      if (metaDateMatch) {
+        date = metaDateMatch[1].split('T')[0];
+      }
     }
 
-    // Extract category from post-category-tag
-    const categoryTag = doc.querySelector('.post-category-tag')?.textContent?.trim() || 'Blog';
+    // Extract category from post-category-tag class
+    const categoryMatch = htmlContent.match(/<span class="post-category-tag">([^<]+)<\/span>/);
+    const categoryTag = categoryMatch ? categoryMatch[1].trim() : 'Blog';
 
-    // Extract read time from post-hero-read-time
-    const readTimeText = doc.querySelector('.post-hero-read-time')?.textContent?.trim() || '5 min read';
+    // Extract read time from post-hero-read-time or post-read-time
+    const readTimeMatch = htmlContent.match(/<span class="(?:post-hero-)?read-time">([^<]+)<\/span>/);
+    const readTimeText = readTimeMatch ? readTimeMatch[1].trim() : '5 min read';
 
     const slug = getSlugFromFilename(filename);
 
@@ -124,14 +119,6 @@ function isBlogPost(metadata) {
 }
 
 function updateBlogMetadata() {
-  // Install jsdom if needed
-  try {
-    require('jsdom');
-  } catch (e) {
-    console.log('Installing jsdom...');
-    require('child_process').execSync('npm install jsdom', { stdio: 'inherit' });
-  }
-
   const blogFiles = getBlogHtmlFiles();
   const existingPosts = loadPostsJson();
   const existingSlugs = new Set(existingPosts.map(p => p.slug));
