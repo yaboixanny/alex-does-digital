@@ -8,173 +8,370 @@
     <meta name="description" content="Complete guide to running profitable Facebook Ads for plumbing services. Learn campaign setup, targeting, ad creative, and how to generate cheap, consistent leads in 2026.">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .post-body {
-            margin: 0 auto;
-        }
-
-        .post-hero-inner {
-            margin: 0 auto;
-        }
-
-        .funnel-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .funnel-step {
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
-            border: 1px solid #00d4ff;
-            border-radius: 8px;
-            padding: 1.5rem;
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
             position: relative;
             overflow: hidden;
         }
 
-        .funnel-step::before {
-            content: attr(data-step);
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            font-size: 4rem;
-            font-weight: bold;
-            color: rgba(0, 212, 255, 0.1);
-            font-family: 'Courier New', monospace;
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
         }
 
-        .funnel-step h3 {
-            position: relative;
-            z-index: 1;
-            margin: 0 0 0.5rem 0;
-            color: #00d4ff;
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
             font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
         }
 
-        .funnel-step p {
-            position: relative;
-            z-index: 1;
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
             margin: 0;
-            color: #a8b2d1;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 1rem !important;
         }
 
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Mistake callout (magenta) ───────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Quote block ─────────────────────────────────────────── */
+        .post-quote {
+            border-left: 3px solid #d0d5e8;
+            padding: 0.5rem 1.25rem;
+            margin: 1rem 0 1rem 0.5rem;
+        }
+
+        .post-quote p {
+            color: #6b7490 !important;
+            font-style: italic;
+            margin: 0 !important;
+            font-size: 0.97rem !important;
+        }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
         .offer-list {
-            list-style: none;
-            padding: 0;
-            margin: 1.5rem 0;
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
         }
 
         .offer-list li {
-            padding: 1rem 0 1rem 2rem;
-            position: relative;
-            color: #a8b2d1;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .offer-list li:last-child {
-            border-bottom: none;
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
         }
 
         .offer-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #00d4ff;
-            font-weight: bold;
-            font-size: 1.2rem;
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
         }
 
-        .callout {
-            background: rgba(0, 212, 255, 0.08);
-            border-left: 3px solid #00d4ff;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 4px;
+        /* ── Funnel steps ────────────────────────────────────────── */
+        .funnel-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
         }
 
-        .callout strong {
-            color: #00d4ff;
+        .funnel-step {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 10px;
+            padding: 1.25rem 1.4rem;
+            display: flex;
+            gap: 1.1rem;
+            align-items: flex-start;
         }
 
-        .callout-warning {
-            background: rgba(255, 0, 212, 0.08);
-            border-left: 3px solid #ff00d4;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 4px;
+        .funnel-step-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            background: var(--color-bg-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
 
-        .callout-warning strong {
-            color: #ff00d4;
+        .funnel-step-body h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f1528;
+            margin-bottom: 0.35rem;
         }
 
+        .funnel-step-body p {
+            font-size: 0.93rem !important;
+            color: #555d70 !important;
+            margin: 0 !important;
+            line-height: 1.6 !important;
+        }
+
+        /* ── Stat block ──────────────────────────────────────────── */
         .stat-block {
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
-            border: 1px solid #00d4ff;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 1.5rem 0;
-            text-align: center;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            background: var(--color-bg-dark);
+            border-radius: 12px;
+            padding: 1.75rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-block .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
         }
 
         .stat-block .stat-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #00d4ff, #ff00d4);
+            font-size: 2rem;
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-magenta));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 0.5rem;
         }
 
         .stat-block .stat-label {
-            color: #a8b2d1;
-            font-size: 0.95rem;
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
         }
 
+        /* ── 3-factor grid ───────────────────────────────────────── */
         .factor-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
         }
 
-        .factor-box {
-            background: rgba(0, 212, 255, 0.05);
-            border: 1px solid #00d4ff;
-            border-radius: 8px;
-            padding: 1.5rem;
+        .factor-card {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 10px;
+            padding: 1.25rem;
         }
 
-        .factor-box h4 {
-            color: #00d4ff;
-            margin: 0 0 0.75rem 0;
+        .factor-card .factor-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .factor-card h4 {
             font-size: 1rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin-bottom: 0.4rem;
         }
 
-        .factor-box p {
-            color: #a8b2d1;
-            margin: 0;
-            font-size: 0.95rem;
-            line-height: 1.6;
+        .factor-card p {
+            font-size: 0.88rem !important;
+            color: #6b7490 !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
         }
 
-        .post-quote {
-            border-left: 4px solid #ff00d4;
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            font-style: italic;
-            color: #a8b2d1;
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
         }
 
-        @media (max-width: 768px) {
-            .funnel-steps, .factor-grid {
-                grid-template-columns: 1fr;
-            }
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+            .factor-grid { grid-template-columns: 1fr; }
+            .stat-block { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
@@ -192,213 +389,216 @@
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="case-studies.html" class="nav-link">Results</a></li>
                     <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
                     <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Post Hero -->
+    <!-- Hero -->
     <section class="post-hero">
         <div class="container">
             <div class="post-hero-inner">
-                <div class="post-meta">
-                    <span class="post-category">Facebook Ads</span>
-                    <span class="post-date">April 21, 2026</span>
-                    <span class="post-read-time">9 min read</span>
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Facebook Ads</span>
+                    <span class="post-hero-date">April 21, 2026</span>
+                    <span class="post-hero-read-time">9 min read</span>
                 </div>
-                <h1 class="post-title">Facebook Ads for Plumbers: The Complete 2026 Strategy Guide</h1>
-                <p class="post-subtitle">Learn how to generate consistent, high-quality leads for your plumbing business using Facebook Ads at a lower cost than Google Ads.</p>
+                <h1>Facebook Ads for Plumbers: The Complete 2026 Strategy Guide</h1>
+                <p class="post-hero-lede">
+                    While most plumbers rely on Google Ads for emergency searches, Facebook lets you generate cheap, consistent leads before emergencies happen. Here's the exact playbook.
+                </p>
             </div>
         </div>
+        <div class="bg-decoration"></div>
     </section>
 
-    <!-- Post Body -->
-    <section class="post-body">
+    <!-- Body -->
+    <section class="post-body-section">
         <div class="container">
-            <div class="post-content">
-                <p>If you're a plumber trying to generate consistent, high-quality leads, Facebook Ads (Meta Ads) are one of the most underrated opportunities in 2026.</p>
+            <div class="post-body">
 
-                <p>While most plumbers rely heavily on Google Ads for "high intent" searches, Facebook allows you to <strong>create demand, dominate your local area, and generate leads at a lower cost</strong>—especially if your daily budget is under $50–$100.</p>
+                <a href="blog.html" class="back-to-blog">← Back to Blog</a>
 
-                <p>This guide breaks down exactly how to run Facebook Ads for plumbing services in 2026—from campaign setup to ad creative to scaling profitably.</p>
+                <p>If you're a plumber trying to generate consistent, high-quality leads, Facebook Ads are one of the most underrated opportunities in 2026.</p>
 
-                <hr style="border: none; border-top: 1px solid rgba(0, 212, 255, 0.2); margin: 2rem 0;">
+                <p>Most plumbers think: <em>"People only hire plumbers when something breaks."</em> That's partially true — but Facebook Ads let you stay top-of-mind before emergencies happen, capture homeowners who need work soon but aren't searching yet, and generate cheap leads via forms instead of expensive clicks.</p>
 
-                <h2>Why Facebook Ads Work for Plumbers in 2026</h2>
+                <hr class="post-divider">
 
-                <p>Most plumbers think:</p>
+                <h2>Why Facebook Ads Work for Plumbers</h2>
 
-                <div class="post-quote">
-                    "People only hire plumbers when something breaks."
-                </div>
+                <p>In 2026, Meta's algorithm is extremely strong at finding homeowners and identifying likely buyers. You can:</p>
 
-                <p>That's partially true—but Facebook Ads let you:</p>
-
-                <ul class="offer-list">
-                    <li>Stay <strong>top-of-mind before emergencies happen</strong></li>
-                    <li>Capture <strong>homeowners who need work soon but aren't searching yet</strong></li>
-                    <li>Generate <strong>cheap leads via forms instead of expensive clicks</strong></li>
-                    <li>Retarget people who already visited your site or engaged with your content</li>
+                <ul>
+                    <li>Stay top-of-mind before emergencies happen</li>
+                    <li>Capture homeowners who need work soon but aren't searching yet</li>
+                    <li>Generate cheap leads via forms instead of expensive clicks</li>
+                    <li>Retarget people who visited your site or engaged with your content</li>
                 </ul>
 
-                <p>In 2026, Meta's algorithm is extremely strong at:</p>
+                <p>The combination of demand generation and precise local targeting is hard to beat for service businesses.</p>
 
-                <ul class="offer-list">
-                    <li>Finding homeowners</li>
-                    <li>Identifying likely buyers</li>
-                    <li>Optimizing for conversions (if set up correctly)</li>
-                </ul>
+                <hr class="post-divider">
 
-                <h2>The Best Facebook Ad Strategy for Plumbers</h2>
+                <h2>The Best Strategy: Lead Generation Campaigns</h2>
 
-                <p>Let's keep this simple and effective.</p>
-
-                <h3>Use Lead Generation Campaigns (Not Traffic)</h3>
-
-                <p>Your objective should be: <strong>Leads – Instant Forms</strong></p>
+                <p>Your objective should be <strong>Leads – Instant Forms</strong>, not traffic.</p>
 
                 <div class="callout">
-                    <strong>Why?</strong> Lower friction than sending users to a website, faster conversions on mobile (where most traffic is), and cheaper cost per lead.
+                    <p><strong>Why?</strong> Lower friction than sending users to a website, faster conversions on mobile (where most traffic is), and cheaper cost per lead.</p>
                 </div>
+
+                <hr class="post-divider">
 
                 <h2>Campaign Structure (Simple + Proven)</h2>
 
-                <p>You don't need complexity.</p>
+                <p>You don't need complexity:</p>
 
-                <div class="factor-grid">
-                    <div class="factor-box">
-                        <h4>1 Campaign</h4>
-                        <p>Objective: Leads</p>
+                <div class="funnel-steps">
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">1</div>
+                        <div class="funnel-step-body">
+                            <h4>1 Campaign</h4>
+                            <p>Objective: Leads</p>
+                        </div>
                     </div>
-                    <div class="factor-box">
-                        <h4>1–2 Ad Sets</h4>
-                        <p>Broad targeting with radius targeting (10–30km around your service area)</p>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">2</div>
+                        <div class="funnel-step-body">
+                            <h4>1–2 Ad Sets</h4>
+                            <p>Broad targeting with radius targeting (10–30km around your service area)</p>
+                        </div>
                     </div>
-                    <div class="factor-box">
-                        <h4>3–5 Ads per Ad Set</h4>
-                        <p>Different hooks, angles, creatives</p>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">3</div>
+                        <div class="funnel-step-body">
+                            <h4>3–5 Ads per Ad Set</h4>
+                            <p>Different hooks, angles, creatives</p>
+                        </div>
                     </div>
                 </div>
 
+                <hr class="post-divider">
+
                 <h2>Targeting Strategy (2026 Update)</h2>
 
-                <p>Meta has evolved—over-targeting kills performance.</p>
-
-                <h3>What Works Now</h3>
+                <p>Meta has evolved—over-targeting kills performance. Keep it simple:</p>
 
                 <ul class="offer-list">
-                    <li><strong>Location targeting</strong> (MOST important)</li>
+                    <li><strong>Location</strong> (MOST important)</li>
                     <li>Age: 25–65+</li>
                     <li>Homeowners (optional)</li>
                     <li>Broad targeting (let Meta optimize)</li>
                 </ul>
 
                 <div class="callout-warning">
-                    <strong>Avoid overly specific interests and layering too many filters</strong>—this kills your reach and performance.
+                    <p><strong>Avoid overly specific interests and layering too many filters</strong> — this kills your reach and performance.</p>
                 </div>
+
+                <hr class="post-divider">
 
                 <h2>High-Converting Plumbing Ad Angles</h2>
 
-                <p>Your ad creative matters more than targeting.</p>
+                <p>Your ad creative matters more than targeting. Test these hooks:</p>
 
-                <div class="funnel-steps">
-                    <div class="funnel-step" data-step="01">
-                        <h3>Emergency Hook</h3>
+                <div class="factor-grid">
+                    <div class="factor-card">
+                        <span class="factor-num">Hook 01</span>
+                        <h4>Emergency</h4>
                         <p>"Burst pipe? We can be there in 60 minutes."</p>
                     </div>
-                    <div class="funnel-step" data-step="02">
-                        <h3>Offer-Based Hook</h3>
+                    <div class="factor-card">
+                        <span class="factor-num">Hook 02</span>
+                        <h4>Offer-Based</h4>
                         <p>"Drain cleaning from $79 – limited time"</p>
                     </div>
-                    <div class="funnel-step" data-step="03">
-                        <h3>Problem-Solution Hook</h3>
+                    <div class="factor-card">
+                        <span class="factor-num">Hook 03</span>
+                        <h4>Problem-Solution</h4>
                         <p>"Tired of slow drains? Here's how we fix it fast."</p>
                     </div>
-                    <div class="funnel-step" data-step="04">
-                        <h3>Trust-Based Hook</h3>
-                        <p>"Rated 5 stars by 100+ homeowners in your area"</p>
+                    <div class="factor-card">
+                        <span class="factor-num">Hook 04</span>
+                        <h4>Trust-Based</h4>
+                        <p>"Rated 5 stars by 100+ homeowners"</p>
                     </div>
-                    <div class="funnel-step" data-step="05">
-                        <h3>Local Authority Hook</h3>
+                    <div class="factor-card">
+                        <span class="factor-num">Hook 05</span>
+                        <h4>Local Authority</h4>
                         <p>"Your licensed plumber serving [City] for 10+ years"</p>
                     </div>
                 </div>
 
-                <h2>Example Ad Copy (High Performer)</h2>
-
-                <div class="stat-block">
-                    <p style="margin: 0 0 1rem 0; color: #a8b2d1; font-weight: 500;">Primary Text:</p>
-                    <p style="margin: 0 0 1.5rem 0; color: #00d4ff; line-height: 1.8;">Need a reliable plumber in [City]?<br>We handle leaks, blocked drains, water heaters & more.<br><br>✓ Same-day service<br>✓ Upfront pricing<br>✓ Licensed & insured<br><br>Tap below to get a fast quote →</p>
-                    <p style="margin: 1rem 0 0.5rem 0; color: #a8b2d1; font-weight: 500;">Headline: Fast Plumbing Service Near You</p>
-                    <p style="margin: 0; color: #ff00d4;">CTA: Get Quote</p>
-                </div>
+                <hr class="post-divider">
 
                 <h2>The Secret Weapon: Instant Forms</h2>
 
-                <p>Most plumbers mess this up.</p>
-
-                <h3>Keep it SIMPLE</h3>
+                <p>Keep your forms <strong>SIMPLE</strong>:</p>
 
                 <div class="callout">
-                    <strong>Fields:</strong><br>
-                    • Name<br>
-                    • Phone number<br>
-                    • (Optional) Short question: "What do you need help with?"
+                    <p><strong>Fields:</strong> Name • Phone number • (Optional) "What do you need help with?"</p>
                 </div>
 
                 <div class="callout-warning">
-                    <strong>Avoid:</strong> Long forms, too many questions, anything that slows conversion.
+                    <p><strong>Avoid:</strong> Long forms, too many questions, anything that slows conversion.</p>
                 </div>
 
-                <h2>Lead Quality Tips (Very Important)</h2>
+                <hr class="post-divider">
+
+                <h2>Lead Quality Tips</h2>
 
                 <p>Cheap leads ≠ good leads. To improve quality:</p>
 
                 <div class="funnel-steps">
-                    <div class="funnel-step" data-step="01">
-                        <h3>Add a Qualifying Question</h3>
-                        <p>Example: "What service do you need?"</p>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">1</div>
+                        <div class="funnel-step-body">
+                            <h4>Add a Qualifying Question</h4>
+                            <p>Example: "What service do you need?"</p>
+                        </div>
                     </div>
-                    <div class="funnel-step" data-step="02">
-                        <h3>Use Higher Intent Option</h3>
-                        <p>Meta adds a review step before submission.</p>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">2</div>
+                        <div class="funnel-step-body">
+                            <h4>Use Higher Intent Option</h4>
+                            <p>Meta adds a review step before submission</p>
+                        </div>
                     </div>
-                    <div class="funnel-step" data-step="03">
-                        <h3>Call Leads FAST</h3>
-                        <p>Speed = money. Call within 5–10 minutes.</p>
-                    </div>
-                </div>
-
-                <h2>Budget Strategy for Plumbers</h2>
-
-                <h3>Starting Point</h3>
-
-                <div class="factor-grid">
-                    <div class="factor-box">
-                        <h4>$20–$50/day</h4>
-                        <p>Good for testing and learning</p>
-                    </div>
-                    <div class="factor-box">
-                        <h4>$50–$100/day</h4>
-                        <p>Consistent lead flow</p>
-                    </div>
-                    <div class="factor-box">
-                        <h4>$100+/day</h4>
-                        <p>Scale and dominate your market</p>
+                    <div class="funnel-step">
+                        <div class="funnel-step-num">3</div>
+                        <div class="funnel-step-body">
+                            <h4>Call Leads FAST</h4>
+                            <p>Speed = money. Call within 5–10 minutes.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="callout">
-                    <strong>Key insight:</strong> If you're under $50/day, Facebook Ads often outperform Google Ads for cost per lead.
-                </div>
+                <hr class="post-divider">
 
-                <h2>Expected Results (Realistic Benchmarks)</h2>
+                <h2>Budget Strategy</h2>
 
                 <div class="stat-block">
-                    <div class="stat-value">$5–$25</div>
-                    <div class="stat-label">Cost per lead</div>
+                    <div class="stat">
+                        <span class="stat-value">$500–$1,500</span>
+                        <span class="stat-label">Monthly to start</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">$20–$50</span>
+                        <span class="stat-label">Daily budget (testing)</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">$50–$100</span>
+                        <span class="stat-label">Daily budget (scaling)</span>
+                    </div>
                 </div>
+
+                <p>At the ideal range you should see a consistent flow of qualified leads every week. If your budget is too low, the algorithm doesn't get enough data to optimize.</p>
+
+                <hr class="post-divider">
+
+                <h2>Expected Results (Realistic Benchmarks)</h2>
 
                 <p>Depending on your market:</p>
 
@@ -408,65 +608,70 @@
                     <li>Cost per job: $20–$100</li>
                 </ul>
 
-                <p>If your average job is $200–$500+, this becomes very profitable.</p>
+                <p>If your average job is $200–$500+, this becomes very profitable. And if you're under $50/day, Facebook Ads often outperform Google Ads for cost per lead.</p>
+
+                <hr class="post-divider">
 
                 <h2>The #1 Mistake Plumbers Make</h2>
 
                 <p>They treat Facebook like Google.</p>
 
                 <div class="callout-warning">
-                    <strong>Facebook is NOT:</strong><br>
-                    • High intent<br>
-                    • Immediate emergency-only traffic<br><br>
-                    <strong>Instead, it's:</strong><br>
-                    • Demand generation<br>
-                    • Local brand dominance<br>
-                    • Cheap lead capture
+                    <p><strong>Facebook is NOT:</strong> High intent, immediate emergency-only traffic.<br><br><strong>Instead, it's:</strong> Demand generation, local brand dominance, cheap lead capture.</p>
                 </div>
 
-                <h2>Advanced Strategy: Combine Facebook + Google</h2>
+                <hr class="post-divider">
 
-                <p>This is where things get powerful.</p>
+                <h2>Advanced Strategy: Facebook + Google Together</h2>
+
+                <p>This is where things get powerful:</p>
 
                 <div class="factor-grid">
-                    <div class="factor-box">
+                    <div class="factor-card">
+                        <span class="factor-num">Channel 01</span>
                         <h4>Facebook Ads</h4>
                         <p>Generate cheap leads & build awareness</p>
                     </div>
-                    <div class="factor-box">
+                    <div class="factor-card">
+                        <span class="factor-num">Channel 02</span>
                         <h4>Google Ads</h4>
                         <p>Capture high-intent searches</p>
                     </div>
-                    <div class="factor-box">
-                        <h4>Together</h4>
-                        <p>Dominate both demand creation AND demand capture</p>
+                    <div class="factor-card">
+                        <span class="factor-num">Result</span>
+                        <h4>Dominate</h4>
+                        <p>Both demand creation & capture</p>
                     </div>
                 </div>
 
+                <hr class="post-divider">
+
                 <h2>Retargeting (Easy Wins)</h2>
 
-                <p>Most plumbers ignore this.</p>
+                <p>Most plumbers ignore this. Retarget:</p>
 
-                <p>Retarget:</p>
-
-                <ul class="offer-list">
+                <ul>
                     <li>Website visitors</li>
                     <li>Facebook/Instagram engagement</li>
                     <li>Video viewers</li>
                 </ul>
 
                 <div class="callout">
-                    <strong>Ad example:</strong> "Still need a plumber? We're ready when you are."
+                    <p><strong>Ad example:</strong> "Still need a plumber? We're ready when you are."</p>
                 </div>
+
+                <hr class="post-divider">
 
                 <h2>Creative Tips That Actually Work</h2>
 
-                <ul class="offer-list">
-                    <li>Use REAL photos (not stock)</li>
+                <ul>
+                    <li><strong>Use REAL photos</strong> (not stock)</li>
                     <li>Show your van, your team, before/after jobs</li>
                     <li>Short videos outperform images in many cases</li>
                     <li>Keep it local and authentic</li>
                 </ul>
+
+                <hr class="post-divider">
 
                 <h2>Scaling What Works</h2>
 
@@ -478,33 +683,24 @@
                     <li>Test new angles</li>
                 </ul>
 
+                <hr class="post-divider">
+
                 <h2>Final Thoughts</h2>
 
-                <p>Facebook Ads in 2026 are one of the best opportunities for plumbers to:</p>
-
-                <ul class="offer-list">
-                    <li>Generate consistent leads</li>
-                    <li>Lower acquisition costs</li>
-                    <li>Build a strong local brand</li>
-                </ul>
-
-                <p>But success comes down to:</p>
-
-                <ul class="offer-list">
-                    <li>Simple campaign structure</li>
-                    <li>Strong ad creative</li>
-                    <li>Fast follow-up</li>
-                </ul>
+                <p>Facebook Ads in 2026 are one of the best opportunities for plumbers to generate consistent leads, lower acquisition costs, and build a strong local brand. But success comes down to three things: simple campaign structure, strong ad creative, and fast follow-up.</p>
 
                 <p>Get those right—and Facebook can become one of your most profitable channels.</p>
 
-                <hr style="border: none; border-top: 1px solid rgba(0, 212, 255, 0.2); margin: 2rem 0;">
-
-                <div style="background: rgba(0, 212, 255, 0.05); border: 1px solid #00d4ff; border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
-                    <h3 style="margin-top: 0; color: #00d4ff;">Ready to Start Your Plumbing Ads?</h3>
-                    <p style="margin: 0.5rem 0; color: #a8b2d1;">Let's build a custom Facebook Ads strategy for your plumbing business. Schedule a free 30-minute strategy call to discuss how we can generate consistent leads at a lower cost.</p>
-                    <a href="https://cal.com/alexanderstefanseo/agency" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #00d4ff; color: #0a0e27; border-radius: 6px; text-decoration: none; font-weight: 600;">Book Your Free Call</a>
+                <div class="post-cta">
+                    <h3>Ready to Start Your Plumbing Ads?</h3>
+                    <p>
+                        Let's build a custom Facebook Ads strategy for your plumbing business. Schedule a free 30-minute call to discuss how we can generate consistent leads at a lower cost than Google Ads.
+                    </p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">
+                        Book Your Free Strategy Call
+                    </a>
                 </div>
+
             </div>
         </div>
     </section>
