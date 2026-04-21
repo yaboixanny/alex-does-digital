@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Pilot Campaign: Test Before You Commit | Alex Does Digital</title>
+    <meta name="description" content="Learn why most Google Ads campaigns fail and how a low-risk pilot campaign lets you test if Google Ads actually work for your business before signing any contracts.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Mistake callout (magenta) ───────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/google-ads-pilot">
+    <meta property="og:title" content="Google Ads Pilot Campaign: Test Before You Commit | Alex Does Digital">
+    <meta property="og:description" content="Learn why most Google Ads campaigns fail and how a low-risk pilot campaign lets you test if Google Ads actually work for your business before signing any contracts.">
+    <meta property="og:url" content="https://alxdoesdigital.com/google-ads-pilot">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Google Ads Pilot Campaign: Test Before You Commit | Alex Does Digital">
+    <meta property="twitter:description" content="Learn why most Google Ads campaigns fail and how a low-risk pilot campaign lets you test if Google Ads actually work for your business before signing any contracts.">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Be 100% Sure Google Ads Will Work (Before You Sign Anything)",
+    "description": "Never lock yourself into a long-term contract until you understand exactly what you're getting. Learn how a pilot campaign lets you test Google Ads risk-free.",
+    "datePublished": "2026-04-21",
+    "dateModified": "2026-04-21",
+    "author": {
+        "@type": "Person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Alex Does Digital",
+        "url": "https://alxdoesdigital.com"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/google-ads-pilot"
+    }
+}
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Google Ads</span>
+                    <span class="post-hero-date">April 21, 2026</span>
+                    <span class="post-hero-read-time">8 min read</span>
+                </div>
+                <h1>How to Be 100% Sure Google Ads Will Work (Before You Sign Anything)</h1>
+                <p class="post-hero-lede">
+                    Never lock yourself into a long-term contract until you understand exactly what you're getting. Learn how a pilot campaign lets you test Google Ads risk-free.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog" class="back-to-blog">← Back to Blog</a>
+
+                <p>If you're thinking about running Google Ads, here's the truth:</p>
+
+                <p>You should <strong>never</strong> lock yourself into a long-term contract until you understand exactly what you're getting.</p>
+
+                <p>Before I run ads for any client, I make sure we know three things:</p>
+
+                <ul>
+                    <li>How many leads you're likely to get each month</li>
+                    <li>How much those leads will cost</li>
+                    <li>How much you should realistically budget for ad spend</li>
+                </ul>
+
+                <p>If you don't know those three numbers, you're guessing—and that's where people lose money.</p>
+
+                <hr class="post-divider">
+
+                <h2>Why Most Google Ads Setups Fail</h2>
+
+                <p>Google can't tell you if Google Ads will work for your business.</p>
+
+                <p>And a lot of agencies will still try to push you into:</p>
+
+                <ul>
+                    <li>3–6 month contracts</li>
+                    <li>High retainers</li>
+                    <li>No real clarity on results</li>
+                </ul>
+
+                <p>That's not a strategy—that's a gamble.</p>
+
+                <p>So instead of doing that, I run what I call a <strong>pilot campaign</strong>.</p>
+
+                <hr class="post-divider">
+
+                <h2>The Pilot Campaign (Low-Risk Testing)</h2>
+
+                <p>A pilot campaign is a short-term test—usually <strong>30 to 60 days</strong>—designed to answer one question:</p>
+
+                <div class="callout">
+                    <p><strong>Will Google Ads actually work for your business?</strong></p>
+                </div>
+
+                <p>No long-term commitment. No guessing.</p>
+
+                <p>Just real data.</p>
+
+                <hr class="post-divider">
+
+                <h2>What You'll Know After the Pilot</h2>
+
+                <p>By the end of the pilot, you'll have clear answers:</p>
+
+                <ul>
+                    <li>Cost per lead</li>
+                    <li>Estimated monthly lead volume</li>
+                    <li>Lead quality (are these actually good prospects?)</li>
+                </ul>
+
+                <p>At that point, you can make a decision based on data—not opinions.</p>
+
+                <hr class="post-divider">
+
+                <h2>What I Actually Build During the Pilot</h2>
+
+                <p>This isn't just "turn ads on and hope."</p>
+
+                <p>Here's what goes into it:</p>
+
+                <ul>
+                    <li>Keyword research to find exactly what people are searching when they need your service</li>
+                    <li>High-converting Google Ads built around those searches</li>
+                    <li>A proper landing page (not your homepage) designed to convert traffic into calls + form submissions</li>
+                    <li>Lead tracking so every call and form is captured</li>
+                    <li>Campaign monitoring and daily optimization</li>
+                    <li>Data analysis so we understand what's working and what's not</li>
+                </ul>
+
+                <p>Everything is built around one goal: generating real, trackable leads.</p>
+
+                <hr class="post-divider">
+
+                <h2>Cost of the Pilot</h2>
+
+                <p>There are two parts to this:</p>
+
+                <h3>1. Setup + Management</h3>
+
+                <p><strong>$2,000 one-time</strong></p>
+
+                <p>This covers:</p>
+
+                <ul>
+                    <li>Full campaign build</li>
+                    <li>Landing page creation</li>
+                    <li>Tracking setup</li>
+                    <li>Campaign management during the pilot</li>
+                    <li>Ongoing optimization</li>
+                </ul>
+
+                <h3>2. Ad Spend (Paid to Google)</h3>
+
+                <p>This is separate.</p>
+
+                <p>Google charges you per click, and the exact cost depends on your market.</p>
+
+                <p>I'll recommend a starting budget—but you control it 100%.</p>
+
+                <div class="callout">
+                    <p><strong>You'll never spend more than what you're comfortable with.</strong></p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>How Long Does It Take?</h2>
+
+                <p>Most of the time, we can get clear answers in about <strong>30 days</strong>.</p>
+
+                <p>In smaller markets, it might take a bit longer to gather enough data.</p>
+
+                <p>But the goal is always the same: get enough data to make a confident decision.</p>
+
+                <hr class="post-divider">
+
+                <h2>Will You Get Sales During the Pilot?</h2>
+
+                <p>Sometimes yes—but that's not the main goal.</p>
+
+                <p>The pilot is designed to test: <strong>lead generation, not closing.</strong></p>
+
+                <p>Here's why that matters:</p>
+
+                <ul>
+                    <li>Some leads take time to convert (especially higher-ticket services)</li>
+                    <li>If you're not used to handling inbound leads, there can be a learning curve</li>
+                    <li>Sales performance depends on your follow-up, not just the ads</li>
+                </ul>
+
+                <p>Two important scenarios:</p>
+
+                <h3>1. Leads convert, but not profitably</h3>
+
+                <p>Ads are working, but numbers don't make sense.</p>
+
+                <h3>2. Leads don't convert at all</h3>
+
+                <p>Likely a sales/process issue, not an ads issue.</p>
+
+                <p>That's why we separate: <strong>lead quality vs. sales performance.</strong></p>
+
+                <hr class="post-divider">
+
+                <h2>What Happens After the Pilot?</h2>
+
+                <p>At the end, you'll have a clear answer.</p>
+
+                <h3>If Google Ads <em>don't</em> work:</h3>
+
+                <p>You just saved yourself months of wasted budget and frustration.</p>
+
+                <h3>If Google Ads <em>do</em> work:</h3>
+
+                <p>You now have:</p>
+
+                <ul>
+                    <li>A proven lead source</li>
+                    <li>Real performance data</li>
+                    <li>A live campaign ready to scale</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>No Lock-In, No Pressure</h2>
+
+                <p>If you want to continue, great—I'll help you scale it.</p>
+
+                <p>If not, no problem.</p>
+
+                <p>You still walk away with:</p>
+
+                <ul>
+                    <li>Data</li>
+                    <li>Insights</li>
+                    <li>A working campaign</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>Final Take</h2>
+
+                <p>Most people lose money on Google Ads because they commit too early.</p>
+
+                <p>The smarter move is simple:</p>
+
+                <div class="callout">
+                    <p><strong>Test first → Validate with data → Then scale</strong></p>
+                </div>
+
+                <p>That's how you remove risk—and actually make Google Ads work.</p>
+
+                <div class="post-cta">
+                    <h3>Ready to Test Google Ads Risk-Free?</h3>
+                    <p>Start with a pilot campaign. Get clear answers in 30 days. No long-term contracts, no guessing. Just real data.</p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Schedule a Consultation</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Alex Does Digital</h4>
+                    <p>Digital marketing consultant specializing in Google Ads and Facebook Ads for service-based businesses.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="case-studies">Results</a></li>
+                        <li><a href="blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://cal.com/alexanderstefanseo/agency">Schedule Call</a></li>
+                        <li><a href="mailto:alxndrstfn@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/alexanderstefan1/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
