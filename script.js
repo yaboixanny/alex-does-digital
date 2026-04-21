@@ -74,14 +74,6 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     }
 });
 
-document.querySelectorAll('.btn-secondary').forEach(button => {
-    if (button.textContent.includes('Case Studies')) {
-        button.addEventListener('click', function() {
-            // Placeholder for case studies navigation
-            alert('Case studies section coming soon! For now, please fill out the form to discuss your specific needs.');
-        });
-    }
-});
 // --- Case Study Interactive Logic ---
 
 // 1. Counter Animation
