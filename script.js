@@ -179,6 +179,37 @@ const initABSlider = () => {
     });
 };
 
+// 5. Load latest blog posts
+const loadLatestPosts = async () => {
+    const container = document.getElementById('latestPostsContainer');
+    if (!container) return;
+
+    try {
+        const response = await fetch('posts.json');
+        const posts = await response.json();
+
+        // Get first 3 posts (already sorted by date in posts.json)
+        const latestPosts = posts.slice(0, 3);
+
+        container.innerHTML = latestPosts.map(post => `
+            <a href="/${post.slug}" class="post-card">
+                <div class="post-card-body">
+                    <span class="post-category">${post.category}</span>
+                    <h3>${post.title}</h3>
+                    <p>${post.excerpt}</p>
+                    <div class="post-meta">
+                        <span class="post-date">${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                        <span class="post-read-time">${post.readTime}</span>
+                    </div>
+                </div>
+            </a>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading posts:', error);
+        container.innerHTML = '<p>Unable to load posts</p>';
+    }
+};
+
 // Initialize all features
 document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
@@ -186,4 +217,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initFloatingWidget();
     initFloatingCTA();
     initABSlider();
+    loadLatestPosts();
 });
