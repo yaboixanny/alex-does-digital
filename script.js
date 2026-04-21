@@ -134,7 +134,23 @@ const initROICalculator = () => {
     updateROI(); // Initial calc
 };
 
-// 3. Floating CTA Visibility
+// 3. Floating Widget Visibility
+const initFloatingWidget = () => {
+    const widget = document.querySelector('.floating-widget');
+    if (!widget) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+        if (scrollPercentage > 10) {
+            widget.classList.remove('hidden');
+        } else {
+            widget.classList.add('hidden');
+        }
+    });
+};
+
+// 3. Floating CTA Visibility (legacy)
 const initFloatingCTA = () => {
     const floatingCta = document.querySelector('.floating-cta');
     if (!floatingCta) return;
@@ -167,6 +183,7 @@ const initABSlider = () => {
 document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
     initROICalculator();
+    initFloatingWidget();
     initFloatingCTA();
     initABSlider();
 });
