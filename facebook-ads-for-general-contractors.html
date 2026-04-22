@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ads for General Contractors | Land High-Ticket Jobs | Alex Does Digital</title>
+    <meta name="description" content="Learn how to generate consistent, high-ticket contractor jobs using Facebook Ads. Proven strategy for landing renovation leads and scaling your contracting business.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Warning callout ─────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Related links ───────────────────────────────────────── */
+        .related-articles {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e6ef;
+        }
+
+        .related-articles h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-link {
+            display: block;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            color: #0069cc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .related-link:hover {
+            color: var(--color-accent-cyan);
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/facebook-ads-for-general-contractors">
+    <meta property="og:title" content="Facebook Ads for General Contractors | Land High-Ticket Jobs">
+    <meta property="og:description" content="Generate consistent, high-ticket contractor jobs using Facebook Ads. Proven strategy for scaling your contracting business.">
+    <meta property="og:url" content="https://alxdoesdigital.com/facebook-ads-for-general-contractors">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Facebook Ads for General Contractors">
+    <meta property="twitter:description" content="Generate high-ticket jobs with Facebook Ads. Land renovation leads consistently.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Facebook Ads for General Contractors: How to Consistently Land High-Ticket Jobs",
+        "description": "Learn how to generate consistent, high-ticket contractor jobs using Facebook Ads. Proven strategy for landing renovation leads and scaling your business.",
+        "datePublished": "2026-04-22",
+        "dateModified": "2026-04-22",
+        "author": {
+            "@type": "Person",
+            "name": "Alex",
+            "url": "https://alxdoesdigital.com/about"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alex Does Digital",
+            "url": "https://alxdoesdigital.com"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://alxdoesdigital.com/facebook-ads-for-general-contractors"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Facebook Ads</span>
+                    <span class="post-hero-date">April 22, 2026</span>
+                    <span class="post-hero-read-time">7 min read</span>
+                </div>
+
+                <h1>Facebook Ads for General Contractors: How to Consistently Land High-Ticket Jobs</h1>
+
+                <p class="post-hero-lede">
+                    Stop relying on referrals alone. Learn how to generate consistent, high-ticket contractor jobs using Facebook Ads.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <article class="post-body">
+
+                <p>
+                    Most general contractors rely heavily on referrals, word-of-mouth, and platforms like HomeStars or Houzz. While those can work, they're inconsistent and hard to scale.
+                </p>
+
+                <p>
+                    <strong>Facebook Ads solve that problem</strong> by giving you a predictable way to generate homeowner leads every single month.
+                </p>
+
+                <p>
+                    In this guide, you'll learn exactly how to use Facebook Ads for general contractors to land high-ticket jobs consistently.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Why Facebook Ads Work So Well for General Contractors</h2>
+
+                <p>General contracting is one of the highest ROI niches for Facebook Ads because:</p>
+
+                <ul>
+                    <li>Jobs are high-ticket ($5,000–$100,000+)</li>
+                    <li>Homeowners respond strongly to visual transformations</li>
+                    <li>You only need a few jobs per month to win big</li>
+                </ul>
+
+                <p>
+                    Unlike Google Ads (which captures people actively searching), <strong>Facebook allows you to get in front of homeowners before they even start looking</strong>. You're creating demand, not just reacting to it.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>The Best Offers for Contractor Ads</h2>
+
+                <p>
+                    Your offer determines whether your campaign wins or loses. A weak offer = no leads.
+                </p>
+
+                <p>Top-performing offers include:</p>
+
+                <ul class="offer-list">
+                    <li>Free in-home estimate</li>
+                    <li>$1,000+ off renovation projects</li>
+                    <li>Free design consultation</li>
+                    <li>"Book this month, save X%"</li>
+                </ul>
+
+                <p>
+                    The key is to <strong>remove friction and give homeowners a reason to act now</strong>. Vague offers get ignored.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Creative That Converts (This Is Non-Negotiable)</h2>
+
+                <p>
+                    Contractors win with proof. Your creative must showcase real work.
+                </p>
+
+                <p>Use these proven formats:</p>
+
+                <ul>
+                    <li><strong>Before and After Remodels</strong> – Kitchen/bathroom transformations work best</li>
+                    <li><strong>Walkthrough Videos</strong> – Show finished jobs in full detail</li>
+                    <li><strong>Time-Lapse Renovations</strong> – Fast, compelling proof of work</li>
+                    <li><strong>Project Portfolio Slides</strong> – Multiple jobs in one carousel</li>
+                </ul>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>Bad creatives = no leads.</strong><br>
+                        This is non-negotiable. Invest in quality before/afters or you're wasting money.
+                    </p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Targeting Strategy (Keep It Simple)</h2>
+
+                <p>You don't need complex targeting. Broad local targeting works best for contractors:</p>
+
+                <ul>
+                    <li><strong>Radius:</strong> 15–30 km around your service area</li>
+                    <li><strong>Age:</strong> 30–65+</li>
+                    <li><strong>Homeowners:</strong> Target homeowner status if available</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Pro Tip:</strong> Broad targeting often beats narrow, complex audiences. Let Facebook's algorithm find qualified homeowners.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Campaign Setup (Simple & Effective)</h2>
+
+                <h3>Campaign Objective:</h3>
+                <ul>
+                    <li><strong>Leads</strong> (using Instant Forms)</li>
+                </ul>
+
+                <h3>Starting Budget:</h3>
+                <ul>
+                    <li>$20–$60/day to start</li>
+                </ul>
+
+                <h3>Campaign Structure:</h3>
+                <ul>
+                    <li>1 campaign</li>
+                    <li>1–2 ad sets</li>
+                    <li>2–3 creatives minimum (different jobs, angles)</li>
+                </ul>
+
+                <p>
+                    Avoid overcomplication. This simple structure converts extremely well.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Lead Form Setup (Keep It Short)</h2>
+
+                <p>Shorter forms = more leads. Keep it to the essentials:</p>
+
+                <ul>
+                    <li>Name</li>
+                    <li>Phone number</li>
+                    <li>Project type (renovation, remodel, etc.)</li>
+                    <li>Timeline for project</li>
+                </ul>
+
+                <p>
+                    Optional: Budget range (helps you qualify leads before calling).
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Follow-Up System (Speed Wins Jobs)</h2>
+
+                <p>
+                    Speed is everything in contracting. Homeowners get multiple quotes. The fastest contractor wins.
+                </p>
+
+                <p>Best practices:</p>
+
+                <ul>
+                    <li><strong>Call within 5 minutes</strong> – Don't wait</li>
+                    <li><strong>Pre-qualify budget</strong> – Understand their scope</li>
+                    <li><strong>Book on-site estimate ASAP</strong> – In-person meetings close jobs</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Example message:</strong> "Hey! Saw you requested a free estimate. We've got availability this week—what day works best for a quick walkthrough?"</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Expected Results (What to Expect)</h2>
+
+                <p>Typical performance for general contractors:</p>
+
+                <ul>
+                    <li><strong>Cost per lead:</strong> $15–$50</li>
+                    <li><strong>Leads per month:</strong> 10–40 (depending on budget)</li>
+                    <li><strong>Job conversion:</strong> 1–2 jobs typically covers months of ad spend</li>
+                </ul>
+
+                <p>
+                    One $10,000 kitchen renovation job pays for months of ads. The ROI is incredible if you follow up properly.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Common Mistakes to Avoid</h2>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>Weak offer</strong><br>
+                        "Contact us" doesn't work. Give homeowners a reason to respond.
+                    </p>
+                </div>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>Poor quality visuals</strong><br>
+                        Bad before/afters kill campaigns. Use high-quality project photos.
+                    </p>
+                </div>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>Slow response time</strong><br>
+                        If you don't call in 5 minutes, someone else will. Speed matters.
+                    </p>
+                </div>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>No sales process</strong><br>
+                        Ads bring leads, but your team closes jobs. Train them to sell.
+                    </p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Final Thoughts</h2>
+
+                <p>
+                    Facebook Ads give contractors control over their pipeline. No more hoping for referrals.
+                </p>
+
+                <p>The winning formula:</p>
+
+                <ul>
+                    <li>Strong, specific offer</li>
+                    <li>High-quality proof (before/afters)</li>
+                    <li>Simple, local targeting</li>
+                    <li>Fast follow-up (under 5 minutes)</li>
+                </ul>
+
+                <p>
+                    <strong>Execute that consistently and you'll never rely on referrals again.</strong>
+                </p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Fill Your Pipeline with High-Ticket Jobs?</h3>
+                    <p>
+                        Let's build a custom Facebook Ads strategy for your contracting business. Get a free strategy call to discuss your market and how we can help you generate consistent, qualified leads.
+                    </p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary btn-large">Book Your Free Strategy Call</a>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="related-articles">
+                    <h3>See Similar Strategies</h3>
+                    <a href="facebook-ads-lead-generation" class="related-link">← Learn our complete Facebook Ads lead generation strategy</a>
+                    <a href="facebook-ads-for-flooring-companies" class="related-link">← Facebook Ads for Flooring Companies</a>
+                    <a href="facebook-ads-for-hair-salons" class="related-link">← Facebook Ads for Hair Salons</a>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-brand">Alex Does Digital</h3>
+                    <p class="footer-mission">
+                        Helping small to medium businesses generate more qualified leads through proven
+                        Google Ads, Facebook Ads, and SEO strategies.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="footer-stat">
+                            <strong>150+</strong>
+                            <span>Businesses Helped</span>
+                        </div>
+                        <div class="footer-stat">
+                            <strong>300%</strong>
+                            <span>Average ROI</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="google-ads-for-service-businesses">Google Ads Management</a></li>
+                        <li><a href="facebook-ads-lead-generation">Facebook Ads Campaigns</a></li>
+                        <li><a href="conversion-rate-optimization">Conversion Optimization</a></li>
+                        <li><a href="industries">Industry Hubs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="case-studies">Case Studies</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="https://cal.com/alexanderstefanseo/agency">Free Strategy Call</a></li>
+                        <li><a href="about">About Alex</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:alex@alexdoesdigital.com">alex@alexdoesdigital.com</a>
+                        </li>
+                        <li>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+17163903081">716-390-3081</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
+                <p class="footer-badge">Certified Google Ads &amp; Facebook Ads Expert</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Widget -->
+    <div class="floating-widget hidden">
+        <div class="floating-widget-content">
+            <p>Need help with leads?</p>
+            <a href="https://cal.com/alexanderstefanseo/agency" class="floating-widget-btn">Book a call</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
