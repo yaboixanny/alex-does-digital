@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ads for Flooring Companies | Generate Quality Leads | Alex Does Digital</title>
+    <meta name="description" content="Learn how to generate consistent, high-quality flooring leads using Facebook Ads. Proven strategy for flooring companies with before/after visuals and strong offers.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Warning callout ─────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Related links ───────────────────────────────────────── */
+        .related-articles {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e6ef;
+        }
+
+        .related-articles h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-link {
+            display: block;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            color: #0069cc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .related-link:hover {
+            color: var(--color-accent-cyan);
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/facebook-ads-for-flooring-companies">
+    <meta property="og:title" content="Facebook Ads for Flooring Companies | Generate Quality Leads">
+    <meta property="og:description" content="Learn how to generate consistent, high-quality flooring leads using Facebook Ads. Proven strategy for flooring businesses.">
+    <meta property="og:url" content="https://alxdoesdigital.com/facebook-ads-for-flooring-companies">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Facebook Ads for Flooring Companies">
+    <meta property="twitter:description" content="Generate consistent flooring leads with Facebook Ads. Before/after visuals + strong offers.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Facebook Ads for Flooring Companies: How to Generate High-Quality Leads Consistently",
+        "description": "Learn how to generate consistent, high-quality flooring leads using Facebook Ads. Proven strategy with before/after visuals and strong offer strategy.",
+        "datePublished": "2026-04-22",
+        "dateModified": "2026-04-22",
+        "author": {
+            "@type": "Person",
+            "name": "Alex",
+            "url": "https://alxdoesdigital.com/about"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alex Does Digital",
+            "url": "https://alxdoesdigital.com"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://alxdoesdigital.com/facebook-ads-for-flooring-companies"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Facebook Ads</span>
+                    <span class="post-hero-date">April 22, 2026</span>
+                    <span class="post-hero-read-time">7 min read</span>
+                </div>
+
+                <h1>Facebook Ads for Flooring Companies: How to Generate High-Quality Leads Consistently</h1>
+
+                <p class="post-hero-lede">
+                    Flooring is a perfect fit for Facebook Ads. Learn how to generate consistent, high-quality homeowner leads for your flooring business.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <article class="post-body">
+
+                <p>
+                    If you run a flooring business, you've probably experienced inconsistent lead flow—busy one month, quiet the next.
+                </p>
+
+                <p>
+                    Relying only on referrals or organic traffic isn't enough to scale. That's where <strong>Facebook Ads for flooring companies</strong> come in.
+                </p>
+
+                <p>
+                    When done right, Facebook Ads can generate a steady stream of homeowner leads actively interested in upgrading their floors.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Why Facebook Ads Work So Well for Flooring Companies</h2>
+
+                <p>Flooring is a high-ticket, visual service—perfect for Facebook. Here's why:</p>
+
+                <ul>
+                    <li>Strong before & after transformations</li>
+                    <li>High emotional impact (home improvement)</li>
+                    <li>Large job values ($2,000–$15,000+)</li>
+                    <li>Easy local targeting</li>
+                </ul>
+
+                <p>
+                    Unlike Google Ads (intent-based), Facebook Ads help you reach homeowners <strong>before they start searching</strong>. You're creating demand, not just capturing it.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>The Best Offers for Flooring Ads</h2>
+
+                <p>
+                    Your offer is the most important part of your campaign. Weak offers get ignored.
+                </p>
+
+                <p><strong>Weak:</strong> "Contact us today"<br>
+                <strong>Strong:</strong> Something specific and valuable</p>
+
+                <p>High-performing offers:</p>
+
+                <ul class="offer-list">
+                    <li>Free in-home estimate</li>
+                    <li>$500 off flooring installation</li>
+                    <li>Free upgrade (underlay, trim, etc.)</li>
+                    <li>Limited-time seasonal promotion</li>
+                </ul>
+
+                <p>
+                    The goal: <strong>Give homeowners a reason to stop scrolling and choose you over competitors.</strong>
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Ad Creative That Converts</h2>
+
+                <p>Your creative stops the scroll. For flooring, focus on these proven formats:</p>
+
+                <h3>1. Before & After Photos</h3>
+                <ul>
+                    <li>Old floors vs new floors</li>
+                    <li>Instant visual impact</li>
+                </ul>
+
+                <h3>2. Short Video Walkthroughs</h3>
+                <ul>
+                    <li>Show finished projects</li>
+                    <li>Highlight quality and detail</li>
+                </ul>
+
+                <h3>3. Installation Process Clips</h3>
+                <ul>
+                    <li>Builds trust and confidence</li>
+                    <li>Shows professionalism</li>
+                </ul>
+
+                <h3>4. Clean Project Photos</h3>
+                <ul>
+                    <li>Bright, well-lit spaces</li>
+                    <li>Modern homes perform best</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Key Insight:</strong> Your creative should make people think: "I want that in my house." The visual transformation is your biggest asset.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Targeting (Keep It Simple)</h2>
+
+                <p>You don't need complex targeting. Start with these basics:</p>
+
+                <ul>
+                    <li><strong>Location:</strong> 10–30 km radius around your service area</li>
+                    <li><strong>Age:</strong> 30–65+</li>
+                    <li><strong>Homeowners:</strong> Target homeowner status if available</li>
+                </ul>
+
+                <p>
+                    Optional interests: Home improvement, interior design, renovations. However, <strong>broad targeting often works best</strong> for flooring.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Campaign Setup</h2>
+
+                <h3>Campaign Objective:</h3>
+                <ul>
+                    <li><strong>Leads</strong> (using Instant Forms)</li>
+                    <li><strong>Messages</strong> (for DM inquiries)</li>
+                </ul>
+
+                <h3>Starting Budget:</h3>
+                <ul>
+                    <li>$15–$50/day to start</li>
+                </ul>
+
+                <h3>Campaign Structure:</h3>
+                <ul>
+                    <li>1 campaign</li>
+                    <li>1–2 ad sets</li>
+                    <li>2–3 ads per set</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>Use Instant Forms for Cheap Leads</h2>
+
+                <p>
+                    Instant Forms convert extremely well for flooring because they capture leads without friction. No leaving the app, no dealing with slow pages.
+                </p>
+
+                <p>Keep the form simple:</p>
+
+                <ul>
+                    <li>Name</li>
+                    <li>Phone number</li>
+                    <li>Type of flooring (optional)</li>
+                    <li>Timeline for project (optional)</li>
+                </ul>
+
+                <p>
+                    <strong>Less friction = more leads.</strong>
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Follow-Up Is Everything</h2>
+
+                <p>
+                    Most flooring jobs are won based on speed. Homeowners get multiple quotes.
+                </p>
+
+                <p>Best practices:</p>
+
+                <ul>
+                    <li>Respond within 5–10 minutes</li>
+                    <li>Call first, then text</li>
+                    <li>Offer a clear next step (free quote or in-home visit)</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Example message:</strong> "Hey! Saw you requested a flooring quote 😊 We've got availability this week—what day works best?"</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Expected Results</h2>
+
+                <p>Typical performance for flooring companies:</p>
+
+                <ul>
+                    <li><strong>Cost per lead:</strong> $10–$40</li>
+                    <li><strong>Leads per month:</strong> 15–50 (depending on budget)</li>
+                    <li><strong>Close rate:</strong> 20–40% (with a solid sales process)</li>
+                </ul>
+
+                <p>
+                    One closed flooring job can pay for months of ads. The ROI is excellent if you follow up properly.
+                </p>
+
+                <hr class="post-divider">
+
+                <h2>Common Mistakes to Avoid</h2>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>No clear offer</strong><br>
+                        Generic CTAs don't work. People need a reason to respond.
+                    </p>
+                </div>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>Poor quality images</strong><br>
+                        Flooring is visual. Invest in good photos. Bad lighting kills conversions.
+                    </p>
+                </div>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>Overcomplicated targeting</strong><br>
+                        Broad local targeting beats narrow, complex audiences for flooring.
+                    </p>
+                </div>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>Slow follow-up</strong><br>
+                        A lead that waits 30 minutes is a lost lead. Call immediately.
+                    </p>
+                </div>
+
+                <div class="callout-warning">
+                    <p>
+                        <strong>No sales process</strong><br>
+                        Ads bring leads, but your sales team closes jobs. Train them.
+                    </p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Final Thoughts</h2>
+
+                <p>
+                    Facebook Ads are one of the fastest ways to grow a flooring business. The formula is simple and repeatable.
+                </p>
+
+                <p>The winning strategy:</p>
+
+                <ul>
+                    <li>Strong, specific offer</li>
+                    <li>High-quality visual proof</li>
+                    <li>Simple, local targeting</li>
+                    <li>Fast follow-up (under 10 minutes)</li>
+                </ul>
+
+                <p>
+                    Execute that consistently, and you'll generate quality leads every month.
+                </p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Generate More Flooring Leads?</h3>
+                    <p>
+                        Let's build a custom Facebook Ads strategy for your flooring company. Get a free strategy call to discuss your specific market and how we can help you generate consistent leads.
+                    </p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary btn-large">Book Your Free Strategy Call</a>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="related-articles">
+                    <h3>See Similar Strategies</h3>
+                    <a href="facebook-ads-lead-generation" class="related-link">← Learn our complete Facebook Ads lead generation strategy</a>
+                    <a href="facebook-ads-for-hair-salons" class="related-link">← Facebook Ads for Hair Salons</a>
+                    <a href="facebook-ads-for-plumbers" class="related-link">← Facebook Ads for Plumbers</a>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-brand">Alex Does Digital</h3>
+                    <p class="footer-mission">
+                        Helping small to medium businesses generate more qualified leads through proven
+                        Google Ads, Facebook Ads, and SEO strategies.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="footer-stat">
+                            <strong>150+</strong>
+                            <span>Businesses Helped</span>
+                        </div>
+                        <div class="footer-stat">
+                            <strong>300%</strong>
+                            <span>Average ROI</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="google-ads-for-service-businesses">Google Ads Management</a></li>
+                        <li><a href="facebook-ads-lead-generation">Facebook Ads Campaigns</a></li>
+                        <li><a href="conversion-rate-optimization">Conversion Optimization</a></li>
+                        <li><a href="industries">Industry Hubs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="case-studies">Case Studies</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="https://cal.com/alexanderstefanseo/agency">Free Strategy Call</a></li>
+                        <li><a href="about">About Alex</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:alex@alexdoesdigital.com">alex@alexdoesdigital.com</a>
+                        </li>
+                        <li>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+17163903081">716-390-3081</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
+                <p class="footer-badge">Certified Google Ads &amp; Facebook Ads Expert</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Widget -->
+    <div class="floating-widget hidden">
+        <div class="floating-widget-content">
+            <p>Need help with leads?</p>
+            <a href="https://cal.com/alexanderstefanseo/agency" class="floating-widget-btn">Book a call</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
