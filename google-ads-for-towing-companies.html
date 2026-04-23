@@ -275,7 +275,7 @@
         .towing-cta h2 {
             font-size: 2rem;
             font-weight: 800;
-            color: var(--color-text-light);
+            color: #ffffff;
             margin-bottom: 1rem;
         }
 
@@ -287,8 +287,66 @@
             opacity: 0.9;
         }
 
+        /* Case Study Video Section */
+        .case-study-video-section {
+            background: var(--color-bg-light);
+            padding: 5rem 0;
+        }
+
+        .video-showcase {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        .case-study-details h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-details .offer-list {
+            margin-bottom: 2rem;
+        }
+
+        .case-study-details .offer-list li {
+            background: var(--color-bg-dark);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            color: var(--color-text-light) !important;
+        }
+
+        .case-study-details .offer-list li::before {
+            color: var(--color-accent-cyan);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            .video-showcase {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
             .towing-hero {
                 padding: 4rem 0 3rem;
             }
@@ -500,6 +558,37 @@
                 <a href="facebook-ads-for-towing-companies" class="related-link">Facebook Ads for Towing Companies →</a>
                 <a href="seo-for-towing-companies" class="related-link">SEO for Towing Companies →</a>
                 <a href="google-ads-towing-case-study" class="related-link">Towing Case Study: $18.53 Cost Per Call →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Video Section -->
+    <section class="case-study-video-section">
+        <div class="container">
+            <h2 class="section-heading">See Real Results: Towing Case Study</h2>
+            <p class="section-subtitle">Watch how we helped a towing company achieve $18.53 cost per call with a 35% conversion rate</p>
+            <div class="video-showcase">
+                <div class="video-wrapper">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/ieFbtzxs6UY"
+                        title="Towing Company Google Ads Case Study"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="case-study-details">
+                    <h3>The Numbers</h3>
+                    <ul class="offer-list">
+                        <li><strong>$18.53</strong> average cost per call</li>
+                        <li><strong>35%</strong> conversion rate to paying jobs</li>
+                        <li><strong>$55/day</strong> budget (just under $1,700/month)</li>
+                        <li><strong>Consistent 2-3</strong> calls daily during peak hours</li>
+                    </ul>
+                    <a href="google-ads-towing-case-study" class="btn btn-primary">View Full Case Study →</a>
+                </div>
             </div>
         </div>
     </section>
