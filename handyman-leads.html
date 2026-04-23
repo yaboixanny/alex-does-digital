@@ -9,6 +9,142 @@
         content="Generate consistent handyman leads through Google Ads, Facebook Ads, and SEO. Proven strategies help handymen book more jobs and grow their business fast.">
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Enhanced page styling */
+        .resources-section {
+            padding: 5rem 0;
+        }
+
+        .resources-category {
+            margin-bottom: 4rem;
+        }
+
+        .resources-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-dark);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .category-title svg {
+            color: var(--color-accent-cyan);
+            flex-shrink: 0;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: white;
+            border: 1px solid #e2e6ef;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .resource-card:hover {
+            border-color: var(--color-accent-cyan);
+            box-shadow: 0 8px 24px rgba(0, 217, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .resource-image {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .resource-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .resource-card:hover .play-button-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            background: var(--color-accent-cyan);
+            color: #0f1528;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+        }
+
+        .resource-card-content {
+            padding: 1.75rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f1528;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .resource-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .resource-link {
+            font-weight: 600;
+            color: var(--color-accent-cyan);
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .resource-card:hover .resource-link {
+            color: var(--color-accent-magenta);
+        }
+
+        /* FAQ Styling */
         .faq-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -71,6 +207,14 @@
 
             .faq-answer {
                 font-size: 0.9rem;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-title {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -365,36 +509,6 @@
                 </div>
             </div>
 
-            <!-- Case Studies Grid -->
-            <div class="resources-category">
-                <h3 class="category-title">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                    Case Studies
-                </h3>
-                <div class="resources-grid">
-                    <a href="case-studies" class="resource-card">
-                        <div class="resource-card-content">
-                            <h4>78 Qualified Leads in 30 Days: Google Ads Success</h4>
-                            <p>Real campaign results from a handyman service achieving consistent leads with Google
-                                Local Services and Search Ads.</p>
-                            <span class="resource-link">View Case Study →</span>
-                        </div>
-                    </a>
-                    <a href="case-studies" class="resource-card">
-                        <div class="resource-card-content">
-                            <h4>Handyman Facebook Ads: Before/After Campaign Results</h4>
-                            <p>How strategic Facebook and Instagram Ads showcasing projects generate qualified handyman
-                                inquiries.</p>
-                            <span class="resource-link">View Case Study →</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
             <!-- Videos Grid -->
             <div class="resources-category">
                 <h3 class="category-title">
@@ -422,44 +536,6 @@
                             <h4>Scale Your Handyman Business with Google Ads</h4>
                             <p>Advanced strategies for scaling your handyman service to $20k+/month using highly
                                 targeted search campaigns.</p>
-                            <span class="resource-link">Watch Video →</span>
-                        </div>
-                    </a>
-                    <a href="case-studies" class="resource-card">
-                        <div class="resource-image">
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=450&fit=crop"
-                                alt="Google Ads Setup" class="resource-thumbnail">
-                            <div class="play-button-overlay">
-                                <div class="play-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <polygon points="5,3 19,12 5,21" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resource-card-content">
-                            <h4>Setting Up Google Ads for Handyman Services (14 min)</h4>
-                            <p>Watch me build a handyman Google Ads campaign from scratch with live commentary and best
-                                practices.</p>
-                            <span class="resource-link">Watch Video →</span>
-                        </div>
-                    </a>
-                    <a href="case-studies" class="resource-card">
-                        <div class="resource-image">
-                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=450&fit=crop"
-                                alt="Facebook Ads Walkthrough" class="resource-thumbnail">
-                            <div class="play-button-overlay">
-                                <div class="play-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <polygon points="5,3 19,12 5,21" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resource-card-content">
-                            <h4>Creating High-Converting Handyman Facebook Ads (16 min)</h4>
-                            <p>Step-by-step walkthrough of creating before/after project ads that generate service
-                                inquiries.</p>
                             <span class="resource-link">Watch Video →</span>
                         </div>
                     </a>
