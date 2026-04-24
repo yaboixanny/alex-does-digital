@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ads for Appliance Repair: Get More Service Calls | Alex Does Digital</title>
+    <meta name="description" content="Stop wasting money on appliance repair ads. Learn the exact Facebook Ads blueprint to generate qualified emergency calls at $12-25 per lead.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Callout Warning ────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Table ──────────────────────────────────────────────── */
+        .post-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .post-body th {
+            background: var(--color-bg-dark);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .post-body td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e6ef;
+        }
+
+        .post-body tr:last-child td {
+            border-bottom: none;
+        }
+
+        .post-body tr:nth-child(even) {
+            background: #f9fafc;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/facebook-ads-for-appliance-repair">
+    <meta property="og:title" content="Facebook Ads for Appliance Repair: Get More Service Calls">
+    <meta property="og:description" content="Stop wasting money on appliance repair ads. Learn the exact Facebook Ads blueprint to generate qualified emergency calls.">
+    <meta property="og:url" content="https://alxdoesdigital.com/facebook-ads-for-appliance-repair">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Facebook Ads for Appliance Repair: Get More Service Calls">
+    <meta property="twitter:description" content="Stop wasting money on appliance repair ads. Learn the exact Facebook Ads blueprint.">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Facebook Ads for Appliance Repair: Stop Wasting Money & Get More Service Calls",
+    "description": "Stop wasting money on appliance repair ads. Learn the exact Facebook Ads blueprint to generate qualified emergency calls at $12-25 per lead.",
+    "datePublished": "2026-04-24",
+    "dateModified": "2026-04-24",
+    "author": {
+        "@type": "Person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Alex Does Digital",
+        "url": "https://alxdoesdigital.com"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/facebook-ads-for-appliance-repair"
+    }
+}
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Facebook Ads</span>
+                    <span class="post-hero-date">April 24, 2026</span>
+                    <span class="post-hero-read-time">9 min read</span>
+                </div>
+                <h1>Facebook Ads for Appliance Repair: Stop Wasting Money & Get More Calls</h1>
+                <p class="post-hero-lede">
+                    When someone's fridge dies at 8 PM on a Sunday, they don't flip through the Yellow Pages. They grab their phone. If your appliance repair business isn't showing up in that moment, you're leaving thousands on the table. Here's the exact Facebook Ads blueprint that works.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog" class="back-to-blog">← Back to Blog</a>
+
+                <p>Most appliance repair techs run boring "We fix appliances" ads and get zero calls. They're targeting everyone, with no message that resonates, and wondering why their Facebook Ads don't work.</p>
+
+                <p>Here's the problem: appliance repair is a <strong>time-sensitive, high-urgency, local service</strong>. Your ads need to reflect that urgency and speak directly to the person in a panic about their broken dishwasher.</p>
+
+                <p>This is the exact blueprint that generates qualified emergency calls at $12-25 per lead. Copy it.</p>
+
+                <hr class="post-divider">
+
+                <h2>1. Stop Targeting Homeowners (Target the Emergency)</h2>
+
+                <p>Generic targeting fails. Forget broad ZIP codes and income levels. Use Facebook's behavioral data to target:</p>
+
+                <ul class="offer-list">
+                    <li><strong>People who moved recently</strong> (new homeowners break dishwashers fast)</li>
+                    <li><strong>Engaged shoppers</strong> (people who buy home goods often need repairs)</li>
+                    <li><strong>Lookalike audiences</strong> from your past repair invoices</li>
+                </ul>
+
+                <p>But here's the real secret: <strong>Create custom audiences from people who engaged with your "Emergency Repair Checklist" video.</strong> Facebook will find more people just like them—people who are already interested in appliance fixes.</p>
+
+                <hr class="post-divider">
+
+                <h2>2. The Ad Creative That Gets the Click</h2>
+
+                <p>Generic stock photos of wrenches fail. Here's what actually wins:</p>
+
+                <ul>
+                    <li><strong>Before & after video:</strong> A broken oven clicking — 45 seconds later, it's heating perfectly.</li>
+                    <li><strong>The "Don't Buy New Yet" text overlay:</strong> "Before you spend $2,000 on a new washer, try this $200 fix."</li>
+                    <li><strong>Customer testimonial (on-site):</strong> Film a client saying, "They came in 2 hours. Fixed my freezer for half what I expected."</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Pro Tip:</strong> Put the problem in the first 3 seconds. Example: "Hear that grinding noise? That's your dryer eating its own belt. Here's the fix."</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>3. The Landing Page Rule (Most Techs Fail Here)</h2>
+
+                <p>Never send traffic to your homepage. Create a <strong>dedicated "Emergency Repair" landing page</strong> with:</p>
+
+                <ul class="offer-list">
+                    <li>A big button: <strong>"Tap to Call — Pick Up in 90 Mins"</strong></li>
+                    <li>Your service area zip codes listed visibly</li>
+                    <li>Three real before/after photos</li>
+                    <li>A simple form: "Describe the problem" (no name/email required upfront)</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>4. The $20/day Ad Set Structure That Works</h2>
+
+                <p>Here's how to split your budget for the first 7 days:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ad Set</th>
+                            <th>Budget</th>
+                            <th>Targeting</th>
+                            <th>Goal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Emergency Retargeting</strong></td>
+                            <td>$10/day</td>
+                            <td>Visited repair page, didn't call</td>
+                            <td>Booked calls</td>
+                        </tr>
+                        <tr>
+                            <td><strong>New Homeowners</strong></td>
+                            <td>$5/day</td>
+                            <td>Moved last 6mo, 5-mile radius</td>
+                            <td>Fill weekday slots</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Competitor Conquesting</strong></td>
+                            <td>$5/day</td>
+                            <td>Like "Sears Home Services" or "Mr. Appliance"</td>
+                            <td>Steal customers</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout-warning">
+                    <p><strong>Ad Schedule:</strong> Pause ads from 11 PM to 7 AM. Nobody calls for a noisy dishwasher at 3 AM unless it's flooding.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>5. The Offer That Converts (Don't Discount — Add Value)</h2>
+
+                <p>Never run "10% off" — it attracts bargain hunters, not emergencies. Instead, offer:</p>
+
+                <ul class="offer-list">
+                    <li><strong>"$39 diagnostic fee waived if you approve the repair."</strong></li>
+                    <li><strong>"Free dryer vent cleaning with any washer repair."</strong></li>
+                    <li><strong>"1-hour arrival windows or $25 off your next visit."</strong></li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>Example Facebook Ad (Copy & Paste)</h2>
+
+                <div class="callout">
+                    <p><strong>Headline:</strong> "Oven won't heat? We'll be there in 90m."</p>
+                    <p style="margin-top: 1rem;"><strong>Primary Text:</strong><br>
+                    No one should eat cereal for dinner because of a broken stove.<br>
+                    We stock 90% of parts on the truck — most fixes take <45 minutes.<br><br>
+                    ✓ Same-day (yes, Sunday too)<br>
+                    ✓ Flat-rate pricing — no "sorry, we need to order that" surprises<br><br>
+                    Tap "Send Message" with your appliance brand + problem. We'll text you the exact price.</p>
+                    <p style="margin-top: 1rem;"><strong>Button:</strong> Send Message (or Call Now)</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Tracking What Matters</h2>
+
+                <p>Forget "likes" and "shares." Check these daily in your Facebook Ads Manager:</p>
+
+                <ul class="offer-list">
+                    <li><strong>Cost per call lead</strong> (aim for $12–$25)</li>
+                    <li><strong>Message response rate</strong> (reply within 4 minutes or you lose the job)</li>
+                    <li><strong>Form-to-call ratio</strong> (if they fill a form but you miss the phone, you lose)</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>The Bottom Line</h2>
+
+                <p>Appliance repair is high-intent, local, and time-sensitive. Facebook's algorithm loves that. Run the structure above for 10 days with $200 total. If you don't get at least 3 paying jobs, change your creative — not your targeting.</p>
+
+                <p>Now go unfreeze that freezer and cash those checks.</p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Get More Appliance Repair Calls?</h3>
+                    <p>Let's build a custom Facebook Ads strategy that actually generates booked jobs for your appliance repair business.</p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Schedule Your Free Strategy Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
