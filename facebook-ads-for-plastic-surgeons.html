@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ads for Plastic Surgeons: High-ROI Patient Acquisition | Alex Does Digital</title>
+    <meta name="description" content="Master Facebook Ads for plastic surgeons with advanced targeting, long-tail keywords, and retargeting strategies. Book high-value consultations consistently.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Callout Warning ────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/facebook-ads-for-plastic-surgeons">
+    <meta property="og:title" content="Facebook Ads for Plastic Surgeons: High-ROI Patient Acquisition">
+    <meta property="og:description" content="Master Facebook Ads for plastic surgeons with advanced targeting, long-tail keywords, and retargeting strategies.">
+    <meta property="og:url" content="https://alxdoesdigital.com/facebook-ads-for-plastic-surgeons">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Facebook Ads for Plastic Surgeons: High-ROI Patient Acquisition">
+    <meta property="twitter:description" content="Master Facebook Ads for plastic surgeons. Learn long-tail keywords, LSI terms, and retargeting strategies.">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Master Facebook Ads for Plastic Surgeons: A 2026 Guide to High-Value Patient Acquisition",
+    "description": "Master Facebook Ads for plastic surgeons with advanced targeting, long-tail keywords, LSI terms, and surgical retargeting sequences to achieve triple-digit ROI.",
+    "datePublished": "2026-04-28",
+    "dateModified": "2026-04-28",
+    "author": {
+        "@type": "Person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Alex Does Digital",
+        "url": "https://alxdoesdigital.com"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/facebook-ads-for-plastic-surgeons"
+    }
+}
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Facebook Ads</span>
+                    <span class="post-hero-date">April 28, 2026</span>
+                    <span class="post-hero-read-time">11 min read</span>
+                </div>
+                <h1>How to Master Facebook Ads for Plastic Surgeons</h1>
+                <p class="post-hero-lede">
+                    Learn how to use long-tail keywords, LSI terms, and surgical retargeting sequences to consistently book high-value consultations and achieve triple-digit ROI on your Facebook Ads campaigns.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog" class="back-to-blog">← Back to Blog</a>
+
+                <p>In the competitive world of cosmetic medicine, waiting for patients to find you through organic search alone is no longer viable. To consistently fill your consultation calendar, you need a proactive, high-intent strategy.</p>
+
+                <p>When executed correctly, Facebook's granular targeting capabilities allow you to place your practice directly in front of high-net-worth individuals actively researching procedures like rhinoplasty, breast augmentation, or a facelift. However, running generic ads is a fast track to burning your budget.</p>
+
+                <p>This guide will show you how to use long-tail keywords, LSI (Latent Semantic Indexing) terms, and surgical retargeting sequences to achieve consistent, high-ROI patient acquisition.</p>
+
+                <hr class="post-divider">
+
+                <h2>Why Standard Ads Fail for Plastic Surgery Practices</h2>
+
+                <p>Most plastic surgeons make the critical mistake of boosting a single "before and after" photo to a broad audience of "women 35-55." This fails because cosmetic surgery is a high-consideration purchase.</p>
+
+                <p>Patients do not impulse-buy a tummy tuck. To succeed with Facebook Ads for plastic surgeons, you must map your campaigns to the patient journey: <strong>Awareness → Consideration → Decision</strong>.</p>
+
+                <hr class="post-divider">
+
+                <h2>Leveraging Long-Tail Keywords for Better CPL</h2>
+
+                <p>Long-tail keywords are the secret weapon for lowering your cost per consultation. Instead of targeting a broad term like "plastic surgery" (which is expensive and low-converting), target specific, intent-driven phrases.</p>
+
+                <h3>High-Converting Long-Tail Keywords for Your Ads:</h3>
+
+                <ul class="offer-list">
+                    <li>"Mommy makeover cost near me" (High purchase intent)</li>
+                    <li>"Non-surgical rhinoplasty recovery time" (Educational, low-friction)</li>
+                    <li>"Best blepharoplasty surgeon for Asian eyes" (Highly specific)</li>
+                    <li>"Liposuction vs CoolSculpting for lower belly" (Comparison stage)</li>
+                </ul>
+
+                <p>By using these long-tail keywords in your ad copy and creative, you tell the Facebook algorithm exactly who to find: users who are typing these solution-seeking queries into search engines or engaging with related content.</p>
+
+                <hr class="post-divider">
+
+                <h2>LSI Keywords: The Algorithm's Trust Signal</h2>
+
+                <p>Search engines and social algorithms love context. LSI keywords are thematically related terms that help Facebook understand your ad's relevance without "keyword stuffing."</p>
+
+                <p>For a campaign advertising a <strong>facelift</strong>, your LSI keywords should include:</p>
+
+                <ul class="offer-list">
+                    <li>Deep plane technique</li>
+                    <li>Cervicomental angle improvement</li>
+                    <li>SMAS lift vs mini lift</li>
+                    <li>Suture suspension</li>
+                    <li>Volume restoration</li>
+                </ul>
+
+                <p>When your ad copy contains these terms, Facebook's machine learning categorizes your practice as an authority, not a spammer. This improves your <strong>Relevance Score</strong>, lowering your CPM (Cost Per Mille).</p>
+
+                <hr class="post-divider">
+
+                <h2>Structuring the High-ROI Three-Layer Funnel</h2>
+
+                <p>To rank for Facebook Ads for plastic surgeons, you cannot use a single ad set. You need a strategic three-layer funnel.</p>
+
+                <h3>Layer 1: The Educational Warm-Up (Top of Funnel)</h3>
+                <ul>
+                    <li><strong>Goal:</strong> Generate clicks to a blog post (like "5 Signs You Need a Breast Revision")</li>
+                    <li><strong>Targeting:</strong> Lookalike audiences based on your clinic's email list + users who engage with cosmetic surgery pages</li>
+                    <li><strong>Ad Format:</strong> Carousel explaining different implant types (Silicone vs. Saline — LSI keywords)</li>
+                </ul>
+
+                <h3>Layer 2: The Value Ladder (Middle of Funnel)</h3>
+                <ul>
+                    <li><strong>Goal:</strong> Lead magnet download (e.g., "The Ultimate Facelift Checklist")</li>
+                    <li><strong>Targeting:</strong> People who watched 50% of your top-of-funnel video</li>
+                    <li><strong>Ad Copy:</strong> "Thinking about blepharoplasty? Download our 2026 surgical guide."</li>
+                </ul>
+
+                <h3>Layer 3: The Consultation Offer (Bottom of Funnel)</h3>
+                <ul>
+                    <li><strong>Goal:</strong> Direct booking</li>
+                    <li><strong>Targeting:</strong> Custom audience of lead magnet downloaders (7-day window)</li>
+                    <li><strong>Ad Copy:</strong> "You did the research. Now see the simulation. $100 off your consult fee (use code CONSULT100)."</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>Creative Elements That Convert Plastic Surgery Leads</h2>
+
+                <p>Your visual creative is your most valuable asset. For cosmetic surgery, trust and discretion are paramount.</p>
+
+                <ul class="offer-list">
+                    <li><strong>Natural-Looking Patient Photos:</strong> Use stock photography of happy, natural-looking patients. Avoid graphic intra-op photos in cold audiences.</li>
+                    <li><strong>Patient Testimonial Reels:</strong> 15-second clips of a patient saying, "I finally feel confident in a swimsuit after my mommy makeover."</li>
+                    <li><strong>POV Education:</strong> A surgeon scrubbing in, saying, "Here is why I prefer drain-less tummy tucks."</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>Retargeting: The Consultation Saver</h2>
+
+                <p>The #1 reason Facebook Ads for plastic surgeons fail is the lack of aggressive retargeting. <strong>97% of users will not book a surgery on their first visit.</strong></p>
+
+                <p>Set up a <strong>Retargeting Sequence</strong> for anyone who:</p>
+                <ol>
+                    <li>Visited your "Pricing" page but didn't book</li>
+                    <li>Clicked your "Botox" link but left</li>
+                    <li>Abandoned a consultation form</li>
+                </ol>
+
+                <div class="callout">
+                    <p><strong>Example Retargeting Ad:</strong> "Still deciding? Here are 56 real reviews from patients who felt the same way you do."</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>Compliance & Best Practices</h2>
+
+                <p>Remember, Facebook's ad policies restrict "before and after" images that imply unrealistic results. Avoid:</p>
+
+                <ul>
+                    <li>Blood, bruising, or surgical instruments</li>
+                    <li>Nudity (including post-mastectomy photos without clothing)</li>
+                    <li>Weight loss claims (e.g., "Lose 20lbs instantly")</li>
+                </ul>
+
+                <div class="callout-warning">
+                    <p><strong>Instead, focus on patient experience, surgeon authority, and educational value.</strong> This approach complies with Facebook policies while building trust with potential patients.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>The Bottom Line</h2>
+
+                <p>Mastering Facebook Ads for plastic surgeons is not about luck; it is about surgical precision in your targeting. By deploying long-tail keywords, LSI-rich copy, and a three-stage funnel, you can consistently acquire high-LTV (Lifetime Value) patients.</p>
+
+                <p>Start with a $500 test budget targeting "Mommy makeover recovery timeline" and scale the winning ads. Your next five-star review is just one click away.</p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Book More High-Value Consultations?</h3>
+                    <p>Let's build a Facebook Ads strategy specifically designed for your plastic surgery practice. Get a free strategy call to discuss advanced targeting and patient acquisition.</p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Schedule Your Free Strategy Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
