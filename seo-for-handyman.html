@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO for Handyman: Complete Guide to Ranking Locally & Generating Organic Jobs</title>
+    <meta name="description" content="Master local SEO for handyman services. Optimize Google Business Profile, create service pages, build local authority, and rank #1 for 'handyman near me' searches.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Callout Warning ────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Table ──────────────────────────────────────────────── */
+        .post-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.95rem;
+        }
+
+        .post-body th {
+            background: var(--color-bg-dark);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .post-body td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e6ef;
+        }
+
+        .post-body tr:last-child td {
+            border-bottom: none;
+        }
+
+        .post-body tr:nth-child(even) {
+            background: #f9fafc;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/seo-for-handyman">
+    <meta property="og:title" content="SEO for Handyman: Complete Guide to Ranking Locally">
+    <meta property="og:description" content="Master local SEO for handyman services and generate organic jobs through Google Business Profile and local optimization.">
+    <meta property="og:url" content="https://alxdoesdigital.com/seo-for-handyman">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SEO for Handyman: Complete Guide">
+    <meta property="twitter:description" content="Master local SEO and generate organic jobs for your handyman business.">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SEO for Handyman: Complete Guide to Ranking Locally & Generating Organic Jobs",
+    "description": "Master local SEO for handyman services. Optimize Google Business Profile, create service pages, and build local authority.",
+    "datePublished": "2026-04-29",
+    "dateModified": "2026-04-29",
+    "author": {
+        "@type": "Person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Alex Does Digital",
+        "url": "https://alxdoesdigital.com"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/seo-for-handyman"
+    }
+}
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">SEO</span>
+                    <span class="post-hero-date">April 29, 2026</span>
+                    <span class="post-hero-read-time">12 min read</span>
+                </div>
+                <h1>SEO for Handyman: Complete Guide to Ranking Locally & Generating Organic Jobs</h1>
+                <p class="post-hero-lede">
+                    Once you rank for "handyman near me," you generate calls every day for free. While competitors pay $5–$8 per click on Google Ads, you're cashing jobs from organic searches. Here's the complete SEO blueprint for handyman services.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog" class="back-to-blog">← Back to Blog</a>
+
+                <p>SEO for handymen takes 3–6 months to show serious results. But once you rank locally, the payoff is massive. You stop competing on ad spend and start winning the "handyman near me" searches that bring the best customers.</p>
+
+                <p>Most handymen ignore SEO entirely—which is your advantage. While they're burning money on ads, you can build a free, consistent lead generation machine.</p>
+
+                <hr class="post-divider">
+
+                <h2>1. Dominate Your Google Business Profile</h2>
+
+                <p>Your Google Business Profile is the #1 ranking factor for local handyman searches. Get this right, and you'll show up in the map pack and organic results.</p>
+
+                <h3>Critical Setup</h3>
+
+                <ul class="offer-list">
+                    <li>Use your real business name (don't stuff keywords)</li>
+                    <li>Category: "Handyman" (primary)</li>
+                    <li>Add secondary categories: "Drywall Repair," "Painting," "General Contractor" (whatever you specialize in)</li>
+                    <li>Write a compelling, unique description (not just "We fix things")</li>
+                    <li>Upload 15+ photos of actual jobs you've completed</li>
+                    <li>Add service area: List the zip codes and neighborhoods you serve</li>
+                    <li>Verify your phone and add current business hours</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Review Gold Mine:</strong> Ask every customer who books to leave a Google review. Aim for 5+ new reviews per month. Respond to every review (positive and negative). This signals active, trustworthy business.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>2. Build Service Pages for Each Handyman Specialty</h2>
+
+                <p>Don't create one "Services" page. Create individual pages for each task you offer.</p>
+
+                <h3>Example Page Structure</h3>
+
+                <ul class="offer-list">
+                    <li>Drywall Repair Handyman</li>
+                    <li>Interior Painting Services</li>
+                    <li>Furniture Assembly & Installation</li>
+                    <li>General Handyman Repairs</li>
+                    <li>Bathroom & Kitchen Repairs</li>
+                    <li>Door & Lock Installation</li>
+                </ul>
+
+                <h3>Each Page Needs</h3>
+
+                <ul>
+                    <li><strong>H1:</strong> "[Service] in [City] – Professional Handyman Services"</li>
+                    <li><strong>First Paragraph:</strong> Lead with location and problem solved. "Cracked drywall? Our licensed handyman provides professional drywall repair across [City]."</li>
+                    <li><strong>Sections:</strong> Common issues, why DIY fails, your process, customer reviews, service area</li>
+                    <li><strong>Photos:</strong> Before/after images of jobs YOU'VE completed</li>
+                    <li><strong>Internal Links:</strong> Link between related services (drywall repair → painting services)</li>
+                    <li><strong>Schema:</strong> LocalBusiness + Service schema markup</li>
+                </ul>
+
+                <div class="callout-warning">
+                    <p><strong>Content Length:</strong> Aim for 1,200+ words per service page. Thin content doesn't rank. Include real photos, prices, and specifics about YOUR process.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>3. Create Location-Specific Pages</h2>
+
+                <p>If you serve multiple neighborhoods, create unique pages for each major area.</p>
+
+                <ul class="offer-list">
+                    <li>yoursite.com/handyman/downtown-neighborhood/</li>
+                    <li>yoursite.com/handyman/riverside-area/</li>
+                    <li>yoursite.com/handyman/eastside/</li>
+                </ul>
+
+                <p>Each page must be truly unique—change the landmarks, zip codes, completed jobs in that area, customer names/quotes from that neighborhood, and local context. Don't create thin location pages.</p>
+
+                <hr class="post-divider">
+
+                <h2>4. Blog Topics That Rank for Handymen</h2>
+
+                <p>Publish 2–4 blog posts per month targeting homeowner questions and common problems.</p>
+
+                <h3>High-ROI Topics</h3>
+
+                <ul>
+                    <li>"How to Patch Drywall: When to DIY vs. Call a Professional"</li>
+                    <li>"Signs Your Interior Doors Need Replacement (Not Just Repair)"</li>
+                    <li>"Why Caulk is Failing Around Your Bathroom: And How to Fix It"</li>
+                    <li>"How Much Does Drywall Repair Actually Cost? [2026 Pricing Guide]"</li>
+                    <li>"Handy vs. Hiring a Pro: What Jobs You Can DIY (And What You Can't)"</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>SEO Gold:</strong> Target "cost" and "how much" keywords. Homeowners search these constantly before calling. Answer the question in your blog—then add a CTA to book a free estimate.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>5. Technical SEO: Speed & Mobile Matter</h2>
+
+                <p>Most "handyman near me" searches happen on mobile. Your site must load fast.</p>
+
+                <h3>Core Web Vitals Checklist</h3>
+
+                <ul class="offer-list">
+                    <li>Page load time: Under 2 seconds (use PageSpeed Insights)</li>
+                    <li>Compress images (ShortPixel or Imagify)</li>
+                    <li>Use a fast hosting provider (Kinsta, Cloudways, SiteGround)</li>
+                    <li>Enable caching (WP Rocket or LiteSpeed Cache)</li>
+                </ul>
+
+                <h3>Mobile Optimization</h3>
+
+                <ul>
+                    <li>Click-to-call buttons visible without scrolling</li>
+                    <li>Large, tappable buttons (48px minimum)</li>
+                    <li>No annoying pop-ups that block the content</li>
+                </ul>
+
+                <h3>Schema Markup</h3>
+
+                <p>Add structured data so Google understands your business:</p>
+
+                <ul class="offer-list">
+                    <li><strong>LocalBusiness:</strong> Name, address, phone, hours, service area</li>
+                    <li><strong>Service:</strong> List all services offered</li>
+                    <li><strong>Review:</strong> Aggregate star rating from Google reviews</li>
+                    <li><strong>OpeningHoursSpecification:</strong> Business hours</li>
+                </ul>
+
+                <p>Test your schema with Google's Rich Results Test.</p>
+
+                <hr class="post-divider">
+
+                <h2>6. Build Local Authority (Backlinks)</h2>
+
+                <p>Backlinks tell Google your site is trustworthy. For local handymen, you don't need national links—you need local relevance.</p>
+
+                <h3>Easy Link-Building Tactics</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chamber of Commerce</strong></td>
+                            <td>Join and get listed on their directory</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BBB Accreditation</strong></td>
+                            <td>Earn high-trust directory link</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Local News/Blogs</strong></td>
+                            <td>Pitch a story: "Home Repair Mistakes Homeowners Make"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Home Service Directories</strong></td>
+                            <td>Yelp, Angi (formerly Angie's List), Nextdoor</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Real Estate Sites</strong></td>
+                            <td>Get featured on local real estate agent websites</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Home Warranty Companies</strong></td>
+                            <td>Get approved as recommended vendor</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout">
+                    <p><strong>Unlinked Mentions:</strong> Use Google Alerts to find local websites mentioning your business without linking. Email them: "Thanks for the mention! Would you mind adding a link to our site?"</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>7. Measure & Optimize (90-Day Audit Cycle)</h2>
+
+                <p>SEO isn't set-and-forget. Run a full audit every 90 days.</p>
+
+                <h3>Essential Tools</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Google Search Console:</strong> Track keywords bringing impressions and clicks</li>
+                    <li><strong>Google Analytics 4:</strong> Track calls, form fills, user behavior</li>
+                    <li><strong>BrightLocal or Local Falcon:</strong> Track your ranking position for "handyman near me" and related terms</li>
+                </ul>
+
+                <h3>KPIs to Track</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Organic calls:</strong> Use call-tracking on your website</li>
+                    <li><strong>Local Pack appearance:</strong> What % of searches show you in map results?</li>
+                    <li><strong>Ranking position:</strong> Aim for top 3 for money keywords</li>
+                    <li><strong>Click-through rate (CTR):</strong> Below 3%? Your title/description need work</li>
+                </ul>
+
+                <h3>The 90-Day Audit</h3>
+
+                <ol>
+                    <li>Check Google Business Profile isn't suspended</li>
+                    <li>Review rankings for your top 10 keywords</li>
+                    <li>Check for broken links (404s)</li>
+                    <li>Update old blog posts with fresh statistics</li>
+                    <li>Ask for new reviews from recent customers</li>
+                </ol>
+
+                <hr class="post-divider">
+
+                <h2>Timeline: When You'll See Results</h2>
+
+                <ul>
+                    <li><strong>Weeks 1–4:</strong> Google Business Profile optimization, service pages go live</li>
+                    <li><strong>Weeks 5–8:</strong> First rankings appear for branded terms ("your name handyman")</li>
+                    <li><strong>Weeks 9–12:</strong> Competitive keywords start showing up</li>
+                    <li><strong>Month 4–6:</strong> Consistent top 3 rankings for local keywords, organic calls increase</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Patience Pays:</strong> SEO takes time, but the jobs that come in are pre-qualified, high-intent, and profitable. You're not paying per click—you're earning organic trust.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>The Bottom Line</h2>
+
+                <p>SEO for handymen is a 3–6 month investment that generates free leads for years. While your competitors are paying $5–$8 per click on Google Ads, you'll be ranking #1 for "handyman near me" and getting calls directly from your Google Business Profile.</p>
+
+                <p>Start today: Optimize your GBP, build service pages, create location-specific content, and earn local backlinks. Your future customers are searching right now.</p>
+
+                <p style="margin-top: 2rem;"><a href="handyman-leads">← Back to the full Handyman Marketing Hub</a></p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Dominate Local SEO?</h3>
+                    <p>Let's build a custom SEO strategy that generates consistent organic jobs for your handyman business.</p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Schedule Your Free Strategy Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

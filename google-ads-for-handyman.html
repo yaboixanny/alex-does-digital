@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads for Handyman: 6-Step Blueprint to Book More Jobs Locally</title>
+    <meta name="description" content="Master Google Ads for handyman services. Learn local targeting, home improvement keywords, booking strategies, and call tracking to generate consistent service calls.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Callout Warning ────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Table ──────────────────────────────────────────────── */
+        .post-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .post-body th {
+            background: var(--color-bg-dark);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .post-body td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e6ef;
+        }
+
+        .post-body tr:last-child td {
+            border-bottom: none;
+        }
+
+        .post-body tr:nth-child(even) {
+            background: #f9fafc;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/google-ads-for-handyman">
+    <meta property="og:title" content="Google Ads for Handyman: 6-Step Blueprint to Book More Jobs">
+    <meta property="og:description" content="Master Google Ads for handyman services with local targeting, home improvement keywords, and booking strategies.">
+    <meta property="og:url" content="https://alxdoesdigital.com/google-ads-for-handyman">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Google Ads for Handyman: 6-Step Blueprint">
+    <meta property="twitter:description" content="Master Google Ads for handyman with local targeting and booking strategies.">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Google Ads for Handyman: Master the 6-Step Blueprint to Book More Jobs Locally",
+    "description": "Master Google Ads for handyman services. Learn local targeting, home improvement keywords, booking strategies, and call tracking.",
+    "datePublished": "2026-04-29",
+    "dateModified": "2026-04-29",
+    "author": {
+        "@type": "Person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Alex Does Digital",
+        "url": "https://alxdoesdigital.com"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/google-ads-for-handyman"
+    }
+}
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Google Ads</span>
+                    <span class="post-hero-date">April 29, 2026</span>
+                    <span class="post-hero-read-time">7 min read</span>
+                </div>
+                <h1>Google Ads for Handyman: Master the 6-Step Blueprint to Book More Jobs Locally</h1>
+                <p class="post-hero-lede">
+                    Homeowners search for handyman services when they need something fixed—fast. If you're not appearing in those searches, a competitor is booking the job. This guide breaks down the exact strategy to dominate local handyman searches on Google.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog" class="back-to-blog">← Back to Blog</a>
+
+                <p>Handyman services are a high-intent, local business. Someone searching "handyman near me" or "fix leaky faucet" is actively looking for help right now. Google Ads is the fastest way to capture those searches and book jobs before your competitors do.</p>
+
+                <p>Unlike plumbers or electricians, handymen can do dozens of different tasks—drywall, painting, furniture assembly, general repairs—which makes Google Ads both powerful and tricky. You need to target the right keywords without wasting money on irrelevant clicks.</p>
+
+                <p>Here's the 6-step blueprint that works.</p>
+
+                <hr class="post-divider">
+
+                <h2>1. Master the Handyman Keyword Stack</h2>
+
+                <p>Handyman keywords fall into three buckets: generalists, specialists, and urgency-driven.</p>
+
+                <h3>High-Intent Keywords to Target</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Generalists:</strong> "Handyman near me," "Local handyman [city]," "Handyman services"</li>
+                    <li><strong>Task-Specific:</strong> "Drywall repair near me," "Furniture assembly," "Painting contractor," "Door repair"</li>
+                    <li><strong>Urgency:</strong> "Emergency handyman," "Same-day handyman," "Handyman available now"</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Pro Tip:</strong> Create separate ad groups for each task category. A drywall specialist will outbid a generalist on "drywall repair near me"—so segment your keywords and budgets accordingly.</p>
+                </div>
+
+                <h3>Negative Keywords to Exclude</h3>
+
+                <p>Block clicks that won't convert:</p>
+
+                <ul>
+                    <li>"Job openings," "Hire," "Franchise" (people looking for employment, not services)</li>
+                    <li>"DIY," "How to," "Tutorial" (DIYers, not buyers)</li>
+                    <li>"Prices," "Cost comparison" (comparison shoppers, often unqualified)</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>2. Geographic Targeting: Hyper-Local Wins</h2>
+
+                <p>Handymen can't travel 30 miles for a $150 job. Set a tight service radius.</p>
+
+                <ul class="offer-list">
+                    <li>Use a 10-15 mile radius around your home base</li>
+                    <li>Exclude highways and distant neighborhoods where you don't service</li>
+                    <li>Create separate campaigns for adjacent cities if you service them</li>
+                </ul>
+
+                <div class="callout-warning">
+                    <p><strong>Watch Out:</strong> Set location to "Presence" only, not "Presence or Interest." You don't want someone in another state researching handyman services to click your ad.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>3. Ad Extensions That Convert</h2>
+
+                <p>Your ad needs to stand out and build trust. Use every extension:</p>
+
+                <ul class="offer-list">
+                    <li><strong>Call Extensions:</strong> Display your phone prominently. Most handyman searches happen on mobile.</li>
+                    <li><strong>Location Extensions:</strong> Show you're local and nearby.</li>
+                    <li><strong>Callout Extensions:</strong> "Licensed & Insured," "Free Estimates," "Same-Day Available," "20+ Years Experience"</li>
+                    <li><strong>Promotion Extensions:</strong> "$50 Off First Job" or "Free Initial Walkthrough"</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>4. Landing Page Strategy (Send Them to the Right Place)</h2>
+
+                <p>Don't send all traffic to your homepage. Create specific landing pages for different search intents.</p>
+
+                <h3>Landing Page Structure</h3>
+
+                <ul class="offer-list">
+                    <li>Search for "drywall repair" → lands on drywall repair page</li>
+                    <li>Search for "handyman near me" → lands on main services page</li>
+                    <li>Search for "emergency handyman" → lands on same-day/emergency page</li>
+                </ul>
+
+                <p>Each landing page should have:</p>
+
+                <ul>
+                    <li>A prominent "Book Now" or "Call for Free Estimate" button</li>
+                    <li>Clear before/after photos of similar jobs</li>
+                    <li>Customer testimonials (real names, not generic reviews)</li>
+                    <li>Your service area zip codes</li>
+                    <li>Fast load time (&lt; 2 seconds)</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>5. Bidding Strategy: Manual CPC or Target CPA</h2>
+
+                <p>For handymen, manual control often beats automated bidding.</p>
+
+                <ul class="offer-list">
+                    <li><strong>Manual CPC:</strong> Start with $3–$8 per click. Adjust based on results.</li>
+                    <li><strong>Target CPA:</strong> Once you have 20+ booked jobs in a month, switch to Target CPA. Set it to what you're willing to pay (e.g., $40–$60 per booked job).</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Budget Structure:</strong> Start with $15–$20/day ($450–$600/month). Run for 30 days, track cost per booked job, then scale 10–20% per month if profitable.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>6. Call Tracking & Conversion Optimization</h2>
+
+                <p>You cannot optimize what you don't measure.</p>
+
+                <h3>The Setup</h3>
+
+                <ol>
+                    <li>Use a call-tracking service (CallRail, Google Call Tracking, or similar)</li>
+                    <li>Assign unique numbers to different ad campaigns</li>
+                    <li>Track which calls turn into booked jobs (not just leads)</li>
+                    <li>Import booked job data back into Google Ads</li>
+                </ol>
+
+                <p>This teaches Google's AI to find "job bookers" not just "callers."</p>
+
+                <h3>Key Metrics to Track</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Cost per phone call:</strong> Should be 40–60% of your Cost Per Booked Job</li>
+                    <li><strong>Call-to-booking ratio:</strong> What % of calls become actual jobs? (Aim for 30–50%)</li>
+                    <li><strong>Quality score:</strong> Higher QS = lower cost per click. Match keywords to ads to landing pages.</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>Real Budget Example: $500/Month Handyman Campaign</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campaign</th>
+                            <th>Budget</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Generalist ("Handyman Near Me")</strong></td>
+                            <td>$10/day</td>
+                            <td>Broad local search, brand awareness</td>
+                        </tr>
+                        <tr>
+                            <td><strong>High-Intent (Drywall, Painting, etc.)</strong></td>
+                            <td>$8/day</td>
+                            <td>Specific tasks with higher conversion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emergency/Same-Day</strong></td>
+                            <td>$4/day</td>
+                            <td>Urgent repairs, premium pricing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Retargeting</strong></td>
+                            <td>$3/day</td>
+                            <td>Website visitors who didn't call</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr class="post-divider">
+
+                <h2>The Bottom Line</h2>
+
+                <p>Handyman Google Ads work because demand is immediate and local. Someone with a broken shelf or water-damaged drywall isn't waiting—they're searching right now.</p>
+
+                <p>Follow this blueprint: tight geo-targeting, specific keywords, strong landing pages, and call tracking. Start with $15–$20/day, measure your cost per booked job, and scale what works.</p>
+
+                <p style="margin-top: 2rem;"><a href="handyman-leads">← Back to the full Handyman Marketing Hub</a></p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Book More Handyman Jobs?</h3>
+                    <p>Let's build a custom Google Ads strategy that generates consistent booked jobs for your handyman business.</p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Schedule Your Free Strategy Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
