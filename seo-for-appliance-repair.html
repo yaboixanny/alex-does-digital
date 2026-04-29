@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO for Appliance Repair: Complete Guide to Ranking Locally & Generating Organic Leads</title>
+    <meta name="description" content="Master local SEO for appliance repair. Learn how to optimize Google Business Profile, build service pages, create local content, and earn backlinks that generate free organic leads.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Callout Warning ────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Table ──────────────────────────────────────────────── */
+        .post-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.95rem;
+        }
+
+        .post-body th {
+            background: var(--color-bg-dark);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .post-body td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e6ef;
+        }
+
+        .post-body tr:last-child td {
+            border-bottom: none;
+        }
+
+        .post-body tr:nth-child(even) {
+            background: #f9fafc;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/seo-for-appliance-repair">
+    <meta property="og:title" content="SEO for Appliance Repair: Complete Guide to Ranking Locally">
+    <meta property="og:description" content="Master local SEO for appliance repair and generate organic leads through Google Business Profile optimization and local content.">
+    <meta property="og:url" content="https://alxdoesdigital.com/seo-for-appliance-repair">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SEO for Appliance Repair: Complete Guide">
+    <meta property="twitter:description" content="Master local SEO and generate organic leads for your appliance repair business.">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SEO for Appliance Repair: Complete Guide to Ranking Locally & Generating Organic Leads",
+    "description": "Master local SEO for appliance repair. Learn how to optimize Google Business Profile, build service pages, and earn backlinks.",
+    "datePublished": "2026-04-29",
+    "dateModified": "2026-04-29",
+    "author": {
+        "@type": "Person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Alex Does Digital",
+        "url": "https://alxdoesdigital.com"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/seo-for-appliance-repair"
+    }
+}
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">SEO</span>
+                    <span class="post-hero-date">April 29, 2026</span>
+                    <span class="post-hero-read-time">14 min read</span>
+                </div>
+                <h1>SEO for Appliance Repair: Complete Guide to Ranking Locally & Generating Organic Leads</h1>
+                <p class="post-hero-lede">
+                    Once you rank on Google, you generate leads every day for free. While your competitors pay $10–$50 per click, you're cashing checks from organic traffic. Here's the complete SEO blueprint for appliance repair businesses.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog" class="back-to-blog">← Back to Blog</a>
+
+                <p>SEO for appliance repair takes 3–6 months to show serious results. But once you rank, the payoff is massive. You're no longer competing on ad spend—you're ranking naturally for "refrigerator repair near me," "emergency washer repair," and high-intent local keywords that bring booked jobs.</p>
+
+                <p>The problem most techs face: they either ignore SEO entirely or try random tactics without a coherent strategy. This guide is different. It's a step-by-step roadmap to dominate local search.</p>
+
+                <hr class="post-divider">
+
+                <h2>1. Your Google Business Profile is Your Foundation</h2>
+
+                <p>Before writing a single blog post, you need to master Google Business Profile (GBP). This is the #1 ranking factor for local appliance repair searches.</p>
+
+                <h3>Critical Setup Steps</h3>
+
+                <ul class="offer-list">
+                    <li>Use your real business name (don't stuff keywords into the name)</li>
+                    <li>Claim your category: "Appliance Repair Service"</li>
+                    <li>Add a complete, unique description (not just "We fix appliances")</li>
+                    <li>Upload 10+ photos of actual work you've done</li>
+                    <li>Verify your phone number and add service hours</li>
+                    <li>Add service areas (individual zip codes, not just "serving the tri-state")</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Pro Tip:</strong> Ask every customer to leave a review on Google. 5+ new reviews per month signals to Google that you're an active, trusted business. Respond to every review (positive or negative).</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>2. Build Individual Service Pages (Not One Mega-Page)</h2>
+
+                <p>Never create one page called "Services" with a list of appliances. Google ranks specific pages, not sections. You need:</p>
+
+                <ul class="offer-list">
+                    <li>Refrigerator Repair</li>
+                    <li>Washer & Dryer Repair</li>
+                    <li>Oven & Stove Repair</li>
+                    <li>Dishwasher Repair</li>
+                    <li>Freezer Repair</li>
+                </ul>
+
+                <h3>The Perfect Service Page Template</h3>
+
+                <p><strong>Each page needs:</strong></p>
+
+                <ol>
+                    <li><strong>H1 Tag:</strong> "Refrigerator Repair in [City Name] – Same-Day Service"</li>
+                    <li><strong>First Paragraph:</strong> Lead with location and urgency. Example: "Is your refrigerator not cooling? Our licensed technicians offer same-day refrigerator repair across [City] and surrounding areas."</li>
+                    <li><strong>H2 Subheadings:</strong> "Common Refrigerator Problems," "Brands We Service," "Our Repair Process," "Why Choose Us," "Service Area"</li>
+                    <li><strong>Bulleted Lists:</strong> Common symptoms, brands, neighborhoods served</li>
+                    <li><strong>Internal Linking:</strong> Link between related service pages (fridge repair → ice maker repair)</li>
+                    <li><strong>Schema Markup:</strong> LocalBusiness + Service schema</li>
+                </ol>
+
+                <div class="callout-warning">
+                    <p><strong>Content Length:</strong> Aim for 1,500+ words per core service page. Thin content doesn't rank. Include step-by-step troubleshooting tips, average costs, warranty info, and photos of technicians at work.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>3. Localized Content: City-by-City Pages</h2>
+
+                <p>You need separate content for every city and neighborhood you serve. Don't create one "Service Area" page. That's a soft 404 to Google.</p>
+
+                <h3>City Landing Page Structure</h3>
+
+                <p>Create unique pages like:</p>
+
+                <ul>
+                    <li>alxdoesdigital.com/appliance-repair/austin/</li>
+                    <li>alxdoesdigital.com/appliance-repair/round-rock/</li>
+                    <li>alxdoesdigital.com/appliance-repair/cedar-park/</li>
+                </ul>
+
+                <p><strong>Each page must be unique. Change:</strong></p>
+
+                <ul class="offer-list">
+                    <li>Neighborhood landmarks and geography</li>
+                    <li>Local zip codes served</li>
+                    <li>Average response times for that specific area</li>
+                    <li>Customer reviews from that city</li>
+                    <li>Photos of jobs completed in that area</li>
+                </ul>
+
+                <h3>High-ROI Blog Topics</h3>
+
+                <p>Publish one blog post weekly targeting these topics:</p>
+
+                <ul>
+                    <li>"Why Your Samsung Refrigerator Ice Maker Freezes Up (And How to Fix It)"</li>
+                    <li>"Top 5 Signs Your Washing Machine Transmission Is Failing"</li>
+                    <li>"Gas vs. Electric Oven Repair: What's Different?"</li>
+                    <li>"How Long Should an Appliance Repair Take?"</li>
+                    <li>"Warranty vs. Repair: When to Replace vs. Fix"</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>Error Code Goldmine:</strong> Use the exact error code in your title. People search error codes constantly. Example: "Frigidaire Error Code ER IF – Causes and Solutions."</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>4. Technical SEO: Speed, Mobile, Security</h2>
+
+                <p>Local rankings require a fast, secure, and crawlable website.</p>
+
+                <h3>Core Web Vitals (Your Pages Must Load Fast)</h3>
+
+                <p>Mobile users expect speed. A 3-second load time loses 50% of visitors.</p>
+
+                <ul class="offer-list">
+                    <li>Use a lightweight WordPress theme (GeneratePress, Kadence)</li>
+                    <li>Compress images (ShortPixel or Imagify)</li>
+                    <li>Use a caching plugin (WP Rocket or LiteSpeed)</li>
+                    <li>Switch to a fast host (Cloudways, Kinsta, SiteGround)</li>
+                </ul>
+
+                <h3>Mobile Optimization</h3>
+
+                <p>Over 70% of "near me" searches happen on phones. Your site must:</p>
+
+                <ul class="offer-list">
+                    <li>Have click-to-call buttons visible without scrolling</li>
+                    <li>Use large, tappable buttons (minimum 48px touch target)</li>
+                    <li>Never use pop-ups that block the screen on mobile</li>
+                </ul>
+
+                <h3>Structured Data (Schema)</h3>
+
+                <p>Add these schema types to your pages:</p>
+
+                <ul>
+                    <li><strong>LocalBusiness</strong> (name, address, phone, hours, coordinates)</li>
+                    <li><strong>OpeningHoursSpecification</strong> (emergency hours if applicable)</li>
+                    <li><strong>Service</strong> (list all repair services)</li>
+                    <li><strong>Review</strong> (aggregate star rating from Google)</li>
+                </ul>
+
+                <p>Use Google's Rich Results Test to verify your markup is correct.</p>
+
+                <hr class="post-divider">
+
+                <h2>5. Link Building for Local Appliance Repair</h2>
+
+                <p>Backlinks remain a top 3 ranking factor. As a local business, you don't need Forbes links. You need local, relevant links.</p>
+
+                <h3>Link Sources That Work</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chamber of Commerce</strong></td>
+                            <td>Join and get a directory link</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BBB Accreditation</strong></td>
+                            <td>Earned link with high trust</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Local News</strong></td>
+                            <td>Pitch stories like "How to prevent frozen pipes in winter"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parts Suppliers</strong></td>
+                            <td>Request link from their "recommended repair" page</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Local Bloggers</strong></td>
+                            <td>Offer free tune-up in exchange for a review/link</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Home Warranty Companies</strong></td>
+                            <td>Get listed as an approved vendor</td>
+                        </tr>
+                        <tr>
+                            <td><strong>City Directories</strong></td>
+                            <td>Yelp, Yellow Pages, Nextdoor, Angi (formerly Angie's List)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout">
+                    <p><strong>Unlinked Brand Mentions:</strong> Use Google Alerts to find when people mention you without linking. Email them: "Thanks for the mention! Would you mind adding our link?"</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>6. Tracking, Analytics, and Continuous Improvement</h2>
+
+                <p>SEO is not "set it and forget it." You need data and a feedback loop.</p>
+
+                <h3>Essential Tools (Free Tier)</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Google Search Console:</strong> See which keywords bring impressions and clicks. Fix crawl errors.</li>
+                    <li><strong>Google Analytics 4:</strong> Track phone calls, form fills, and user behavior.</li>
+                    <li><strong>Local Falcon or BrightLocal:</strong> Track your Local Pack rankings for specific zip codes.</li>
+                </ul>
+
+                <h3>Key Performance Indicators (Track These, Not Vanity Metrics)</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Organic calls:</strong> Use call tracking numbers on your website</li>
+                    <li><strong>Local Pack appearance:</strong> Track % of searches where you appear in map pack</li>
+                    <li><strong>Click-through rate (CTR):</strong> Below 3%? Rewrite your meta descriptions</li>
+                    <li><strong>Average ranking position:</strong> Aim for top 3 for money keywords</li>
+                </ul>
+
+                <h3>The 90-Day Audit Cycle</h3>
+
+                <p>Run a full SEO audit every quarter:</p>
+
+                <ol>
+                    <li>Check for broken links (404s)</li>
+                    <li>Verify Google Business Profile is not suspended</li>
+                    <li>Review new local competitors</li>
+                    <li>Update old blog posts with fresh statistics</li>
+                    <li>Add new customer reviews and testimonials</li>
+                </ol>
+
+                <hr class="post-divider">
+
+                <h2>The Bottom Line: SEO is a Marathon</h2>
+
+                <p>SEO for appliance repair takes 3–6 months to show serious results. But once you rank, you generate calls every day for free—while your competitors keep paying $10–$50 per click on Google Ads.</p>
+
+                <p>The appliance repair companies ranking #1 today started working on their SEO six months ago. Your future customers are searching right now. Make sure they find you.</p>
+
+                <p>Start with your Google Business Profile. Build individual service pages for every appliance and every city you serve. Earn local backlinks. Track everything.</p>
+
+                <p style="margin-top: 2rem;"><a href="appliance-repair-leads">← Back to the full Appliance Repair Marketing Hub</a></p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Dominate Local SEO?</h3>
+                    <p>Let's build a custom SEO strategy that generates consistent organic leads for your appliance repair business.</p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Schedule Your Free Strategy Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

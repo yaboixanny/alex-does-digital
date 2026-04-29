@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads for Appliance Repair: 7-Step Blueprint to Dominate Local Searches</title>
+    <meta name="description" content="Master Google Ads for appliance repair. Learn geolocation bidding, emergency keywords, smart bidding, and call tracking to generate qualified leads at scale.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Post Hero ───────────────────────────────────────────── */
+        .post-hero {
+            background: var(--color-bg-dark);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-category-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent-cyan);
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .post-hero-date,
+        .post-hero-read-time {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        .post-hero-read-time::before {
+            content: '·';
+            margin-right: 0.75rem;
+        }
+
+        .post-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-hero-lede {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* ── Post Body ───────────────────────────────────────────── */
+        .post-body-section {
+            background: #f7f8fc;
+            padding: 4rem 0 5rem;
+        }
+
+        .post-body {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--color-text-dark);
+        }
+
+        .post-body h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f1528;
+            margin: 2.75rem 0 0.9rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .post-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1d2e;
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .post-body p {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #333848;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 0 0 1.25rem 1.4rem;
+        }
+
+        .post-body li {
+            font-size: 1.03rem;
+            line-height: 1.75;
+            color: #333848;
+            margin-bottom: 0.35rem;
+        }
+
+        .post-body strong { color: #0f1528; font-weight: 700; }
+        .post-body em { font-style: italic; }
+
+        .post-body a {
+            color: #0069cc;
+            text-decoration: underline;
+        }
+
+        /* ── Divider ─────────────────────────────────────────────── */
+        .post-divider {
+            border: none;
+            border-top: 1px solid #e2e6ef;
+            margin: 2.5rem 0;
+        }
+
+        /* ── Callout ─────────────────────────────────────────────── */
+        .callout {
+            background: var(--color-bg-dark);
+            border-left: 3px solid var(--color-accent-cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p {
+            color: var(--color-text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout strong { color: var(--color-accent-cyan) !important; }
+
+        /* ── Callout Warning ────────────────────────────────────── */
+        .callout-warning {
+            background: rgba(255, 0, 110, 0.06);
+            border-left: 3px solid var(--color-accent-magenta);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout-warning p {
+            color: #1a1d2e !important;
+            margin: 0;
+            font-size: 1rem !important;
+        }
+
+        .callout-warning strong { color: #b30050 !important; }
+
+        /* ── Offer pills ─────────────────────────────────────────── */
+        .offer-list {
+            list-style: none !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .offer-list li {
+            background: #fff;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            padding: 0.75rem 1.1rem;
+            font-weight: 600 !important;
+            color: #1a1d2e !important;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        .offer-list li::before {
+            content: '→';
+            color: var(--color-accent-cyan);
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Table ──────────────────────────────────────────────── */
+        .post-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border: 1px solid #dde2ef;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .post-body th {
+            background: var(--color-bg-dark);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .post-body td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e6ef;
+        }
+
+        .post-body tr:last-child td {
+            border-bottom: none;
+        }
+
+        .post-body tr:nth-child(even) {
+            background: #f9fafc;
+        }
+
+        /* ── Post CTA ────────────────────────────────────────────── */
+        .post-cta {
+            background: var(--color-bg-dark);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .post-cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Back link ───────────────────────────────────────────── */
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-to-blog:hover { color: var(--color-accent-cyan); }
+
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+        }
+    </style>
+    <link rel="canonical" href="https://alxdoesdigital.com/google-ads-for-appliance-repair">
+    <meta property="og:title" content="Google Ads for Appliance Repair: 7-Step Blueprint to Dominate Local Searches">
+    <meta property="og:description" content="Master Google Ads for appliance repair with geolocation bidding, emergency keywords, and call tracking strategies.">
+    <meta property="og:url" content="https://alxdoesdigital.com/google-ads-for-appliance-repair">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Google Ads for Appliance Repair: 7-Step Blueprint">
+    <meta property="twitter:description" content="Master Google Ads with geolocation bidding, emergency keywords, and call tracking.">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Google Ads for Appliance Repair: Master the 7-Step Blueprint to Dominate Local Searches",
+    "description": "Master Google Ads for appliance repair. Learn geolocation bidding, emergency keywords, smart bidding, and call tracking to generate qualified leads.",
+    "datePublished": "2026-04-29",
+    "dateModified": "2026-04-29",
+    "author": {
+        "@type": "Person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Alex Does Digital",
+        "url": "https://alxdoesdigital.com"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/google-ads-for-appliance-repair"
+    }
+}
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index" class="logo-text">Alex Does Digital</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="case-studies" class="nav-link">Results</a></li>
+                    <li><a href="industries" class="nav-link">Industries</a></li>
+                    <li><a href="blog" class="nav-link active">Blog</a></li>
+                    <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <div class="post-hero-meta">
+                    <span class="post-category-tag">Google Ads</span>
+                    <span class="post-hero-date">April 29, 2026</span>
+                    <span class="post-hero-read-time">8 min read</span>
+                </div>
+                <h1>Google Ads for Appliance Repair: Master the 7-Step Blueprint to Dominate Local Searches</h1>
+                <p class="post-hero-lede">
+                    When your refrigerator quits cooling or your oven won't heat, where do customers search? Google. And if you're not showing up, a competitor is. This guide breaks down the exact 7-step framework to build a profitable Google Ads campaign that generates consistent booked calls.
+                </p>
+            </div>
+        </div>
+        <div class="bg-decoration"></div>
+    </section>
+
+    <!-- Body -->
+    <section class="post-body-section">
+        <div class="container">
+            <div class="post-body">
+
+                <a href="blog" class="back-to-blog">← Back to Blog</a>
+
+                <p>In the appliance repair industry, speed wins. But without a strategic Google Ads campaign, you're leaving money on the table for national chains and competitors who understand PPC. Google Ads for appliance repair isn't just about bidding on "fridge repair near me." It's a tactical battlefield of local intent, emergency keywords, and negative filters.</p>
+
+                <p>If done correctly, Pay-Per-Click (PPC) can deliver a 300% ROI. If done poorly, you burn cash on clicks that never call. Here's your blueprint.</p>
+
+                <hr class="post-divider">
+
+                <h2>1. Geolocation is Everything (Set Radius Bidding)</h2>
+
+                <p>Appliance repair is hyper-local. You cannot fix a dishwasher in a city three hours away. Yet most technicians leave their location settings on "Presence or Interest."</p>
+
+                <p><strong>The Fix:</strong> Switch to <strong>"Presence" only</strong>. You don't want someone researching repair tips in another state. Set a tight radius around your service area (15–20 miles). Use advanced location options to exclude commuter highways where people drive through but don't live.</p>
+
+                <div class="callout">
+                    <p><strong>Pro Tip:</strong> Create separate campaigns for high-density zip codes. Bid 20% higher for zip codes with older homes (more appliances breaking) or higher household incomes (premium customers willing to pay).</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>2. Dominating Emergency Keywords with High Intent</h2>
+
+                <p>Not all searches are equal. Someone searching "how to fix a noisy dryer" is a DIY learner. Someone searching "appliance repair same day" has their credit card ready.</p>
+
+                <h3>High-Intent Keyword Buckets</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Emergency:</strong> "24 hour appliance repair," "emergency refrigerator repair," "Sunday washer repair"</li>
+                    <li><strong>Brand Specific:</strong> "Samsung fridge error code 22e repair," "Whirlpool oven not heating"</li>
+                    <li><strong>Action:</strong> "Book appliance repair," "fix AC immediately"</li>
+                </ul>
+
+                <p><strong>Strategy:</strong> Put emergency keywords in a separate campaign with a high daily budget and call extensions. Convert these users immediately via phone.</p>
+
+                <h3>Negative Keywords (The Money Savers)</h3>
+
+                <p>You must add negative keywords to avoid irrelevant clicks. Exclude:</p>
+
+                <ul>
+                    <li>"Manual," "part," "how to," "diagram," "training," "classes"</li>
+                    <li>"Rent," "buy," "price of new" (send them to a retailer, not your repair quote)</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>3. Ad Extensions: The "Trust" Factor</h2>
+
+                <p>Google charges for clicks, not impressions. To get the click, your ad needs to be twice the size of the competition. Use every extension available.</p>
+
+                <ul class="offer-list">
+                    <li><strong>Call Extensions:</strong> Display your phone number directly. For mobile searches (70%+ of repair queries), this is a one-tap call to dispatch.</li>
+                    <li><strong>Location Extensions:</strong> Show your Google Maps presence. "Local" beats "National."</li>
+                    <li><strong>Callout Extensions:</strong> Use assets like "Same-Day Service," "Licensed & Insured," "90-Day Warranty," and "No Overtime Fees."</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>4. Landing Page Optimization (Don't Send Them Home)</h2>
+
+                <p>The biggest mistake in appliance repair PPC is sending traffic to a generic "Services" page. If a user clicks an ad for "Oven Repair," they expect to see <strong>OVEN REPAIR</strong> immediately, not a picture of your smiling team.</p>
+
+                <h3>The Perfect Landing Page</h3>
+
+                <ul class="offer-list">
+                    <li><strong>Headline:</strong> "Same-Day Oven Repair in [City] — $69 Diagnostic Fee"</li>
+                    <li><strong>Trust Signals:</strong> Photos of technicians in uniform, BBB rating, Google Reviews (3+ stars)</li>
+                    <li><strong>The Hook:</strong> A large, orange "CALL NOW" button visible on mobile</li>
+                    <li><strong>Form:</strong> Name, Phone, Appliance Type. That's it.</li>
+                </ul>
+
+                <div class="callout-warning">
+                    <p><strong>Speed Matters:</strong> Ensure your landing page loads in under 2 seconds. A 1-second delay drops conversions by 7%.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>5. Smart Bidding vs. Manual CPC</h2>
+
+                <p>Google pushes "Smart Bidding" (Maximize Conversions), but for appliance repair, manual control often yields lower cost-per-call.</p>
+
+                <ul class="offer-list">
+                    <li><strong>Manual CPC:</strong> You're a new business with limited data. Bid $5–$10 per click manually.</li>
+                    <li><strong>Smart Bidding:</strong> You have 30+ conversions (calls) in the last 30 days. Switch to Target CPA. Set Target CPA at what you're willing to pay for a booked job (e.g., $25).</li>
+                </ul>
+
+                <div class="callout-warning">
+                    <p><strong>Warning:</strong> Do not use "Maximize Clicks" unless you want to pay for 100 people looking for a "refrigerator wiring diagram."</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>6. Call-Only Campaigns for Mobile Users</h2>
+
+                <p>Mobile devices drive the appliance repair industry. Customers are standing in front of their broken washing machine, searching on their phone.</p>
+
+                <h3>Build a Call-Only Campaign</h3>
+
+                <ul>
+                    <li>Ensure "Phone calls" are your primary conversion metric</li>
+                    <li>Use the headline: "Call Now to Book a Tech"</li>
+                    <li>Set scheduling to only run when your dispatch team is awake (e.g., 7 AM to 9 PM)</li>
+                    <li>Use frequency capping to avoid showing the same ad 15 times to the same person</li>
+                </ul>
+
+                <hr class="post-divider">
+
+                <h2>7. Tracking, Quality Score, and The Feedback Loop</h2>
+
+                <p>You cannot fix what you don't measure. Google Ads for appliance repair requires <strong>offline conversion tracking</strong>.</p>
+
+                <h3>The Setup</h3>
+
+                <ol>
+                    <li>Import your calls via CallRail or Google forwarding numbers</li>
+                    <li>Flag which calls turned into booked jobs ($)</li>
+                    <li>Upload that data back into Google Ads</li>
+                    <li>Google's AI learns to find better customers, not just more customers</li>
+                </ol>
+
+                <div class="callout">
+                    <p><strong>Quality Score Matters:</strong> If your Keyword (Fridge repair) matches your Ad (Fridge repair experts) matches your Landing Page (Page title: Fridge Repair), your Quality Score rises. High QS = 50% lower cost per click and better ad position.</p>
+                </div>
+
+                <hr class="post-divider">
+
+                <h2>The Bottom Line: Run Ads, but Manage the Waste</h2>
+
+                <p>Google Ads for appliance repair works exceptionally well because demand is immediate and inelastic—people need their stove fixed tonight. However, the industry is plagued by click fraud and lookie-loos.</p>
+
+                <p>By narrowing your geo-targeting, leveraging emergency keywords, adding negative keyword walls, and using call-only campaigns, you'll starve out competitors. Start with a modest budget ($500–$1,000/month), measure your cost per booked call, and scale the winners.</p>
+
+                <p><strong>Stop waiting for organic SEO to rank. Your next service call is one click away.</strong></p>
+
+                <p style="margin-top: 2rem;"><a href="appliance-repair-leads">← Back to the full Appliance Repair Marketing Hub</a></p>
+
+                <!-- CTA -->
+                <div class="post-cta">
+                    <h3>Ready to Master Google Ads for Appliance Repair?</h3>
+                    <p>Let's build a custom Google Ads strategy that generates qualified booked calls for your appliance repair business.</p>
+                    <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Schedule Your Free Strategy Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
