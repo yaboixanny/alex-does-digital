@@ -1,819 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Does Digital | Google Ads Specialist</title>
-    <meta name="description"
-        content="Expert paid media specialist helping businesses grow with Google Ads and Facebook Ads. Get more qualified leads with proven strategies from an experienced expert.">
-    <meta name="google-site-verification" content="JbMlIVz3jPUQGdotgayJfIA0ow16ykn64DeRk_hl-bk" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="canonical" href="https://alxdoesdigital.com/">
-    <meta property="og:title" content="Alex Does Digital | Google Ads Specialist">
-    <meta property="og:description" content="Expert paid media specialist for small businesses">
-    <meta property="og:url" content="https://alxdoesdigital.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Alex Does Digital | Google Ads Specialist">
-    <meta property="twitter:description" content="Expert paid media specialist for small businesses">
-    <style>
-        /* Latest Posts Section */
-        .latest-posts-section {
-            background: var(--color-bg-light);
-            padding: 5rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-            position: relative;
-        }
-
-        .section-header .section-title {
-            font-size: clamp(2rem, 5vw, 2.8rem);
-            font-weight: 900;
-            color: var(--color-text-dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .section-header .section-subtitle {
-            font-size: 1.05rem;
-            color: var(--color-text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .view-all-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--color-accent-cyan);
-            text-decoration: none;
-            transition: gap 0.2s;
-        }
-
-        .view-all-link:hover {
-            gap: 0.7rem;
-        }
-
-        /* Posts Grid */
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .post-card {
-            background: var(--color-bg-dark);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .post-card:hover {
-            border-color: rgba(0, 217, 255, 0.25);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .post-card-body {
-            padding: 1.75rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            flex: 1;
-        }
-
-        .post-meta {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .post-category {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--color-accent-cyan);
-            background: rgba(0, 217, 255, 0.1);
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-        }
-
-        .post-date {
-            font-size: 0.8rem;
-            color: var(--color-text-muted);
-        }
-
-        .post-read-time {
-            font-size: 0.8rem;
-            color: var(--color-text-muted);
-        }
-
-        .post-read-time::before {
-            content: '·';
-            margin-right: 0.75rem;
-        }
-
-        .post-card-body h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            line-height: 1.35;
-            color: var(--color-text-light);
-            margin: 0.25rem 0 0 0;
-        }
-
-        .post-card-body p {
-            font-size: 0.88rem;
-            color: var(--color-text-muted);
-            line-height: 1.65;
-            flex: 1;
-            margin: 0;
-        }
-
-        .read-more {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--color-accent-cyan);
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: gap 0.2s;
-        }
-
-        .post-card:hover .read-more {
-            gap: 0.7rem;
-        }
-
-        /* Skeleton loading */
-        .skeleton {
-            background: linear-gradient(90deg, var(--color-surface) 25%, var(--color-surface-light) 50%, var(--color-surface) 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.4s infinite;
-            border-radius: 6px;
-        }
-
-        @keyframes shimmer {
-            0%   { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .skeleton-card {
-            background: var(--color-bg-dark);
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.05);
-            overflow: hidden;
-        }
-
-        .skeleton-body { padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
-        .skeleton-line { height: 12px; }
-        .skeleton-line.w-60 { width: 60%; }
-        .skeleton-line.w-80 { width: 80%; }
-        .skeleton-line.w-40 { width: 40%; }
-
-        @media (max-width: 900px) {
-            .posts-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .posts-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .latest-posts-section {
-                padding: 3rem 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Does Digital | PPC &amp; SEO Growth</title>
+  <meta name="description" content="Direct, senior-led Google Ads, paid social and SEO for service businesses that want qualified leads and measurable growth.">
+  <meta name="google-site-verification" content="JbMlIVz3jPUQGdotgayJfIA0ow16ykn64DeRk_hl-bk">
+  <link rel="canonical" href="https://alxdoesdigital.com/">
+  <meta property="og:title" content="Alex Does Digital | PPC &amp; SEO Growth">
+  <meta property="og:description" content="Senior-led paid search and organic growth for service businesses.">
+  <meta property="og:url" content="https://alxdoesdigital.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="editorial.css">
 </head>
-
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <span class="logo-text">Alex Does Digital</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index" class="nav-link active">Home</a></li>
-                    <li><a href="about" class="nav-link">About</a></li>
-                    <li><a href="case-studies" class="nav-link">Results</a></li>
-                    <li><a href="industries" class="nav-link">Industries</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <!-- Left Side - Value Proposition -->
-                <div class="hero-left">
-                    <div class="hero-text">
-                        <h1 class="hero-headline">
-                            Generate More Leads <br>
-                            <span class="gradient-text">for Your Business</span>
-                        </h1>
-                        <p class="hero-subheadline">With Alex Does Digital</p>
-
-                        <!-- Social Proof -->
-                        <div class="social-proof">
-                            <div class="stars">
-                                <span class="star">⭐</span>
-                                <span class="star">⭐</span>
-                                <span class="star">⭐</span>
-                                <span class="star">⭐</span>
-                                <span class="star">⭐</span>
-                            </div>
-                            <p class="trust-text">Trusted by 150+ small businesses</p>
-                        </div>
-
-                        <!-- Credibility Bullets -->
-                        <ul class="credentials">
-                            <li>✓ Google Ads Certified</li>
-                            <li>✓ SEO Specialist</li>
-                            <li>✓ Facebook Ads Expert</li>
-                            <li>✓ 150+ Businesses Helped</li>
-                        </ul>
-
-                        <!-- Supporting Paragraph -->
-                        <p class="hero-description">
-                            I help small to medium businesses generate qualified leads through
-                            Google Ads, Facebook Ads, and SEO strategies that actually work.
-                        </p>
-
-                        <!-- CTA Buttons -->
-                        <div class="cta-buttons">
-                            <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary">Get Your Free
-                                Strategy Call</a>
-                            <a href="case-studies" class="btn btn-secondary">View Case Studies</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side - Lead Capture Form -->
-                <div class="hero-right">
-                    <div class="form-card">
-                        <h3 class="form-title">Ready to Scale Your Business?</h3>
-                        <p class="form-subtitle">Let's discuss your lead generation strategy.</p>
-
-                        <form class="lead-form" id="leadForm" name="hero-lead" netlify>
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required placeholder="Your full name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="website">Website *</label>
-                                <input type="url" id="website" name="website" required
-                                    placeholder="https://yourwebsite.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="716-390-3081">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="problem">What's your biggest challenge right now? *</label>
-                                <textarea id="problem" name="problem" rows="4" required
-                                    placeholder="Tell us about your current lead generation challenges..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-full-width">
-                                Get My Free Strategy Session
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Background Decorative Elements -->
-        <div class="bg-decoration"></div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="case-studies" id="results">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Real Results for Real Businesses</h2>
-                <p class="section-subtitle">
-                    See how I've helped small to medium businesses like yours generate more leads,
-                    reduce costs, and grow their revenue.
-                </p>
-            </div>
-
-            <div class="case-studies-grid">
-                <!-- Case Study 1 -->
-                <a href="google-ads-towing-case-study" class="case-study-card-link">
-                    <div class="case-study-card">
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/ieFbtzxs6UY"
-                                title="Towing Company Google Ads Case Study" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="case-study-content">
-                            <h3 class="case-study-title">$18.53 Cost Per Call for Towing Company</h3>
-                            <p class="case-study-description">
-                                How a small towing company achieved a 35% conversion rate and $18.53 cost per call with
-                                just a $55 daily budget through strategic Google Ads optimization.
-                            </p>
-                            <span class="case-study-link">
-                                Read Full Case Study
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Case Study 2 -->
-                <a href="wedding-photography-96-leads" class="case-study-card-link">
-                    <div class="case-study-card">
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/Q6PlN5OR84I"
-                                title="Wedding Photography Google Ads Case Study" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="case-study-content">
-                            <h3 class="case-study-title">96 Leads in 30 Days for Wedding Photographer</h3>
-                            <p class="case-study-description">
-                                How a London wedding photographer achieved 96 qualified leads with a 15% conversion rate
-                                and 8-12x ROAS using Performance Max and search campaigns.
-                            </p>
-                            <span class="case-study-link">
-                                Read Full Case Study
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Case Study 3 -->
-                <a href="pool-service-winter-leads-case-study" class="case-study-card-link">
-                    <div class="case-study-card">
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/2re3NMYllgg"
-                                title="Pool Service Facebook Ads Case Study" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="case-study-content">
-                            <h3 class="case-study-title">48 Leads in "Slow Season" for Pool Service</h3>
-                            <p class="case-study-description">
-                                How we generated 48 pool cleaning leads at $21/lead in Port St. Lucie during the winter
-                                months, outperforming Google Ads by 5x in cost efficiency.
-                            </p>
-                            <span class="case-study-link">
-                                Read Full Case Study
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Bottom CTA -->
-            <div class="case-studies-cta">
-                <a href="case-studies" class="btn btn-primary btn-large">View All Case Studies</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-header">
-                <h2 class="section-title">A Little About Alex</h2>
-                <p class="about-role">Alex – Digital Marketing Consultant</p>
-                <div class="authority-bar">
-                    <span class="authority-item">12+ Years Experience</span>
-                    <span class="authority-divider">·</span>
-                    <span class="authority-item">Helping Small Businesses Dominate Their Local Markets</span>
-                </div>
-            </div>
-
-            <div class="about-content">
-                <!-- Left Column - Bio & CTA -->
-                <div class="about-left">
-                    <div class="bio-text">
-                        <p class="bio-intro">
-                            Hi, I'm Alex — a digital marketing consultant who's spent over a decade helping
-                            businesses like yours get more customers online.
-                        </p>
-
-                        <p class="bio-paragraph">
-                            I specialize in building <strong>high-performing Google Ads and Facebook Ads
-                                campaigns</strong>
-                            that don't just generate clicks — they generate <strong>real, qualified leads</strong> that
-                            turn into revenue.
-                        </p>
-
-                        <p class="bio-paragraph">
-                            I've worked with local service businesses across industries — from towing companies
-                            and plumbers to e-commerce stores and professional services. No matter your niche,
-                            my approach is the same: <strong>data-driven, results-focused, and built to scale.</strong>
-                        </p>
-
-                        <p class="bio-paragraph">
-                            What makes me different? I don't just run ads. I build systems that turn your paid
-                            traffic into predictable revenue. Every campaign I manage is optimized for one goal:
-                            <strong>getting you more customers at the lowest cost possible.</strong>
-                        </p>
-
-                        <p class="bio-closing">
-                            If you're ready to stop wasting money on marketing that doesn't work and start seeing
-                            real results, let's talk.
-                        </p>
-                    </div>
-
-                    <div class="about-cta">
-                        <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary btn-large">Schedule
-                            Your Free Strategy Call</a>
-                    </div>
-                </div>
-
-                <!-- Right Column - Photo -->
-                <div class="about-right">
-                    <div class="photo-wrapper">
-                        <img src="images/alexpolo copy.jpg" alt="Professional Photo of Alex" class="about-photo">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What My Clients Say</h2>
-                <p class="section-subtitle">
-                    Real results from real businesses just like yours
-                </p>
-            </div>
-
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                    </div>
-                    <blockquote class="testimonial-quote">
-                        "Alex completely transformed our lead generation. Within 90 days, we saw a
-                        <strong>400% increase in qualified leads</strong> through his Google Ads campaigns.
-                        His data-driven approach cut our cost per lead in half while tripling our volume."
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <p class="author-name">Michael Rodriguez</p>
-                        <p class="author-business">Owner, Elite Towing Services</p>
-                    </div>
-                    <div class="testimonial-metric">
-                        400% increase in leads
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                    </div>
-                    <blockquote class="testimonial-quote">
-                        "We were skeptical about Facebook Ads, but Alex proved us wrong. His campaigns generated
-                        <strong>300% more patient bookings</strong> in just 60 days. The ROI has been incredible
-                        and our practice has never been busier."
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <p class="author-name">Dr. Sarah Chen</p>
-                        <p class="author-business">Founder, Brightside Dental Clinic</p>
-                    </div>
-                    <div class="testimonial-metric">
-                        300% more patient bookings
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                    </div>
-                    <blockquote class="testimonial-quote">
-                        "Alex's SEO strategy ranked us #1 for our most valuable keywords. We went from barely
-                        visible to dominating local search, which brought us <strong>$85K in additional revenue</strong>
-                        in the first quarter alone."
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <p class="author-name">James Martinez</p>
-                        <p class="author-business">CEO, Pro Plumbing Solutions</p>
-                    </div>
-                    <div class="testimonial-metric">
-                        $85K additional revenue
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta" id="contact">
-        <div class="container">
-            <div class="final-cta-header">
-                <h2 class="section-title">Ready to Scale Your Business?</h2>
-                <p class="section-subtitle">
-                    Join 150+ businesses that have already transformed their lead generation with Alex Does Digital
-                </p>
-                <p class="cta-tagline">Let's Grow Your Business Together</p>
-            </div>
-
-            <div class="final-cta-content">
-                <!-- Left Side - Form -->
-                <div class="final-cta-left">
-                    <form class="strategy-form" id="strategyForm" name="strategy-contact" netlify>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="final-name">Name *</label>
-                                <input type="text" id="final-name" name="name" required placeholder="Your full name">
-                            </div>
-                            <div class="form-group">
-                                <label for="final-email">Email *</label>
-                                <input type="email" id="final-email" name="email" required placeholder="your@email.com">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="final-phone">Phone *</label>
-                                <input type="tel" id="final-phone" name="phone" required placeholder="716-390-3081">
-                            </div>
-                            <div class="form-group">
-                                <label for="final-business">Business Name *</label>
-                                <input type="text" id="final-business" name="business" required
-                                    placeholder="Your business name">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="final-goals">What are your main business goals or challenges? *</label>
-                            <textarea id="final-goals" name="goals" rows="4" required
-                                placeholder="Tell us what you're looking to achieve..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-full-width btn-large">
-                            Get Your Free Strategy Session
-                        </button>
-                    </form>
-
-                    <div class="what-happens-next">
-                        <h4>What Happens Next?</h4>
-                        <ul>
-                            <li><strong>Step 1:</strong> Fill out the form above</li>
-                            <li><strong>Step 2:</strong> We'll review your business and schedule a 30-minute strategy
-                                call</li>
-                            <li><strong>Step 3:</strong> Get a customized plan with specific recommendations for your
-                                business</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Right Side - Trust & Info -->
-                <div class="final-cta-right">
-                    <div class="info-boxes">
-                        <div class="info-box">
-                            <div class="info-icon">📧</div>
-                            <h4>Email for Quick Response</h4>
-                            <p>alex@alexdoesdigital.com</p>
-                        </div>
-
-                        <div class="info-box">
-                            <div class="info-icon">⏱️</div>
-                            <h4>Response Time</h4>
-                            <p>Within 24 hours on business days</p>
-                        </div>
-
-                        <div class="info-box">
-                            <div class="info-icon">🌎</div>
-                            <h4>Service Area</h4>
-                            <p>North America & Remote Services</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Latest Blog Posts Section -->
-    <section class="latest-posts-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Strategies & Insights</h2>
-                <p class="section-subtitle">Real tactics from real campaigns</p>
-                <a href="blog" class="view-all-link">View All Posts →</a>
-            </div>
-
-            <div id="latestPostsContainer" class="posts-grid">
-                <!-- Posts will be loaded here by JavaScript -->
-                <div class="skeleton-card"><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
-                <div class="skeleton-card"><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
-                <div class="skeleton-card"><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="oauth-disclosure" aria-labelledby="google-ads-connection-title">
-        <div class="container oauth-disclosure-grid">
-            <div>
-                <span class="privacy-eyebrow">Google Ads API connection</span>
-                <h2 id="google-ads-connection-title">Authorized access. Clear purpose. Your control.</h2>
-            </div>
-            <div class="oauth-disclosure-copy">
-                <p>Alex Does Digital uses Google OAuth 2.0 and the Google Ads API to manage and report on Google Ads
-                    accounts only after an account owner or authorized user grants access. The connection may be used to
-                    read campaign performance and, when requested, create or manage campaigns, ads, targeting, budgets,
-                    bidding, and conversion settings.</p>
-                <p>You can revoke access at any time. Google Ads data is used only to deliver the services you authorize
-                    and is not sold or used for unrelated advertising.</p>
-                <div class="oauth-disclosure-links">
-                    <a href="privacy-policy#google-user-data">How Google data is handled →</a>
-                    <a href="terms-of-service#google-services">Google integration terms →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3 class="footer-brand">Alex Does Digital</h3>
-                    <p class="footer-mission">
-                        Helping small to medium businesses generate more qualified leads through proven
-                        Google Ads, Facebook Ads, and SEO strategies.
-                    </p>
-                    <div class="footer-stats">
-                        <div class="footer-stat">
-                            <strong>150+</strong>
-                            <span>Businesses Helped</span>
-                        </div>
-                        <div class="footer-stat">
-                            <strong>300%</strong>
-                            <span>Average ROI</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-heading">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="google-ads-for-service-businesses">Google Ads Management</a></li>
-                        <li><a href="facebook-ads-lead-generation">Facebook Ads Campaigns</a></li>
-                        <li><a href="conversion-rate-optimization">Conversion Optimization</a></li>
-                        <li><a href="industries">Industry Hubs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-heading">Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="case-studies">Case Studies</a></li>
-                        <li><a href="blog">Blog</a></li>
-                        <li><a href="https://cal.com/alexanderstefanseo/agency">Free Strategy Call</a></li>
-                        <li><a href="about">About Alex</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-heading">Contact</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <strong>Email:</strong><br>
-                            <a href="mailto:alex@alexdoesdigital.com">alex@alexdoesdigital.com</a>
-                        </li>
-                        <li>
-                            <strong>Phone:</strong><br>
-                            <a href="tel:+17163903081">716-390-3081</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
-                <div class="footer-meta"><p class="footer-badge">Certified Google Ads &amp; Facebook Ads Expert</p><div class="footer-legal"><a href="privacy-policy">Privacy Policy</a><a href="terms-of-service">Terms of Service</a></div></div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Load and display latest blog posts
-        async function loadLatestPosts() {
-            try {
-                const response = await fetch('posts.json');
-                const posts = await response.json();
-
-                // Get latest 3 posts
-                const latestPosts = posts.slice(0, 3);
-
-                const categoryIcons = {
-                    'Google Ads':   '📈',
-                    'Facebook Ads': '🎯',
-                    'SEO':          '🔍',
-                    'Lead Gen':     '⚡',
-                    'Default':      '📝'
-                };
-
-                function getIcon(category) {
-                    return categoryIcons[category] || categoryIcons['Default'];
-                }
-
-                function formatDate(iso) {
-                    const d = new Date(iso + 'T00:00:00');
-                    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                }
-
-                function buildPostCard(post) {
-                    return `
-                    <a href="${post.slug}" class="post-card">
-                        <div class="post-card-body">
-                            <div class="post-meta">
-                                <span class="post-category">${post.category}</span>
-                                <span class="post-date">${formatDate(post.date)}</span>
-                                <span class="post-read-time">${post.readTime}</span>
-                            </div>
-                            <h3>${post.title}</h3>
-                            <p>${post.excerpt}</p>
-                            <span class="read-more">Read Post →</span>
-                        </div>
-                    </a>`;
-                }
-
-                const container = document.getElementById('latestPostsContainer');
-                container.innerHTML = latestPosts.map(post => buildPostCard(post)).join('');
-            } catch (error) {
-                console.error('Error loading posts:', error);
-            }
-        }
-
-        // Load posts when page loads
-        document.addEventListener('DOMContentLoaded', loadLatestPosts);
-    </script>
-
-    <!-- Floating Widget -->
-    <div class="floating-widget hidden">
-        <div class="floating-widget-content">
-            <p>Need help with leads?</p>
-            <a href="https://cal.com/alexanderstefanseo/agency" class="floating-widget-btn">Book a call</a>
-        </div>
+<body class="home-redesign">
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a class="logo-text" href="index.html" aria-label="Alex Does Digital home">ALEX DOES DIGITAL</a>
+      <nav aria-label="Primary navigation"><ul class="nav-links">
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="blog.html">Insights</a></li>
+        <li><a class="nav-link" href="https://cal.com/alexdoesdigital/30min" target="_blank" rel="noopener">Book a Growth Audit</a></li>
+      </ul></nav>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main>
+    <section class="pe-hero"><div class="container pe-hero-grid">
+      <div>
+        <div class="pe-trust-pill"><strong>12+ years in performance marketing</strong> · Senior execution, no layers</div>
+        <h1>Profitable PPC &amp; Organic Search Marketing for <span>Service Businesses.</span></h1>
+        <p class="pe-hero-lede">Direct, one-to-one growth strategy and campaign execution. I design high-converting search programs that generate qualified leads, reveal what is working and scale without agency bloat.</p>
+        <div class="pe-actions">
+          <a class="pe-button pe-button-primary" href="https://cal.com/alexdoesdigital/30min" target="_blank" rel="noopener">Claim a free 30-min audit <span aria-hidden="true">→</span></a>
+          <a class="pe-button pe-button-secondary" href="case-studies.html">View case studies</a>
+        </div>
+        <div class="pe-signal-row" aria-label="Core capabilities"><span><i></i>Google Ads</span><span><i></i>Technical SEO</span><span><i></i>Conversion tracking</span></div>
+      </div>
+      <aside class="pe-terminal" aria-label="Campaign performance snapshot">
+        <div class="pe-terminal-head"><span class="pe-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>growth-telemetry.live</span><span class="pe-sync">Synced now</span></div>
+        <div class="pe-kpis">
+          <div class="pe-kpi"><div class="pe-kpi-label">Conversion rate</div><div class="pe-kpi-value green">35%</div><small>High-intent traffic</small></div>
+          <div class="pe-kpi"><div class="pe-kpi-label">Cost per call</div><div class="pe-kpi-value">$18.53</div><small>Tracked end to end</small></div>
+        </div>
+        <div class="pe-chart">
+          <div class="pe-chart-title">Qualified lead velocity · 90 days</div>
+          <svg viewBox="0 0 420 150" role="img" aria-label="Rising qualified lead trend over 90 days">
+            <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".28"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="#e2e8f0" stroke-width="1"><path d="M0 25H420M0 65H420M0 105H420M0 145H420"/><path d="M70 0V150M140 0V150M210 0V150M280 0V150M350 0V150"/></g>
+            <path d="M0 130 C35 120 47 113 77 112 S130 83 168 87 S226 78 260 55 S323 37 356 22 S394 15 420 7 L420 150 L0 150Z" fill="url(#area)"/>
+            <path d="M0 130 C35 120 47 113 77 112 S130 83 168 87 S226 78 260 55 S323 37 356 22 S394 15 420 7" fill="none" stroke="#059669" stroke-width="3"/>
+            <path d="M0 138 C55 134 96 127 138 119 S223 111 275 98 S360 85 420 72" fill="none" stroke="#94a3b8" stroke-dasharray="5 5" stroke-width="2"/>
+          </svg>
+          <div class="pe-chart-legend"><span>— Qualified leads</span><span>-- Previous period</span></div>
+        </div>
+        <div class="pe-terminal-foot"><span>Attribution: <strong>active</strong></span><span>Lead quality: <strong>high</strong></span></div>
+      </aside>
+    </div></section>
+
+    <section aria-label="Performance highlights"><div class="container pe-proof">
+      <div class="pe-metric-grid">
+        <div class="pe-metric"><strong>150+</strong><span>Businesses supported</span><small>Across local and national markets</small></div>
+        <div class="pe-metric"><strong>300%</strong><span>Average campaign ROI</span><small>Revenue-minded optimization</small></div>
+        <div class="pe-metric"><strong>12+</strong><span>Years in paid search</span><small>Senior strategy and execution</small></div>
+        <div class="pe-metric"><strong>100%</strong><span>Direct senior access</span><small>No account-manager relay</small></div>
+      </div>
+      <div class="pe-capabilities"><span>Specialist across the funnel</span><div class="pe-capability-list"><b>Google Ads</b><b>Meta Ads</b><b>Technical SEO</b><b>Landing Pages</b><b>Analytics</b></div></div>
+    </div></section>
+
+    <section class="pe-section" id="services"><div class="container">
+      <div class="pe-section-heading"><div><span class="pe-kicker">Core growth systems</span><h2>Precision paid search and organic growth.</h2></div><p>Strategy is only useful when the execution is measurable. Every engagement connects targeting, creative, landing pages and tracking.</p></div>
+      <div class="pe-service-grid">
+        <article class="pe-service-card"><div class="pe-icon">PPC</div><h3>Paid Search &amp; Social</h3><p>Full-funnel campaigns engineered around commercial intent—not empty clicks or platform vanity metrics.</p><ul class="pe-checks"><li>Google Search and Performance Max</li><li>Meta acquisition and retargeting</li><li>Budget and bid strategy control</li></ul><a class="pe-text-link" href="google-ads-for-service-businesses.html">Explore PPC management →</a></article>
+        <article class="pe-service-card"><div class="pe-icon">SEO</div><h3>Technical &amp; Organic SEO</h3><p>Search systems built to capture demand, strengthen authority and turn rankings into qualified inquiries.</p><ul class="pe-checks"><li>Technical and content audits</li><li>Local and service-page strategy</li><li>Conversion-focused content briefs</li></ul><a class="pe-text-link" href="industries.html">Explore SEO strategies →</a></article>
+        <article class="pe-service-card"><div class="pe-icon">CRO</div><h3>Tracking &amp; Conversion</h3><p>Clear attribution, sharper landing pages and a measurement layer that shows which leads create real value.</p><ul class="pe-checks"><li>GA4 and conversion tracking</li><li>Landing-page diagnostics</li><li>Lead quality feedback loops</li></ul><a class="pe-text-link" href="conversion-rate-optimization.html">Explore conversion strategy →</a></article>
+      </div>
+    </div></section>
+
+    <section class="pe-section" style="padding-top:0"><div class="container">
+      <div class="pe-section-heading"><div><span class="pe-kicker">Proven delivery</span><h2>Recent campaigns. Hard outcomes.</h2></div><a class="pe-text-link" href="case-studies.html">Browse all case studies →</a></div>
+      <div class="pe-case-grid">
+        <a class="pe-case-card" href="google-ads-towing-case-study.html"><div class="pe-case-visual"><div class="pe-case-tags"><span>Towing</span><span>Google Ads</span></div><div class="pe-case-window"><svg viewBox="0 0 300 100" aria-hidden="true"><g fill="#334155"><rect x="10" y="12" width="76" height="28" rx="4"/><rect x="94" y="12" width="76" height="28" rx="4"/><rect x="178" y="12" width="112" height="28" rx="4"/></g><path d="M10 85L46 73L82 77L118 56L154 62L190 40L226 46L290 17" fill="none" stroke="#34d399" stroke-width="4"/></svg></div></div><div class="pe-case-content"><h3>Towing: high-intent calls at sustainable cost</h3><div class="pe-case-stats"><div><small>CONVERSION RATE</small><strong>35%</strong></div><div><small>COST / CALL</small><strong>$18.53</strong></div></div><p>Search structure and call tracking focused spend on real roadside demand instead of low-quality traffic.</p><span class="pe-text-link">Read the case study →</span></div></a>
+        <a class="pe-case-card" href="wedding-photography-96-leads.html"><div class="pe-case-visual"><div class="pe-case-tags"><span>Photography</span><span>Paid Search</span></div><div class="pe-case-window"><svg viewBox="0 0 300 100" aria-hidden="true"><g fill="#334155"><rect x="10" y="10" width="280" height="14" rx="3"/><rect x="10" y="32" width="84" height="58" rx="5"/><rect x="102" y="32" width="188" height="11" rx="3"/><rect x="102" y="51" width="156" height="8" rx="3"/><rect x="102" y="67" width="176" height="8" rx="3"/></g><rect x="102" y="82" width="74" height="8" rx="4" fill="#34d399"/></svg></div></div><div class="pe-case-content"><h3>Wedding photography: demand captured in 30 days</h3><div class="pe-case-stats"><div><small>QUALIFIED LEADS</small><strong>96</strong></div><div><small>TIMEFRAME</small><strong>30 days</strong></div></div><p>A focused search campaign connected couples with the right offer at the moment they were ready to book.</p><span class="pe-text-link">Read the case study →</span></div></a>
+        <a class="pe-case-card" href="pool-service-winter-leads-case-study.html"><div class="pe-case-visual"><div class="pe-case-tags"><span>Pool Service</span><span>Lead Gen</span></div><div class="pe-case-window"><svg viewBox="0 0 300 100" aria-hidden="true"><g fill="#334155"><rect x="10" y="10" width="134" height="36" rx="5"/><rect x="154" y="10" width="136" height="36" rx="5"/><rect x="10" y="56" width="280" height="34" rx="5"/></g><path d="M25 79C62 65 85 78 116 67S170 62 196 48S254 53 278 31" fill="none" stroke="#38bdf8" stroke-width="4"/></svg></div></div><div class="pe-case-content"><h3>Pool service: leads through the slow season</h3><div class="pe-case-stats"><div><small>WINTER LEADS</small><strong>48</strong></div><div><small>COST / LEAD</small><strong>$21</strong></div></div><p>A seasonal acquisition plan kept opportunities moving when category demand was at its lowest.</p><span class="pe-text-link">Read the case study →</span></div></a>
+      </div>
+    </div></section>
+
+    <section class="pe-section" style="padding-top:0"><div class="container pe-about-shell"><div class="pe-about-grid">
+      <div class="pe-portrait"><img src="images/alexpolo copy.jpg" alt="Alex, performance marketing consultant" width="1013" height="1024"><div class="pe-portrait-status"><strong>Available for select projects</strong><span>12+ yrs</span></div></div>
+      <div class="pe-about-copy"><span class="pe-kicker">Direct specialist model</span><h2>Agency-grade systems without the account-manager maze.</h2><p>When you work with Alex Does Digital, the person shaping the strategy is also inside the account. You get experienced judgment, transparent reporting and a faster path from insight to action.</p><div class="pe-principles"><div class="pe-principle"><strong>Senior execution</strong><p>Strategy, builds and optimization stay close to the person accountable for outcomes.</p></div><div class="pe-principle"><strong>Commercial accountability</strong><p>Decisions are tied to qualified leads, pipeline and revenue—not platform optics.</p></div><div class="pe-principle"><strong>Clear communication</strong><p>Plain-language reporting shows what changed, why it mattered and what comes next.</p></div><div class="pe-principle"><strong>Focused capacity</strong><p>A selective client roster protects response times and the quality of the work.</p></div></div><div class="pe-actions"><a class="pe-text-link" href="about.html">More about Alex →</a></div></div>
+    </div></div></section>
+
+    <section class="pe-section" style="padding-top:0"><div class="container">
+      <div class="pe-section-heading"><div><span class="pe-kicker">Field notes</span><h2>Actionable PPC &amp; SEO breakdowns. No fluff.</h2></div><a class="pe-text-link" href="blog.html">See all insights →</a></div>
+      <div class="pe-insight-grid">
+        <a class="pe-insight-card" href="seo-for-handyman.html"><div class="pe-insight-meta"><span>SEO guide</span><span>12 min read</span></div><h3>SEO for Handyman: a complete local ranking guide</h3><p>Build durable local visibility with the right pages, signals and conversion path.</p><div class="pe-insight-foot"><span>Apr 29, 2026</span><strong>Read article →</strong></div></a>
+        <a class="pe-insight-card" href="google-ads-for-handyman.html"><div class="pe-insight-meta"><span>Paid search</span><span>7 min read</span></div><h3>Google Ads for Handyman: the six-step blueprint</h3><p>Structure campaigns around urgent, local demand and the jobs you actually want.</p><div class="pe-insight-foot"><span>Apr 29, 2026</span><strong>Read article →</strong></div></a>
+        <a class="pe-insight-card" href="seo-for-appliance-repair.html"><div class="pe-insight-meta"><span>SEO guide</span><span>14 min read</span></div><h3>SEO for Appliance Repair: turn rankings into leads</h3><p>A practical framework for service pages, local relevance and measurable organic growth.</p><div class="pe-insight-foot"><span>Apr 29, 2026</span><strong>Read article →</strong></div></a>
+      </div>
+    </div></section>
+
+    <section class="container"><div class="pe-cta">
+      <span class="pe-availability">Accepting a limited number of projects</span><h2>Ready to scale qualified leads—not just traffic?</h2><p>Book a relaxed 30-minute growth audit. We’ll map the biggest constraint in your acquisition system and the clearest next move.</p>
+      <div class="pe-actions"><a class="pe-button pe-button-primary" href="https://cal.com/alexdoesdigital/30min" target="_blank" rel="noopener">Book your growth audit →</a><a class="pe-button pe-button-secondary" href="case-studies.html">Review the proof</a></div><div class="pe-cta-notes"><span>No-pressure conversation</span><span>Direct with Alex</span><span>Practical next steps</span></div>
+    </div></section>
+  </main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-content">
+      <div class="footer-brand"><a class="logo-text" href="index.html">ALEX DOES DIGITAL</a><p class="footer-mission">Senior-led search marketing for service businesses that care about profitable, measurable growth.</p><a class="footer-contact" href="mailto:alex@alxdoesdigital.com">alex@alxdoesdigital.com</a></div>
+      <div><h3 class="footer-heading">Services</h3><ul class="footer-links"><li><a href="google-ads-for-service-businesses.html">Google Ads</a></li><li><a href="facebook-ads-lead-generation.html">Paid Social</a></li><li><a href="industries.html">SEO</a></li><li><a href="conversion-rate-optimization.html">Conversion Strategy</a></li></ul></div>
+      <div><h3 class="footer-heading">Company</h3><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Insights</a></li><li><a href="https://cal.com/alexdoesdigital/30min" target="_blank" rel="noopener">Book an Audit</a></li></ul></div>
+      <div><h3 class="footer-heading">Legal</h3><ul class="footer-links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Alex Does Digital. All rights reserved.</span><span>Performance marketing, measured clearly.</span></div>
+  </div></footer>
 </body>
-
 </html>
