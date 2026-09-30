@@ -1201,6 +1201,209 @@ select:focus {
     color: #cbd5e1 !important;
 }
 
+/* Shared conversion panels */
+.case-study-cta-section,
+.wedding-cta-section,
+.towing-cta,
+.final-cta {
+    padding: 4.75rem 0 !important;
+    margin: 0 !important;
+    color: var(--pe-ink) !important;
+    background: white !important;
+    border: 0 !important;
+}
+
+.case-study-cta-section::before {
+    display: none !important;
+}
+
+.case-study-cta-section .cta-box,
+.wedding-cta-section .cta-content-centered,
+.towing-cta .towing-cta-content,
+.final-cta .cta-box-gradient {
+    position: relative;
+    width: min(100%, 980px);
+    max-width: 980px;
+    padding: clamp(2.25rem, 6vw, 4.5rem) !important;
+    margin: 0 auto;
+    overflow: hidden;
+    color: white !important;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% -35%, rgba(16, 185, 129, 0.28), transparent 45%),
+        var(--pe-navy) !important;
+    border: 1px solid #1e293b !important;
+    border-radius: 16px !important;
+    box-shadow: 0 24px 50px -28px rgba(15, 23, 42, 0.8) !important;
+}
+
+.case-study-cta-section .cta-box::before,
+.wedding-cta-section .cta-content-centered::before,
+.towing-cta .towing-cta-content::before,
+.final-cta .cta-box-gradient::before {
+    content: 'READY WHEN YOU ARE';
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.38rem 0.62rem;
+    margin-bottom: 1.15rem;
+    color: #a7f3d0;
+    background: rgba(30, 41, 59, 0.82);
+    border: 1px solid #334155;
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+}
+
+.case-study-cta-section .cta-box::after,
+.wedding-cta-section .cta-content-centered::after,
+.towing-cta .towing-cta-content::after,
+.final-cta .cta-box-gradient::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+.case-study-cta-section .cta-box > *,
+.wedding-cta-section .cta-content-centered > *,
+.towing-cta .towing-cta-content > *,
+.final-cta .cta-box-gradient > * {
+    position: relative;
+    z-index: 1;
+}
+
+.case-study-cta-section .cta-heading,
+.wedding-cta-section .cta-heading,
+.towing-cta h2,
+.final-cta .cta-box-gradient h2 {
+    max-width: 760px;
+    margin: 0 auto 1rem !important;
+    color: white !important;
+    font-size: clamp(2rem, 5vw, 3.7rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.05em !important;
+}
+
+.case-study-cta-section .cta-subheading,
+.wedding-cta-section .cta-description,
+.towing-cta p,
+.final-cta .cta-box-gradient p {
+    max-width: 680px;
+    margin: 0 auto 1.8rem !important;
+    color: #cbd5e1 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.75 !important;
+}
+
+.case-study-cta-section .cta-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    max-width: 820px;
+    margin: 1.8rem auto 2rem !important;
+    text-align: left;
+}
+
+.case-study-cta-section .cta-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    min-height: 100%;
+    padding: 0.95rem;
+    color: #e2e8f0;
+    background: rgba(30, 41, 59, 0.78);
+    border: 1px solid #334155;
+    border-radius: 9px;
+    font-size: 0.72rem;
+    line-height: 1.5;
+}
+
+.case-study-cta-section .cta-feature svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin-top: 1px;
+    color: #34d399;
+}
+
+.wedding-cta-section .cta-features-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    max-width: 760px;
+    margin: 1.8rem auto 2rem !important;
+    text-align: left;
+}
+
+.wedding-cta-section .cta-feature-item {
+    min-height: 100%;
+    padding: 0.9rem 1rem;
+    color: #e2e8f0;
+    background: rgba(30, 41, 59, 0.78);
+    border: 1px solid #334155;
+    border-radius: 9px;
+    font-size: 0.74rem;
+}
+
+.wedding-cta-section .cta-feature-item svg {
+    width: 18px;
+    height: 18px;
+    color: #34d399;
+}
+
+.case-study-cta-section .btn,
+.wedding-cta-section .btn,
+.towing-cta .btn,
+.final-cta .btn,
+.post-cta .btn,
+.cta-box-centered .btn {
+    min-width: min(100%, 260px);
+    color: white !important;
+    background: var(--pe-green) !important;
+    border-color: var(--pe-green) !important;
+}
+
+.post-cta,
+.cta-box-centered {
+    position: relative;
+    max-width: 860px;
+    padding: clamp(1.8rem, 5vw, 3rem) !important;
+    margin: 3rem auto 0 !important;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% -60%, rgba(16, 185, 129, 0.25), transparent 55%),
+        var(--pe-navy) !important;
+}
+
+.post-cta h3,
+.cta-box-centered h2,
+.cta-box-centered h3 {
+    max-width: 650px;
+    margin: 0 auto 0.75rem !important;
+    color: white !important;
+    font-size: clamp(1.55rem, 4vw, 2.25rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.035em !important;
+}
+
+.post-cta p,
+.cta-box-centered p {
+    max-width: 650px;
+    margin: 0 auto 1.4rem !important;
+    color: #cbd5e1 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.7 !important;
+}
+
 .privacy-content-section {
     background: white !important;
 }
@@ -1413,6 +1616,26 @@ select:focus {
 
     .pe-cta {
         margin-bottom: 3rem;
+    }
+
+    .case-study-cta-section,
+    .wedding-cta-section,
+    .towing-cta,
+    .final-cta {
+        padding: 2.75rem 0 !important;
+    }
+
+    .case-study-cta-section .cta-box,
+    .wedding-cta-section .cta-content-centered,
+    .towing-cta .towing-cta-content,
+    .final-cta .cta-box-gradient {
+        padding: 2.25rem 1.25rem !important;
+        border-radius: 12px !important;
+    }
+
+    .case-study-cta-section .cta-features,
+    .wedding-cta-section .cta-features-list {
+        grid-template-columns: 1fr;
     }
 
     .footer-content {
