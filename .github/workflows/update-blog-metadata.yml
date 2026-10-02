@@ -1,4 +1,4 @@
-name: Update Blog Metadata
+name: Update Content Metadata
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
       - '*.html'
       - 'posts.json'
       - 'sitemap.xml'
+      - 'content-registry.json'
       - 'scripts/update-blog-metadata.js'
 
 jobs:
@@ -27,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Update blog metadata
+      - name: Update content metadata
         run: npm run update-blog
 
       - name: Commit changes if needed
@@ -37,7 +38,7 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit"
           else
-            git add posts.json sitemap.xml blog.html
-            git commit -m "chore: auto-update blog metadata"
+            git add posts.json sitemap.xml
+            git commit -m "chore: auto-update content metadata"
             git push
           fi

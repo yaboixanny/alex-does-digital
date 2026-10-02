@@ -6,12 +6,15 @@ const { execFileSync } = require('child_process');
 const EXCLUDED_FILES = new Set([
   'index.html',
   'blog.html',
+  'guides.html',
+  'services.html',
   'about.html',
   'case-studies.html',
   'industries.html',
   'conversion-rate-optimization.html',
   'facebook-ads-lead-generation.html',
   'google-ads-for-service-businesses.html',
+  'seo-for-service-businesses.html',
   'youtube-leads.html',
   'privacy-policy.html',
   'terms-of-service.html',
@@ -306,8 +309,6 @@ function updateBlogMetadata() {
 
     saveSitemap(sitemap);
   }
-
-  renderBlogCards(existingPosts);
 
   console.log(`\n✓ Blog metadata update complete. ${newPostsAdded} new posts added, ${postsUpdated} updated, ${postsPruned} removed.`);
 }

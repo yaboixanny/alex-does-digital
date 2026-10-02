@@ -4,6 +4,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT = path.join(ROOT, 'dist');
 const EXCLUDED_TEMPLATES = new Set([
+  'blog.html',
   'blog-post-template.html',
   'case-study-template.html',
   'facebook-ads-post-template.html',

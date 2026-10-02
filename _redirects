@@ -3,13 +3,14 @@
 /google-ads-for-garage-door-companies     /     301
 /google-ads-for-handyman-companies        /google-ads-for-handyman     301
 /google-ads-for-handyman-companies.html   /google-ads-for-handyman     301
+/blog                                      /guides                               301!
 
 # Canonical clean-URL redirects. Forced because the source HTML files exist.
 /index.html                                      /                                      301!
 /about.html                                      /about                                 301!
 /advanced-solar-lead-generation.html             /advanced-solar-lead-generation        301!
 /appliance-repair-leads.html                     /appliance-repair-leads                301!
-/blog.html                                       /blog                                  301!
+/blog.html                                       /guides                                301!
 /car-detailing-leads.html                        /car-detailing-leads                   301!
 /carpet-cleaning-leads.html                      /carpet-cleaning-leads                 301!
 /case-studies.html                               /case-studies                          301!
@@ -53,6 +54,8 @@
 /handyman-leads.html                             /handyman-leads                        301!
 /hvac-leads.html                                 /hvac-leads                            301!
 /industries.html                                 /industries                            301!
+/guides.html                                     /guides                                301!
+/services.html                                   /services                              301!
 /lead-generation-guides.html                     /lead-generation-guides                301!
 /plumbing-leads.html                             /plumbing-leads                        301!
 /pool-service-leads.html                         /pool-service-leads                    301!
@@ -63,6 +66,7 @@
 /seo-for-handyman.html                           /seo-for-handyman                      301!
 /seo-for-nursing-homes.html                      /seo-for-nursing-homes                 301!
 /seo-for-nutritionists.html                      /seo-for-nutritionists                 301!
+/seo-for-service-businesses.html                 /seo-for-service-businesses            301!
 /seo-for-pool-service.html                       /seo-for-pool-service                  301!
 /seo-for-towing-companies.html                   /seo-for-towing-companies              301!
 /seo-by-industry.html                            /seo-by-industry                       301!

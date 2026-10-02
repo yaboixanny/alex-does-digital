@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
   <url>
     <loc>https://alxdoesdigital.com/</loc>
     <lastmod>2026-01-12</lastmod>
@@ -8,16 +7,6 @@
 
   <url>
     <loc>https://alxdoesdigital.com/about</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/case-studies</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/industries</loc>
     <lastmod>2026-01-12</lastmod>
   </url>
 
@@ -31,7 +20,46 @@
     <lastmod>2026-09-28</lastmod>
   </url>
 
-  <!-- Service Pillar Pages -->
+  <url>
+    <loc>https://alxdoesdigital.com/services</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/guides</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/industries</loc>
+    <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/case-studies</loc>
+    <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-by-industry</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/google-ads-by-industry</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/seo-by-industry</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/lead-generation-guides</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
   <url>
     <loc>https://alxdoesdigital.com/google-ads-for-service-businesses</loc>
     <lastmod>2026-01-12</lastmod>
@@ -43,61 +71,43 @@
   </url>
 
   <url>
+    <loc>https://alxdoesdigital.com/seo-for-service-businesses</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
     <loc>https://alxdoesdigital.com/conversion-rate-optimization</loc>
     <lastmod>2026-01-12</lastmod>
   </url>
 
-  <!-- Specialty Industry Pages -->
   <url>
-    <loc>https://alxdoesdigital.com/google-ads-for-towing-companies</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/google-ads-for-roadside-assistance</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-towing-companies</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/seo-for-towing-companies</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <!-- Case Study Pages -->
-  <url>
-    <loc>https://alxdoesdigital.com/google-ads-towing-case-study</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/wedding-photography-96-leads</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/ceramic-coating-facebook-ads-case-study</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/pool-service-winter-leads-case-study</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <!-- Industry Landing Pages -->
-  <url>
-    <loc>https://alxdoesdigital.com/appliance-repair-leads</loc>
+    <loc>https://alxdoesdigital.com/youtube-leads</loc>
     <lastmod>2026-04-20</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/towing-leads</loc>
+    <loc>https://alxdoesdigital.com/google-ads-for-dietitians-and-nutritionists</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/google-ads-wedding-photography-leads</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/wedding-photography-leads</loc>
     <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/advanced-solar-lead-generation</loc>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/appliance-repair-leads</loc>
+    <lastmod>2026-04-20</lastmod>
   </url>
 
   <url>
@@ -106,8 +116,28 @@
   </url>
 
   <url>
+    <loc>https://alxdoesdigital.com/carpet-cleaning-leads</loc>
+    <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/electrician-leads</loc>
+    <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/epoxy-flooring-leads</loc>
+    <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
     <loc>https://alxdoesdigital.com/garage-door-leads</loc>
     <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/handyman-leads</loc>
+    <lastmod>2026-04-20</lastmod>
   </url>
 
   <url>
@@ -121,78 +151,42 @@
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/electrician-leads</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/handyman-leads</loc>
-    <lastmod>2026-04-20</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/carpet-cleaning-leads</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <url>
     <loc>https://alxdoesdigital.com/pool-service-leads</loc>
     <lastmod>2026-01-12</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/epoxy-flooring-leads</loc>
+    <loc>https://alxdoesdigital.com/towing-leads</loc>
     <lastmod>2026-01-12</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/wedding-photography-leads</loc>
+    <loc>https://alxdoesdigital.com/ceramic-coating-facebook-ads-case-study</loc>
     <lastmod>2026-01-12</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/google-ads-wedding-photography-leads</loc>
+    <loc>https://alxdoesdigital.com/google-ads-towing-case-study</loc>
     <lastmod>2026-10-02</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/google-ads-for-pool-service</loc>
+    <loc>https://alxdoesdigital.com/pool-service-winter-leads-case-study</loc>
     <lastmod>2026-01-12</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-pool-service</loc>
+    <loc>https://alxdoesdigital.com/wedding-photography-96-leads</loc>
     <lastmod>2026-01-12</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/seo-for-pool-service</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-
-  <!-- Blog Pages -->
-  <url>
-    <loc>https://alxdoesdigital.com/blog</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-appliance-repair</loc>
+    <lastmod>2026-04-24</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/google-ads-pilot</loc>
-    <lastmod>2026-04-21</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-yoga-studios</loc>
-    <lastmod>2026-04-20</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-lawyers</loc>
-    <lastmod>2026-04-20</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-general-contractors</loc>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-financial-advisors</loc>
     <lastmod>2026-04-22</lastmod>
   </url>
 
@@ -202,17 +196,7 @@
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-hair-salons</loc>
-    <lastmod>2026-04-22</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-plumbers</loc>
-    <lastmod>2026-04-21</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-financial-advisors</loc>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-general-contractors</loc>
     <lastmod>2026-04-22</lastmod>
   </url>
 
@@ -222,7 +206,47 @@
   </url>
 
   <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-hair-salons</loc>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-landscaping</loc>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-lawn-care</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-lawyers</loc>
+    <lastmod>2026-04-20</lastmod>
+  </url>
+
+  <url>
     <loc>https://alxdoesdigital.com/facebook-ads-for-mechanics</loc>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-plastic-surgeons</loc>
+    <lastmod>2026-04-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-plumbers</loc>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-pool-service</loc>
+    <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-recruiting</loc>
     <lastmod>2026-04-22</lastmod>
   </url>
 
@@ -242,28 +266,8 @@
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/advanced-solar-lead-generation</loc>
-    <lastmod>2026-04-22</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/seo-for-nursing-homes</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/seo-for-care-homes</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/seo-for-nutritionists</loc>
-    <lastmod>2026-04-22</lastmod>
-  </url>
-
-  <url>
-    <loc>https://alxdoesdigital.com/google-ads-for-dietitians-and-nutritionists</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-towing-companies</loc>
+    <lastmod>2026-01-12</lastmod>
   </url>
 
   <url>
@@ -272,12 +276,12 @@
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-plastic-surgeons</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://alxdoesdigital.com/facebook-ads-for-yoga-studios</loc>
+    <lastmod>2026-04-20</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/seo-for-handyman</loc>
+    <loc>https://alxdoesdigital.com/google-ads-for-appliance-repair</loc>
     <lastmod>2026-04-29</lastmod>
   </url>
 
@@ -287,52 +291,57 @@
   </url>
 
   <url>
+    <loc>https://alxdoesdigital.com/google-ads-for-pool-service</loc>
+    <lastmod>2026-01-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/google-ads-for-roadside-assistance</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/google-ads-for-towing-companies</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/google-ads-pilot</loc>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+
+  <url>
     <loc>https://alxdoesdigital.com/seo-for-appliance-repair</loc>
     <lastmod>2026-04-29</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/google-ads-for-appliance-repair</loc>
+    <loc>https://alxdoesdigital.com/seo-for-care-homes</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alxdoesdigital.com/seo-for-handyman</loc>
     <lastmod>2026-04-29</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-appliance-repair</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://alxdoesdigital.com/seo-for-nursing-homes</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-recruiting</loc>
+    <loc>https://alxdoesdigital.com/seo-for-nutritionists</loc>
     <lastmod>2026-04-22</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-lawn-care</loc>
-    <lastmod>2026-04-23</lastmod>
+    <loc>https://alxdoesdigital.com/seo-for-pool-service</loc>
+    <lastmod>2026-01-12</lastmod>
   </url>
 
   <url>
-    <loc>https://alxdoesdigital.com/youtube-leads</loc>
-    <lastmod>2026-04-20</lastmod>
-  </url>
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-for-landscaping</loc>
-    <lastmod>2026-04-21</lastmod>
-  </url>
-  <url>
-    <loc>https://alxdoesdigital.com/facebook-ads-by-industry</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-  <url>
-    <loc>https://alxdoesdigital.com/google-ads-by-industry</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-  <url>
-    <loc>https://alxdoesdigital.com/seo-by-industry</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-  <url>
-    <loc>https://alxdoesdigital.com/lead-generation-guides</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://alxdoesdigital.com/seo-for-towing-companies</loc>
+    <lastmod>2026-01-12</lastmod>
   </url>
 </urlset>

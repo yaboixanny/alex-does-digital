@@ -3,6 +3,8 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const posts = JSON.parse(fs.readFileSync(path.join(ROOT, 'posts.json'), 'utf8'));
+const registry = JSON.parse(fs.readFileSync(path.join(ROOT, 'content-registry.json'), 'utf8'));
+const guides = posts.filter(post => registry[post.slug] === 'guide');
 
 const hubs = [
   {
@@ -44,7 +46,7 @@ function escapeHtml(value) {
 }
 
 function renderHub(hub) {
-  const items = posts.filter(hub.matches);
+  const items = guides.filter(hub.matches);
   const cards = items.map(post => `
                 <a class="topic-hub-card" href="/${escapeHtml(post.slug)}">
                     <span>${escapeHtml(post.category === 'Blog' ? hub.eyebrow : post.category)}</span>
@@ -73,8 +75,8 @@ function renderHub(hub) {
             <div class="logo"><a href="/" class="logo-text">Alex Does Digital</a></div>
             <ul class="nav-links">
                 <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/case-studies" class="nav-link">Results</a></li>
-                <li><a href="/blog" class="nav-link">Insights</a></li>
+                <li><a href="/case-studies" class="nav-link">Case Studies</a></li>
+                <li><a href="/guides" class="nav-link">Guides</a></li>
                 <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link nav-cta">Book a Growth Audit</a></li>
             </ul>
         </div></div>
