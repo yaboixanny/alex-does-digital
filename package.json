@@ -5,9 +5,10 @@
   "scripts": {
     "generate-hubs": "node scripts/generate-topic-hubs.js",
     "generate-wedding-pages": "node scripts/generate-wedding-pages.js",
+    "generate-core-lead-pages": "node scripts/generate-core-lead-pages.js",
     "enhance-site": "node scripts/enhance-site.js",
     "update-blog": "node scripts/update-blog-metadata.js",
-    "build": "npm run generate-wedding-pages && npm run update-blog && npm run generate-hubs && npm run enhance-site && node scripts/build-site.js"
+    "build": "npm run generate-wedding-pages && npm run generate-core-lead-pages && npm run update-blog && npm run generate-hubs && npm run enhance-site && node scripts/build-site.js"
   },
   "dependencies": {}
 }

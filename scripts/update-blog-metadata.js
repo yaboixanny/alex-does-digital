@@ -30,6 +30,15 @@ function getSlugFromFilename(filename) {
   return filename.replace('.html', '');
 }
 
+function decodeHtml(value) {
+  return String(value || '')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#(?:39|x27);/gi, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+}
+
 function getFirstCommittedDate(filename) {
   try {
     const output = execFileSync(
@@ -50,7 +59,7 @@ function extractMetadataFromHtml(htmlPath, filename) {
     // Extract title from <title> tag using regex
     const titleMatch = htmlContent.match(/<title>([^<]+)<\/title>/i);
     const titleTag = titleMatch ? titleMatch[1] : '';
-    const title = titleTag.replace(' | Alex Does Digital', '').trim();
+    const title = decodeHtml(titleTag).replace(' | Alex Does Digital', '').trim();
 
     // Extract meta description
     const descMatch = htmlContent.match(/<meta\s+name="description"\s+content="([^"]+)"/i);

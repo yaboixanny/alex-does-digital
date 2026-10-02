@@ -134,6 +134,86 @@ const pages = [
     ],
     ctaTitle: 'Want a clearer organic growth plan?',
     ctaText: 'Get a practical review of your service pages, portfolio structure, local visibility, and booking path.'
+  },
+  {
+    slug: 'google-ads-for-dietitians-and-nutritionists',
+    category: 'Google Ads',
+    label: 'Paid Search for Nutrition Practices',
+    title: 'Google Ads for Dietitians & Nutritionists | Get More Clients',
+    h1: 'Google Ads for Dietitians and Nutritionists',
+    description: 'Learn Google Ads for dietitians and nutritionists with focused keywords, specialty landing pages, local and telehealth targeting, careful claims, and client tracking.',
+    date: '2026-10-02',
+    readTime: '13 min read',
+    lede: 'Reach people actively searching for qualified nutrition support. This guide explains how dietitians, dieticians, and nutritionists can build focused campaigns around real services, locations, and client needs.',
+    summary: ['Separate specialties and search intent', 'Use careful health claims and clear credentials', 'Track qualified consultations and new clients'],
+    sections: `
+      <h2>How Google Ads works for dietitians and nutritionists</h2>
+      <p>Paid search can place a practice in front of people who are already looking for nutrition support. That intent is valuable, but it varies widely. Someone searching for a local registered dietitian may be close to booking, while someone searching for a free meal plan may only want general information.</p>
+      <p>A strong campaign narrows the account around services the practice genuinely provides. It explains credentials, who the service is for, whether care is local or online, and what a prospective client should expect next.</p>
+
+      <h2>Use both dietitian and dietician search language</h2>
+      <p>People use both <strong>dietitian</strong> and <strong>dietician</strong> when searching, even though professional title rules and common usage vary by country. Keyword research should account for both spellings alongside “nutritionist,” but ad and landing-page language must accurately represent the practitioner’s real qualifications.</p>
+      <div class="intent-table-wrap"><table class="intent-table">
+        <thead><tr><th>Keyword theme</th><th>Intent</th><th>Recommended page</th></tr></thead>
+        <tbody>
+          <tr><td>dietitian near me / dietician near me</td><td>Local commercial</td><td>Local practice landing page</td></tr>
+          <tr><td>online nutritionist</td><td>Telehealth comparison</td><td>Online consultation page</td></tr>
+          <tr><td>sports nutrition dietitian</td><td>Specialty-specific</td><td>Sports nutrition service page</td></tr>
+          <tr><td>PCOS nutritionist</td><td>Condition-related support</td><td>Eligible specialty page with careful claims</td></tr>
+          <tr><td>nutrition counseling cost</td><td>Pricing research</td><td>Pricing, insurance, or consultation page</td></tr>
+        </tbody>
+      </table></div>
+      <p>Use exact and phrase match to establish control. Review search terms frequently and exclude searches for jobs, salaries, degrees, certifications, recipes, free plans, definitions, and services the practice does not offer.</p>
+
+      <h2>Separate campaigns by service and client need</h2>
+      <p>Do not place sports nutrition, digestive health, weight-management support, eating-disorder care, pediatric nutrition, and general wellness into one ad group. Each specialty has different language, qualifications, risks, and booking expectations.</p>
+      <ul>
+        <li>Create a focused ad group or campaign for each real service.</li>
+        <li>Send each ad to the matching specialty page.</li>
+        <li>Keep local office and telehealth targeting separate when their economics differ.</li>
+        <li>Exclude conditions or services outside the practitioner’s scope.</li>
+      </ul>
+      <p>This structure improves relevance and makes it easier to see which specialties produce qualified consultations rather than low-fit inquiries.</p>
+
+      <h2>Target local and online clients accurately</h2>
+      <p>For an in-person practice, target people physically located within a realistic travel area. Mention the city, neighborhood, or clinic location in the ad and landing page. For online nutrition services, target only regions where the practitioner is legally and professionally able to work.</p>
+      <p>Avoid creating one nationwide campaign simply because consultations happen online. Licensure, title protection, insurance, time zones, and specialty demand may differ. Separate regions when their rules, pricing, or messaging require it.</p>
+
+      <h2>Write clear ads without risky promises</h2>
+      <p>Ads should explain the service, credentials, audience, and next step without guaranteeing health outcomes. Avoid sensational before-and-after claims, shame-based language, unsupported medical promises, or wording that assumes a person has a sensitive condition.</p>
+      <div class="intent-callout"><strong>Accuracy matters.</strong> Use professional titles only when they apply, describe the service rather than promising a cure, and make sure ads and landing pages follow current advertising, platform, privacy, and professional rules in the markets served.</div>
+      <p>Useful differentiators may include registered credentials, specialty training, insurance acceptance, language options, virtual appointments, evening availability, or experience with a specific client group.</p>
+
+      <h2>Build specialty landing pages that earn trust</h2>
+      <p>A paid-search landing page should immediately confirm the service and audience named in the ad. Introduce the practitioner, credentials, approach, appointment format, location or service area, and a clear consultation process.</p>
+      <ul>
+        <li>Explain who the service is designed to support.</li>
+        <li>Describe what happens before, during, and after the first appointment.</li>
+        <li>Show accurate credentials, professional memberships, and review context.</li>
+        <li>Address pricing, insurance, or reimbursement when possible.</li>
+        <li>Use a short, privacy-conscious consultation form.</li>
+      </ul>
+      <p>Do not ask for unnecessary health details in an advertising lead form. Collect only what the practice needs to arrange a safe first conversation, then move sensitive information into an appropriate intake system.</p>
+
+      <h2>Measure consultations, qualified leads, and new clients</h2>
+      <p>Basic form tracking cannot show whether a campaign is profitable. Record calls, consultation requests, scheduled appointments, attended appointments, qualified prospective clients, and new-client revenue. When consent and systems allow, import qualified and completed outcomes so bidding can learn from meaningful conversions.</p>
+      <p>Review performance by specialty, keyword theme, location, device, and appointment type. A campaign with a higher cost per lead may still be better if those leads attend consultations and become suitable long-term clients.</p>
+
+      <h2>Budget and bidding</h2>
+      <p>Set a starting budget based on local click costs, consultation capacity, and the value of a new client. Keep the initial structure simple enough to gather useful data. Controlled bidding and frequent search-term reviews are valuable early; automated bidding becomes more useful after accurate conversion signals accumulate.</p>
+      <p>Protect the budget from broad informational traffic before increasing spend. Expansion should follow evidence from qualified consultations and new clients, not impression volume alone.</p>
+
+      <h2>Pair paid search with nutrition SEO</h2>
+      <p>Google Ads can reveal which specialties, questions, locations, and client terms create real inquiries. Use those findings to prioritize durable service pages and educational content. The <a href="/seo-for-nutritionists">SEO guide for nutritionists, dietitians, and dieticians</a> explains how to build that long-term organic visibility, including sports nutrition and AI search.</p>`,
+    faqs: [
+      ['Do Google Ads work for dietitians and nutritionists?', 'They can work when campaigns focus on services the practitioner genuinely offers, use accurate credentials and careful claims, and track qualified consultations and new clients rather than every form equally.'],
+      ['Should campaigns target dietitian, dietician, and nutritionist keywords?', 'Keyword research should consider all three terms because people use them differently. Ads must still use professional titles accurately and comply with the rules in each location served.'],
+      ['Can online nutrition practices advertise nationally?', 'Only where the practitioner can legally and professionally provide the advertised service. Regional rules, licenses, insurance, time zones, and platform policies should be checked before expanding targeting.'],
+      ['What should a nutrition landing page include?', 'Include the specialty, intended audience, practitioner credentials, care format, process, pricing or insurance guidance, trust signals, and a privacy-conscious consultation form.'],
+      ['Which conversions should a practice track?', 'Track calls, consultation requests, scheduled and attended appointments, qualified prospective clients, and new clients. Those outcomes are more useful than treating every form submission as equal.']
+    ],
+    ctaTitle: 'Want a focused nutrition-practice campaign?',
+    ctaText: 'Get a practical review of your keywords, specialty pages, targeting, claims, and consultation tracking.'
   }
 ];
 

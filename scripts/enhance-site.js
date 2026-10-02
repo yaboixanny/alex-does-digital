@@ -24,10 +24,14 @@ const CASE_STUDIES = new Set([
   'pool-service-winter-leads-case-study',
   'wedding-photography-96-leads'
 ]);
-const COMMERCIAL_SERVICE_PAGES = new Set([
-  'google-ads-wedding-photography-leads',
-  'wedding-photography-leads'
-]);
+const COMMERCIAL_SERVICE_TYPES = {
+  'google-ads-wedding-photography-leads': 'Google Ads management for wedding photographers',
+  'google-ads-for-dietitians-and-nutritionists': 'Google Ads management for dietitians and nutritionists',
+  'wedding-photography-leads': 'SEO services for wedding photographers',
+  'plumbing-leads': 'Plumbing lead generation services',
+  'advanced-solar-lead-generation': 'Solar lead generation services'
+};
+const COMMERCIAL_SERVICE_PAGES = new Set(Object.keys(COMMERCIAL_SERVICE_TYPES));
 const INDUSTRIES = [
   'appliance-repair', 'handyman', 'towing', 'pool-service', 'wedding-photography',
   'solar', 'plumbing', 'car-detailing', 'carpet-cleaning', 'electrician',
@@ -50,6 +54,15 @@ function stripTags(value) {
   return String(value || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+function decodeHtml(value) {
+  return String(value || '')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#(?:39|x27);/gi, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+}
+
 function getMeta(html, name) {
   const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const first = html.match(new RegExp(`<meta\\s+[^>]*(?:name|property)=["']${escaped}["'][^>]*content=["']([^"']*)["'][^>]*>`, 'i'));
@@ -60,7 +73,7 @@ function getMeta(html, name) {
 
 function getTitle(html) {
   const match = html.match(/<title>([\s\S]*?)<\/title>/i);
-  return stripTags(match ? match[1] : '').replace(/\s*\|\s*Alex Does Digital.*$/i, '').trim();
+  return decodeHtml(stripTags(match ? match[1] : '')).replace(/\s*\|\s*Alex Does Digital.*$/i, '').trim();
 }
 
 function getGitDate(filename) {
@@ -91,6 +104,23 @@ function shortTitle(title) {
 }
 
 function relatedPosts(post, posts) {
+  const staticRelated = {
+    'facebook-ads-lead-generation': { slug: 'facebook-ads-lead-generation', title: 'Facebook Ads Lead Generation' },
+    'google-ads-for-service-businesses': { slug: 'google-ads-for-service-businesses', title: 'Google Ads for Service Businesses' },
+    'conversion-rate-optimization': { slug: 'conversion-rate-optimization', title: 'Conversion Rate Optimization' }
+  };
+  const manualRelated = {
+    'google-ads-for-dietitians-and-nutritionists': ['seo-for-nutritionists', 'google-ads-pilot'],
+    'seo-for-nutritionists': ['google-ads-for-dietitians-and-nutritionists', 'google-ads-pilot'],
+    'facebook-ads-for-financial-advisors': ['facebook-ads-lead-generation', 'conversion-rate-optimization'],
+    'plumbing-leads': ['facebook-ads-for-plumbers', 'google-ads-for-service-businesses'],
+    'advanced-solar-lead-generation': ['facebook-ads-for-solar-companies', 'google-ads-for-service-businesses']
+  };
+  if (manualRelated[post.slug]) {
+    return manualRelated[post.slug]
+      .map(slug => posts.find(candidate => candidate.slug === slug) || staticRelated[slug])
+      .filter(Boolean);
+  }
   const industry = industryFor(post.slug);
   const sameIndustry = industry
     ? posts.filter(candidate => candidate.slug !== post.slug && industryFor(candidate.slug) === industry)
@@ -174,9 +204,7 @@ function makeSchema({ slug, title, description, html, post, crumbs }) {
       name: title,
       description,
       url,
-      serviceType: slug.startsWith('google-ads')
-        ? 'Google Ads management for wedding photographers'
-        : 'SEO services for wedding photographers',
+      serviceType: COMMERCIAL_SERVICE_TYPES[slug],
       provider: { '@id': `${SITE}/#organization` }
     };
   } else if (post) {
