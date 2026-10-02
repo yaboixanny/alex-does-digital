@@ -44,6 +44,10 @@ yarn-error.log*
 
 # Optional npm cache directory
 .npm
+.npm_cache/
+
+# Generated deployment output
+dist/
 
 # Optional eslint cache
 .eslintcache

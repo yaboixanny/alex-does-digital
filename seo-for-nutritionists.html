@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO for Nutritionists | The ULTIMATE Guide</title>
-    <meta name="description" content="Master SEO for nutritionists with keyword research, local optimization, E-E-A-T principles, and content strategy. Build authority and grow your client base.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Learn SEO for nutritionists with clear steps for local rankings, helpful content, technical SEO, AI search visibility, and more client inquiries.">
+
     <style>
         .post-hero { background: var(--color-bg-dark); padding: 5rem 0 4rem; position: relative; overflow: hidden; }
         .post-hero-inner { max-width: 760px; margin: 0 auto; }
@@ -43,58 +43,195 @@
         .related-articles h3 { font-size: 1.2rem; font-weight: 800; color: #0f1528; margin-bottom: 1.5rem; }
         .related-link { display: block; padding: 1rem; margin-bottom: 0.75rem; color: #0069cc; text-decoration: none; font-weight: 600; transition: all 0.2s; }
         .related-link:hover { color: var(--color-accent-cyan); padding-left: 1.5rem; }
-        @media (max-width: 600px) { .post-hero { padding: 3.5rem 0 3rem; } }
+        .quick-answer { padding: 1.4rem 1.5rem; margin-bottom: 1.5rem; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; }
+        .quick-answer-label { display: block; margin-bottom: 0.45rem; color: #047857; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        .quick-answer p { margin: 0; color: #134e4a; font-size: 1rem; line-height: 1.7; }
+        .article-nav { padding: 1.4rem 1.5rem; margin: 1.75rem 0 2.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05); }
+        .article-nav strong { display: block; margin-bottom: 0.75rem; font-size: 0.9rem; }
+        .article-nav ol { columns: 2; column-gap: 2rem; margin: 0 0 0 1.2rem; }
+        .article-nav li { break-inside: avoid; margin-bottom: 0.45rem; font-size: 0.88rem; }
+        .article-nav a { color: #047857; text-decoration: none; }
+        .article-nav a:hover { text-decoration: underline; }
+        .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 1.3rem 0 1.6rem; }
+        .mini-card { padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; }
+        .mini-card strong { display: block; margin-bottom: 0.25rem; color: #047857; font-size: 0.86rem; }
+        .mini-card p { margin: 0; font-size: 0.84rem; line-height: 1.6; }
+        .seo-checklist { padding: 1.4rem 1.5rem; margin: 1.5rem 0; background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid #059669; border-radius: 10px; }
+        .seo-checklist h3 { margin-top: 0; }
+        .seo-checklist ul { margin-bottom: 0; }
+        .faq-list { display: grid; gap: 0.75rem; margin-top: 1.4rem; }
+        .faq-list details { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+        .faq-list summary { padding: 1rem 1.15rem; color: #0f172a; font-weight: 700; cursor: pointer; list-style: none; }
+        .faq-list summary::-webkit-details-marker { display: none; }
+        .faq-list summary::after { content: '+'; float: right; color: #059669; font-size: 1.2rem; }
+        .faq-list details[open] summary::after { content: '−'; }
+        .faq-list .faq-answer { padding: 0 1.15rem 1.1rem; }
+        .faq-list .faq-answer p { margin: 0; font-size: 0.95rem; }
+        .updated-note { display: inline-block; margin-top: 1rem; color: #64748b; font-size: 0.78rem; }
+        @media (max-width: 600px) {
+            .post-hero { padding: 3.5rem 0 3rem; }
+            .article-nav ol { columns: 1; }
+            .mini-grid { grid-template-columns: 1fr; }
+        }
     </style>
     <link rel="canonical" href="https://alxdoesdigital.com/seo-for-nutritionists">
     <meta property="og:title" content="SEO for Nutritionists | The ULTIMATE Guide">
-    <meta property="og:description" content="Master SEO for nutritionists with keyword research, local optimization, E-E-A-T principles, and content strategy. Build authority and grow your client base.">
+    <meta property="og:description" content="A clear guide to local SEO, content, technical fixes, AI search visibility, and more client inquiries for nutritionists.">
     <meta property="og:url" content="https://alxdoesdigital.com/seo-for-nutritionists">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="og:image" content="https://alxdoesdigital.com/images/alexpolo-copy.webp">
     <meta property="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "SEO for Nutritionists | The ULTIMATE Guide",
-        "description": "Master SEO for nutritionists with keyword research, local optimization, E-E-A-T principles, and content strategy. Build authority and grow your client base.",
-        "datePublished": "2026-04-22",
-        "dateModified": "2026-04-22",
-        "author": {"@type": "Person", "name": "Alex", "url": "https://alxdoesdigital.com/about"},
-        "publisher": {"@type": "Organization", "name": "Alex Does Digital", "url": "https://alxdoesdigital.com"},
-        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://alxdoesdigital.com/seo-for-nutritionists"}
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Does SEO work for nutritionists?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes. SEO can help nutritionists appear when people search for local or online nutrition help. It works best when the site has clear service pages, useful health content, trusted credentials, and a strong Google Business Profile."}
+            },
+            {
+                "@type": "Question",
+                "name": "How long does SEO take for a nutrition practice?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Many practices need three to six months to see steady gains. The timing depends on the market, the age of the website, past SEO work, and the strength of competing sites."}
+            },
+            {
+                "@type": "Question",
+                "name": "What keywords should a nutritionist target?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Start with service, specialty, and location terms. Examples include nutritionist near me, sports nutritionist in Austin, PCOS dietitian, and online gut health nutritionist. Each main service should have its own useful page."}
+            },
+            {
+                "@type": "Question",
+                "name": "Do online nutritionists need local SEO?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Online nutritionists still need clear location and service details, but they should not create fake local pages. They can build pages around real licenses, regions served, specialties, and online care options."}
+            },
+            {
+                "@type": "Question",
+                "name": "How often should nutrition content be updated?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Review key health pages at least once a year and sooner when guidance changes. Check facts, links, author details, examples, and the date of the last medical or expert review."}
+            },
+            {
+                "@type": "Question",
+                "name": "How can a nutritionist appear in AI search results?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Use clear answers, accurate facts, named authors, trusted sources, simple page structure, and consistent business details. AI search systems are more likely to use content that is easy to understand and verify."}
+            }
+        ]
     }
     </script>
-    <link rel="stylesheet" href="editorial.css?v=2">
+
+
+
+
+    <script type="application/ld+json" data-seo-schema>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://alxdoesdigital.com/seo-for-nutritionists#article",
+      "headline": "SEO for Nutritionists | The ULTIMATE Guide",
+      "description": "Learn SEO for nutritionists with clear steps for local rankings, helpful content, technical SEO, AI search visibility, and more client inquiries.",
+      "image": [
+        "https://alxdoesdigital.com/images/alexpolo-copy.webp"
+      ],
+      "datePublished": "2026-04-22",
+      "dateModified": "2026-10-02",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://alxdoesdigital.com/seo-for-nutritionists"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://alxdoesdigital.com/about#person",
+        "name": "Alex",
+        "url": "https://alxdoesdigital.com/about"
+      },
+      "publisher": {
+        "@id": "https://alxdoesdigital.com/#organization"
+      },
+      "articleSection": "SEO by Industry"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://alxdoesdigital.com/#organization",
+      "name": "Alex Does Digital",
+      "url": "https://alxdoesdigital.com/",
+      "email": "alex@alexdoesdigital.com",
+      "telephone": "+17163903081",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alxdoesdigital.com/images/alex-does-digital-logo.svg",
+        "width": 512,
+        "height": 512
+      },
+      "founder": {
+        "@id": "https://alxdoesdigital.com/about#person"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alxdoesdigital.com/seo-for-nutritionists#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://alxdoesdigital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SEO by Industry",
+          "item": "https://alxdoesdigital.com/seo-by-industry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO for Nutritionists | The ULTIMATE Guide",
+          "item": "https://alxdoesdigital.com/seo-for-nutritionists"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/site.css?v=3">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <div class="logo"><a href="index.html" class="logo-text">Alex Does Digital</a></div>
+                <div class="logo"><a href="/" class="logo-text">Alex Does Digital</a></div>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="case-studies.html" class="nav-link">Results</a></li>
-                    <li><a href="industries.html" class="nav-link">Industries</a></li>
-                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
+                    <li><a href="/case-studies" class="nav-link">Results</a></li>
+                    <li><a href="/industries" class="nav-link">Industries</a></li>
+                    <li><a href="/blog" class="nav-link active">Blog</a></li>
                     <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <section class="post-hero">
+<!-- SEO_BREADCRUMBS_START -->
+<nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/seo-by-industry">SEO by Industry</a></li><li><span aria-current="page">SEO for Nutritionists | The ULTIMATE Guide</span></li></ol></div></nav>
+<!-- SEO_BREADCRUMBS_END -->
+<section class="post-hero">
         <div class="container">
             <div class="post-hero-inner">
                 <div class="post-hero-meta">
                     <span class="post-category-tag">SEO</span>
-                    <span class="post-hero-date">April 22, 2026</span>
-                    <span class="post-hero-read-time">10 min read</span>
+                    <span class="post-hero-date">Updated October 2, 2026</span>
+                    <span class="post-hero-read-time">15 min read</span>
                 </div>
                 <h1>SEO for Nutritionists | The ULTIMATE Guide</h1>
-                <p class="post-hero-lede">Own your search traffic and build a sustainable lead generation engine through strategic SEO optimization for your nutrition practice.</p>
+                <p class="post-hero-lede">A clear guide to local rankings, helpful health content, technical SEO, AI search visibility, and more client inquiries.</p>
             </div>
         </div>
     </section>
@@ -102,138 +239,243 @@
     <section class="post-body-section">
         <div class="container">
             <article class="post-body">
-                <p>In the digital age, being a world-class nutritionist isn't enough if your potential clients can't find you. Whether you specialize in sports nutrition, weight management, or clinical dietetics, the bridge between your expertise and a full roster of clients is <strong>Search Engine Optimization (SEO).</strong></p>
-                <p>Most nutritionists rely on word-of-mouth or social media. While valuable, these channels are "rented" attention. SEO allows you to <strong>"own" your traffic.</strong> When someone types "nutritionist for gut health" into Google, they are actively looking for a solution. SEO ensures you are the answer.</p>
+                <div class="quick-answer">
+                    <span class="quick-answer-label">Quick answer</span>
+                    <p><strong>SEO for nutritionists</strong> helps the right people find your practice in Google and AI search. Start with clear service pages, a complete Google Business Profile, useful health content, trusted credentials, and a fast website. Then track which pages lead to calls and bookings.</p>
+                </div>
 
-                <hr class="post-divider">
+                <p>A great nutrition practice can still struggle online. People may need your help, but they cannot book with you if they cannot find you. Search engine optimization, or SEO, helps close that gap.</p>
+                <p>SEO brings your website in front of people who are looking for help now. They may search for a sports nutritionist, a PCOS dietitian, a local dietician, or online nutrition coaching. A strong site helps them learn, trust you, and take the next step.</p>
+                <span class="updated-note">Updated October 2, 2026 · About 15 minutes to read</span>
 
-                <h2>Why SEO is the Most Valuable Asset for Nutritionists</h2>
-                <p>Unlike paid ads that stop working the moment you stop paying, SEO provides a compounding return on investment. A well-optimized blog post can generate leads for years with zero additional spend.</p>
+                <nav class="article-nav" aria-label="Article contents">
+                    <strong>In this guide</strong>
+                    <ol>
+                        <li><a href="#why-seo">Why SEO matters</a></li>
+                        <li><a href="#keywords">Keyword research</a></li>
+                        <li><a href="#dietitian-dietician">Dietitian and dietician SEO</a></li>
+                        <li><a href="#sports-nutrition-seo">Sports nutrition SEO</a></li>
+                        <li><a href="#service-pages">Service pages</a></li>
+                        <li><a href="#local-seo">Local SEO</a></li>
+                        <li><a href="#health-content">Helpful health content</a></li>
+                        <li><a href="#technical-seo">Technical SEO</a></li>
+                        <li><a href="#links">Links and authority</a></li>
+                        <li><a href="#ai-search">SEO for AI search</a></li>
+                        <li><a href="#measurement">Tracking results</a></li>
+                        <li><a href="#faq">Common questions</a></li>
+                    </ol>
+                </nav>
+
+                <h2 id="why-seo">Why Does SEO Matter for Nutritionists?</h2>
+                <p>SEO can bring steady traffic without paying for every click. A useful page may attract visits for months or years. Paid ads stop when the budget stops, but a strong page can keep working.</p>
+                <p>Search traffic can also have high intent. Someone searching for “nutritionist near me” is not just scrolling. That person may be ready to compare providers or book a call.</p>
+
+                <div class="mini-grid">
+                    <div class="mini-card"><strong>Build trust</strong><p>Show your training, focus areas, process, and real experience.</p></div>
+                    <div class="mini-card"><strong>Reach local clients</strong><p>Appear for searches tied to your city, area, or clinic.</p></div>
+                    <div class="mini-card"><strong>Explain your care</strong><p>Answer common questions before a person contacts you.</p></div>
+                    <div class="mini-card"><strong>Grow over time</strong><p>Improve useful pages instead of starting from zero each month.</p></div>
+                </div>
 
                 <div class="callout">
-                    <p><strong>Key Insight:</strong> Most health-related searches are informational first, then transactional. Your content needs to educate first, then convert.</p>
+                    <p><strong>Simple rule:</strong> Answer the health question first. Then show the reader how your service can help.</p>
                 </div>
 
-                <hr class="post-divider">
+                <h2 id="keywords">1. Find the Words Your Clients Use</h2>
+                <p>Keyword research starts with real client needs. Do not build a list based only on search volume. Think about the problem, the type of help, the location, and how close the person is to booking.</p>
 
-                <h2>1. Keyword Research: Thinking Like Your Client</h2>
-                <p>SEO for nutritionists starts with understanding the "search intent" of your audience. Keywords fall into three categories:</p>
+                <h3>Service keywords</h3>
+                <p>These searches show that a person may want to hire someone. Examples include “nutritionist near me,” “online dietitian,” and “sports nutrition coaching.” Use them on service and location pages.</p>
 
-                <h3>Informational Keywords</h3>
-                <p>Users looking for answers. Examples: "How much protein do I need?", "Benefits of magnesium," "Symptoms of gluten intolerance."</p>
-                <p><strong>Strategy:</strong> Use these for blog posts to build trust and establish authority.</p>
+                <h3>Specialty keywords</h3>
+                <p>These searches name a clear need. Examples include “PCOS dietitian,” “gut health nutritionist,” and “plant-based sports nutritionist.” Create a page only when you truly offer that service and have the right training.</p>
 
-                <h3>Transactional/Commercial Keywords</h3>
-                <p>Users ready to hire someone. Examples: "Nutritionist near me," "Online sports nutritionist," "Personalized meal planning services."</p>
-                <p><strong>Strategy:</strong> Use these on your homepage and service pages.</p>
+                <h3>Question keywords</h3>
+                <p>These searches ask for help or facts. Examples include “what should I eat before a marathon?” and “can a dietitian help with IBS?” Use them for articles, videos, and FAQ sections.</p>
 
-                <h3>Long-Tail Keywords</h3>
-                <p>Highly specific and less competitive. Examples: "Plant-based nutrition for marathon training," "Postpartum nutrition plan for breastfeeding moms."</p>
-                <p><strong>Strategy:</strong> These are your "secret weapon" for ranking quickly with less competition.</p>
+                <div class="seo-checklist">
+                    <h3>A useful keyword pattern</h3>
+                    <ul>
+                        <li><strong>Service:</strong> nutrition counseling</li>
+                        <li><strong>Specialty:</strong> sports, gut health, diabetes, or family nutrition</li>
+                        <li><strong>Location:</strong> city, state, or real service area</li>
+                        <li><strong>Format:</strong> in-person, online, group, or one-to-one</li>
+                    </ul>
+                </div>
 
-                <hr class="post-divider">
+                <h2 id="dietitian-dietician">SEO for Dietitians and Dieticians: Use Both Spellings</h2>
+                <p>People search for nutrition care using both “dietitian” and “dietician.” If the search data shows demand for each spelling, your website can mention both in a natural way. This helps a dietitian reach people who type “dietician” without making the page feel forced.</p>
+                <p>Use your correct professional title in your name, bio, credentials, and service details. Then work the alternate spelling into helpful copy where it makes sense. For example: “Looking for a registered dietitian? Some people also search for a dietician when they need the same type of support.”</p>
+                <p>You can also use both terms in FAQs, image alt text when accurate, internal links, and one or two page headings. Avoid swapping every use of “dietitian” for “dietician.” Clear writing and accurate credentials matter more than repeating either keyword.</p>
 
-                <h2>2. On-Page SEO: Optimizing Every Element</h2>
-                <p>Every page on your site should be optimized for a specific keyword.</p>
+                <h2 id="sports-nutrition-seo">Sports Nutrition SEO: Reach Athletes Looking for Support</h2>
+                <p><strong>Sports nutrition SEO</strong> helps a practice appear when athletes search for food, fueling, recovery, or performance support. A focused sports nutrition page should explain who you help, which sports you understand, and whether sessions are local or online.</p>
+                <p>To improve <strong>SEO for sports nutrition</strong>, cover the questions athletes ask before they book. Useful topics may include pre-workout meals, race-day fueling, recovery nutrition, hydration, supplements, and nutrition for different training goals. Keep claims careful and support health advice with trusted sources.</p>
+                <p>Use specific phrases only when they match the service. Examples include “sports dietitian in Austin,” “online sports dietician,” and “nutritionist for marathon training.” Link related articles back to the main sports nutrition service page so readers and search engines can see the connection.</p>
 
-                <h3>Title Tags and Meta Descriptions</h3>
-                <p>The Title Tag is the first thing Google and users see.</p>
+                <h2 id="service-pages">2. Build One Strong Page for Each Main Service</h2>
+                <p>Your homepage cannot explain every service in detail. Give each main offer its own page. This helps search engines understand the site. It also helps people find the care that fits their needs.</p>
+                <p>A service page should state who the service is for, what happens, what it may help with, and how to book. It should also explain your training and any limits of the service.</p>
+
+                <h3>Use a clear page structure</h3>
                 <ul>
-                    <li><strong>Bad:</strong> Home - Jane Doe Nutrition</li>
-                    <li><strong>Good:</strong> Registered Dietitian & Nutritionist in Austin, TX | Jane Doe Nutrition</li>
+                    <li>A direct title and one clear H1</li>
+                    <li>A short answer near the top</li>
+                    <li>Signs the service may be a good fit</li>
+                    <li>Your process, price range, or next step</li>
+                    <li>Credentials and links to trusted sources</li>
+                    <li>Common questions and a clear booking button</li>
                 </ul>
 
-                <h3>Header Tags (H1, H2, H3)</h3>
-                <p>Search engines use headers to understand content hierarchy. Your H1 should contain your main keyword, and H2s should cover sub-topics.</p>
+                <h3>Write useful search titles</h3>
+                <p>Make the title clear, not clever. “Sports Nutritionist in Austin | Jane Doe Nutrition” tells people and search engines what the page offers. A title like “Feel Your Best” does not.</p>
+                <p>Write a short meta description that explains the service and gives a reason to click. Keep it honest. Do not promise a cure or a result you cannot prove.</p>
 
-                <h3>Image Alt Text</h3>
-                <p>Google cannot "see" images. Alt text describes them to search engines, helping you rank in Google Images.</p>
-                <p><strong>Example:</strong> "Green kale smoothie with protein powder on a wooden table."</p>
+                <h2 id="local-seo">3. Improve Local SEO</h2>
+                <p>Local SEO matters when you meet clients at a clinic or serve a real local area. It helps your practice appear in Google Maps and local search results.</p>
 
-                <hr class="post-divider">
-
-                <h2>3. Local SEO: Dominating Your Market</h2>
-                <p>If you have a physical office or serve a specific region, Local SEO is critical.</p>
-
-                <h3>Google Business Profile (GBP)</h3>
-                <p>This is what puts you on the "Map Pack" in local search results.</p>
+                <h3>Complete your Google Business Profile</h3>
                 <ul>
-                    <li><strong>Consistency:</strong> Ensure your Name, Address, and Phone number (NAP) are identical everywhere</li>
-                    <li><strong>Reviews:</strong> Proactively ask clients for reviews. Google prioritizes businesses with high ratings</li>
-                    <li><strong>Photos:</strong> Upload high-quality photos of your office, your staff, and yourself</li>
+                    <li>Use the real business name, address, phone number, and hours</li>
+                    <li>Pick the closest correct business category</li>
+                    <li>Add services, appointment links, photos, and a clear description</li>
+                    <li>Keep the same contact details across your website and listings</li>
                 </ul>
 
-                <h3>Local Citations</h3>
-                <p>Get listed in local directories and health-specific platforms like Healthgrades or specialized nutritionist registries.</p>
+                <h3>Ask for honest reviews</h3>
+                <p>Reviews can help people feel safe choosing your practice. Ask clients in a fair and private way. Never offer a reward for a positive review. Reply with care and do not reveal private health details.</p>
 
-                <hr class="post-divider">
+                <h3>Handle online services with care</h3>
+                <p>Do not make fake city pages for places you do not serve. If you work online, explain where you are licensed or able to provide care. Build pages around real services and real service areas.</p>
 
-                <h2>4. Content Strategy: The E-E-A-T Principle</h2>
-                <p>Google evaluates health websites using <strong>E-E-A-T</strong>: Experience, Expertise, Authoritativeness, and Trustworthiness. Because nutrition is a "Your Money or Your Life" (YMYL) topic, Google is extremely strict.</p>
+                <h2 id="health-content">4. Publish Helpful and Safe Health Content</h2>
+                <p>Nutrition content can affect a person’s health. That means trust is vital. Each article should be accurate, clear, and written or checked by someone with the right background.</p>
 
-                <h3>Show Your Credentials</h3>
-                <p>Link to your certifications (RD, CNS, etc.) on every page. Have a detailed "About" page listing your education and experience.</p>
+                <h3>Show who created the content</h3>
+                <p>Add an author name, short bio, credentials, and a link to a full profile. If another expert checked the page, name that reviewer too. Include the published date and the last review date.</p>
 
-                <h3>Cite Peer-Reviewed Sources</h3>
-                <p>Never make a health claim without linking to peer-reviewed studies (PubMed, NIH) or reputable medical journals. This signals to Google that your information is factually grounded.</p>
+                <h3>Use strong sources</h3>
+                <p>Link health claims to sources readers can check. Good choices may include government health agencies, medical groups, and peer-reviewed research. Make it clear when advice is general and when a person should speak with a qualified care provider.</p>
 
-                <h3>Write High-Quality Content</h3>
-                <p>Don't just write 500 words. Create comprehensive guides (2,000+ words) that include:</p>
-                <ul>
-                    <li>Detailed food lists and recipes</li>
-                    <li>Scientific explanations with citations</li>
-                    <li>Sample meal plans</li>
-                    <li>Comprehensive FAQs</li>
-                </ul>
-
-                <hr class="post-divider">
-
-                <h2>5. Technical SEO: The Foundation</h2>
-                <p>No amount of good content saves your rankings if your site is slow or broken.</p>
+                <h3>Cover one topic well</h3>
+                <p>Word count alone does not make a page useful. A short page can rank if it fully answers the question. Add more detail only when it helps the reader.</p>
+                <p>Good nutrition content may include steps, food examples, common mistakes, safety notes, and answers to follow-up questions. Review older pages when health guidance changes.</p>
 
                 <div class="callout-warning">
-                    <p><strong>Mobile Optimization:</strong> Over 60% of health searches happen on mobile. Your site must be fully responsive.</p>
+                    <p><strong>Important:</strong> Do not use SEO copy to make claims that go beyond your training, evidence, or local rules.</p>
                 </div>
 
+                <h2 id="technical-seo">5. Fix the Technical Basics</h2>
+                <p>Search engines need to reach, read, and understand each page. Clients also need a site that works well on a phone.</p>
+
                 <ul>
-                    <li><strong>Page Speed:</strong> Use Google PageSpeed Insights. Compress images and use fast hosting</li>
-                    <li><strong>HTTPS Security:</strong> An SSL certificate is a ranking factor and builds trust</li>
-                    <li><strong>Clean Code:</strong> Proper heading structure, alt text, and semantic HTML matter</li>
+                    <li><strong>Speed:</strong> Compress large images and remove code you do not use.</li>
+                    <li><strong>Mobile design:</strong> Keep text easy to read and buttons easy to tap.</li>
+                    <li><strong>HTTPS:</strong> Protect the site with a valid security certificate.</li>
+                    <li><strong>Indexing:</strong> Use a clean sitemap and block test pages from search.</li>
+                    <li><strong>Links:</strong> Fix broken links and redirect old pages to the best match.</li>
+                    <li><strong>Accessibility:</strong> Add useful alt text and clear heading order.</li>
                 </ul>
+
+                <p>Add structured data when it matches what readers can see. Useful types may include Person, Organization, Article, Service, and FAQPage. Structured data can help machines understand the page, but it does not replace good content.</p>
+
+                <h2 id="links">6. Earn Links and Mentions</h2>
+                <p>A link from another trusted site can help people and search engines find you. Focus on real relationships, not link tricks.</p>
+
+                <ul>
+                    <li>Write a useful article for a local clinic, gym, or community group</li>
+                    <li>Speak on a health podcast and ask for a link in the show notes</li>
+                    <li>Create a resource that local groups can share</li>
+                    <li>Join real professional directories tied to your field</li>
+                    <li>Offer expert input to reporters when the topic matches your skills</li>
+                </ul>
+
+                <p>Avoid buying large packs of links. Do not place the same guest post on many weak sites. One trusted and relevant mention is worth more than many spam links.</p>
+
+                <h2 id="ai-search">7. Help AI Search Understand Your Practice</h2>
+                <p>People now ask full questions in Google, ChatGPT, and other answer tools. There is no special trick that guarantees a citation. The same basics still matter: clear answers, sound facts, strong sources, and a site that machines can read.</p>
+
+                <h3>Write answer-first sections</h3>
+                <p>Give a short answer below each heading. Add the details after it. This makes the page easier for readers to scan and easier for search tools to quote in context.</p>
+
+                <h3>Make your identity clear</h3>
+                <p>Use the same practice name, author name, credentials, phone number, and service details across the site. Link the author bio, service pages, and trusted professional profiles together.</p>
+
+                <h3>Add facts that can be checked</h3>
+                <p>Cite the source near the claim. State when the page was reviewed. Use real examples and explain how you reached a conclusion. This is more useful than repeating a keyword many times.</p>
+
+                <h3>Use plain page structure</h3>
+                <p>Clear headings, lists, short paragraphs, and visible FAQs help both people and machines. Keep key facts in the page HTML. Do not hide all useful content inside images or scripts.</p>
+
+                <div class="callout">
+                    <p><strong>AI SEO in one line:</strong> Be clear enough to quote, useful enough to trust, and specific enough to verify.</p>
+                </div>
+
+                <h2 id="measurement">8. Track Leads, Not Just Rankings</h2>
+                <p>Rankings are useful, but they are not the final goal. Track actions that can grow the practice.</p>
+
+                <ul>
+                    <li><strong>Google Search Console:</strong> Track search terms, clicks, pages, and indexing.</li>
+                    <li><strong>Google Analytics 4:</strong> Track booking clicks, forms, calls, and useful visits.</li>
+                    <li><strong>Google Business Profile:</strong> Track calls, website visits, and direction requests.</li>
+                    <li><strong>Lead notes:</strong> Ask new clients how they found you and which service they wanted.</li>
+                </ul>
+
+                <p>Many practices need three to six months to see steady gains. A new site in a busy city may take longer. Review progress by page, search intent, and booked leads—not by one keyword.</p>
+
+                <div class="seo-checklist">
+                    <h3>A simple 90-day SEO plan</h3>
+                    <ul>
+                        <li><strong>Days 1–30:</strong> Fix tracking, key pages, business details, and major site errors.</li>
+                        <li><strong>Days 31–60:</strong> Improve service pages and publish two useful expert-led articles.</li>
+                        <li><strong>Days 61–90:</strong> Build local mentions, earn reviews, and improve pages using real search data.</li>
+                    </ul>
+                </div>
+
+                <h2 id="faq">SEO for Nutritionists: Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Does SEO work for nutritionists?</summary>
+                        <div class="faq-answer"><p>Yes. SEO can help nutritionists appear when people search for local or online nutrition help. It works best when the site has clear service pages, useful health content, trusted credentials, and a strong Google Business Profile.</p></div>
+                    </details>
+                    <details>
+                        <summary>How long does SEO take for a nutrition practice?</summary>
+                        <div class="faq-answer"><p>Many practices need three to six months to see steady gains. The timing depends on the market, the age of the website, past SEO work, and the strength of competing sites.</p></div>
+                    </details>
+                    <details>
+                        <summary>What keywords should a nutritionist target?</summary>
+                        <div class="faq-answer"><p>Start with service, specialty, and location terms. Examples include “nutritionist near me,” “sports nutritionist in Austin,” “PCOS dietitian,” and “online gut health nutritionist.” Each main service should have its own useful page.</p></div>
+                    </details>
+                    <details>
+                        <summary>Do online nutritionists need local SEO?</summary>
+                        <div class="faq-answer"><p>Online nutritionists still need clear location and service details, but they should not create fake local pages. Build pages around real licenses, regions served, specialties, and online care options.</p></div>
+                    </details>
+                    <details>
+                        <summary>How often should nutrition content be updated?</summary>
+                        <div class="faq-answer"><p>Review key health pages at least once a year and sooner when guidance changes. Check facts, links, author details, examples, and the date of the last medical or expert review.</p></div>
+                    </details>
+                    <details>
+                        <summary>How can a nutritionist appear in AI search results?</summary>
+                        <div class="faq-answer"><p>Use clear answers, accurate facts, named authors, trusted sources, simple page structure, and consistent business details. AI search systems are more likely to use content that is easy to understand and verify.</p></div>
+                    </details>
+                </div>
 
                 <hr class="post-divider">
 
-                <h2>6. Backlinks: Digital Word-of-Mouth</h2>
-                <p>A backlink is a link from another website to yours. To Google, it's a vote of confidence.</p>
-
-                <ul>
-                    <li><strong>Guest Posting:</strong> Write articles for fitness blogs or local news sites. Link back to your homepage</li>
-                    <li><strong>Podcast Appearances:</strong> Being a guest on health podcasts often results in show note links</li>
-                    <li><strong>Expert Quotes:</strong> Sign up for services like Connectively to provide quotes to journalists seeking nutrition advice</li>
-                </ul>
-
-                <hr class="post-divider">
-
-                <h2>7. Measuring Success: SEO Analytics</h2>
-                <p>You can't manage what you don't measure. Use these free tools:</p>
-
-                <ul>
-                    <li><strong>Google Search Console:</strong> See which keywords bring people to your site</li>
-                    <li><strong>Google Analytics 4 (GA4):</strong> Track how long people stay and if they book appointments</li>
-                </ul>
-
-                <hr class="post-divider">
-
-                <h2>The Winning Formula</h2>
-                <p><strong>High-Intent Keywords + E-E-A-T Authority + Local Presence = Full Client Calendar</strong></p>
+                <h2>The SEO Plan in One Sentence</h2>
+                <p><strong>Match real client searches with clear service pages, trusted health content, local proof, and a fast website.</strong></p>
+                <p>SEO works best when the page is helpful before it is promotional. Pair it with a clear booking path and strong landing pages. If you also use paid search, connect it to the same tracking and lead goals.</p>
+                <p>Learn more about <a href="/conversion-rate-optimization">turning visits into inquiries</a> or review the broader <a href="/google-ads-for-service-businesses">paid search approach for service businesses</a>.</p>
 
                 <div class="post-cta">
-                    <h3>Ready to Dominate Local Search?</h3>
-                    <p>Let's build a comprehensive SEO strategy that turns your nutrition expertise into a sustainable lead generation engine.</p>
+                    <h3>Want a Clear SEO Plan for Your Practice?</h3>
+                    <p>Get a practical review of your pages, local visibility, content, and next best steps.</p>
                     <a href="https://cal.com/alexanderstefanseo/agency" class="btn btn-primary btn-large">Book Your Free SEO Strategy Call</a>
                 </div>
-
-            </article>
+<!-- SEO_CONTEXT_START -->
+<p class="article-pathways"><strong>Keep building the strategy:</strong> read <a href="/seo-for-care-homes">SEO for Care Homes &amp; Assisted Living</a>, <a href="/seo-for-handyman">SEO for Handyman</a>, and <a href="/seo-for-appliance-repair">SEO for Appliance Repair</a> for the closest next steps, channel comparisons, and real campaign context.</p>
+<!-- SEO_CONTEXT_END -->
+</article>
         </div>
     </section>
 
@@ -251,16 +493,16 @@
                 <div class="footer-column">
                     <h4 class="footer-heading">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="google-ads-for-service-businesses.html">Google Ads Management</a></li>
-                        <li><a href="facebook-ads-lead-generation.html">Facebook Ads Campaigns</a></li>
-                        <li><a href="conversion-rate-optimization.html">Conversion Optimization</a></li>
+                        <li><a href="/google-ads-for-service-businesses">Google Ads Management</a></li>
+                        <li><a href="/facebook-ads-lead-generation">Facebook Ads Campaigns</a></li>
+                        <li><a href="/conversion-rate-optimization">Conversion Optimization</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4 class="footer-heading">Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/case-studies">Case Studies</a></li>
+                        <li><a href="/blog">Blog</a></li>
                         <li><a href="https://cal.com/alexanderstefanseo/agency">Free Strategy Call</a></li>
                     </ul>
                 </div>
@@ -274,7 +516,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
-                <div class="footer-meta"><p class="footer-badge">Certified Google Ads &amp; Facebook Ads Expert</p><div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a></div></div>
+                <div class="footer-meta"><p class="footer-badge">Certified Google Ads &amp; Facebook Ads Expert</p><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a></div></div>
             </div>
         </div>
     </footer>

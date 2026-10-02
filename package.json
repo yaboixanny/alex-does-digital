@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Lead generation and digital marketing website",
   "scripts": {
-    "update-blog": "node scripts/update-blog-metadata.js"
+    "generate-hubs": "node scripts/generate-topic-hubs.js",
+    "generate-wedding-pages": "node scripts/generate-wedding-pages.js",
+    "enhance-site": "node scripts/enhance-site.js",
+    "update-blog": "node scripts/update-blog-metadata.js",
+    "build": "npm run generate-wedding-pages && npm run update-blog && npm run generate-hubs && npm run enhance-site && node scripts/build-site.js"
   },
   "dependencies": {}
 }

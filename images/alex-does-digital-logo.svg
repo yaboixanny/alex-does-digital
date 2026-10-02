@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Alex Does Digital</title>
+  <desc id="desc">Alex Does Digital green brand mark</desc>
+  <rect width="512" height="512" rx="96" fill="#0f172a"/>
+  <rect x="42" y="42" width="428" height="428" rx="72" fill="none" stroke="#10b981" stroke-width="18"/>
+  <path d="M126 350 230 128h52l104 222h-62l-20-48h-98l-20 48h-60Zm101-99h56l-28-68-28 68Z" fill="#f8fafc"/>
+  <circle cx="386" cy="128" r="31" fill="#10b981"/>
+</svg>

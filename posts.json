@@ -1,8 +1,35 @@
 [
   {
+    "slug": "google-ads-for-roadside-assistance",
+    "title": "Google Ads for Roadside Assistance | Get More Calls",
+    "excerpt": "Learn how to run Google Ads for roadside assistance using service-based campaigns, local targeting, call assets, landing pages, and qualified-call tracking.",
+    "date": "2026-10-02",
+    "category": "Google Ads",
+    "readTime": "10 min read",
+    "featured": false
+  },
+  {
+    "slug": "seo-for-care-homes",
+    "title": "SEO for Care Homes & Assisted Living | Complete Guide",
+    "excerpt": "Learn SEO for care homes and assisted living communities, including local rankings, service pages, trusted content, technical SEO, AI visibility, and tour inquiries.",
+    "date": "2026-10-02",
+    "category": "SEO",
+    "readTime": "12 min read",
+    "featured": false
+  },
+  {
+    "slug": "google-ads-wedding-photography-leads",
+    "title": "Google Ads for Wedding Photographers | Book More Couples",
+    "excerpt": "Learn how Google Ads for wedding photographers can generate qualified inquiries with focused keywords, local targeting, landing pages, and accurate booking tracking.",
+    "date": "2026-10-02",
+    "category": "Google Ads",
+    "readTime": "12 min read",
+    "featured": false
+  },
+  {
     "slug": "seo-for-handyman",
     "title": "SEO for Handyman: Complete Guide to Ranking Locally & Generating Organic Jobs",
-    "excerpt": "Master local SEO for handyman services with Google Business Profile optimization, service pages, localized content, and backlink strategies to rank #1 for handyman searches.",
+    "excerpt": "Master local SEO for handyman services. Optimize Google Business Profile, create service pages, build local authority, and rank #1 for 'handyman near me' searches.",
     "date": "2026-04-29",
     "category": "SEO",
     "readTime": "12 min read",
@@ -10,8 +37,8 @@
   },
   {
     "slug": "google-ads-for-handyman",
-    "title": "Google Ads for Handyman: Master the 6-Step Blueprint to Book More Jobs Locally",
-    "excerpt": "Master Google Ads for handyman services with local targeting, home improvement keywords, smart bidding, and call tracking strategies to generate consistent booked jobs.",
+    "title": "Google Ads for Handyman Services: 6-Step Blueprint",
+    "excerpt": "Master Google Ads for handyman services. Learn local targeting, home improvement keywords, booking strategies, and call tracking to generate consistent service calls.",
     "date": "2026-04-29",
     "category": "Google Ads",
     "readTime": "7 min read",
@@ -20,7 +47,7 @@
   {
     "slug": "seo-for-appliance-repair",
     "title": "SEO for Appliance Repair: Complete Guide to Ranking Locally & Generating Organic Leads",
-    "excerpt": "Master local SEO for appliance repair with Google Business Profile optimization, service pages, localized content, and backlink strategies to rank #1 and generate free organic leads.",
+    "excerpt": "Master local SEO for appliance repair. Learn how to optimize Google Business Profile, build service pages, create local content, and earn backlinks that generate free organic leads.",
     "date": "2026-04-29",
     "category": "SEO",
     "readTime": "14 min read",
@@ -28,8 +55,8 @@
   },
   {
     "slug": "google-ads-for-appliance-repair",
-    "title": "Google Ads for Appliance Repair: Master the 7-Step Blueprint to Dominate Local Searches",
-    "excerpt": "Master Google Ads for appliance repair with geolocation bidding, emergency keywords, smart bidding, and call tracking strategies to generate consistent qualified leads.",
+    "title": "Google Ads for Appliance Repair: 7-Step Blueprint to Dominate Local Searches",
+    "excerpt": "Master Google Ads for appliance repair. Learn geolocation bidding, emergency keywords, smart bidding, and call tracking to generate qualified leads at scale.",
     "date": "2026-04-29",
     "category": "Google Ads",
     "readTime": "8 min read",
@@ -37,8 +64,8 @@
   },
   {
     "slug": "facebook-ads-for-plastic-surgeons",
-    "title": "How to Master Facebook Ads for Plastic Surgeons: A 2026 Guide to High-Value Patient Acquisition",
-    "excerpt": "Master Facebook Ads for plastic surgeons with advanced targeting, long-tail keywords, LSI terms, and surgical retargeting sequences to achieve triple-digit ROI.",
+    "title": "Facebook Ads for Plastic Surgeons: High-ROI Patient Acquisition",
+    "excerpt": "Master Facebook Ads for plastic surgeons with advanced targeting, long-tail keywords, and retargeting strategies. Book high-value consultations consistently.",
     "date": "2026-04-28",
     "category": "Facebook Ads",
     "readTime": "11 min read",
@@ -46,7 +73,7 @@
   },
   {
     "slug": "facebook-ads-for-appliance-repair",
-    "title": "Facebook Ads for Appliance Repair: Stop Wasting Money & Get More Calls",
+    "title": "Facebook Ads for Appliance Repair: Get More Service Calls",
     "excerpt": "Stop wasting money on appliance repair ads. Learn the exact Facebook Ads blueprint to generate qualified emergency calls at $12-25 per lead.",
     "date": "2026-04-24",
     "category": "Facebook Ads",
@@ -64,7 +91,7 @@
   },
   {
     "slug": "facebook-ads-for-recruiting",
-    "title": "Facebook Ads for Recruiting: The Ultimate Guide to Attracting Top Talent in 2026",
+    "title": "Facebook Ads for Recruiting | Attract Top Talent",
     "excerpt": "Master Facebook Ads for recruiting. Learn compliance rules, creative strategies, and lead form optimization to attract passive candidates and build your talent pipeline.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -73,7 +100,7 @@
   },
   {
     "slug": "facebook-ads-for-web-designers",
-    "title": "The Ultimate Guide to Facebook Ads for Web Designers: Scaling Your Agency Beyond Referrals",
+    "title": "Facebook Ads for Web Designers | Scale Your Agency",
     "excerpt": "Learn how to scale your web design agency with Facebook Ads. Proven strategy for generating high-intent design leads and building a predictable client pipeline.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -82,26 +109,26 @@
   },
   {
     "slug": "seo-for-nutritionists",
-    "title": "The Ultimate Guide to SEO for Nutritionists: How to Rank for High-Intent Clients",
-    "excerpt": "Master SEO for nutritionists with keyword research, local optimization, E-E-A-T principles, and content strategy. Build authority and grow your client base.",
+    "title": "SEO for Nutritionists | The ULTIMATE Guide",
+    "excerpt": "Learn SEO for nutritionists with clear steps for local rankings, helpful content, technical SEO, AI search visibility, and more client inquiries.",
     "date": "2026-04-22",
     "category": "SEO",
-    "readTime": "10 min read",
+    "readTime": "15 min read",
     "featured": false
   },
   {
     "slug": "seo-for-nursing-homes",
-    "title": "SEO for Nursing Homes: The Ultimate Guide to Increasing Resident Leads",
-    "excerpt": "Master SEO for nursing homes with local search optimization, technical excellence, and authoritative content strategy to drive consistent resident admissions.",
+    "title": "SEO for Nursing Homes | Increase Resident Leads",
+    "excerpt": "Learn SEO for nursing homes and skilled nursing facilities, including local SEO, SNF service pages, technical fixes, trusted content, and admissions tracking.",
     "date": "2026-04-22",
     "category": "SEO",
-    "readTime": "8 min read",
+    "readTime": "11 min read",
     "featured": false
   },
   {
     "slug": "advanced-solar-lead-generation",
-    "title": "Solar Lead Generation 2026: The Andromeda AI & Home Energy Hub Strategy",
-    "excerpt": "Master the 2026 solar market with Andromeda AI, Home Energy Hubs, and AI Voice qualification. Advanced strategy for scaling solar installations.",
+    "title": "Solar Lead Generation 2026 | Andromeda AI Strategy Guide",
+    "excerpt": "Master the 2026 solar market with Andromeda AI, Home Energy Hubs, and AI Voice qualification. Advanced strategy for scaling solar installations in the new era.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
     "readTime": "12 min read",
@@ -109,7 +136,7 @@
   },
   {
     "slug": "facebook-ads-for-spas",
-    "title": "Scaling Your Sanctuary: The Ultimate Guide to Facebook Ads for Spas",
+    "title": "Facebook Ads for Spas | Fill Your Treatment Calendar",
     "excerpt": "Learn how to fill your spa treatment calendar with Facebook Ads. Proven strategy for reaching wellness seekers and converting them into loyal clients.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -118,7 +145,7 @@
   },
   {
     "slug": "facebook-ads-for-solar-companies",
-    "title": "Mastering Solar Lead Generation: The Ultimate Guide to Scaling with Facebook Ads",
+    "title": "Facebook Ads for Solar Companies | Generate Installation Leads",
     "excerpt": "Master solar lead generation with Facebook Ads. Learn the high-performance framework for quality leads, advanced targeting, and scaling residential solar installations.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -127,7 +154,7 @@
   },
   {
     "slug": "facebook-ads-for-short-term-rentals",
-    "title": "Facebook Ads for Short-Term Rentals: How to Boost Bookings",
+    "title": "Facebook Ads for Short-Term Rentals | Boost Bookings",
     "excerpt": "Learn how to increase bookings for your short-term rental property using Facebook Ads. Proven strategy for reaching travelers and driving occupancy rates.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -136,7 +163,7 @@
   },
   {
     "slug": "facebook-ads-for-mechanics",
-    "title": "Facebook Ads for Mechanics: How to Book More Service Calls",
+    "title": "Facebook Ads for Mechanics | Book More Service Calls",
     "excerpt": "Learn how to generate consistent auto repair leads using Facebook Ads. Proven strategy for booking more service calls and building repeat customers.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -145,7 +172,7 @@
   },
   {
     "slug": "facebook-ads-for-graphic-designers",
-    "title": "Facebook Ads for Graphic Designers: How to Land Premium Clients",
+    "title": "Facebook Ads for Graphic Designers | Land Premium Clients",
     "excerpt": "Learn how to generate high-value graphic design clients using Facebook Ads. Proven strategy for showcasing your portfolio and landing premium projects.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -154,7 +181,7 @@
   },
   {
     "slug": "facebook-ads-for-financial-advisors",
-    "title": "Facebook Ads for Financial Advisors: How to Generate Qualified Leads Consistently",
+    "title": "Facebook Ads for Financial Advisors | Generate Qualified Leads",
     "excerpt": "Learn how to generate qualified financial advisory leads using Facebook Ads. Proven strategy for building trust and scaling your advisory practice.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
@@ -163,8 +190,8 @@
   },
   {
     "slug": "facebook-ads-for-general-contractors",
-    "title": "Facebook Ads for General Contractors: How to Consistently Land High-Ticket Jobs",
-    "excerpt": "Learn how to generate consistent, high-ticket contractor jobs using Facebook Ads. Proven strategy for landing renovation leads and scaling your business.",
+    "title": "Facebook Ads for General Contractors | Land High-Ticket Jobs",
+    "excerpt": "Learn how to generate consistent, high-ticket contractor jobs using Facebook Ads. Proven strategy for landing renovation leads and scaling your contracting business.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
     "readTime": "7 min read",
@@ -172,8 +199,8 @@
   },
   {
     "slug": "facebook-ads-for-flooring-companies",
-    "title": "Facebook Ads for Flooring Companies: How to Generate High-Quality Leads Consistently",
-    "excerpt": "Learn how to generate consistent, high-quality flooring leads using Facebook Ads. Proven strategy with before/after visuals and strong offer strategy.",
+    "title": "Facebook Ads for Flooring Companies | Generate Quality Leads",
+    "excerpt": "Learn how to generate consistent, high-quality flooring leads using Facebook Ads. Proven strategy for flooring companies with before/after visuals and strong offers.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
     "readTime": "7 min read",
@@ -181,17 +208,26 @@
   },
   {
     "slug": "facebook-ads-for-hair-salons",
-    "title": "Facebook Ads for Hair Salons: How to Get Consistent Bookings",
-    "excerpt": "Learn how to use Facebook Ads to fill slow appointment slots and generate consistent bookings for your hair salon business.",
+    "title": "Facebook Ads for Hair Salons | Consistent Bookings",
+    "excerpt": "Learn how to use Facebook Ads for hair salons to fill slow appointment slots and generate consistent bookings. Proven offer and creative strategy.",
     "date": "2026-04-22",
     "category": "Facebook Ads",
     "readTime": "8 min read",
     "featured": false
   },
   {
+    "slug": "seo-for-towing-companies",
+    "title": "SEO for Towing Companies | Rank for Emergency Calls",
+    "excerpt": "Master SEO for towing companies. Rank for 'tow truck near me' searches and dominate the local map pack without ongoing ad costs.",
+    "date": "2026-04-22",
+    "category": "SEO",
+    "readTime": "9 min read",
+    "featured": false
+  },
+  {
     "slug": "google-ads-pilot",
-    "title": "How to Be 100% Sure Google Ads Will Work (Before You Sign Anything)",
-    "excerpt": "Never lock yourself into a long-term contract until you understand exactly what you're getting. Learn how a pilot campaign lets you test if Google Ads will work for your business.",
+    "title": "Google Ads Pilot Campaign: Test Before You Commit",
+    "excerpt": "Learn why most Google Ads campaigns fail and how a low-risk pilot campaign lets you test if Google Ads actually work for your business before signing any contracts.",
     "date": "2026-04-21",
     "category": "Google Ads",
     "readTime": "8 min read",
@@ -200,91 +236,10 @@
   {
     "slug": "facebook-ads-for-plumbers",
     "title": "Facebook Ads for Plumbers: The Complete 2026 Strategy Guide",
-    "excerpt": "Learn how to generate consistent, high-quality leads for your plumbing business using Facebook Ads at a lower cost than Google Ads.",
+    "excerpt": "Complete guide to running profitable Facebook Ads for plumbing services. Learn campaign setup, targeting, ad creative, and how to generate cheap, consistent leads in 2026.",
     "date": "2026-04-21",
     "category": "Facebook Ads",
     "readTime": "9 min read",
-    "featured": false
-  },
-  {
-    "slug": "facebook-ads-for-lawyers",
-    "title": "Facebook Ads for Lawyers: How to Get Consistent, High-Quality Leads",
-    "excerpt": "Referrals are unpredictable. SEO takes months. Google Ads get expensive. Here's how law firms can use Facebook Ads to generate new clients consistently.",
-    "date": "2026-04-20",
-    "category": "Facebook Ads",
-    "readTime": "6 min read",
-    "featured": false
-  },
-  {
-    "slug": "facebook-ads-for-yoga-studios",
-    "title": "Facebook Ads for Yoga Studios: How to Get More Clients Consistently",
-    "excerpt": "Referrals are unpredictable. Instagram reach is declining. Here's the exact Facebook Ads playbook yoga studios should be running to fill classes every week.",
-    "date": "2026-04-20",
-    "category": "Facebook Ads",
-    "readTime": "7 min read",
-    "featured": false
-  },
-  {
-    "slug": "pool-service-winter-leads-case-study",
-    "title": "The Facebook Ads Strategy That Generated 48 Leads in the \"Slow Season\"",
-    "excerpt": "Pool service in winter sounds dead. We proved otherwise — 48 leads at $21/lead in Port St. Lucie during December. Here's the exact playbook.",
-    "date": "2026-04-10",
-    "category": "Facebook Ads",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "appliance-repair-leads",
-    "title": "Get More Appliance Repair Leads with Google Ads & Facebook Ads | 2026",
-    "excerpt": "Proven strategies to generate high-quality appliance repair leads through Google Ads, Facebook Ads, and SEO. Book more jobs for refrigerators, washers, dryers, ovens & more.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "car-detailing-leads",
-    "title": "Car Detailing Leads | Google Ads, Facebook Ads & SEO for Auto Detailers",
-    "excerpt": "Complete guide to generating car detailing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more detailing appointments and build recurring customers.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "carpet-cleaning-leads",
-    "title": "Carpet Cleaning Leads | Google Ads, Facebook Ads & SEO Strategies",
-    "excerpt": "Complete guide to generating carpet cleaning leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more jobs and grow your carpet cleaning business.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "ceramic-coating-facebook-ads-case-study",
-    "title": "Ceramic Coating Facebook Ads Case Study — 79 Leads in 30 Days at $5.65 CPL",
-    "excerpt": "See how we generated 79 ceramic coating leads in 30 days using a simple Facebook Ads setup — with cost-per-lead as low as $5.65. Watch the full breakdown and learn how you can duplicate this system for your own detailing or ceramic coating business.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "electrician-leads",
-    "title": "Electrician Leads | Google Ads, Facebook Ads & SEO for Electrical Services",
-    "excerpt": "Complete guide to generating electrician leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more service calls and grow your electrical business.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "epoxy-flooring-leads",
-    "title": "Epoxy Flooring Leads | Google Ads, Facebook Ads & SEO for Floor Coating",
-    "excerpt": "Complete guide to generating epoxy flooring leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more jobs and grow your floor coating business.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
     "featured": false
   },
   {
@@ -297,28 +252,28 @@
     "featured": false
   },
   {
+    "slug": "facebook-ads-for-lawyers",
+    "title": "Facebook Ads for Lawyers: How to Get Consistent, High-Quality Leads",
+    "excerpt": "Learn how law firms can use Facebook Ads to generate consistent, high-quality legal leads and new clients without relying solely on referrals or expensive Google Ads.",
+    "date": "2026-04-20",
+    "category": "Facebook Ads",
+    "readTime": "6 min read",
+    "featured": false
+  },
+  {
+    "slug": "facebook-ads-for-yoga-studios",
+    "title": "Facebook Ads for Yoga Studios: How to Get More Clients Consistently",
+    "excerpt": "Learn how yoga studios can use Facebook Ads to generate consistent leads, fill classes, and grow memberships — without relying on referrals or hoping posts go viral.",
+    "date": "2026-04-20",
+    "category": "Facebook Ads",
+    "readTime": "7 min read",
+    "featured": false
+  },
+  {
     "slug": "facebook-ads-for-pool-service",
     "title": "Facebook & Instagram Ads for Pool Service",
     "excerpt": "Scale your pool service business with Facebook & Instagram Ads. Use visual storytelling and targeted ads to build demand and book more cleaning jobs.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "facebook-ads-for-towing-companies",
-    "title": "Facebook Ads for Towing Companies",
-    "excerpt": "Build brand awareness for your towing service with Facebook and Instagram Ads. Target local drivers and businesses that need reliable towing partnerships.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "garage-door-leads",
-    "title": "Garage Door Leads | Google Ads, Facebook Ads & SEO for Garage Door Companies",
-    "excerpt": "Complete guide to generating garage door leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more installations, repairs, and maintenance jobs.",
-    "date": "",
+    "date": "2026-01-12",
     "category": "Blog",
     "readTime": "5 min read",
     "featured": false
@@ -327,70 +282,7 @@
     "slug": "google-ads-for-pool-service",
     "title": "Google Ads for Pool Service",
     "excerpt": "Master Google Ads for your pool service business. Learn how to capture high-intent 'pool service near me' searches and book more maintenance contracts.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "google-ads-for-towing-companies",
-    "title": "Google Ads for Towing Companies | Expert Towing Marketing",
-    "excerpt": "Get more towing leads with Google Ads. Call-only campaigns targeting 'tow truck near me' searches. Average cost per call $15-30. Get your free strategy call.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "google-ads-towing-case-study",
-    "title": "Towing Company Google Ads Case Study | $18.53 Cost Per Call",
-    "excerpt": "How a towing company achieved $18.53 cost per call with 35% conversion rate in a hyper-competitive market. Low-budget Google Ads success story.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "handyman-leads",
-    "title": "Get More Handyman Leads with Google Ads & Facebook Ads | 2026",
-    "excerpt": "Generate consistent handyman leads through Google Ads, Facebook Ads, and SEO. Proven strategies help handymen book more jobs and grow their business fast.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "hvac-leads",
-    "title": "HVAC Leads | Google Ads, Facebook Ads & SEO for HVAC Companies",
-    "excerpt": "Complete guide to generating HVAC leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more installations, repairs, and maintenance contracts.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "plumbing-leads",
-    "title": "Plumbing Leads | Google Ads, Facebook Ads & SEO for Plumbers",
-    "excerpt": "Complete guide to generating plumbing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more emergency repairs and scheduled plumbing jobs.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "pool-service-leads",
-    "title": "Pool Service Leads | Google Ads, Facebook Ads & SEO for Pool Maintenance",
-    "excerpt": "Complete guide to generating pool service leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more clients and grow your pool maintenance business.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "pool-service-winter-leads-case-study",
-    "title": "Pool Service Marketing Case Study: 48 Leads in Winter | Alex Does Local",
-    "excerpt": "A breakdown of a Facebook Ads campaign for a Florida pool service business. See how we generated 48 leads at $21/lead during the slow winter months.",
-    "date": "",
+    "date": "2026-01-12",
     "category": "Blog",
     "readTime": "5 min read",
     "featured": false
@@ -399,16 +291,133 @@
     "slug": "seo-for-pool-service",
     "title": "SEO for Pool Service Companies",
     "excerpt": "Own your local market with SEO for pool service companies. Rank #1 for 'pool cleaning near me' and drive organic maintenance leads without ad spend.",
-    "date": "",
+    "date": "2026-01-12",
     "category": "Blog",
     "readTime": "5 min read",
     "featured": false
   },
   {
-    "slug": "seo-for-towing-companies",
-    "title": "SEO for Towing Companies",
-    "excerpt": "Rank organically for tow truck near me and emergency towing searches. Dominate local map pack and organic results without ongoing ad spend.",
-    "date": "",
+    "slug": "pool-service-winter-leads-case-study",
+    "title": "Pool Service Marketing Case Study: 48 Leads in Winter | Alex Does Local",
+    "excerpt": "A breakdown of a Facebook Ads campaign for a Florida pool service business. See how we generated 48 leads at $21/lead during the slow winter months.",
+    "date": "2026-01-11",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "facebook-ads-for-towing-companies",
+    "title": "Facebook Ads for Towing Companies",
+    "excerpt": "Build brand awareness for your towing service with Facebook and Instagram Ads. Target local drivers and businesses that need reliable towing partnerships.",
+    "date": "2026-01-05",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "google-ads-for-towing-companies",
+    "title": "Google Ads for Towing Companies | Get More Emergency Calls",
+    "excerpt": "Google Ads for towing companies generate high-intent tow truck calls with local targeting, call assets, focused keywords, and conversion tracking.",
+    "date": "2026-01-05",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "ceramic-coating-facebook-ads-case-study",
+    "title": "Ceramic Coating Facebook Ads Case Study — 79 Leads in 30 Days at $5.65 CPL",
+    "excerpt": "See how we generated 79 ceramic coating leads in 30 days using a simple Facebook Ads setup — with cost-per-lead as low as $5.65. Watch the full breakdown and learn how you can duplicate this system for your own detailing or ceramic coating business.",
+    "date": "2025-12-27",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "electrician-leads",
+    "title": "Electrician Leads | Google Ads, Facebook Ads & SEO for Electrical Services",
+    "excerpt": "Complete guide to generating electrician leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more service calls and grow your electrical business.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "epoxy-flooring-leads",
+    "title": "Epoxy Flooring Leads | Google Ads, Facebook Ads & SEO for Floor Coating",
+    "excerpt": "Complete guide to generating epoxy flooring leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more jobs and grow your floor coating business.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "garage-door-leads",
+    "title": "Garage Door Leads | Google Ads, Facebook Ads & SEO for Garage Door Companies",
+    "excerpt": "Complete guide to generating garage door leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more installations, repairs, and maintenance jobs.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "appliance-repair-leads",
+    "title": "Get More Appliance Repair Leads & Book More Jobs | 2026",
+    "excerpt": "Generate appliance repair leads with Facebook Ads, Google Ads, local SEO, retargeting, and better lead follow-up for refrigerators, washers, dryers, and ovens.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "car-detailing-leads",
+    "title": "Get More Car Detailing Leads & Book More Appointments",
+    "excerpt": "Complete guide to generating car detailing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more detailing appointments and build recurring customers.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "carpet-cleaning-leads",
+    "title": "Get More Carpet Cleaning Leads & Book More Jobs",
+    "excerpt": "Proven strategies to generate consistent carpet cleaning leads and fill your schedule. Learn the fastest ways to book more jobs and grow your carpet cleaning business.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "handyman-leads",
+    "title": "Handyman Leads: Proven Lead Generation Strategies | 2026",
+    "excerpt": "Learn how to generate handyman leads through referrals, local partnerships, directories, reviews, SEO, and a clear lead follow-up process.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "hvac-leads",
+    "title": "HVAC Leads | Google Ads, Facebook Ads & SEO for HVAC Companies",
+    "excerpt": "Complete guide to generating HVAC leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more installations, repairs, and maintenance contracts.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "plumbing-leads",
+    "title": "Plumbing Leads | Google Ads, Facebook Ads & SEO for Plumbers",
+    "excerpt": "Complete guide to generating plumbing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more emergency repairs and scheduled plumbing jobs.",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "pool-service-leads",
+    "title": "Pool Service Leads | Google Ads, Facebook Ads & SEO for Pool Maintenance",
+    "excerpt": "Complete guide to generating pool service leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more clients and grow your pool maintenance business.",
+    "date": "2025-12-02",
     "category": "Blog",
     "readTime": "5 min read",
     "featured": false
@@ -417,7 +426,25 @@
     "slug": "towing-leads",
     "title": "Towing Leads | Digital Marketing for Towing Companies",
     "excerpt": "Complete guide to generating towing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more emergency calls and roadside assistance requests.",
-    "date": "",
+    "date": "2025-12-02",
+    "category": "Blog",
+    "readTime": "5 min read",
+    "featured": false
+  },
+  {
+    "slug": "wedding-photography-leads",
+    "title": "SEO for Wedding Photographers | Book More Weddings",
+    "excerpt": "Learn SEO for wedding photographers with location pages, venue content, portfolio image optimization, local SEO, technical improvements, and booking measurement.",
+    "date": "2025-12-02",
+    "category": "SEO",
+    "readTime": "14 min read",
+    "featured": false
+  },
+  {
+    "slug": "google-ads-towing-case-study",
+    "title": "Towing Company Google Ads Case Study | $18.53 Cost Per Call",
+    "excerpt": "How a towing company achieved $18.53 cost per call with 35% conversion rate in a hyper-competitive market. Low-budget Google Ads success story.",
+    "date": "2025-12-01",
     "category": "Blog",
     "readTime": "5 min read",
     "featured": false
@@ -426,16 +453,7 @@
     "slug": "wedding-photography-96-leads",
     "title": "Wedding Photography Google Ads: 96 Leads in 30 Days at 15% Conversion Rate",
     "excerpt": "See how a London wedding photographer generated 96 leads in 30 days with Google Ads at a 15% conversion rate and 8-12x ROAS. Complete campaign breakdown and strategy inside.",
-    "date": "",
-    "category": "Blog",
-    "readTime": "5 min read",
-    "featured": false
-  },
-  {
-    "slug": "wedding-photography-leads",
-    "title": "Wedding Photography Leads | Google Ads, Facebook Ads & SEO Strategies",
-    "excerpt": "Complete guide to generating wedding photography leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more weddings and grow your photography business.",
-    "date": "",
+    "date": "2025-12-01",
     "category": "Blog",
     "readTime": "5 min read",
     "featured": false

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog: Google Ads & Facebook Ads Strategies | Alex Does Digital</title>
     <meta name="description" content="Google Ads, Facebook Ads, and lead generation strategies for small businesses. Real tactics from real campaigns.">
-    <link rel="stylesheet" href="styles.css">
+
     <style>
         /* ── Blog Hero ──────────────────────────────────────────── */
         .blog-hero {
@@ -36,7 +36,7 @@
         }
 
         .filter-btn {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.85rem;
             font-weight: 600;
             padding: 0.45rem 1.1rem;
@@ -140,6 +140,10 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
         }
 
+        .post-card[hidden] {
+            display: none;
+        }
+
         .post-card-img {
             background: linear-gradient(135deg, #0d1533 0%, #1a2a4a 100%);
             height: 160px;
@@ -181,53 +185,6 @@
             flex: 1;
         }
 
-        /* ── Empty / Loading States ─────────────────────────────── */
-        .posts-loading {
-            text-align: center;
-            padding: 4rem 0;
-            color: var(--color-text-muted);
-            font-size: 0.95rem;
-        }
-
-        .posts-empty {
-            text-align: center;
-            padding: 4rem 0;
-            color: var(--color-text-muted);
-        }
-
-        .posts-empty h3 {
-            font-size: 1.2rem;
-            color: var(--color-text-light);
-            margin-bottom: 0.5rem;
-        }
-
-        /* ── Skeleton shimmer ───────────────────────────────────── */
-        .skeleton {
-            background: linear-gradient(90deg, var(--color-surface) 25%, var(--color-surface-light) 50%, var(--color-surface) 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.4s infinite;
-            border-radius: 6px;
-        }
-
-        @keyframes shimmer {
-            0%   { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .skeleton-card {
-            background: var(--color-bg-dark);
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.05);
-            overflow: hidden;
-        }
-
-        .skeleton-img  { height: 160px; }
-        .skeleton-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
-        .skeleton-line { height: 12px; }
-        .skeleton-line.w-60 { width: 60%; }
-        .skeleton-line.w-80 { width: 80%; }
-        .skeleton-line.w-40 { width: 40%; }
-
         /* ── Responsive ─────────────────────────────────────────── */
         @media (max-width: 900px) {
             .posts-grid {
@@ -254,11 +211,68 @@
     <meta property="og:description" content="Google Ads, Facebook Ads, and lead generation strategies for small businesses. Real tactics from real campaigns.">
     <meta property="og:url" content="https://alxdoesdigital.com/blog">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://alxdoesdigital.com/og-image.jpg">
+    <meta property="og:image" content="https://alxdoesdigital.com/images/alexpolo-copy.webp">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Blog | Alex Does Digital">
     <meta property="twitter:description" content="Google Ads, Facebook Ads, and lead generation strategies for small businesses. Real tactics from real campaigns.">
-    <link rel="stylesheet" href="editorial.css?v=2">
+
+
+
+
+    <script type="application/ld+json" data-seo-schema>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://alxdoesdigital.com/blog#webpage",
+      "name": "Blog: Google Ads & Facebook Ads Strategies",
+      "description": "Google Ads, Facebook Ads, and lead generation strategies for small businesses. Real tactics from real campaigns.",
+      "url": "https://alxdoesdigital.com/blog"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://alxdoesdigital.com/#organization",
+      "name": "Alex Does Digital",
+      "url": "https://alxdoesdigital.com/",
+      "email": "alex@alexdoesdigital.com",
+      "telephone": "+17163903081",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alxdoesdigital.com/images/alex-does-digital-logo.svg",
+        "width": 512,
+        "height": 512
+      },
+      "founder": {
+        "@id": "https://alxdoesdigital.com/about#person"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alxdoesdigital.com/blog#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://alxdoesdigital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog: Google Ads & Facebook Ads Strategies",
+          "item": "https://alxdoesdigital.com/blog"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/site.css?v=3">
 </head>
 
 <body>
@@ -267,21 +281,23 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <a href="index.html" class="logo-text">Alex Does Digital</a>
+                    <a href="/" class="logo-text">Alex Does Digital</a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="case-studies.html" class="nav-link">Results</a></li>
-                    <li><a href="industries.html" class="nav-link">Industries</a></li>
-                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
+                    <li><a href="/case-studies" class="nav-link">Results</a></li>
+                    <li><a href="/industries" class="nav-link">Industries</a></li>
+                    <li><a href="/blog" class="nav-link active">Blog</a></li>
                     <li><a href="https://cal.com/alexanderstefanseo/agency" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Blog Hero -->
+<!-- SEO_BREADCRUMBS_START -->
+<nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Blog: Google Ads &amp; Facebook Ads Strategies</span></li></ol></div></nav>
+<!-- SEO_BREADCRUMBS_END -->
+<!-- Blog Hero -->
     <section class="blog-hero">
         <div class="container">
             <h1 class="page-headline">
@@ -295,26 +311,698 @@
             <!-- Category Filter -->
             <div class="filter-bar" id="filterBar">
                 <button class="filter-btn active" data-filter="all">All Posts</button>
-                <!-- Category buttons injected by JS -->
+                <button class="filter-btn" data-filter="SEO">SEO</button>
+                <button class="filter-btn" data-filter="Google Ads">Google Ads</button>
+                <button class="filter-btn" data-filter="Facebook Ads">Facebook Ads</button>
+                <button class="filter-btn" data-filter="Blog">Lead Generation</button>
             </div>
         </div>
         <div class="bg-decoration"></div>
     </section>
 
+    <section class="topic-directory" aria-labelledby="topic-directory-title">
+        <div class="container">
+            <h2 id="topic-directory-title" class="visually-hidden">Browse marketing guides by topic</h2>
+            <nav aria-label="Article topics">
+                <a href="/facebook-ads-by-industry">Facebook Ads by Industry</a>
+                <a href="/google-ads-by-industry">Google Ads by Industry</a>
+                <a href="/seo-by-industry">SEO by Industry</a>
+                <a href="/lead-generation-guides">Lead-Generation Guides</a>
+                <a href="/case-studies">Case Studies</a>
+            </nav>
+        </div>
+    </section>
+
     <!-- Posts -->
     <section class="blog-section">
         <div class="container">
-            <!-- Loading skeletons shown while fetching -->
-            <div id="postsLoading">
-                <div class="posts-grid">
-                    <div class="skeleton-card"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
-                    <div class="skeleton-card"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
-                    <div class="skeleton-card"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line w-40"></div><div class="skeleton skeleton-line w-80" style="height:18px;"></div><div class="skeleton skeleton-line w-60"></div></div></div>
+            <!-- BLOG_POSTS_START -->
+            <div id="postsContainer" class="posts-grid">
+            <a href="/google-ads-for-roadside-assistance" class="post-card" data-category="Google Ads">
+                <div class="post-card-img" aria-hidden="true">📈</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Google Ads</span>
+                        <span class="post-date">October 2, 2026</span>
+                        <span class="post-read-time">10 min read</span>
+                    </div>
+                    <h3>Google Ads for Roadside Assistance | Get More Calls</h3>
+                    <p>Learn how to run Google Ads for roadside assistance using service-based campaigns, local targeting, call assets, landing pages, and qualified-call tracking.</p>
+                    <span class="read-more">Read Post →</span>
                 </div>
+            </a>
+            <a href="/seo-for-care-homes" class="post-card" data-category="SEO">
+                <div class="post-card-img" aria-hidden="true">🔍</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">SEO</span>
+                        <span class="post-date">October 2, 2026</span>
+                        <span class="post-read-time">12 min read</span>
+                    </div>
+                    <h3>SEO for Care Homes &amp; Assisted Living | Complete Guide</h3>
+                    <p>Learn SEO for care homes and assisted living communities, including local rankings, service pages, trusted content, technical SEO, AI visibility, and tour inquiries.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/google-ads-wedding-photography-leads" class="post-card" data-category="Google Ads">
+                <div class="post-card-img" aria-hidden="true">📈</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Google Ads</span>
+                        <span class="post-date">October 2, 2026</span>
+                        <span class="post-read-time">12 min read</span>
+                    </div>
+                    <h3>Google Ads for Wedding Photographers | Book More Couples</h3>
+                    <p>Learn how Google Ads for wedding photographers can generate qualified inquiries with focused keywords, local targeting, landing pages, and accurate booking tracking.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/seo-for-handyman" class="post-card" data-category="SEO">
+                <div class="post-card-img" aria-hidden="true">🔍</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">SEO</span>
+                        <span class="post-date">April 29, 2026</span>
+                        <span class="post-read-time">12 min read</span>
+                    </div>
+                    <h3>SEO for Handyman: Complete Guide to Ranking Locally &amp; Generating Organic Jobs</h3>
+                    <p>Master local SEO for handyman services. Optimize Google Business Profile, create service pages, build local authority, and rank #1 for 'handyman near me' searches.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/google-ads-for-handyman" class="post-card" data-category="Google Ads">
+                <div class="post-card-img" aria-hidden="true">📈</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Google Ads</span>
+                        <span class="post-date">April 29, 2026</span>
+                        <span class="post-read-time">7 min read</span>
+                    </div>
+                    <h3>Google Ads for Handyman Services: 6-Step Blueprint</h3>
+                    <p>Master Google Ads for handyman services. Learn local targeting, home improvement keywords, booking strategies, and call tracking to generate consistent service calls.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/seo-for-appliance-repair" class="post-card" data-category="SEO">
+                <div class="post-card-img" aria-hidden="true">🔍</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">SEO</span>
+                        <span class="post-date">April 29, 2026</span>
+                        <span class="post-read-time">14 min read</span>
+                    </div>
+                    <h3>SEO for Appliance Repair: Complete Guide to Ranking Locally &amp; Generating Organic Leads</h3>
+                    <p>Master local SEO for appliance repair. Learn how to optimize Google Business Profile, build service pages, create local content, and earn backlinks that generate free organic leads.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/google-ads-for-appliance-repair" class="post-card" data-category="Google Ads">
+                <div class="post-card-img" aria-hidden="true">📈</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Google Ads</span>
+                        <span class="post-date">April 29, 2026</span>
+                        <span class="post-read-time">8 min read</span>
+                    </div>
+                    <h3>Google Ads for Appliance Repair: 7-Step Blueprint to Dominate Local Searches</h3>
+                    <p>Master Google Ads for appliance repair. Learn geolocation bidding, emergency keywords, smart bidding, and call tracking to generate qualified leads at scale.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-plastic-surgeons" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 28, 2026</span>
+                        <span class="post-read-time">11 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Plastic Surgeons: High-ROI Patient Acquisition</h3>
+                    <p>Master Facebook Ads for plastic surgeons with advanced targeting, long-tail keywords, and retargeting strategies. Book high-value consultations consistently.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-appliance-repair" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 24, 2026</span>
+                        <span class="post-read-time">9 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Appliance Repair: Get More Service Calls</h3>
+                    <p>Stop wasting money on appliance repair ads. Learn the exact Facebook Ads blueprint to generate qualified emergency calls at $12-25 per lead.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-lawn-care" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 23, 2026</span>
+                        <span class="post-read-time">8 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Lawn Care: Scale Your Business</h3>
+                    <p>Master Facebook Ads for lawn care with proven tactics for visual storytelling, local targeting, and lead generation. Build a seven-figure lead engine.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-recruiting" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">10 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Recruiting | Attract Top Talent</h3>
+                    <p>Master Facebook Ads for recruiting. Learn compliance rules, creative strategies, and lead form optimization to attract passive candidates and build your talent pipeline.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-web-designers" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">9 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Web Designers | Scale Your Agency</h3>
+                    <p>Learn how to scale your web design agency with Facebook Ads. Proven strategy for generating high-intent design leads and building a predictable client pipeline.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/seo-for-nutritionists" class="post-card" data-category="SEO">
+                <div class="post-card-img" aria-hidden="true">🔍</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">SEO</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">15 min read</span>
+                    </div>
+                    <h3>SEO for Nutritionists | The ULTIMATE Guide</h3>
+                    <p>Learn SEO for nutritionists with clear steps for local rankings, helpful content, technical SEO, AI search visibility, and more client inquiries.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/seo-for-nursing-homes" class="post-card" data-category="SEO">
+                <div class="post-card-img" aria-hidden="true">🔍</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">SEO</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">11 min read</span>
+                    </div>
+                    <h3>SEO for Nursing Homes | Increase Resident Leads</h3>
+                    <p>Learn SEO for nursing homes and skilled nursing facilities, including local SEO, SNF service pages, technical fixes, trusted content, and admissions tracking.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/advanced-solar-lead-generation" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">12 min read</span>
+                    </div>
+                    <h3>Solar Lead Generation 2026 | Andromeda AI Strategy Guide</h3>
+                    <p>Master the 2026 solar market with Andromeda AI, Home Energy Hubs, and AI Voice qualification. Advanced strategy for scaling solar installations in the new era.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-spas" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">8 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Spas | Fill Your Treatment Calendar</h3>
+                    <p>Learn how to fill your spa treatment calendar with Facebook Ads. Proven strategy for reaching wellness seekers and converting them into loyal clients.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-solar-companies" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">10 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Solar Companies | Generate Installation Leads</h3>
+                    <p>Master solar lead generation with Facebook Ads. Learn the high-performance framework for quality leads, advanced targeting, and scaling residential solar installations.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-short-term-rentals" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">7 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Short-Term Rentals | Boost Bookings</h3>
+                    <p>Learn how to increase bookings for your short-term rental property using Facebook Ads. Proven strategy for reaching travelers and driving occupancy rates.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-mechanics" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">6 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Mechanics | Book More Service Calls</h3>
+                    <p>Learn how to generate consistent auto repair leads using Facebook Ads. Proven strategy for booking more service calls and building repeat customers.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-graphic-designers" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">7 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Graphic Designers | Land Premium Clients</h3>
+                    <p>Learn how to generate high-value graphic design clients using Facebook Ads. Proven strategy for showcasing your portfolio and landing premium projects.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-financial-advisors" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">6 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Financial Advisors | Generate Qualified Leads</h3>
+                    <p>Learn how to generate qualified financial advisory leads using Facebook Ads. Proven strategy for building trust and scaling your advisory practice.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-general-contractors" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">7 min read</span>
+                    </div>
+                    <h3>Facebook Ads for General Contractors | Land High-Ticket Jobs</h3>
+                    <p>Learn how to generate consistent, high-ticket contractor jobs using Facebook Ads. Proven strategy for landing renovation leads and scaling your contracting business.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-flooring-companies" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">7 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Flooring Companies | Generate Quality Leads</h3>
+                    <p>Learn how to generate consistent, high-quality flooring leads using Facebook Ads. Proven strategy for flooring companies with before/after visuals and strong offers.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-hair-salons" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">8 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Hair Salons | Consistent Bookings</h3>
+                    <p>Learn how to use Facebook Ads for hair salons to fill slow appointment slots and generate consistent bookings. Proven offer and creative strategy.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/seo-for-towing-companies" class="post-card" data-category="SEO">
+                <div class="post-card-img" aria-hidden="true">🔍</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">SEO</span>
+                        <span class="post-date">April 22, 2026</span>
+                        <span class="post-read-time">9 min read</span>
+                    </div>
+                    <h3>SEO for Towing Companies | Rank for Emergency Calls</h3>
+                    <p>Master SEO for towing companies. Rank for 'tow truck near me' searches and dominate the local map pack without ongoing ad costs.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/google-ads-pilot" class="post-card" data-category="Google Ads">
+                <div class="post-card-img" aria-hidden="true">📈</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Google Ads</span>
+                        <span class="post-date">April 21, 2026</span>
+                        <span class="post-read-time">8 min read</span>
+                    </div>
+                    <h3>Google Ads Pilot Campaign: Test Before You Commit</h3>
+                    <p>Learn why most Google Ads campaigns fail and how a low-risk pilot campaign lets you test if Google Ads actually work for your business before signing any contracts.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-plumbers" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 21, 2026</span>
+                        <span class="post-read-time">9 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Plumbers: The Complete 2026 Strategy Guide</h3>
+                    <p>Complete guide to running profitable Facebook Ads for plumbing services. Learn campaign setup, targeting, ad creative, and how to generate cheap, consistent leads in 2026.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-landscaping" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 21, 2026</span>
+                        <span class="post-read-time">6 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Landscaping: Get Consistent Local Leads</h3>
+                    <p>Learn how to generate consistent landscaping leads using Facebook Ads. Proven strategy for lawn care, hardscaping, and backyard transformation businesses.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-lawyers" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 20, 2026</span>
+                        <span class="post-read-time">6 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Lawyers: How to Get Consistent, High-Quality Leads</h3>
+                    <p>Learn how law firms can use Facebook Ads to generate consistent, high-quality legal leads and new clients without relying solely on referrals or expensive Google Ads.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-yoga-studios" class="post-card" data-category="Facebook Ads">
+                <div class="post-card-img" aria-hidden="true">🎯</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Facebook Ads</span>
+                        <span class="post-date">April 20, 2026</span>
+                        <span class="post-read-time">7 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Yoga Studios: How to Get More Clients Consistently</h3>
+                    <p>Learn how yoga studios can use Facebook Ads to generate consistent leads, fill classes, and grow memberships — without relying on referrals or hoping posts go viral.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-pool-service" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">January 12, 2026</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Facebook &amp; Instagram Ads for Pool Service</h3>
+                    <p>Scale your pool service business with Facebook &amp; Instagram Ads. Use visual storytelling and targeted ads to build demand and book more cleaning jobs.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/google-ads-for-pool-service" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">January 12, 2026</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Google Ads for Pool Service</h3>
+                    <p>Master Google Ads for your pool service business. Learn how to capture high-intent 'pool service near me' searches and book more maintenance contracts.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/seo-for-pool-service" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">January 12, 2026</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>SEO for Pool Service Companies</h3>
+                    <p>Own your local market with SEO for pool service companies. Rank #1 for 'pool cleaning near me' and drive organic maintenance leads without ad spend.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/pool-service-winter-leads-case-study" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">January 11, 2026</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Pool Service Marketing Case Study: 48 Leads in Winter | Alex Does Local</h3>
+                    <p>A breakdown of a Facebook Ads campaign for a Florida pool service business. See how we generated 48 leads at $21/lead during the slow winter months.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/facebook-ads-for-towing-companies" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">January 5, 2026</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Facebook Ads for Towing Companies</h3>
+                    <p>Build brand awareness for your towing service with Facebook and Instagram Ads. Target local drivers and businesses that need reliable towing partnerships.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/google-ads-for-towing-companies" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">January 5, 2026</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Google Ads for Towing Companies | Get More Emergency Calls</h3>
+                    <p>Google Ads for towing companies generate high-intent tow truck calls with local targeting, call assets, focused keywords, and conversion tracking.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/ceramic-coating-facebook-ads-case-study" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 27, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Ceramic Coating Facebook Ads Case Study — 79 Leads in 30 Days at $5.65 CPL</h3>
+                    <p>See how we generated 79 ceramic coating leads in 30 days using a simple Facebook Ads setup — with cost-per-lead as low as $5.65. Watch the full breakdown and learn how you can duplicate this system for your own detailing or ceramic coating business.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/electrician-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Electrician Leads | Google Ads, Facebook Ads &amp; SEO for Electrical Services</h3>
+                    <p>Complete guide to generating electrician leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more service calls and grow your electrical business.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/epoxy-flooring-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Epoxy Flooring Leads | Google Ads, Facebook Ads &amp; SEO for Floor Coating</h3>
+                    <p>Complete guide to generating epoxy flooring leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more jobs and grow your floor coating business.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/garage-door-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Garage Door Leads | Google Ads, Facebook Ads &amp; SEO for Garage Door Companies</h3>
+                    <p>Complete guide to generating garage door leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more installations, repairs, and maintenance jobs.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/appliance-repair-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Get More Appliance Repair Leads &amp; Book More Jobs | 2026</h3>
+                    <p>Generate appliance repair leads with Facebook Ads, Google Ads, local SEO, retargeting, and better lead follow-up for refrigerators, washers, dryers, and ovens.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/car-detailing-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Get More Car Detailing Leads &amp; Book More Appointments</h3>
+                    <p>Complete guide to generating car detailing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more detailing appointments and build recurring customers.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/carpet-cleaning-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Get More Carpet Cleaning Leads &amp; Book More Jobs</h3>
+                    <p>Proven strategies to generate consistent carpet cleaning leads and fill your schedule. Learn the fastest ways to book more jobs and grow your carpet cleaning business.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/handyman-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Handyman Leads: Proven Lead Generation Strategies | 2026</h3>
+                    <p>Learn how to generate handyman leads through referrals, local partnerships, directories, reviews, SEO, and a clear lead follow-up process.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/hvac-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>HVAC Leads | Google Ads, Facebook Ads &amp; SEO for HVAC Companies</h3>
+                    <p>Complete guide to generating HVAC leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more installations, repairs, and maintenance contracts.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/plumbing-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Plumbing Leads | Google Ads, Facebook Ads &amp; SEO for Plumbers</h3>
+                    <p>Complete guide to generating plumbing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to book more emergency repairs and scheduled plumbing jobs.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/pool-service-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Pool Service Leads | Google Ads, Facebook Ads &amp; SEO for Pool Maintenance</h3>
+                    <p>Complete guide to generating pool service leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more clients and grow your pool maintenance business.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/towing-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Towing Leads | Digital Marketing for Towing Companies</h3>
+                    <p>Complete guide to generating towing leads through Google Ads, Facebook Ads, and SEO. Proven strategies to get more emergency calls and roadside assistance requests.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/wedding-photography-leads" class="post-card" data-category="SEO">
+                <div class="post-card-img" aria-hidden="true">🔍</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">SEO</span>
+                        <span class="post-date">December 2, 2025</span>
+                        <span class="post-read-time">14 min read</span>
+                    </div>
+                    <h3>SEO for Wedding Photographers | Book More Weddings</h3>
+                    <p>Learn SEO for wedding photographers with location pages, venue content, portfolio image optimization, local SEO, technical improvements, and booking measurement.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/google-ads-towing-case-study" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 1, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Towing Company Google Ads Case Study | $18.53 Cost Per Call</h3>
+                    <p>How a towing company achieved $18.53 cost per call with 35% conversion rate in a hyper-competitive market. Low-budget Google Ads success story.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
+            <a href="/wedding-photography-96-leads" class="post-card" data-category="Blog">
+                <div class="post-card-img" aria-hidden="true">📝</div>
+                <div class="post-card-body">
+                    <div class="post-meta">
+                        <span class="post-category">Blog</span>
+                        <span class="post-date">December 1, 2025</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+                    <h3>Wedding Photography Google Ads: 96 Leads in 30 Days at 15% Conversion Rate</h3>
+                    <p>See how a London wedding photographer generated 96 leads in 30 days with Google Ads at a 15% conversion rate and 8-12x ROAS. Complete campaign breakdown and strategy inside.</p>
+                    <span class="read-more">Read Post →</span>
+                </div>
+            </a>
             </div>
-
-            <!-- Rendered posts injected here -->
-            <div id="postsContainer" style="display:none;"></div>
+            <!-- BLOG_POSTS_END -->
         </div>
     </section>
 
@@ -350,19 +1038,19 @@
                 <div class="footer-column">
                     <h4 class="footer-heading">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="google-ads-for-service-businesses.html">Google Ads Management</a></li>
-                        <li><a href="facebook-ads-lead-generation.html">Facebook Ads Campaigns</a></li>
-                        <li><a href="conversion-rate-optimization.html">Conversion Optimization</a></li>
-                        <li><a href="industries.html">Industry Hubs</a></li>
+                        <li><a href="/google-ads-for-service-businesses">Google Ads Management</a></li>
+                        <li><a href="/facebook-ads-lead-generation">Facebook Ads Campaigns</a></li>
+                        <li><a href="/conversion-rate-optimization">Conversion Optimization</a></li>
+                        <li><a href="/industries">Industry Hubs</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4 class="footer-heading">Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/case-studies">Case Studies</a></li>
+                        <li><a href="/blog">Blog</a></li>
                         <li><a href="https://cal.com/alexanderstefanseo/agency">Free Strategy Call</a></li>
-                        <li><a href="about.html">About Alex</a></li>
+                        <li><a href="/about">About Alex</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -381,104 +1069,28 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Alex Does Digital. All rights reserved.</p>
-                <div class="footer-meta"><p class="footer-badge">Certified Google Ads &amp; Facebook Ads Expert</p><div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a></div></div>
+                <div class="footer-meta"><p class="footer-badge">Certified Google Ads &amp; Facebook Ads Expert</p><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a></div></div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script>
-        // Category icons map
-        const categoryIcons = {
-            'Google Ads':   '📈',
-            'Facebook Ads': '🎯',
-            'SEO':          '🔍',
-            'Lead Gen':     '⚡',
-            'Default':      '📝'
-        };
+        const filterBar = document.getElementById('filterBar');
+        const postCards = [...document.querySelectorAll('#postsContainer .post-card')];
 
-        function getIcon(category) {
-            return categoryIcons[category] || categoryIcons['Default'];
-        }
+        filterBar.addEventListener('click', event => {
+            const button = event.target.closest('.filter-btn');
+            if (!button) return;
 
-        function formatDate(iso) {
-            const d = new Date(iso + 'T00:00:00');
-            return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-        }
+            filterBar.querySelectorAll('.filter-btn').forEach(item => item.classList.remove('active'));
+            button.classList.add('active');
 
-        function buildPostCard(post) {
-            return `
-            <a href="${post.slug}.html" class="post-card" data-category="${post.category}">
-                <div class="post-card-img">${getIcon(post.category)}</div>
-                <div class="post-card-body">
-                    <div class="post-meta">
-                        <span class="post-category">${post.category}</span>
-                        <span class="post-date">${formatDate(post.date)}</span>
-                        <span class="post-read-time">${post.readTime}</span>
-                    </div>
-                    <h3>${post.title}</h3>
-                    <p>${post.excerpt}</p>
-                    <span class="read-more">Read Post →</span>
-                </div>
-            </a>`;
-        }
-
-        function renderPosts(posts, activeFilter) {
-            const filtered = activeFilter === 'all'
-                ? posts
-                : posts.filter(p => p.category === activeFilter);
-
-            if (filtered.length === 0) {
-                return `<div class="posts-empty"><h3>No posts in this category yet.</h3><p>Check back soon.</p></div>`;
-            }
-
-            // Sort by date descending
-            const sorted = [...filtered].sort((a, b) => new Date(b.date) - new Date(a.date));
-
-            // Display all posts in grid
-            const html = `<div class="posts-grid">${sorted.map(buildPostCard).join('')}</div>`;
-
-            return html;
-        }
-
-        function buildFilterBar(posts, categories) {
-            const filterBar = document.getElementById('filterBar');
-            categories.forEach(cat => {
-                const btn = document.createElement('button');
-                btn.className = 'filter-btn';
-                btn.dataset.filter = cat;
-                btn.textContent = cat;
-                filterBar.appendChild(btn);
+            const filter = button.dataset.filter;
+            postCards.forEach(card => {
+                card.hidden = filter !== 'all' && card.dataset.category !== filter;
             });
-
-            filterBar.addEventListener('click', e => {
-                const btn = e.target.closest('.filter-btn');
-                if (!btn) return;
-                filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('postsContainer').innerHTML = renderPosts(posts, btn.dataset.filter);
-            });
-        }
-
-        // Fetch and render
-        fetch('posts.json')
-            .then(r => r.json())
-            .then(posts => {
-                // Build category list (preserving order of first appearance)
-                const categories = [...new Set(posts.map(p => p.category))];
-
-                // Hide loading, show container
-                document.getElementById('postsLoading').style.display = 'none';
-                const container = document.getElementById('postsContainer');
-                container.style.display = '';
-                container.innerHTML = renderPosts(posts, 'all');
-
-                buildFilterBar(posts, categories);
-            })
-            .catch(() => {
-                document.getElementById('postsLoading').innerHTML =
-                    '<div class="posts-empty"><h3>Couldn\'t load posts.</h3><p>Please try refreshing the page.</p></div>';
-            });
+        });
     </script>
 
     <!-- Floating Widget -->
@@ -488,7 +1100,5 @@
             <a href="https://cal.com/alexanderstefanseo/agency" class="floating-widget-btn">Book a call</a>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
