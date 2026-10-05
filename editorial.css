@@ -290,6 +290,9 @@ body::selection {
 .intent-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
 .intent-proof { padding: 1.6rem; background: #fff; border: 1px solid #d1fae5; border-radius: 14px; box-shadow: var(--pe-shadow-lg); }
 .intent-proof span { color: var(--pe-green-dark); font: 700 0.68rem/1.2 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+.intent-proof-list { display: flex; flex-wrap: wrap; gap: 0.7rem 1.25rem; }
+.intent-proof-list span { position: relative; padding-left: 0.8rem; }
+.intent-proof-list span::before { content: ''; position: absolute; top: 0.38em; left: 0; width: 5px; height: 5px; background: var(--pe-green); border-radius: 50%; }
 .intent-proof strong { display: block; margin: 0.8rem 0; color: var(--pe-ink); font-size: 1.25rem; line-height: 1.4; }
 .intent-proof p { margin: 0; color: var(--pe-copy); line-height: 1.7; }
 
