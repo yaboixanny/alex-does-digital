@@ -315,7 +315,7 @@ function standardNavigation(slug) {
       (target === 'guides' && REGISTRY[slug] === 'guide');
     return `<li><a class="nav-link${active ? ' active' : ''}" href="/${target}"${active ? ' aria-current="page"' : ''}>${label}</a></li>`;
   }).join('');
-  return `<nav class="navbar" aria-label="Primary navigation"><div class="container"><div class="nav-wrapper"><a class="logo-text" href="/" aria-label="Alex Does Digital home">Alex Does Digital</a><ul class="nav-links">${items}<li><a class="nav-link nav-cta" href="${BOOKING_URL}" target="_blank" rel="noopener">Book a Growth Audit</a></li></ul></div></div></nav>`;
+  return `<nav class="navbar" aria-label="Primary navigation"><div class="container"><div class="nav-wrapper"><a class="logo-text" href="/" aria-label="Alex Does Digital home">Alex Does Digital</a><ul class="nav-links">${items}<li><a class="nav-link nav-cta" href="${BOOKING_URL}" target="_blank" rel="noopener">Talk to Alex</a></li></ul></div></div></nav>`;
 }
 
 function standardFooter() {
@@ -323,7 +323,7 @@ function standardFooter() {
     <div><a class="footer-brand" href="/">Alex Does Digital</a><p class="footer-mission">Senior-led paid search, paid social, SEO, and conversion strategy for service businesses.</p><div class="footer-contact"><a href="mailto:alex@alexdoesdigital.com">alex@alexdoesdigital.com</a></div></div>
     <div><h3 class="footer-heading">Services</h3><div class="footer-links"><a href="/google-ads-for-service-businesses">Google Ads</a><a href="/facebook-ads-lead-generation">Facebook Ads</a><a href="/seo-for-service-businesses">SEO</a><a href="/conversion-rate-optimization">Conversion Rate Optimization</a><a href="/youtube-leads">YouTube</a></div></div>
     <div><h3 class="footer-heading">Explore</h3><div class="footer-links"><a href="/services">Services</a><a href="/industries">Industries</a><a href="/case-studies">Case Studies</a><a href="/guides">Guides</a><a href="/about">About</a></div></div>
-    <div><h3 class="footer-heading">Start here</h3><div class="footer-links"><a href="${BOOKING_URL}" target="_blank" rel="noopener">Book a Growth Audit</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a></div></div>
+    <div><h3 class="footer-heading">Start here</h3><div class="footer-links"><a href="${BOOKING_URL}" target="_blank" rel="noopener">Talk to Alex</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a></div></div>
   </div><div class="footer-bottom"><p>&copy; 2026 Alex Does Digital. All rights reserved.</p><p>Strategy and execution without agency layers.</p></div></div></footer>`;
 }
 
