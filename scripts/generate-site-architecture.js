@@ -38,6 +38,7 @@ const services = [
   ['youtube-leads', 'YouTube Lead Generation', 'Use useful video content and focused calls to action to build trust before a prospect reaches your sales process.']
 ];
 const specialistServices = [
+  ['appliance-repair-web-design', 'Appliance Repair Web Design'],
   ['google-ads-for-dietitians-and-nutritionists', 'Google Ads for Dietitians & Nutritionists'],
   ['google-ads-wedding-photography-leads', 'Google Ads for Wedding Photographers'],
   ['wedding-photography-leads', 'SEO for Wedding Photographers']
