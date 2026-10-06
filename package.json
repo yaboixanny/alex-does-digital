@@ -9,12 +9,13 @@
     "generate-seo-service-page": "node scripts/generate-seo-service-page.js",
     "generate-youtube-service-page": "node scripts/generate-youtube-service-page.js",
     "generate-priority-industry-clusters": "node scripts/generate-priority-industry-clusters.js",
+    "generate-senior-care-clusters": "node scripts/generate-senior-care-clusters.js",
     "generate-architecture": "node scripts/generate-site-architecture.js",
     "enhance-site": "node scripts/enhance-site.js",
     "validate-architecture": "node scripts/validate-content-architecture.js",
     "classify-content": "node scripts/classify-content.js",
     "update-blog": "node scripts/update-blog-metadata.js",
-    "build": "npm run generate-wedding-pages && npm run generate-core-lead-pages && npm run generate-seo-service-page && npm run generate-youtube-service-page && npm run generate-priority-industry-clusters && npm run update-blog && npm run generate-architecture && npm run generate-hubs && npm run enhance-site && npm run validate-architecture && node scripts/build-site.js"
+    "build": "npm run generate-wedding-pages && npm run generate-core-lead-pages && npm run generate-seo-service-page && npm run generate-youtube-service-page && npm run generate-priority-industry-clusters && npm run generate-senior-care-clusters && npm run update-blog && npm run generate-architecture && npm run generate-hubs && npm run enhance-site && npm run validate-architecture && node scripts/build-site.js"
   },
   "dependencies": {}
 }

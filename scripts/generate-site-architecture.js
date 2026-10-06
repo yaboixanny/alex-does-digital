@@ -88,7 +88,8 @@ const industries = [
   ['car-detailing-leads', 'Car Detailing'], ['electrician-leads', 'Electricians'], ['garage-door-leads', 'Garage Door'], ['handyman-leads', 'Handyman Services'],
   ['carpet-cleaning-leads', 'Carpet Cleaning'], ['epoxy-flooring-leads', 'Epoxy Flooring'], ['appliance-repair-leads', 'Appliance Repair'],
   ['advanced-solar-lead-generation', 'Solar Companies'], ['wedding-photography-leads', 'Wedding Photographers'], ['seo-for-nutritionists', 'Dietitians & Nutritionists'],
-  ['seo-for-care-homes', 'Care Homes & Assisted Living'], ['facebook-ads-for-financial-advisors', 'Financial Advisors'], ['google-ads-for-roadside-assistance', 'Roadside Assistance']
+  ['care-home-marketing', 'Care Homes & Assisted Living'], ['nursing-home-marketing', 'Nursing Homes & Skilled Nursing'],
+  ['facebook-ads-for-financial-advisors', 'Financial Advisors'], ['google-ads-for-roadside-assistance', 'Roadside Assistance']
 ];
 const industryCards = industries.map(([slug, title]) => card(slug, title, postsBySlug.get(slug)?.excerpt || `Acquisition strategy and practical growth guidance for ${title.toLowerCase()}.`, 'Industry', registry[slug])).join('');
 fs.writeFileSync(path.join(ROOT, 'industries.html'), page({
@@ -101,12 +102,16 @@ fs.writeFileSync(path.join(ROOT, 'industries.html'), page({
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 const oldSitemap = fs.existsSync(sitemapPath) ? fs.readFileSync(sitemapPath, 'utf8') : '';
 const dates = new Map([...oldSitemap.matchAll(/<loc>https:\/\/alxdoesdigital\.com\/(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>/gs)].map(match => [match[1], match[2]]));
+const refreshedRoutes = new Set([
+  'care-home-marketing', 'google-ads-for-care-homes', 'facebook-ads-for-care-homes', 'seo-for-care-homes',
+  'nursing-home-marketing', 'google-ads-for-nursing-homes', 'facebook-ads-for-nursing-homes', 'seo-for-nursing-homes'
+]);
 const sitemapRoutes = Object.keys(registry).filter(slug => !['blog'].includes(slug));
 const sitemapEntries = sitemapRoutes.map(slug => {
   const route = slug === 'index' ? '' : slug;
   const loc = route ? `https://alxdoesdigital.com/${route}` : 'https://alxdoesdigital.com/';
   const oldKey = route;
-  const lastmod = dates.get(oldKey) || '2026-10-02';
+  const lastmod = refreshedRoutes.has(slug) ? '2026-10-06' : (dates.get(oldKey) || '2026-10-06');
   return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
 }).join('\n\n');
 fs.writeFileSync(sitemapPath, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`);

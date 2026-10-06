@@ -186,7 +186,8 @@ body::selection {
     text-transform: uppercase;
 }
 
-.topic-hub-card h2 {
+.topic-hub-card h2,
+.topic-hub-card h3 {
     margin: 0;
     font-size: 1.05rem;
     line-height: 1.4;
@@ -214,6 +215,32 @@ body::selection {
 .hub-section-heading p { color: var(--pe-copy); line-height: 1.7; }
 .hub-section-heading-spaced { margin-top: 4rem; }
 .topic-hub-grid-compact .topic-hub-card { min-height: 190px; }
+
+.cluster-navigation {
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    margin: 3.5rem 0;
+    background: var(--pe-wash);
+    border: 1px solid var(--pe-line);
+    border-radius: 14px;
+}
+
+.cluster-navigation > h2 {
+    margin: 0.45rem 0 0.75rem;
+}
+
+.cluster-navigation > p:not(.eyebrow) {
+    margin: 0 0 1.4rem;
+}
+
+.cluster-navigation > p:last-child {
+    margin: 1.3rem 0 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--pe-line);
+}
+
+.cluster-navigation .topic-hub-card {
+    min-height: 240px;
+}
 
 .guide-filters {
     display: flex;

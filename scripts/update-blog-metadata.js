@@ -22,6 +22,8 @@ const EXCLUDED_FILES = new Set([
   'google-ads-by-industry.html',
   'seo-by-industry.html',
   'lead-generation-guides.html',
+  'care-home-marketing.html',
+  'nursing-home-marketing.html',
   '404.html',
   'blog-post-template.html',
   'case-study-template.html',

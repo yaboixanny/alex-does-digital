@@ -35,6 +35,14 @@ const COMMERCIAL_SERVICE_TYPES = {
   'advanced-solar-lead-generation': 'Solar lead generation services'
 };
 const COMMERCIAL_SERVICE_PAGES = new Set(Object.keys(COMMERCIAL_SERVICE_TYPES));
+const UPDATED_CONTENT = new Set([
+  'seo-for-care-homes',
+  'seo-for-nursing-homes',
+  'google-ads-for-care-homes',
+  'facebook-ads-for-care-homes',
+  'google-ads-for-nursing-homes',
+  'facebook-ads-for-nursing-homes'
+]);
 const INDUSTRIES = [
   'appliance-repair', 'handyman', 'towing', 'pool-service', 'wedding-photography',
   'solar', 'plumbing', 'car-detailing', 'carpet-cleaning', 'electrician',
@@ -120,6 +128,14 @@ function relatedPosts(post, posts) {
     'epoxy-flooring-leads': [],
     'appliance-repair-leads': [],
     'google-ads-for-towing-companies': [],
+    'care-home-marketing': [],
+    'google-ads-for-care-homes': [],
+    'facebook-ads-for-care-homes': [],
+    'seo-for-care-homes': [],
+    'nursing-home-marketing': [],
+    'google-ads-for-nursing-homes': [],
+    'facebook-ads-for-nursing-homes': [],
+    'seo-for-nursing-homes': [],
     'google-ads-for-dietitians-and-nutritionists': ['seo-for-nutritionists', 'google-ads-pilot'],
     'seo-for-nutritionists': ['google-ads-for-dietitians-and-nutritionists', 'google-ads-pilot'],
     'facebook-ads-for-financial-advisors': ['facebook-ads-lead-generation', 'conversion-rate-optimization'],
@@ -221,7 +237,7 @@ function makeSchema({ slug, title, description, html, post, crumbs, role }) {
       '@id': `${url}#article`, headline: title, description,
       image: [schemaImage(html)],
       datePublished: post.date || getGitDate(`${slug}.html`),
-      dateModified: post.date && post.date > TODAY ? post.date : TODAY,
+      dateModified: UPDATED_CONTENT.has(slug) ? '2026-10-06' : (post.date && post.date > TODAY ? post.date : TODAY),
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       author: { '@type': 'Person', '@id': `${SITE}/about#person`, name: 'Alex', url: `${SITE}/about` },
       publisher: { '@id': `${SITE}/#organization` },
