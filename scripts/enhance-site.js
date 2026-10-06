@@ -117,7 +117,8 @@ function relatedPosts(post, posts) {
     'seo-for-nutritionists': ['google-ads-for-dietitians-and-nutritionists', 'google-ads-pilot'],
     'facebook-ads-for-financial-advisors': ['facebook-ads-lead-generation', 'conversion-rate-optimization'],
     'plumbing-leads': ['facebook-ads-for-plumbers', 'google-ads-for-service-businesses'],
-    'advanced-solar-lead-generation': ['facebook-ads-for-solar-companies', 'google-ads-for-service-businesses']
+    'advanced-solar-lead-generation': ['facebook-ads-for-solar-companies', 'google-ads-for-service-businesses'],
+    'google-local-services-ads-towing-cost-per-lead': ['google-ads-towing-case-study', 'google-ads-for-towing-companies', 'towing-leads']
   };
   if (manualRelated[post.slug]) {
     return manualRelated[post.slug]
@@ -218,7 +219,7 @@ function makeSchema({ slug, title, description, html, post, crumbs, role }) {
       '@id': `${url}#article`, headline: title, description,
       image: [schemaImage(html)],
       datePublished: post.date || getGitDate(`${slug}.html`),
-      dateModified: TODAY,
+      dateModified: post.date && post.date > TODAY ? post.date : TODAY,
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       author: { '@type': 'Person', '@id': `${SITE}/about#person`, name: 'Alex', url: `${SITE}/about` },
       publisher: { '@id': `${SITE}/#organization` },

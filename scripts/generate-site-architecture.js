@@ -62,7 +62,13 @@ fs.writeFileSync(path.join(ROOT, 'services.html'), page({
 }));
 
 const guidePosts = posts.filter(post => registry[post.slug] === 'guide').sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.title.localeCompare(b.title));
-const guideCategory = post => post.slug.startsWith('facebook-ads') ? 'Facebook Ads' : post.slug.startsWith('google-ads') ? 'Google Ads' : post.slug.startsWith('seo-') ? 'SEO' : 'Growth';
+const guideCategory = post => post.category === 'Facebook Ads' || post.slug.startsWith('facebook-ads')
+  ? 'Facebook Ads'
+  : post.category === 'Google Ads' || post.slug.startsWith('google-ads') || post.slug.startsWith('google-local-services-ads')
+    ? 'Google Ads'
+    : post.category === 'SEO' || post.slug.startsWith('seo-')
+      ? 'SEO'
+      : 'Growth';
 const guideCards = guidePosts.map(post => card(post.slug, post.title, post.excerpt, guideCategory(post), 'guide').replace('class="topic-hub-card"', `class="topic-hub-card" data-guide-category="${guideCategory(post)}"`)).join('');
 const guidesContent = `<section class="topic-directory"><div class="container"><nav aria-label="Guide collections"><a href="/facebook-ads-by-industry">Facebook Ads by Industry</a><a href="/google-ads-by-industry">Google Ads by Industry</a><a href="/seo-by-industry">SEO by Industry</a><a href="/lead-generation-guides">Lead Generation</a></nav></div></section><section class="topic-hub-section"><div class="container">
     <div class="guide-filters" aria-label="Filter guides"><button class="guide-filter active" type="button" data-filter="All">All</button><button class="guide-filter" type="button" data-filter="Facebook Ads">Facebook Ads</button><button class="guide-filter" type="button" data-filter="Google Ads">Google Ads</button><button class="guide-filter" type="button" data-filter="SEO">SEO</button></div>
