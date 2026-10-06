@@ -440,6 +440,121 @@ body::selection {
     border-radius: 10px;
 }
 
+/* Contextual service and resource bridges */
+.service-bridge-section {
+    padding: clamp(2.75rem, 6vw, 4.75rem) 0;
+    background: #fff;
+}
+
+.service-bridge {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
+    gap: clamp(1.75rem, 5vw, 4rem);
+    align-items: center;
+    padding: clamp(1.75rem, 5vw, 3.5rem);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 100% 0, rgba(16, 185, 129, 0.13), transparent 42%),
+        var(--pe-wash);
+    border: 1px solid var(--pe-line);
+    border-radius: 16px;
+    box-shadow: 0 20px 45px -34px rgba(15, 23, 42, 0.45);
+}
+
+.service-bridge::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--pe-green);
+}
+
+.service-bridge-copy,
+.service-bridge-details {
+    position: relative;
+    z-index: 1;
+}
+
+.service-bridge .eyebrow {
+    margin: 0 0 0.75rem;
+}
+
+.service-bridge h2 {
+    max-width: 700px;
+    margin: 0 0 0.9rem;
+    color: var(--pe-ink);
+    font-size: clamp(1.65rem, 4vw, 2.65rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.service-bridge-copy > p:not(.eyebrow) {
+    max-width: 680px;
+    margin: 0;
+    color: var(--pe-muted);
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.service-bridge-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.45rem;
+}
+
+.service-bridge-actions .btn {
+    min-width: 0;
+}
+
+.service-bridge-details {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.service-bridge-details li {
+    padding: 0.9rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--pe-line);
+    border-radius: 9px;
+}
+
+.service-bridge-details strong,
+.service-bridge-details span {
+    display: block;
+}
+
+.service-bridge-details strong {
+    margin-bottom: 0.22rem;
+    color: var(--pe-green-dark);
+    font-size: 0.76rem;
+    letter-spacing: 0.02em;
+}
+
+.service-bridge-details span {
+    color: var(--pe-ink);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+    .service-bridge {
+        grid-template-columns: 1fr;
+    }
+
+    .service-bridge-actions {
+        display: grid;
+    }
+
+    .service-bridge-actions .btn {
+        width: 100%;
+    }
+}
+
 .intent-case-link {
     display: block;
     margin: 2.5rem 0;

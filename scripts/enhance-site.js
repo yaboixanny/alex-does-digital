@@ -114,7 +114,12 @@ function relatedPosts(post, posts) {
     'google-ads-for-service-businesses': { slug: 'google-ads-for-service-businesses', title: 'Google Ads for Service Businesses' },
     'conversion-rate-optimization': { slug: 'conversion-rate-optimization', title: 'Conversion Rate Optimization' }
   };
+  // An empty curated list intentionally suppresses the generic footer callout
+  // when the page already links to its same-industry resources in context.
   const manualRelated = {
+    'epoxy-flooring-leads': [],
+    'appliance-repair-leads': [],
+    'google-ads-for-towing-companies': [],
     'google-ads-for-dietitians-and-nutritionists': ['seo-for-nutritionists', 'google-ads-pilot'],
     'seo-for-nutritionists': ['google-ads-for-dietitians-and-nutritionists', 'google-ads-pilot'],
     'facebook-ads-for-financial-advisors': ['facebook-ads-lead-generation', 'conversion-rate-optimization'],
