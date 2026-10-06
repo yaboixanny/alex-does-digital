@@ -99,6 +99,8 @@ function hubFor(post) {
 }
 
 function industryFor(slug) {
+  if (slug.includes('epoxy-flooring') || slug.includes('flooring-companies')) return 'flooring';
+  if (slug.includes('ceramic-coating') || slug.includes('car-detailing')) return 'car-detailing';
   return INDUSTRIES.find(industry => slug.includes(industry)) || '';
 }
 
@@ -129,12 +131,7 @@ function relatedPosts(post, posts) {
   const sameIndustry = industry
     ? posts.filter(candidate => candidate.slug !== post.slug && industryFor(candidate.slug) === industry)
     : [];
-  if (sameIndustry.length >= 2) return sameIndustry.slice(0, 3);
-  const sameTopic = posts.filter(candidate => (
-    candidate.slug !== post.slug && hubFor(candidate).slug === hubFor(post).slug
-  ));
-  const caseStudy = posts.filter(candidate => candidate.slug !== post.slug && CASE_STUDIES.has(candidate.slug));
-  return [...new Map([...sameIndustry, ...sameTopic, ...caseStudy].map(item => [item.slug, item])).values()].slice(0, 3);
+  return sameIndustry.slice(0, 3);
 }
 
 function breadcrumbsFor(slug, title, post, role) {
@@ -380,12 +377,14 @@ function addBreadcrumbs(html, crumbs) {
 function addContextLinks(html, post, posts) {
   html = html.replace(/\s*<!-- SEO_CONTEXT_START -->[\s\S]*?<!-- SEO_CONTEXT_END -->\s*/g, '\n');
   const related = relatedPosts(post, posts);
-  if (related.length < 2) return html;
+  if (!related.length) return html;
   const links = related.map(item => `<a href="/${item.slug}">${escapeHtml(shortTitle(item.title))}</a>`);
-  const sentence = links.length === 3
+  const sentence = links.length === 1
+    ? links[0]
+    : links.length === 3
     ? `${links[0]}, ${links[1]}, and ${links[2]}`
     : `${links[0]} and ${links[1]}`;
-  const block = `<!-- SEO_CONTEXT_START -->\n<p class="article-pathways"><strong>Keep building the strategy:</strong> read ${sentence} for the closest next steps, channel comparisons, and real campaign context.</p>\n<!-- SEO_CONTEXT_END -->`;
+  const block = `<!-- SEO_CONTEXT_START -->\n<p class="article-pathways"><strong>Related resources:</strong> ${sentence}.</p>\n<!-- SEO_CONTEXT_END -->`;
 
   if (/<\/article>/i.test(html)) return html.replace(/<\/article>/i, `${block}\n</article>`);
   const ctaMatches = [...html.matchAll(/<section\b[^>]*class=["'][^"']*(?:cta|next-steps)[^"']*["'][^>]*>/gi)];
