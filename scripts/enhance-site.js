@@ -413,26 +413,20 @@ function addBreadcrumbs(html, crumbs) {
   return html.replace(/<body[^>]*>/i, match => `${match}\n${markup}`);
 }
 
-function addContextLinks(html, post, posts) {
-  html = html.replace(/\s*<!-- SEO_CONTEXT_START -->[\s\S]*?<!-- SEO_CONTEXT_END -->\s*/g, '\n');
-  const related = relatedPosts(post, posts);
-  if (!related.length) return html;
-  const links = related.map(item => `<a href="/${item.slug}">${escapeHtml(shortTitle(item.title))}</a>`);
-  const sentence = links.length === 1
-    ? links[0]
-    : links.length === 3
-    ? `${links[0]}, ${links[1]}, and ${links[2]}`
-    : `${links[0]} and ${links[1]}`;
-  const block = `<!-- SEO_CONTEXT_START -->\n<p class="article-pathways"><strong>Related resources:</strong> ${sentence}.</p>\n<!-- SEO_CONTEXT_END -->`;
-
-  if (/<\/article>/i.test(html)) return html.replace(/<\/article>/i, `${block}\n</article>`);
-  const ctaMatches = [...html.matchAll(/<section\b[^>]*class=["'][^"']*(?:cta|next-steps)[^"']*["'][^>]*>/gi)];
-  if (ctaMatches.length) {
-    const target = ctaMatches[ctaMatches.length - 1];
-    return `${html.slice(0, target.index)}${block}\n${html.slice(target.index)}`;
-  }
-  if (/<footer\b/i.test(html)) return html.replace(/<footer\b/i, `${block}\n<footer`);
-  return html.replace(/<\/body>/i, `${block}\n</body>`);
+function removeBottomRelatedModules(html) {
+  // Related-content links should live naturally inside useful copy. Remove the
+  // generic end-of-page modules across legacy pages and generated templates.
+  return html
+    .replace(/\s*<!-- SEO_CONTEXT_START -->[\s\S]*?<!-- SEO_CONTEXT_END -->\s*/gi, '\n')
+    .replace(/\s*<!-- Related Articles -->\s*<section\b[^>]*class=["'][^"']*related-articles[^"']*["'][^>]*>[\s\S]*?<\/section>\s*/gi, '\n')
+    .replace(/\s*<!-- Related Articles -->\s*<div\b[^>]*class=["'][^"']*related-articles[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/gi, '\n')
+    .replace(/\s*<section\b[^>]*class=["'][^"']*cluster-navigation[^"']*["'][^>]*>[\s\S]*?<\/section>\s*/gi, '\n')
+    .replace(/\s*<div\b[^>]*class=["'][^"']*related-articles[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/gi, '\n')
+    .replace(/\s*<div\b[^>]*class=["'][^"']*article-pathways[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/gi, '\n')
+    .replace(/\s*<p\b[^>]*class=["'][^"']*article-pathways[^"']*["'][^>]*>[\s\S]*?<\/p>\s*/gi, '\n')
+    .replace(/\s*<h2\b[^>]*>\s*(?:Related Articles|See Similar Strategies|Related Towing and Roadside Resources)\s*<\/h2>\s*<(?:ul|div)\b[^>]*(?:class=["'][^"']*related-links[^"']*["'])?[^>]*>[\s\S]*?<\/(?:ul|div)>\s*/gi, '\n')
+    .replace(/\s*<div\b[^>]*class=["'][^"']*related-links[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/gi, '\n')
+    .replace(/\s*<hr\b[^>]*class=["'][^"']*post-divider[^"']*["'][^>]*>\s*(?=<\/article>|<\/div>\s*<\/div>\s*<\/(?:main|section)>)/gi, '\n');
 }
 
 function minifyCss(css) {
@@ -463,7 +457,7 @@ for (const file of htmlFiles) {
   html = html.replace(/\s*<\/head>/i, `\n    ${makeSchema({ slug, title, description, html, post, crumbs, role })}\n</head>`);
   html = normalizeAssets(html);
   html = addBreadcrumbs(html, crumbs);
-  if (post) html = addContextLinks(html, post, posts);
+  html = removeBottomRelatedModules(html);
   html = optimizeImages(html, slug);
   fs.writeFileSync(path.join(ROOT, file), html);
 }
@@ -474,5 +468,5 @@ const combinedCss = [
 ].join('\n');
 fs.writeFileSync(path.join(ROOT, 'site.css'), `${minifyCss(combinedCss)}\n`);
 
-console.log(`Enhanced ${htmlFiles.length} public pages with standardized navigation, footers, breadcrumbs, schema, assets, and contextual links`);
+console.log(`Enhanced ${htmlFiles.length} public pages with standardized navigation, footers, breadcrumbs, schema, assets, and related-module cleanup`);
 console.log(`Generated consolidated site.css (${Math.round(fs.statSync(path.join(ROOT, 'site.css')).size / 1024)} KB)`);
