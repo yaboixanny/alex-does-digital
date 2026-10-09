@@ -53,6 +53,9 @@ const UPDATED_CONTENT = new Set([
   'facebook-ads-for-flooring-companies',
   'seo-for-epoxy-flooring'
 ]);
+const CONTENT_MODIFIED_DATES = {
+  'facebook-ads-for-plumbers': '2026-10-09'
+};
 const INDUSTRIES = [
   'appliance-repair', 'handyman', 'towing', 'pool-service', 'wedding-photography',
   'solar', 'plumbing', 'car-detailing', 'carpet-cleaning', 'electrician',
@@ -255,7 +258,7 @@ function makeSchema({ slug, title, description, html, post, crumbs, role }) {
       '@id': `${url}#article`, headline: title, description,
       image: [schemaImage(html)],
       datePublished: post.date || getGitDate(`${slug}.html`),
-      dateModified: UPDATED_CONTENT.has(slug) ? '2026-10-06' : (post.date && post.date > TODAY ? post.date : TODAY),
+      dateModified: CONTENT_MODIFIED_DATES[slug] || (UPDATED_CONTENT.has(slug) ? '2026-10-06' : (post.date && post.date > TODAY ? post.date : TODAY)),
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       author: { '@type': 'Person', '@id': `${SITE}/about#person`, name: 'Alex', url: `${SITE}/about` },
       publisher: { '@id': `${SITE}/#organization` },
