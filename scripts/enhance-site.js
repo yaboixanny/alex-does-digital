@@ -41,7 +41,11 @@ const UPDATED_CONTENT = new Set([
   'google-ads-for-care-homes',
   'facebook-ads-for-care-homes',
   'google-ads-for-nursing-homes',
-  'facebook-ads-for-nursing-homes'
+  'facebook-ads-for-nursing-homes',
+  'financial-advisor-leads',
+  'google-ads-for-financial-advisors',
+  'facebook-ads-for-financial-advisors',
+  'seo-for-financial-advisors'
 ]);
 const INDUSTRIES = [
   'appliance-repair', 'handyman', 'towing', 'pool-service', 'wedding-photography',
@@ -138,7 +142,10 @@ function relatedPosts(post, posts) {
     'seo-for-nursing-homes': [],
     'google-ads-for-dietitians-and-nutritionists': ['seo-for-nutritionists', 'google-ads-pilot'],
     'seo-for-nutritionists': ['google-ads-for-dietitians-and-nutritionists', 'google-ads-pilot'],
-    'facebook-ads-for-financial-advisors': ['facebook-ads-lead-generation', 'conversion-rate-optimization'],
+    'financial-advisor-leads': [],
+    'google-ads-for-financial-advisors': [],
+    'facebook-ads-for-financial-advisors': [],
+    'seo-for-financial-advisors': [],
     'plumbing-leads': ['facebook-ads-for-plumbers', 'google-ads-for-service-businesses'],
     'advanced-solar-lead-generation': ['facebook-ads-for-solar-companies', 'google-ads-for-service-businesses'],
     'google-local-services-ads-towing-cost-per-lead': ['google-ads-towing-case-study', 'google-ads-for-towing-companies', 'towing-leads']

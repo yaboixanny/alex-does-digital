@@ -34,6 +34,7 @@
   "pool-service-leads": "industry",
   "towing-leads": "industry",
   "nursing-home-marketing": "industry",
+  "financial-advisor-leads": "industry",
   "ceramic-coating-facebook-ads-case-study": "case-study",
   "google-ads-towing-case-study": "case-study",
   "pool-service-winter-leads-case-study": "case-study",
@@ -75,6 +76,7 @@
   "google-ads-for-roadside-assistance": "guide",
   "google-ads-for-towing-companies": "guide",
   "google-ads-for-nursing-homes": "guide",
+  "google-ads-for-financial-advisors": "guide",
   "google-local-services-ads-towing-cost-per-lead": "guide",
   "google-ads-pilot": "guide",
   "seo-for-appliance-repair": "guide",
@@ -85,6 +87,7 @@
   "seo-for-care-homes": "guide",
   "seo-for-handyman": "guide",
   "seo-for-nursing-homes": "guide",
+  "seo-for-financial-advisors": "guide",
   "seo-for-nutritionists": "guide",
   "seo-for-pool-service": "guide",
   "seo-for-towing-companies": "guide"

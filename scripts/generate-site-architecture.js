@@ -89,7 +89,7 @@ const industries = [
   ['carpet-cleaning-leads', 'Carpet Cleaning'], ['epoxy-flooring-leads', 'Epoxy Flooring'], ['appliance-repair-leads', 'Appliance Repair'],
   ['advanced-solar-lead-generation', 'Solar Companies'], ['wedding-photography-leads', 'Wedding Photographers'], ['seo-for-nutritionists', 'Dietitians & Nutritionists'],
   ['care-home-marketing', 'Care Homes & Assisted Living'], ['nursing-home-marketing', 'Nursing Homes & Skilled Nursing'],
-  ['facebook-ads-for-financial-advisors', 'Financial Advisors'], ['google-ads-for-roadside-assistance', 'Roadside Assistance']
+  ['financial-advisor-leads', 'Financial Advisors'], ['google-ads-for-roadside-assistance', 'Roadside Assistance']
 ];
 const industryCards = industries.map(([slug, title]) => card(slug, title, postsBySlug.get(slug)?.excerpt || `Acquisition strategy and practical growth guidance for ${title.toLowerCase()}.`, 'Industry', registry[slug])).join('');
 fs.writeFileSync(path.join(ROOT, 'industries.html'), page({
