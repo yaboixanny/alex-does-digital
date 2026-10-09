@@ -32,7 +32,8 @@ const COMMERCIAL_SERVICE_TYPES = {
   'google-ads-for-dietitians-and-nutritionists': 'Google Ads management for dietitians and nutritionists',
   'wedding-photography-leads': 'SEO services for wedding photographers',
   'plumbing-leads': 'Plumbing lead generation services',
-  'advanced-solar-lead-generation': 'Solar lead generation services'
+  'advanced-solar-lead-generation': 'Solar lead generation services',
+  'google-ads-for-financial-advisors': 'Google Ads management for financial advisors'
 };
 const COMMERCIAL_SERVICE_PAGES = new Set(Object.keys(COMMERCIAL_SERVICE_TYPES));
 const UPDATED_CONTENT = new Set([
@@ -46,6 +47,7 @@ const UPDATED_CONTENT = new Set([
   'google-ads-for-financial-advisors',
   'facebook-ads-for-financial-advisors',
   'seo-for-financial-advisors',
+  'financial-advisor-google-ads-keywords',
   'epoxy-flooring-leads',
   'google-ads-for-epoxy-flooring',
   'facebook-ads-for-flooring-companies',
@@ -151,6 +153,7 @@ function relatedPosts(post, posts) {
     'seo-for-nutritionists': ['google-ads-for-dietitians-and-nutritionists', 'google-ads-pilot'],
     'financial-advisor-leads': [],
     'google-ads-for-financial-advisors': [],
+    'financial-advisor-google-ads-keywords': [],
     'facebook-ads-for-financial-advisors': [],
     'seo-for-financial-advisors': [],
     'plumbing-leads': ['facebook-ads-for-plumbers', 'google-ads-for-service-businesses'],
