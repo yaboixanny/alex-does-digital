@@ -136,6 +136,7 @@ function relatedPosts(post, posts) {
   // when the page already links to its same-industry resources in context.
   const manualRelated = {
     'epoxy-flooring-leads': [],
+    'google-ads-pilot': [],
     'google-ads-for-epoxy-flooring': [],
     'facebook-ads-for-flooring-companies': [],
     'seo-for-epoxy-flooring': [],
