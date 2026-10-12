@@ -55,7 +55,8 @@ const UPDATED_CONTENT = new Set([
 ]);
 const CONTENT_MODIFIED_DATES = {
   'facebook-ads-for-plumbers': '2026-10-09',
-  'seo-for-towing-companies': '2026-10-12'
+  'seo-for-towing-companies': '2026-10-12',
+  'google-ads-for-electricians': '2026-10-12'
 };
 const INDUSTRIES = [
   'appliance-repair', 'handyman', 'towing', 'pool-service', 'wedding-photography',
