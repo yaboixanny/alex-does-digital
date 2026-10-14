@@ -57,7 +57,8 @@ const CONTENT_MODIFIED_DATES = {
   'facebook-ads-for-plumbers': '2026-10-09',
   'seo-for-towing-companies': '2026-10-12',
   'google-ads-for-electricians': '2026-10-12',
-  'seo-for-nursing-homes': '2026-10-13'
+  'seo-for-nursing-homes': '2026-10-13',
+  'seo-for-handyman': '2026-10-14'
 };
 const INDUSTRIES = [
   'appliance-repair', 'handyman', 'towing', 'pool-service', 'wedding-photography',
