@@ -16,6 +16,7 @@
     "generate-architecture": "node scripts/generate-site-architecture.js",
     "enhance-site": "node scripts/enhance-site.js",
     "validate-architecture": "node scripts/validate-content-architecture.js",
+    "test-industry-layouts": "node scripts/test-industry-layouts.js",
     "classify-content": "node scripts/classify-content.js",
     "update-blog": "node scripts/update-blog-metadata.js",
     "build": "npm run generate-wedding-pages && npm run generate-core-lead-pages && npm run generate-seo-service-page && npm run generate-youtube-service-page && npm run generate-priority-industry-clusters && npm run generate-senior-care-clusters && npm run generate-financial-advisor-cluster && npm run generate-epoxy-flooring-cluster && npm run generate-roofing-hub && npm run update-blog && npm run generate-architecture && npm run generate-hubs && npm run enhance-site && npm run validate-architecture && node scripts/build-site.js"

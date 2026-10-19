@@ -446,6 +446,8 @@ function minifyCss(css) {
 }
 
 const posts = JSON.parse(fs.readFileSync(path.join(ROOT, 'posts.json'), 'utf8'));
+// Normalize generated and hand-authored industry hubs before common chrome.
+require('./standardize-industry-layouts');
 const postsBySlug = new Map(posts.map(post => [post.slug, post]));
 const htmlFiles = fs.readdirSync(ROOT).filter(file => file.endsWith('.html') && !TEMPLATES.has(file));
 
@@ -471,7 +473,8 @@ for (const file of htmlFiles) {
 
 const combinedCss = [
   fs.readFileSync(path.join(ROOT, 'styles.css'), 'utf8'),
-  fs.readFileSync(path.join(ROOT, 'editorial.css'), 'utf8')
+  fs.readFileSync(path.join(ROOT, 'editorial.css'), 'utf8'),
+  fs.readFileSync(path.join(ROOT, 'industry-hubs.css'), 'utf8')
 ].join('\n');
 fs.writeFileSync(path.join(ROOT, 'site.css'), `${minifyCss(combinedCss)}\n`);
 

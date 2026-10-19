@@ -21,9 +21,9 @@ Every public page must have exactly one role in `content-registry.json`:
 
 ## Industry hub template
 
-New industry hubs should use `scripts/lib/industry-hub-template.js` as the primary layout. Supply industry-specific services, audience, demand patterns, proof, measurement language, FAQs, and same-industry Google Ads, Facebook Ads, and SEO destinations through configuration rather than copying finished HTML.
+Handyman Leads is the visual reference for every industry hub: centered hero and description, primary and strategy buttons, overview, three strategy cards, readable content sections, FAQs, and a final CTA. Do not introduce a new split hero or oversized headline for an individual industry.
 
-The template includes the standard hero and decision-journey board, measurement strip, problem/solution comparison, three-channel acquisition cards, commercial and operational clarity section, outcome scorecard, trust architecture, 90-day roadmap, privacy and accessibility guidance, FAQ, and final CTA.
+New hubs may use `scripts/lib/industry-hub-template.js` for industry-specific content, but the final layout is owned by `scripts/standardize-industry-layouts.js` and `industry-hubs.css`. The standardizer runs within `enhance-site`, after generators, and applies to every `industry` entry in `content-registry.json`. It moves supporting hero information into the overview, preserves copy and media, and formats editorial channel sections as cards. Keep useful industry-specific sections rather than padding every page with identical copy. Run the full build and check desktop/mobile previews before publishing.
 
 Supporting links must fail closed: include only genuine same-industry destinations or an explicitly curated adjacent page. Never fill a hub with unrelated same-channel links, never link a page to itself, and avoid repeating the same destination in multiple generic modules.
 

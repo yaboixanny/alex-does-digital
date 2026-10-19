@@ -1,0 +1,56 @@
+/* Handyman Leads is the visual reference for all industry hubs.
+   Keep these rules scoped: channel guides and service pages are unaffected. */
+.industry-hub .hub-hero { padding: 6rem 0 5rem !important; background: linear-gradient(180deg,#f8fafc,#fff) !important; }
+.industry-hub .hub-hero .wedding-hero-content { display: block; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; }
+.industry-hub .hub-hero h1 { max-width: 900px !important; margin: 0 auto 1.5rem !important; font-size: clamp(2rem,5vw,3.5rem) !important; line-height: 1.2 !important; text-align: center !important; }
+.industry-hub .hub-hero .wedding-hero-description { max-width: 700px !important; margin: 0 auto 2rem !important; font-size: 1.2rem !important; line-height: 1.8 !important; text-align: center !important; }
+.industry-hub .hub-hero .hero-badge { color: #047857 !important; background: #ecfdf5 !important; border: 1px solid #a7f3d0 !important; font-size: .8rem; }
+.industry-hub .hero-cta-buttons { justify-content: center; gap: 1rem; }
+.industry-hub .container { max-width: 1200px; }
+.industry-hub .hub-intro { padding: 3rem 0; }
+.industry-hub .hub-intro-inner { display: block; max-width: 900px; margin: auto; }
+.industry-hub .hub-intro .intent-proof { justify-content: center; margin: 1.5rem auto; }
+.industry-hub .hub-intro .intent-summary { width: 100%; max-width: 900px; margin: auto; }
+.industry-hub .care-demand-board { max-width: 900px; margin: auto; box-shadow: none; }
+.industry-hub .care-demand-route { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+.industry-hub .care-demand-route > b { display: none; }
+.industry-hub .care-demand-board { border: 0; padding: 0; background: transparent; }
+.industry-hub .care-demand-board::before { display: none; }
+.industry-hub .care-demand-board-head { justify-content: center; text-align: center; }
+.industry-hub .care-status { display: none; }
+.industry-hub .care-demand-route > div { display: flex; flex-direction: column; text-align: center; padding: 1.5rem; }
+.industry-hub .intent-article { width: 100%; max-width: 1200px; margin: 0 auto; padding: 3rem 24px; }
+.industry-hub .intent-article > p { max-width: 900px; margin-left: auto; margin-right: auto; }
+.industry-hub .intent-section, .industry-hub .overview-section, .industry-hub .strategies-section, .industry-hub .resources-section, .industry-hub .lead-gen-section { padding: 4.5rem 0; }
+.industry-hub .intent-article > section:not(.intent-cta) { padding: 3rem 0; margin: 0; }
+.industry-hub .hub-content-section > :not(div):not(table), .industry-hub .care-content-narrow { max-width: 900px; margin-left: auto; margin-right: auto; }
+.industry-hub .care-section-heading, .industry-hub .overview-content { max-width: 900px; margin: 0 auto 2.5rem; text-align: center; }
+.industry-hub h2 { font-size: clamp(1.75rem,3vw,2.5rem); line-height: 1.25; letter-spacing: -.035em; }
+.industry-hub .section-heading, .industry-hub .intent-article > section > h2 { text-align: center; margin-bottom: 1.5rem; }
+.industry-hub .strategy-boxes, .industry-hub .care-pillar-grid, .industry-hub .intent-card-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2rem; margin-top: 2.5rem; }
+.industry-hub .strategy-box, .industry-hub .care-pillar-card, .industry-hub .intent-card { min-width: 0; padding: 2rem; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; color: #475569; box-shadow: none; }
+.industry-hub .strategy-box h3, .industry-hub .care-pillar-card h3 { font-size: 1.4rem; line-height: 1.35; color: #0f172a; }
+.industry-hub .care-pillar-card { display: flex; flex-direction: column; text-decoration: none; }
+.industry-hub .care-pillar-card > strong:last-child { margin-top: auto; padding-top: 1.5rem; color: #047857; }
+.industry-hub .intent-faq, .industry-hub .faq-container { max-width: 900px; margin: 0 auto; }
+.industry-hub details { border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; background: white; margin-bottom: 1rem; }
+.industry-hub summary { font-weight: 600; cursor: pointer; color: #0f172a; }
+.industry-hub .intent-cta { max-width: 1200px; margin: 3rem auto; padding: 0 24px; text-align: center; }
+.industry-hub .intent-cta-panel, .industry-hub .intent-article > .intent-cta { border-radius: 20px; padding: 3.5rem 2rem; background: #0f172a; color: white; }
+.industry-hub .intent-cta h2 { color: white !important; max-width: 800px; margin: 0 auto 1rem; }
+.industry-hub .intent-cta p { max-width: 700px; margin: 0 auto 1.5rem; color: #cbd5e1; }
+.industry-hub .intent-cta .intent-actions { justify-content: center; }
+.industry-hub [id] { scroll-margin-top: 100px; }
+.industry-hub iframe { max-width: 100%; }
+@media(max-width:900px) {
+  .industry-hub .strategy-boxes, .industry-hub .care-pillar-grid, .industry-hub .intent-card-grid { grid-template-columns: 1fr; }
+  .industry-hub .care-strategy-split, .industry-hub .care-compare-grid { grid-template-columns: 1fr; }
+}
+@media(max-width:600px) {
+  .industry-hub .care-demand-route { grid-template-columns: 1fr; }
+  .industry-hub .hub-hero { padding: 3.5rem 0 !important; }
+  .industry-hub .hero-cta-buttons { flex-direction: column; }
+  .industry-hub .hero-cta-buttons .btn { width: 100%; }
+  .industry-hub .intent-section, .industry-hub .overview-section, .industry-hub .strategies-section, .industry-hub .resources-section { padding: 3rem 0; }
+  .industry-hub .strategy-box, .industry-hub .care-pillar-card { padding: 1.5rem; }
+}
