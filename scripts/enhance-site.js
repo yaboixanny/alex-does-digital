@@ -474,7 +474,8 @@ for (const file of htmlFiles) {
 const combinedCss = [
   fs.readFileSync(path.join(ROOT, 'styles.css'), 'utf8'),
   fs.readFileSync(path.join(ROOT, 'editorial.css'), 'utf8'),
-  fs.readFileSync(path.join(ROOT, 'industry-hubs.css'), 'utf8')
+  fs.readFileSync(path.join(ROOT, 'industry-hubs.css'), 'utf8'),
+  fs.readFileSync(path.join(ROOT, 'cta.css'), 'utf8')
 ].join('\n');
 fs.writeFileSync(path.join(ROOT, 'site.css'), `${minifyCss(combinedCss)}\n`);
 
