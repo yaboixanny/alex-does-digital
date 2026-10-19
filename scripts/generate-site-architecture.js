@@ -31,36 +31,15 @@ ${showDefaultHero ? `        <header class="topic-hub-hero"><div class="containe
 ${script ? `    ${script}\n` : ''}</body></html>\n`;
 }
 
-const services = [
-  ['google-ads-for-service-businesses', 'Google Ads Management', 'Capture high-intent demand with tighter campaigns, better tracking, stronger landing pages, and decisions tied to lead quality.'],
-  ['facebook-ads-lead-generation', 'Facebook Ads Lead Generation', 'Create demand and turn attention into qualified inquiries with paid social campaigns built around a clear offer.'],
-  ['seo-for-service-businesses', 'SEO for Service Businesses', 'Build durable search visibility with technical SEO, commercial content, local relevance, and a clean site structure.'],
-  ['conversion-rate-optimization', 'Conversion Rate Optimization', 'Turn more existing traffic into calls, forms, and booked work by removing friction from the customer journey.'],
-  ['youtube-leads', 'YouTube Lead Generation', 'Use useful video content and focused calls to action to build trust before a prospect reaches your sales process.']
-];
-const specialistServices = [
-  ['appliance-repair-web-design', 'Appliance Repair Web Design'],
-  ['google-ads-for-dietitians-and-nutritionists', 'Google Ads for Dietitians & Nutritionists'],
-  ['google-ads-wedding-photography-leads', 'Google Ads for Wedding Photographers'],
-  ['wedding-photography-leads', 'SEO for Wedding Photographers']
-];
-
 function card(slug, title, description, label, role) {
   return `<a class="topic-hub-card" data-content-role="${role}" href="/${slug}"><span>${esc(label)}</span><h2>${esc(title)}</h2><p>${esc(description)}</p><strong>Explore ${esc(label.toLowerCase())} →</strong></a>`;
 }
 
-const servicesContent = `<section class="topic-hub-section"><div class="container">
-    <div class="hub-section-heading"><p class="section-label">Core capabilities</p><h2>One connected growth system</h2><p>Choose the channel you need now, or combine services around one measurement plan and one commercial goal.</p></div>
-    <div class="topic-hub-grid">${services.map(([slug, title, description]) => card(slug, title, description, 'Service', 'service')).join('')}</div>
-    <div class="hub-section-heading hub-section-heading-spaced"><p class="section-label">Specialized programs</p><h2>Industry-specific services</h2></div>
-    <div class="topic-hub-grid topic-hub-grid-compact">${specialistServices.map(([slug, title]) => card(slug, title, postsBySlug.get(slug)?.excerpt || 'A focused acquisition program designed around the way customers search and choose in this market.', 'Specialist service', 'service')).join('')}</div>
-</div></section>`;
-
+const servicesDirectory = require('./services-directory');
 fs.writeFileSync(path.join(ROOT, 'services.html'), page({
-  slug: 'services', title: 'Digital Marketing Services', eyebrow: 'Services',
-  description: 'Google Ads, Facebook Ads, SEO, conversion optimization, and YouTube lead generation for service businesses.',
-  intro: 'Paid search, paid social, SEO, conversion, and video strategy—connected to qualified leads and measurable growth.',
-  content: servicesContent
+  slug: 'services', title: 'SEO, Google Ads, Facebook Ads & Lead Generation Services',
+  description: 'SEO, Google Ads management, Facebook Ads, and lead generation for service businesses. Work directly with Alex on campaigns, content, tracking, and growth.',
+  content: servicesDirectory.content, styles: servicesDirectory.styles, showDefaultHero: false
 }));
 
 const guidePosts = posts.filter(post => registry[post.slug] === 'guide').sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.title.localeCompare(b.title));
