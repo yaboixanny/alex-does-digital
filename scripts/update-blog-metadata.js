@@ -26,6 +26,7 @@ const EXCLUDED_FILES = new Set([
   'nursing-home-marketing.html',
   'financial-advisor-leads.html',
   'epoxy-flooring-leads.html',
+  'roofing-leads.html',
   '404.html',
   'blog-post-template.html',
   'case-study-template.html',
