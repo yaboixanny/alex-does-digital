@@ -15,13 +15,13 @@ const clusters = [
     name: 'Care Home',
     plural: 'care homes',
     pluralLabel: 'Care Homes',
-    audience: 'care home operators, assisted living communities, senior living providers, and retirement communities',
-    region: 'Care home is the primary term in the UK. Assisted living, senior living, and retirement community are more common in North America. Use the language families use in the market you actually serve.',
+    audience: 'operators marketing residential accommodation with personal care, including respite and dementia support where actually provided',
+    region: 'The focus here is residential personal care and the family enquiry-to-visit journey. Care home is an umbrella term in UK usage and can include nursing. Assisted living and retirement housing are distinct settings, not alternative names for the same service.',
     hubTitle: 'Care Home Marketing: Build Trust, Enquiries and Occupancy',
     googleTitle: 'Google Ads for Care Homes: Generate Qualified Enquiries',
     hubDescription: 'A complete care home marketing strategy covering Google Ads, Facebook Ads, local SEO, family trust, referral relationships, enquiry tracking, tours, and occupancy.',
     lede: 'Build a measurable marketing system that helps families understand the community, arrange a conversation or tour, and make a confident care decision.',
-    services: ['Residential care', 'Assisted living', 'Dementia care', 'Respite care', 'Senior living', 'Retirement living'],
+    services: ['Residential personal care', 'Permanent residential stays', 'Respite stays where offered', 'Dementia support where offered'],
     urgent: 'Families may need an answer quickly after a health change, hospital stay, caregiver burnout, or a sudden change in living circumstances.',
     planned: 'Other families research for weeks or months, comparing location, care approach, staff, activities, accommodation, costs, and availability.',
     proof: 'real rooms and shared spaces, staff introductions, activity schedules, inspection or regulator information, family guidance, transparent contact details, and an accurate explanation of care options',
@@ -31,7 +31,24 @@ const clusters = [
     facebookAngles: ['A calm walkthrough of the community', 'Meet the people who provide day-to-day care', 'What families can expect during an initial visit', 'Activities, dining, rooms, and shared spaces', 'A practical guide to choosing the right care setting'],
     conversion: 'qualified enquiries, conversations, assessments, tours, applications, move-ins, occupancy contribution, and the reasons families do not progress',
     referrals: 'local clinicians, social workers, discharge teams, community groups, charities, professional advisers, and relevant local partners',
-    terminology: 'care homes, assisted living, senior living and retirement communities'
+    terminology: 'residential care homes and their actual personal-care services',
+    hubCopy: {
+      specialistLabel: 'Residential care home marketing',
+      heroTitle: 'Care Home Marketing That Builds Family Trust and Suitable Enquiries',
+      heroLede: 'Help families understand residential personal care, arrange a visit and take the next assessment step. Connect local search, honest home-specific creative and reliable enquiry follow-up.',
+      clarityTitle: 'Market the care provided—not a collection of senior-living labels.',
+      clarityFollowup: 'Separate permanent residential stays from respite when availability and assessment differ. Dementia support describes a provision that must be explained; it does not by itself establish whether a home offers nursing. Mixed-service operators should give nursing provision its own pages and response route.',
+      marketNote: '<p class="eyebrow">Service type comes before geography</p><h3>Care home is not one fixed care level.</h3><p>In UK usage, care homes include residential and nursing homes. This hub focuses on residential personal care. Assisted living has its own housing and support model; retirement housing does not automatically include personal or nursing care. Senior living is a broad category, not a clinical service.</p><p>For nursing provision, see the <a href="/nursing-home-marketing">nursing home marketing hub</a>. Use the <a href="https://www.nhs.uk/social-care-and-support/care-services-equipment-and-care-homes/care-homes/">NHS care-home definitions</a> as a UK reference, then verify local terms.</p>',
+      primaryGoal: 'Reachable families seeking support the home can provide—not every senior-housing enquiry.',
+      problemTitle: 'A family visit journey needs clear care boundaries.',
+      problemLede: 'Families need to understand daily support, the home environment and the assessment process. A residential-care campaign should not attract nursing or independent-housing enquiries through vague promises.',
+      successTitle: 'Optimizing for suitable residential enquiries',
+      scoreTitle: 'Track the steps from family enquiry to a suitable move-in.',
+      scoreLede: 'Separate permanent and respite pathways. Record conversations, completed visits, suitability assessments and move-ins, with reasons such as unsupported care, unavailable rooms or timing. Raw enquiry volume hides those differences.',
+      trustFollowup: 'Useful residential-care content explains first visits, settling in, meals, daily choices, staff roles, fee discussions and what an assessment involves. Keep independent housing and nursing-service claims separate, and have staff verify the care described.',
+      ctaTitle: 'Build a clearer path from family enquiry to a care-home visit.',
+      ctaCopy: 'Review your residential offer, local visibility, creative and enquiry follow-up with Alex.'
+    }
   },
   {
     slug: 'nursing-home-marketing',
@@ -41,13 +58,13 @@ const clusters = [
     name: 'Nursing Home',
     plural: 'nursing homes',
     pluralLabel: 'Nursing Homes',
-    audience: 'nursing homes, skilled nursing facilities, SNFs, rehabilitation centers, and long-term care providers',
-    region: 'This cluster uses US terminology. Nursing homes and skilled nursing facilities provide a different level of care from non-clinical assisted living and retirement communities.',
+    audience: 'facilities providing nursing care, with separate long-term and short-stay services where available, including US skilled nursing facilities where that designation applies',
+    region: 'Nursing home is used in several countries. SNF is a specific US term, not a universal label for nursing homes, rehabilitation or Canadian long-term care. Match the marketing to verified services and the local admissions process.',
     hubTitle: 'Nursing Home Marketing: Generate Qualified Admissions',
     googleTitle: 'Google Ads for Nursing Homes: A Responsible Admissions Strategy',
     hubDescription: 'A complete nursing home marketing strategy for skilled nursing facilities and SNFs, including Google Ads, Facebook Ads, SEO, referral relationships, admissions tracking, and trust.',
     lede: 'Help families and professional referral sources understand clinical services, admissions, availability, and the next step without reducing a complex care decision to a generic lead form.',
-    services: ['Skilled nursing', 'Short-term rehabilitation', 'Long-term nursing care', 'Post-acute care', 'Memory support', 'Specialty programs'],
+    services: ['Long-term nursing care', 'US skilled nursing where applicable', 'Short-stay rehabilitation where offered', 'Verified specialty nursing services'],
     urgent: 'Many searches happen around hospital discharge, a rapid change in care needs, rehabilitation planning, or the need for longer-term skilled support.',
     planned: 'Families and referral professionals still need time to evaluate services, staffing, credentials, insurance or payment questions, location, availability, and admissions requirements.',
     proof: 'facility credentials, service definitions, staff expertise, therapy information, real environment photography, admissions guidance, visiting details, and accurate third-party information families can verify',
@@ -57,7 +74,23 @@ const clusters = [
     facebookAngles: ['A clear explanation of skilled nursing services', 'Meet rehabilitation and admissions team members', 'What happens during an admissions review', 'Facility environment, therapy spaces, and daily support', 'Guidance for families preparing for a care transition'],
     conversion: 'qualified admissions calls, referral submissions, document reviews, tours, accepted admissions, completed admissions, payer mix where appropriate, and lost-admission reasons',
     referrals: 'hospital discharge planners, physicians, case managers, health systems, rehabilitation partners, senior-care professionals, and relevant community organizations',
-    terminology: 'nursing homes, skilled nursing facilities and SNFs'
+    terminology: 'nursing provision and, where applicable, US skilled nursing facilities',
+    hubCopy: {
+      specialistLabel: 'Nursing-service and admissions marketing',
+      heroTitle: 'Nursing Home Marketing Built Around Services, Referrals and Admissions',
+      heroLede: 'Help families and referral professionals understand verified nursing services. Keep long-term nursing and short-stay skilled pathways distinct, from first contact through review and admission.',
+      clarityTitle: 'Separate nursing-service pathways before choosing campaigns.',
+      clarityFollowup: 'Do not describe every rehabilitation program as skilled nursing or every long-term care home as a US SNF. Identify actual nursing and therapy provision, review responsibilities, capacity and payment-verification steps. Separate professional referrals from initial family contacts.',
+      marketNote: '<p class="eyebrow">Care level, then local terminology</p><h3>Nursing home and SNF are not universal synonyms.</h3><p>Nursing home is used in several countries. A US skilled nursing facility has a specific service and certification context; Medicare coverage is conditional, not a promise attached to the name. Canadian long-term care and UK nursing services follow their own systems.</p><p>For residential personal-care enquiries and visits, use the <a href="/care-home-marketing">care home marketing hub</a>. For US coverage language, consult <a href="https://www.medicare.gov/coverage/skilled-nursing-facility-care">Medicare’s SNF guidance</a>.</p>',
+      problemTitle: 'Clinical service fit matters more than a cheap enquiry.',
+      problemLede: 'A nursing-service campaign must explain what the facility provides and who reviews a referral. Retirement lifestyle messaging cannot replace capability information, and an enquiry does not establish clinical acceptance.',
+      primaryGoal: 'Appropriate admissions contacts and referrals—not implied eligibility or guaranteed placement.',
+      scoreTitle: 'Measure referral review and admissions by service pathway.',
+      scoreLede: 'Separate family contacts, professional referrals, short-stay care and long-term nursing. Keep clinical and financial details inside approved operational systems; external marketing reports should contain only permitted, necessary data.',
+      trustFollowup: 'Explain verified nursing and therapy capabilities, clinical review, the secure referral route, visiting and family communication. Have qualified staff review service claims. Do not promise recovery, automatic coverage or acceptance.',
+      ctaTitle: 'Connect nursing-service demand to the right admissions pathway.',
+      ctaCopy: 'Review your service definitions, search campaigns, family education and referral handoff with Alex.'
+    }
   }
 ];
 
@@ -83,7 +116,7 @@ function shell({ title, description, slug, faq = [], body }) {
   <meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}"><meta property="og:url" content="https://alxdoesdigital.com/${slug}">
   <meta property="og:image" content="https://alxdoesdigital.com/images/alexpolo-copy.webp">
-  <meta property="article:published_time" content="2026-10-06">
+  <meta property="article:published_time" content="2026-10-06"><meta property="article:modified_time" content="2026-10-20">
   ${faqSchema(faq)}
 </head><body><main>${body}</main></body></html>\n`;
 }
@@ -99,6 +132,8 @@ function channelCards(d, heading = `Explore the complete ${d.name.toLowerCase()}
 
 function hubFaq(d) {
   return [
+    [d.slug === 'care-home-marketing' ? 'Does care home mean residential care only?' : 'Is every nursing home a skilled nursing facility?', d.slug === 'care-home-marketing' ? 'No. In UK usage, care home can include residential and nursing homes. This marketing hub focuses on residential personal care and family visits. Nursing provision needs its own accurate service information and admissions route.' : 'No. Nursing home is used in several countries, while SNF is a specific US designation. Describe the services and certifications the facility actually has; do not transfer US funding language to other markets.'],
+    [d.slug === 'care-home-marketing' ? 'Are assisted living and retirement housing the same offer?' : 'Should short-stay and long-term nursing share one campaign?', d.slug === 'care-home-marketing' ? 'No. Their housing, support and admission models can differ. Retirement housing does not automatically include personal or nursing care. Explain each real offer separately rather than using these labels as synonyms.' : 'Not by default. They can involve different services, referral steps, timelines and payment questions. Separate the messages and reporting when those pathways differ at the facility.'],
     [`What should a ${d.name.toLowerCase()} marketing strategy include?`, `A useful plan connects search visibility, paid media, referral relationships, trustworthy content, enquiry handling, and admissions measurement around the services and locations the organization can support.`],
     [`How should ${d.plural} measure marketing?`, `Measure ${d.conversion}. Website sessions and platform leads are diagnostic metrics, not the final business outcome.`],
     ['Should Google Ads, Facebook Ads and SEO use the same message?', 'They should share accurate facts and brand standards, but each channel serves a different stage of the decision. Search captures active demand, paid social builds familiarity, and SEO creates durable discovery and trust.'],
@@ -112,62 +147,33 @@ function hubPage(d) {
   return shell({ title: d.hubTitle, description: d.hubDescription, slug: d.slug, faq, body });
 }
 
-function guideFaq(d, channel) {
-  const lead = channel === 'Google Ads' ? 'paid-search campaign' : 'Facebook and Instagram campaign';
-  return [
-    [`Can ${channel} work for ${d.plural}?`, `Yes, when the ${lead} reflects real services, geography, availability, policy requirements, a trustworthy conversion path, and an admissions team that records outcomes.`],
-    ['What should count as a conversion?', `Start with meaningful steps such as ${d.conversion}. Use one set of definitions across advertising, analytics, and admissions.`],
-    ['How quickly should enquiries receive a response?', 'Respond as quickly and consistently as the organization can sustain. Confirm receipt immediately, explain the next step, and route urgent or professional referrals appropriately.'],
-    ['What claims should ads avoid?', 'Avoid unsupported superlatives, guaranteed outcomes, inaccurate availability, and wording that implies knowledge of a person’s health or other sensitive attributes. Review current platform and local rules before launch.']
-  ];
-}
-
-function googleGuide(d) {
-  const faq = guideFaq(d, 'Google Ads');
-  const keywordRows = d.googleKeywords.map((keyword, index) => `<tr><td>${keyword}</td><td>${index < 2 ? 'High-intent local comparison' : index < 4 ? 'Service-specific research' : 'Location and care-level research'}</td><td>${index < 2 ? 'Call or enquiry page' : 'Relevant service or location page'}</td></tr>`).join('');
-  const body = `<section class="intent-hero senior-care-hero"><div class="container intent-hero-grid"><div><span class="post-category-tag">Google Ads</span><h1>Google Ads for ${d.pluralLabel}</h1><p class="intent-lede">Capture active local demand with focused keywords, accurate service pages, responsible messaging, admissions tracking, and budgets tied to qualified outcomes.</p><div class="intent-actions"><a class="btn btn-primary" href="${BOOKING}">Talk to Alex</a><a class="btn btn-secondary" href="#strategy">Read the strategy</a></div><div class="intent-proof intent-proof-list"><span>Search intent</span><span>Local coverage</span><span>Admissions outcomes</span></div></div><aside class="intent-callout"><p class="eyebrow">The central rule</p><h2>Do not treat every enquiry as an admission.</h2><p>Campaigns should connect searches to suitable services and measure the complete path from click to qualified admissions outcome.</p></aside></div></section>
-<article class="container intent-article" id="strategy"><div class="intent-article-intro"><p>${d.region} This guide focuses on the search-to-enquiry path for ${d.terminology}.</p><p class="intent-byline">Written and reviewed by <a href="/about">Alex</a> · Updated ${UPDATED}</p></div>
-<h2>Start With Services, Locations and Availability</h2><p>Document the services the organization wants to grow, the locations families can realistically consider, current capacity, admissions requirements, response hours, and commercial priorities. A broad campaign cannot fix unclear availability or a slow handoff.</p>
-<h2>Structure Campaigns Around Search Intent</h2><p>Separate brand searches, general local searches, service-specific searches, and location campaigns. Keep distinct care levels in separate ad groups or campaigns so the ad and landing page answer the same need. Use call-focused paths only when trained staff can respond.</p>
-<div class="intent-table-wrap"><table class="intent-table"><thead><tr><th>Example keyword</th><th>Likely intent</th><th>Best destination</th></tr></thead><tbody>${keywordRows}</tbody></table></div>
-<h2>Build a Deliberate Negative Keyword List</h2><p>Review search terms before excluding queries. Common starting points may include ${d.googleNegatives.join(', ')}, but a word should be excluded only when it is genuinely irrelevant. Protect useful informational searches when the website has a helpful path from research to enquiry.</p>
-<h2>Control Geography Carefully</h2><p>Target the actual catchment area, use presence-based location settings where appropriate, and review where enquiries originate. Families may search from outside the area on behalf of someone local, so interpret geography with the full decision journey rather than a rigid radius alone.</p>
-<h2>Write Accurate, Respectful Ads</h2><p>Use clear service and location language, a realistic next step, and verifiable proof. Avoid fear-based copy, unsupported rankings, guaranteed outcomes, or wording that implies Google knows a person's medical condition. Review current Google Ads personalized advertising, healthcare, housing, privacy, and local regulatory requirements.</p>
-<h2>Send Each Ad to the Closest Useful Page</h2><p>The landing page should explain the service, who it may suit, the location, environment, staff or credentials, admissions process, costs or payment context where appropriate, availability language, and next step. Show ${d.proof}.</p>
-<h2>Track Calls and Forms Beyond the Platform</h2><p>Capture ${d.qualification}. Connect the enquiry source to ${d.conversion}. Use call recording or transcription only when lawful, disclosed, secured, and appropriate for the organization.</p>
-<h2>Set a Budget From the Admissions Model</h2><p>Estimate search demand, expected click cost, landing-page conversion, qualification, progression, admission rate, capacity, and the value of an appropriate admission. There is no universal cost-per-lead benchmark that replaces the organization's own economics and service obligations.</p>
-<h2>Optimize in the Right Order</h2><ol><li>Confirm conversion tracking and admissions outcomes.</li><li>Remove irrelevant searches and unsupported locations.</li><li>Improve the ad-to-page match.</li><li>Compare services, locations, schedules, and devices.</li><li>Adjust bids and budgets using qualified outcome data.</li></ol>
-<h2>A Practical 90-Day Google Ads Plan</h2><div class="intent-timeline"><div><strong>Month 1</strong><p>Define services, keyword groups, negatives, locations, pages, policy review, and tracking.</p></div><div><strong>Month 2</strong><p>Launch narrowly, review search terms and calls, and repair the conversion path.</p></div><div><strong>Month 3</strong><p>Shift budget using qualified enquiries, tours or reviews, and admissions outcomes.</p></div></div>
-<p>Paid search is one part of the admissions journey. Use <a href="/${d.seo}">SEO for ${d.plural}</a> to build organic visibility alongside campaigns. When families need to become familiar with the organization before searching, <a href="/${d.facebook}">Facebook Ads for ${d.plural}</a> can introduce the people, environment and next steps.</p>
-<section class="intent-faq"><p class="eyebrow">Frequently asked questions</p><h2>Google Ads for ${d.pluralLabel} FAQ</h2>${faq.map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</section></article>
-<section class="intent-cta"><div class="container"><div class="intent-cta-panel"><p class="eyebrow">Build a measurable search program</p><h2>Need a clearer Google Ads plan for your ${d.name.toLowerCase()}?</h2><p>Review keywords, geography, pages, tracking, policy requirements, and admissions outcomes together.</p><div class="intent-actions"><a class="btn btn-primary" href="${BOOKING}">Talk to Alex</a><a class="btn btn-secondary" href="/${d.slug}">View the marketing hub</a></div></div></div></section>`;
-  return shell({ title: d.googleTitle, description: `Plan Google Ads for ${d.plural} with focused keywords, local targeting, trustworthy landing pages, policy-aware messaging, and qualified admissions tracking.`, slug: d.google, faq, body });
-}
-
-function facebookGuide(d) {
-  const faq = guideFaq(d, 'Facebook Ads');
-  const angles = d.facebookAngles.map((angle, index) => `<section class="intent-guide-step"><span>${String(index + 1).padStart(2, '0')}</span><div><h2>${angle}</h2><p>Use real, permissioned photography or video and plain-language context. Explain what the viewer is seeing, why it matters, and the most appropriate next step without making unsupported promises.</p></div></section>`).join('');
-  const body = `<section class="intent-hero senior-care-hero"><div class="container intent-hero-grid"><div><span class="post-category-tag">Facebook Ads</span><h1>Facebook Ads for ${d.pluralLabel}</h1><p class="intent-lede">Build local familiarity and trust with responsible creative, helpful guidance, clear enquiry routes, and measurement connected to tours and admissions.</p><div class="intent-actions"><a class="btn btn-primary" href="${BOOKING}">Talk to Alex</a><a class="btn btn-secondary" href="#strategy">Read the strategy</a></div><div class="intent-proof intent-proof-list"><span>Original creative</span><span>Responsible targeting</span><span>Qualified outcomes</span></div></div><aside class="intent-callout"><p class="eyebrow">Use paid social for the right job</p><h2>Build familiarity before asking for an enquiry.</h2><p>Families need context, evidence, and a low-pressure next step. The campaign should help them understand the organization rather than force a complex decision into one ad.</p></aside></div></section>
-<article class="container intent-article" id="strategy"><div class="intent-article-intro"><p>${d.region} Facebook and Instagram can support awareness and consideration, but the campaign must respect sensitive decisions and applicable platform rules.</p><p class="intent-byline">Written and reviewed by <a href="/about">Alex</a> · Updated ${UPDATED}</p></div>
-<h2>Choose an Objective That Matches the Decision Stage</h2><p>Use video or engagement to introduce the organization, traffic for useful guidance, and lead or conversion campaigns when the page and response process are ready. Retarget only when consent and applicable privacy rules support it. Do not treat cheap clicks as a commercial result.</p>
-<h2>Use Original Creative That Families Can Verify</h2><p>Show ${d.proof}. Obtain appropriate permission for every identifiable person, protect resident dignity, and avoid staging scenes that misrepresent the environment or level of care.</p><div class="intent-guide-steps">${angles}</div>
-<h2>Keep the Offer Useful and Low Pressure</h2><p>Appropriate next steps may include viewing a guide, requesting a brochure, attending an open event, speaking with admissions, checking availability, or arranging a visit. The offer should fit the audience's stage and make clear what happens after submission.</p>
-<h2>Handle Sensitive Attributes and Housing Rules Carefully</h2><p>Do not write copy that asserts or implies a viewer's health condition, disability, family situation, or other sensitive personal attribute. Depending on the service and jurisdiction, housing, healthcare, privacy, and anti-discrimination rules may affect targeting and campaign setup. Review current Meta policies and obtain appropriate professional advice before launch.</p>
-<h2>Use Broad Local Targeting Before Inventing Complex Audiences</h2><p>Start with the real catchment area and strong creative. Platform restrictions may limit audience controls for sensitive or housing-related campaigns. Retargeting, customer lists, and lookalike-style tools require careful consent, data governance, and policy review.</p>
-<h2>Choose Between Instant Forms and Landing Pages</h2><p>Instant forms reduce friction, while landing pages provide more room for proof and explanation. Ask for ${d.qualification}. Avoid collecting unnecessary health information in an advertising form. Route sensitive or clinical details into a secure, appropriate process.</p>
-<h2>Build a Reliable Follow-Up Workflow</h2><p>Confirm receipt, state who will respond, provide a realistic timeframe, and route enquiries to the right team. Track contact attempts and outcomes. A campaign will look inefficient when suitable enquiries are not answered or recorded consistently.</p>
-<h2>Measure Tours and Admissions, Not Form Cost Alone</h2><p>Connect campaigns to ${d.conversion}. Compare creative and offers using qualified progression, not raw submissions. Record lost reasons so the team can distinguish marketing problems from capacity, service-fit, payment, timing, or follow-up constraints.</p>
-<h2>A Practical 90-Day Facebook Ads Plan</h2><div class="intent-timeline"><div><strong>Month 1</strong><p>Complete policy and consent review, gather original creative, choose the offer, and define outcomes.</p></div><div><strong>Month 2</strong><p>Launch a focused local test and review creative quality, enquiries, and response weekly.</p></div><div><strong>Month 3</strong><p>Refresh creative and allocate spend using tours, reviews, admissions, and lost reasons.</p></div></div>
-<p>Local awareness should connect to the channels families use when they begin comparing options. See <a href="/${d.google}">Google Ads for ${d.plural}</a> for active search demand and <a href="/${d.seo}">SEO for ${d.plural}</a> for useful service pages and organic discovery.</p>
-<section class="intent-faq"><p class="eyebrow">Frequently asked questions</p><h2>Facebook Ads for ${d.pluralLabel} FAQ</h2>${faq.map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</section></article>
-<section class="intent-cta"><div class="container"><div class="intent-cta-panel"><p class="eyebrow">Build responsible local awareness</p><h2>Need a clearer Facebook Ads plan for your ${d.name.toLowerCase()}?</h2><p>Review creative, targeting, consent, enquiry handling, and admissions measurement before increasing spend.</p><div class="intent-actions"><a class="btn btn-primary" href="${BOOKING}">Talk to Alex</a><a class="btn btn-secondary" href="/${d.slug}">View the marketing hub</a></div></div></div></section>`;
-  return shell({ title: `Facebook Ads for ${d.pluralLabel}: Build Trust and Enquiries`, description: `Use Facebook Ads for ${d.plural} with responsible creative, local awareness, privacy-conscious enquiry paths, policy review, and admissions measurement.`, slug: d.facebook, faq, body });
+function channelGuide(d, channel) {
+  const content = require('./lib/senior-care-guide-content');
+  const kind = d.slug === 'care-home-marketing' ? 'care' : 'nursing';
+  const c = content[kind + '-' + channel];
+  const label = channel === 'google' ? 'Google Ads' : 'Facebook Ads';
+  const sibling = channel === 'google' ? 'facebook' : 'google';
+  const siblingLabel = sibling === 'google' ? 'Google Ads' : 'Facebook Ads';
+  const scopeLink = kind === 'care'
+    ? '<p>For campaigns promoting nursing provision rather than residential personal care, use the <a href="/nursing-home-marketing">nursing home and skilled nursing marketing hub</a>. A mixed-service operator may need both approaches, on clearly separated service pages.</p>'
+    : '<p>For residential personal-care enquiries and family visits, use the <a href="/care-home-marketing">residential care home marketing hub</a>. Assisted living and retirement housing need their own accurate service descriptions, not a nursing label.</p>';
+  const policyLink = channel === 'google'
+    ? '<a href="https://support.google.com/adspolicy/answer/143465">Google’s restricted-targeting policy</a>'
+    : '<a href="https://transparency.meta.com/policies/ad-standards/">Meta Advertising Standards</a>';
+  const body = `<section class="intent-hero senior-care-hero"><div class="container intent-hero-grid"><div><span class="post-category-tag">${label}</span><h1>${label} for ${d.pluralLabel}</h1><p class="intent-lede">${c.lede}</p><div class="intent-actions"><a class="btn btn-primary" href="${BOOKING}">Talk to Alex</a><a class="btn btn-secondary" href="#strategy">Read the strategy</a></div></div><aside class="intent-callout"><p class="eyebrow">Campaign focus</p><h2>${c.rule}</h2><p>${c.ruleCopy}</p></aside></div></section>
+<article class="container intent-article" id="strategy"><div class="intent-article-intro"><p>${c.intro}</p>${scopeLink}<p class="intent-byline">Written and reviewed by <a href="/about">Alex</a> · Updated ${UPDATED}</p></div>
+${c.sections.map(([heading, html]) => `<section class="intent-guide-section"><h2>${heading}</h2>${html}</section>`).join('\n')}
+<p>Connect this campaign to your <a href="/${d.slug}">${d.name.toLowerCase()} marketing plan</a>. For the other channels in that plan, see <a href="/${d[sibling]}">${siblingLabel} for ${d.plural}</a> and <a href="/${d.seo}">SEO for ${d.plural}</a>.</p>
+<section class="intent-guide-section"><h2>Check Service Definitions and Current Platform Rules</h2><p>The <a href="https://www.nhs.uk/social-care-and-support/care-services-equipment-and-care-homes/care-homes/">NHS explanation of residential and nursing homes</a> shows why care home is not a synonym for one care level. Check ${policyLink} for the actual advertised service and market. These marketing examples do not determine care eligibility or legal compliance.</p></section>
+<section class="intent-faq"><h2>${label} for ${d.pluralLabel} FAQ</h2>${c.faq.map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</section></article>
+<section class="intent-cta"><div class="container"><div class="intent-cta-panel"><p class="eyebrow">Direct support from Alex</p><h2>${c.cta}</h2><p>${c.ctaCopy}</p><div class="intent-actions"><a class="btn btn-primary" href="${BOOKING}">Talk to Alex</a><a class="btn btn-secondary" href="/${d.slug}">View the marketing hub</a></div></div></div></section>`;
+  return shell({ title: c.title, description: c.description, slug: d[channel], faq: c.faq, body });
 }
 
 for (const cluster of clusters) {
   fs.writeFileSync(path.join(ROOT, `${cluster.slug}.html`), hubPage(cluster));
-  fs.writeFileSync(path.join(ROOT, `${cluster.google}.html`), googleGuide(cluster));
-  fs.writeFileSync(path.join(ROOT, `${cluster.facebook}.html`), facebookGuide(cluster));
+  fs.writeFileSync(path.join(ROOT, `${cluster.google}.html`), channelGuide(cluster, 'google'));
+  fs.writeFileSync(path.join(ROOT, `${cluster.facebook}.html`), channelGuide(cluster, 'facebook'));
 }
 
 console.log('Generated 2 senior-care marketing hubs and 4 paid-media guides');

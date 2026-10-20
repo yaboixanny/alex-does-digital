@@ -27,6 +27,10 @@ New hubs may use `scripts/lib/industry-hub-template.js` for industry-specific co
 
 Supporting links must fail closed: include only genuine same-industry destinations or an explicitly curated adjacent page. Never fill a hub with unrelated same-channel links, never link a page to itself, and avoid repeating the same destination in multiple generic modules.
 
+## Senior-care content boundaries
+
+Senior-care clusters are separated by service and operator workflow, not geography alone. Care-home content focuses on residential personal care, family visits and suitability assessments. Nursing-home content focuses on verified nursing provision and admissions/referral pathways, with long-term and short-stay services kept distinct. Explain that care home can include nursing, SNF is a specific US term, assisted living has a distinct service model, and retirement housing does not automatically include care. Use `scripts/lib/senior-care-guide-content.js` for separate ad-guide briefs; do not generate paired articles by substituting industry names. Preserve contextual links between each hub and its guides.
+
 ## Calls to action
 
 Use the shared styles in `cta.css` for CTA panels. Keep the panel focused: a specific outcome-led heading, one short sentence, one primary booking button, and at most one relevant secondary resource link. Put detailed advice, tracking checklists and channel comparisons in the body before the CTA, not inside a large promotional text block. Use `.action-card` for a compact inline CTA and existing `.intent-cta-panel` or `.post-cta` components for final page CTAs. Verify button contrast, keyboard focus and mobile stacking. Do not invent performance guarantees or add unrelated links.
