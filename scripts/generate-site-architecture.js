@@ -125,16 +125,12 @@ fs.writeFileSync(path.join(ROOT, 'industries.html'), page({
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 const oldSitemap = fs.existsSync(sitemapPath) ? fs.readFileSync(sitemapPath, 'utf8') : '';
 const dates = new Map([...oldSitemap.matchAll(/<loc>https:\/\/alxdoesdigital\.com\/(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>/gs)].map(match => [match[1], match[2]]));
-const refreshedRoutes = new Set([
-  'care-home-marketing', 'google-ads-for-care-homes', 'facebook-ads-for-care-homes', 'seo-for-care-homes',
-  'nursing-home-marketing', 'google-ads-for-nursing-homes', 'facebook-ads-for-nursing-homes', 'seo-for-nursing-homes'
-]);
 const sitemapRoutes = Object.keys(registry).filter(slug => !['blog'].includes(slug));
 const sitemapEntries = sitemapRoutes.map(slug => {
   const route = slug === 'index' ? '' : slug;
   const loc = route ? `https://alxdoesdigital.com/${route}` : 'https://alxdoesdigital.com/';
   const oldKey = route;
-  const lastmod = refreshedRoutes.has(slug) ? '2026-10-06' : (dates.get(oldKey) || '2026-10-06');
+  const lastmod = dates.get(oldKey) || '2026-10-06';
   return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
 }).join('\n\n');
 fs.writeFileSync(sitemapPath, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`);
