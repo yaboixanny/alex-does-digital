@@ -56,7 +56,7 @@ const UPDATED_CONTENT = new Set([
 const CONTENT_MODIFIED_DATES = {
   'facebook-ads-for-plumbers': '2026-10-09',
   'seo-for-towing-companies': '2026-10-12',
-  'google-ads-for-electricians': '2026-10-12',
+  'google-ads-for-electricians': '2026-10-28',
   'seo-for-nursing-homes': '2026-10-13',
   'seo-for-handyman': '2026-10-14'
 };
