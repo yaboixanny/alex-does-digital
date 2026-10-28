@@ -56,7 +56,7 @@ function body(booking) {
 
     <aside class="intent-guide-warning"><p class="eyebrow">Before you publish</p><h2>The Mistakes I Would Check First</h2><ul><li>Call and form tracking hasn’t been tested.</li><li>Every electrical service shares one vague ad and page.</li><li>The location settings reach areas the team can’t cover.</li><li>The ad promises availability or pricing the business can’t deliver.</li><li>Assets from another service show up in the wrong ad group.</li><li>Clicks are being judged without reviewing calls and job outcomes.</li></ul></aside>
 
-    <section class="intent-guide-section"><p class="eyebrow">After launch</p><h2>How I Would Use the First 90 Days</h2><div class="intent-timeline"><div><strong>Month 1: check the setup</strong><p>Test conversions, launch the priority services, review search terms, and confirm calls reach someone who can book the work.</p></div><div><strong>Month 2: improve the leads</strong><p>Review which services and areas produce useful inquiries. Improve ads and pages, add negatives carefully, and check follow-up.</p></div><div><strong>Month 3: use job results</strong><p>Compare booked work and acquisition cost. Test bidding or expand a service when the results and capacity support it.</p></div></div><p>You may see traffic soon after approval, but lead timing varies. I would agree on a budget and review period up front, then use the data to decide what comes next.</p></section>
+    <section class="intent-guide-section electrician-launch-plan" id="after-launch"><p class="eyebrow">After launch</p><h2>How I Would Use the First 90 Days</h2><div class="intent-timeline"><div><strong>Month 1: check the setup</strong><p>Test conversions, launch the priority services, review search terms, and confirm calls reach someone who can book the work.</p></div><div><strong>Month 2: improve the leads</strong><p>Review which services and areas produce useful inquiries. Improve ads and pages, add negatives carefully, and check follow-up.</p></div><div><strong>Month 3: use job results</strong><p>Compare booked work and acquisition cost. Test bidding or expand a service when the results and capacity support it.</p></div></div><p>You may see traffic soon after approval, but lead timing varies. I would agree on a budget and review period up front, then use the data to decide what comes next.</p></section>
 
     <section class="intent-faq"><h2>Google Ads for Electricians FAQ</h2>${faq.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</section>
   </article>
@@ -73,6 +73,12 @@ const styles = `
 .electrician-guide-article :is(h2,h3,p,li,a,code,summary){overflow-wrap:anywhere}
 .electrician-keyword-table{max-width:100%;min-width:0;scroll-margin-top:100px}
 .electrician-keyword-table caption{text-align:left;font-weight:700;padding-bottom:1rem}
+.electrician-launch-plan .eyebrow{margin-bottom:.75rem}
+.electrician-launch-plan .intent-timeline{gap:1rem;margin:1.75rem 0}
+.electrician-launch-plan .intent-timeline>div{padding:1.25rem}
+.electrician-launch-plan .intent-timeline strong{margin-bottom:.85rem;line-height:1.5}
+.electrician-launch-plan .intent-timeline p{font-size:.9rem;line-height:1.8}
+.electrician-launch-plan .intent-timeline+p{margin-top:1.5rem}
 @media(max-width:600px){
   .electrician-keyword-table{overflow:visible}
   .electrician-keyword-table .intent-table{display:block;border:0;background:transparent}
