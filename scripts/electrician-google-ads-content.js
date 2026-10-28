@@ -63,6 +63,6 @@ function body(booking) {
   <section class="intent-cta"><div class="container"><div class="intent-cta-panel"><p class="eyebrow">Get help with your campaign</p><h2>Want Me to Take a Look at Your Google Ads?</h2><p>If you need help with the setup, a landing page, or managing the account, book a call with me. I’m happy to answer your questions and see where I can help.</p><div class="intent-actions"><a class="btn btn-primary" href="${booking}">Talk to Alex</a></div></div></div></section>`;
 }
 
-const styles = `.electrician-guide-hero{text-align:center}.electrician-guide-hero .electrician-guide-hero-inner{max-width:960px;margin-inline:auto}.electrician-guide-hero .electrician-guide-hero-inner h1,.electrician-guide-hero .intent-lede{margin-inline:auto}.electrician-guide-hero .intent-actions{justify-content:center}`;
+const styles = `.electrician-guide-hero{text-align:center}.electrician-guide-hero .electrician-guide-hero-inner{max-width:960px;margin-inline:auto}.electrician-guide-hero .electrician-guide-hero-inner h1,.electrician-guide-hero .intent-lede{margin-inline:auto}.electrician-guide-hero .intent-actions{justify-content:center}[aria-labelledby="electrician-google-ads-video"] .video-wrapper{margin-block:1.5rem}`;
 
 module.exports = { title, description, faq, body, styles };
