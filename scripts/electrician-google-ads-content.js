@@ -15,7 +15,7 @@ function body(booking) {
   return `<section class="intent-hero electrician-guide-hero"><div class="container electrician-guide-hero-inner">
   <span class="post-category-tag">Google Ads</span><h1>Google Ads for Electricians</h1><p class="intent-lede">I’ll walk you through how I set up Google Ads for an electrician: the services to target, the keywords to use, the landing pages to build, and the tracking you need to see what turns into work.</p><div class="intent-actions"><a class="btn btn-primary" href="${booking}">Talk to Alex</a></div>
   </div></section>
-  <article class="container intent-article" id="strategy">
+  <article class="container intent-article electrician-guide-article" id="strategy">
     <section class="intent-guide-section intent-guide-video" aria-labelledby="electrician-google-ads-video"><p class="eyebrow">My campaign walkthrough</p><h2 id="electrician-google-ads-video">Watch: How I Set Up Google Ads for Electricians</h2><p>In this tutorial, I use Toronto as the example and build a Search campaign from the ground up. Follow along with your own services and service area.</p><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1Zw2E_iRCq0" title="Alex's Google Ads for electricians setup tutorial" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a href="https://www.youtube.com/watch?v=1Zw2E_iRCq0" target="_blank" rel="noopener">Watch my electrician Google Ads tutorial on YouTube →</a></p></section>
 
     <div class="intent-article-intro"><h3>Overview</h3><p>If you’re an electrician looking to book more jobs, Google Ads can get you in front of people already searching for help. But the setup matters. I see businesses put every service into one ad group, send everyone to the homepage, and then wonder why the leads aren’t coming in.</p><p>My approach is straightforward: match the search to the service, make it easy to get in touch, and track what happens after the click. Let’s work through it.</p><p class="intent-byline">By <a href="/about">Alex</a> · Updated October 28, 2026 · <span class="post-hero-read-time">10 min read</span></p></div>
@@ -32,12 +32,12 @@ function body(booking) {
       <section class="intent-guide-step"><span>04</span><div><h2>Build Ad Groups Around the Electrical Services You Want</h2><p>I normally start with the core electrician service, then add specific services as the budget allows. In the tutorial, I also like to give “near me” searches their own ad group so I can write and review that message separately. It’s an approach to test; you don’t need a new group for every slight variation.</p><p>Light-fixture installation is a good example of a focused service group. Panel upgrades, EV chargers, generators, rewiring, and emergency repairs can follow the same pattern when those are jobs you want.</p></div></section>
     </div>
 
-    <div class="intent-table-wrap"><table class="intent-table"><caption>Example electrician ad groups and landing pages</caption><thead><tr><th>Ad group</th><th>Example keywords</th><th>Matching page</th></tr></thead><tbody>
-      <tr><td>Core electrician</td><td>electrician Toronto, local electrician, residential electrician</td><td>Local electrical services, coverage, credentials, and booking</td></tr>
-      <tr><td>Near me</td><td>electrician near me, local electrician near me</td><td>Relevant local service page with clear availability</td></tr>
-      <tr><td>Light-fixture installation</td><td>light fixture installation, light fixture installer near me</td><td>Installation options, project photos, and estimate details</td></tr>
-      <tr><td>Emergency electrician</td><td>emergency electrician, emergency electrical repair</td><td>Actual emergency coverage, response expectations, and call button</td></tr>
-      <tr><td>Planned upgrades</td><td>electrical panel upgrade, EV charger installation</td><td>A separate relevant page for each advertised service</td></tr>
+    <div class="intent-table-wrap electrician-keyword-table" id="electrician-keyword-examples"><table class="intent-table" role="table"><caption>Example electrician ad groups and landing pages</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Ad group</th><th scope="col" role="columnheader">Example keywords</th><th scope="col" role="columnheader">Matching page</th></tr></thead><tbody role="rowgroup">
+      <tr role="row"><th scope="row" role="rowheader">Core electrician</th><td role="cell" data-label="Example keywords">electrician Toronto, local electrician, residential electrician</td><td role="cell" data-label="Matching page">Local electrical services, coverage, credentials, and booking</td></tr>
+      <tr role="row"><th scope="row" role="rowheader">Near me</th><td role="cell" data-label="Example keywords">electrician near me, local electrician near me</td><td role="cell" data-label="Matching page">Relevant local service page with clear availability</td></tr>
+      <tr role="row"><th scope="row" role="rowheader">Light-fixture installation</th><td role="cell" data-label="Example keywords">light fixture installation, light fixture installer near me</td><td role="cell" data-label="Matching page">Installation options, project photos, and estimate details</td></tr>
+      <tr role="row"><th scope="row" role="rowheader">Emergency electrician</th><td role="cell" data-label="Example keywords">emergency electrician, emergency electrical repair</td><td role="cell" data-label="Matching page">Actual emergency coverage, response expectations, and call button</td></tr>
+      <tr role="row"><th scope="row" role="rowheader">Planned upgrades</th><td role="cell" data-label="Example keywords">electrical panel upgrade, EV charger installation</td><td role="cell" data-label="Matching page">A separate relevant page for each advertised service</td></tr>
     </tbody></table></div>
 
     <section class="intent-guide-section"><h2>Find Electrician Keywords and Add Negatives</h2><p>In Keyword Planner, set your actual area before reviewing terms. Start with “electrician,” then work through the services and local variations. Check that the keyword describes work you offer; search volume alone isn’t a reason to add it.</p><p>I use exact and phrase match in the tutorial. Exact match uses square brackets, such as <code>[electrician Toronto]</code>; phrase match uses quotation marks, such as <code>“light fixture installation”</code>. Both can match by meaning, so you still need to review search terms. <a href="https://support.google.com/google-ads/answer/7478529" target="_blank" rel="noopener">Google’s match-type guide</a> explains how reach differs.</p><h3>Negative keyword themes I would review</h3><ul><li><strong>Employment:</strong> jobs, salary, apprenticeships, and careers.</li><li><strong>Education:</strong> courses, training, exams, and certification classes.</li><li><strong>DIY and research:</strong> wiring diagrams, tutorials, and how-to instructions.</li><li><strong>Products:</strong> wholesale supplies, parts, tools, and fixtures for sale.</li><li><strong>Wrong fit:</strong> locations or services your business does not cover.</li></ul><p>Check the full search before blocking it. For example, someone looking for a certified electrician may be a good lead, while someone looking for a certification course isn’t. I also avoid expanding into broad match casually; it needs a suitable bidding approach and reliable conversion data.</p></section>
@@ -63,6 +63,28 @@ function body(booking) {
   <section class="intent-cta"><div class="container"><div class="intent-cta-panel"><p class="eyebrow">Get help with your campaign</p><h2>Want Me to Take a Look at Your Google Ads?</h2><p>If you need help with the setup, a landing page, or managing the account, book a call with me. I’m happy to answer your questions and see where I can help.</p><div class="intent-actions"><a class="btn btn-primary" href="${booking}">Talk to Alex</a></div></div></div></section>`;
 }
 
-const styles = `.electrician-guide-hero{text-align:center}.electrician-guide-hero .electrician-guide-hero-inner{max-width:960px;margin-inline:auto}.electrician-guide-hero .electrician-guide-hero-inner h1,.electrician-guide-hero .intent-lede{margin-inline:auto}.electrician-guide-hero .intent-actions{justify-content:center}[aria-labelledby="electrician-google-ads-video"] .video-wrapper{margin-block:1.5rem}`;
+const styles = `
+.electrician-guide-hero{text-align:center}
+.electrician-guide-hero .electrician-guide-hero-inner{max-width:960px;margin-inline:auto}
+.electrician-guide-hero .electrician-guide-hero-inner h1,.electrician-guide-hero .intent-lede{margin-inline:auto}
+.electrician-guide-hero .intent-actions{justify-content:center}
+[aria-labelledby="electrician-google-ads-video"] .video-wrapper{margin-block:1.5rem}
+.electrician-guide-article,.electrician-guide-article .intent-guide-step>div{min-width:0}
+.electrician-guide-article :is(h2,h3,p,li,a,code,summary){overflow-wrap:anywhere}
+.electrician-keyword-table{max-width:100%;min-width:0;scroll-margin-top:100px}
+.electrician-keyword-table caption{text-align:left;font-weight:700;padding-bottom:1rem}
+@media(max-width:600px){
+  .electrician-keyword-table{overflow:visible}
+  .electrician-keyword-table .intent-table{display:block;border:0;background:transparent}
+  .electrician-keyword-table caption{display:block}
+  .electrician-keyword-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .electrician-keyword-table tbody{display:grid;gap:1rem}
+  .electrician-keyword-table tbody tr{display:block;min-width:0;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;background:#fff}
+  .electrician-keyword-table th[scope="row"],.electrician-keyword-table td{display:block;width:auto;padding:1rem;border:0;white-space:normal;overflow-wrap:anywhere;line-height:1.6}
+  .electrician-keyword-table th[scope="row"]{background:#ecfdf5;color:#065f46;font-weight:700}
+  .electrician-keyword-table td+td{border-top:1px solid #e2e8f0}
+  .electrician-keyword-table td::before{content:attr(data-label);display:block;margin-bottom:.4rem;color:#64748b;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+}
+`;
 
 module.exports = { title, description, faq, body, styles };
