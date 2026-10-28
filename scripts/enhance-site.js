@@ -407,11 +407,11 @@ function breadcrumbMarkup(crumbs) {
   return `<!-- SEO_BREADCRUMBS_START -->\n<nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol>${items}</ol></div></nav>\n<!-- SEO_BREADCRUMBS_END -->`;
 }
 
-function addBreadcrumbs(html, crumbs) {
+function addBreadcrumbs(html, crumbs, slug) {
   html = html.replace(/\s*<!-- SEO_BREADCRUMBS_START -->[\s\S]*?<!-- SEO_BREADCRUMBS_END -->\s*/g, '\n');
   // A one-item breadcrumb on the homepage adds no navigation value; its
   // BreadcrumbList remains available in structured data.
-  if (crumbs.length === 1) return html;
+  if (crumbs.length === 1 || slug === 'google-ads-for-electricians') return html;
   const markup = breadcrumbMarkup(crumbs);
   if (/<header\b[^>]*class=["'][^"']*navbar[^"']*["'][^>]*>/i.test(html)) {
     return html.replace(/<\/header>/i, `</header>\n${markup}`);
@@ -465,7 +465,7 @@ for (const file of htmlFiles) {
   html = html.replace(/\s*<script\s+type=["']application\/ld\+json["'][^>]*data-seo-schema[^>]*>[\s\S]*?<\/script>/gi, '');
   html = html.replace(/\s*<\/head>/i, `\n    ${makeSchema({ slug, title, description, html, post, crumbs, role })}\n</head>`);
   html = normalizeAssets(html);
-  html = addBreadcrumbs(html, crumbs);
+  html = addBreadcrumbs(html, crumbs, slug);
   html = removeBottomRelatedModules(html);
   html = optimizeImages(html, slug);
   fs.writeFileSync(path.join(ROOT, file), html);
