@@ -4,6 +4,9 @@
 /google-ads-for-handyman-companies        /google-ads-for-handyman     301
 /google-ads-for-handyman-companies.html   /google-ads-for-handyman     301
 /blog                                      /guides                               301!
+/financial-advisor-google-ads-keywords       /google-ads-for-financial-advisors     301!
+/financial-advisor-google-ads-keywords.html  /google-ads-for-financial-advisors     301!
+/financial-advisor-google-ads-keywords/      /google-ads-for-financial-advisors     301!
 
 # Canonical clean-URL redirects. Forced because the source HTML files exist.
 /index.html                                      /                                      301!

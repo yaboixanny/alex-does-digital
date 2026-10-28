@@ -237,7 +237,7 @@ function updateBlogMetadata() {
   const loadedPosts = loadPostsJson();
   const existingPosts = [...new Map(
     loadedPosts
-      .filter(post => !EXCLUDED_FILES.has(`${post.slug}.html`))
+      .filter(post => !EXCLUDED_FILES.has(`${post.slug}.html`) && fs.existsSync(path.join(__dirname, '..', `${post.slug}.html`)))
       .map(post => [post.slug, post])
   ).values()];
   const postsPruned = loadedPosts.length - existingPosts.length;

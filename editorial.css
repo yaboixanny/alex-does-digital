@@ -512,6 +512,11 @@ body::selection {
 .fa-ppc-compliance a { color: var(--pe-green-dark); font-weight: 700; }
 .fa-ppc-negative-list { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 1.1rem; margin-top: 1rem; background: var(--pe-wash); border: 1px solid var(--pe-line); border-radius: 10px; }
 .fa-ppc-negative-list strong { flex-basis: 100%; color: var(--pe-ink); font-size: 0.8rem; }
+.fa-ppc-block#advisor-keywords { scroll-margin-top: 100px; }
+.fa-ppc-block#advisor-keywords .fa-ppc-negative-list { margin-block: 1rem 1.5rem; }
+.fa-ppc-keyword-wrap { max-width: 100%; min-width: 0; }
+.fa-ppc-keyword-table th[scope="row"] { font-weight: 700; }
+.fa-ppc-keyword-table :is(th, td) { overflow-wrap: anywhere; }
 .fa-ppc-negative-list span, .fa-ppc-qualifiers span { padding: 0.45rem 0.65rem; color: var(--pe-green-dark); background: #fff; border: 1px solid #d1fae5; border-radius: 999px; font: 700 0.64rem/1 'JetBrains Mono', monospace; }
 .fa-ppc-resource-link { padding-left: 1rem; border-left: 3px solid var(--pe-green); }
 .fa-ppc-resource-link a { color: var(--pe-green-dark); font-weight: 800; }
@@ -548,6 +553,15 @@ body::selection {
 
 @media (max-width: 760px) {
     .fa-ppc-page { padding-bottom: 64px; }
+    .fa-ppc-keyword-wrap { overflow: visible; }
+    .fa-ppc-keyword-table { display: block; border: 0; background: transparent; }
+    .fa-ppc-keyword-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .fa-ppc-keyword-table tbody { display: grid; gap: 1rem; }
+    .fa-ppc-keyword-table tbody tr { display: block; min-width: 0; border: 1px solid var(--pe-line); border-radius: 12px; overflow: hidden; background: #fff; }
+    .fa-ppc-keyword-table th[scope="row"], .fa-ppc-keyword-table td { display: block; width: auto; padding: 1rem; border: 0; white-space: normal; line-height: 1.7; }
+    .fa-ppc-keyword-table th[scope="row"] { color: var(--pe-green-dark); background: var(--pe-green-soft); }
+    .fa-ppc-keyword-table td + td { border-top: 1px solid var(--pe-line); }
+    .fa-ppc-keyword-table td::before { content: attr(data-label); display: block; margin-bottom: .4rem; color: var(--pe-muted); font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
     .fa-ppc-proofbar .container, .fa-ppc-method-grid, .fa-ppc-compliance, .fa-ppc-fit-grid, .fa-ppc-included-grid { grid-template-columns: 1fr; }
     .fa-ppc-proofbar .container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .fa-ppc-proofbar .container > div:nth-child(odd) { border-left: 1px solid var(--pe-line); }
