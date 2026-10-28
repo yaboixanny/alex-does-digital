@@ -266,6 +266,38 @@
 
         .back-to-blog:hover { color: var(--color-accent-cyan); }
 
+        .handyman-seo-guide .handyman-video {
+            padding: clamp(1.25rem, 4vw, 2rem);
+            margin: 0 0 3rem;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+        }
+        .handyman-seo-guide .handyman-video h2 { margin-top: 0; }
+        .handyman-seo-guide .handyman-video .video-wrapper { margin-block: 1.5rem; border-radius: 10px; }
+        .handyman-seo-guide .handyman-video > p:last-child { margin-bottom: 0; }
+        .handyman-seo-guide .handyman-video-chapters { display: flex; flex-wrap: wrap; gap: .65rem; margin-block: 1.25rem; }
+        .handyman-seo-guide .handyman-video-chapters a { padding: .5rem .75rem; border: 1px solid #d1fae5; border-radius: 7px; background: #ecfdf5; color: #065f46; font-size: .8rem; text-decoration: none; }
+        .handyman-seo-guide .handyman-note { padding: 1.4rem; margin-block: 1.75rem; border: 1px solid #a7f3d0; border-radius: 10px; background: #ecfdf5; }
+        .handyman-seo-guide .handyman-note p:last-child { margin-bottom: 0; }
+        .handyman-seo-guide .handyman-seo-faq { margin-block: 3rem; }
+        .handyman-seo-guide .handyman-seo-faq details { padding-block: 1.35rem; border-bottom: 1px solid #e2e8f0; }
+        .handyman-seo-guide .handyman-seo-faq summary { cursor: pointer; font-weight: 700; line-height: 1.6; }
+        .handyman-seo-guide .handyman-seo-faq details p { margin: 1rem 0 0; }
+        .handyman-seo-guide .post-body { min-width: 0; }
+        .handyman-seo-guide .post-body :is(p, li, h2, h3, a, code, td, th, summary) { overflow-wrap: anywhere; }
+        .handyman-seo-guide .post-body table caption { text-align: left; font-weight: 700; padding-bottom: 1rem; }
+        @media (max-width: 600px) {
+            .handyman-seo-guide .post-body table { display: block; border: 0; overflow: visible; }
+            .handyman-seo-guide .post-body table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+            .handyman-seo-guide .post-body table tbody { display: grid; gap: 1rem; }
+            .handyman-seo-guide .post-body table tbody tr { display: block; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; background: #fff; }
+            .handyman-seo-guide .post-body table td { display: block; border: 0; white-space: normal; }
+            .handyman-seo-guide .post-body table td:first-child { background: #ecfdf5; }
+            .handyman-seo-guide .post-body table td + td { border-top: 1px solid #e2e8f0; }
+            .handyman-seo-guide .post-body table td::before { content: attr(data-label); display: block; margin-bottom: .45rem; color: #64748b; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+        }
+
         @media (max-width: 600px) {
             .post-hero { padding: 3.5rem 0 3rem; }
         }
@@ -283,6 +315,66 @@
 
 
 
+    <script type="application/ld+json" id="handyman-seo-faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a storefront to show up in Google Maps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Eligible businesses that travel to customers can use a service-area Business Profile. If customers do not visit your premises, hide your address and follow Google's verification and representation rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should my homepage target handyman services and my main city?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is where I usually start for a local handyman business. Make the service and primary area clear, then link to the specific services and nearby areas you genuinely cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my service pages mention the same city as my homepage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A homepage about general handyman services and a page about drywall repair can both explain coverage in the same city. Give each page a distinct purpose and useful details about the job it covers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many service-area pages should I build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I would start with the areas you can serve profitably and support with useful local information. There is no fixed page quota. Expand when demand and real project experience give you something valuable to add."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I ask for Google reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make an honest review request part of your completed-job follow-up. Use a direct link, ask customers fairly, and avoid incentives. A steady process is more practical than chasing a fixed review count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What would you fix first if my handyman website gets visits but no calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I would check whether those visits come from the right services and locations. Then I would test the phone number and form, review your project proof, and check how quickly inquiries receive a response."
+      }
+    }
+  ]
+}
+    </script>
+
+
+
+
     <script type="application/ld+json" data-seo-schema>
 {
   "@context": "https://schema.org",
@@ -296,7 +388,7 @@
         "https://alxdoesdigital.com/images/alexpolo-copy.webp"
       ],
       "datePublished": "2026-04-29",
-      "dateModified": "2026-10-14",
+      "dateModified": "2026-10-28",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://alxdoesdigital.com/seo-for-handyman"
@@ -363,7 +455,7 @@
     <link rel="stylesheet" href="/site.css?v=3">
 </head>
 
-<body>
+<body class="handyman-seo-guide">
     <!-- Navigation -->
     <nav class="navbar" aria-label="Primary navigation"><div class="container"><div class="nav-wrapper"><a class="logo-text" href="/" aria-label="Alex Does Digital home">Alex Does Digital</a><ul class="nav-links"><li><a class="nav-link" href="/services">Services</a></li><li><a class="nav-link" href="/industries">Industries</a></li><li><a class="nav-link" href="/case-studies">Case Studies</a></li><li><a class="nav-link active" href="/guides" aria-current="page">Guides</a></li><li><a class="nav-link" href="/about">About</a></li><li><a class="nav-link nav-cta" href="https://cal.com/alexanderstefanseo/agency" target="_blank" rel="noopener">Talk to Alex</a></li></ul></div></div></nav>
 <!-- SEO_BREADCRUMBS_START -->
@@ -375,8 +467,8 @@
             <div class="post-hero-inner">
                 <div class="post-hero-meta">
                     <span class="post-category-tag">SEO</span>
-                    <span class="post-hero-date">Updated October 14, 2026</span>
-                    <span class="post-hero-read-time">14 min read</span>
+                    <span class="post-hero-date">Updated October 28, 2026</span>
+                    <span class="post-hero-read-time">18 min read</span>
                 </div>
                 <h1>SEO for Handyman: Complete Guide to Ranking Locally & Generating Organic Jobs</h1>
                 <p class="post-hero-lede">
@@ -393,6 +485,21 @@
             <div class="post-body">
 
                 <a href="/guides" class="back-to-blog">← Back to Guides</a>
+
+                <section class="handyman-video" aria-labelledby="handyman-seo-video">
+                    <h2 id="handyman-seo-video">Watch My Handyman SEO Walkthrough</h2>
+                    <p>If you run a handyman business, I want homeowners to find you when they search for the jobs you actually do.</p>
+                    <p>In this tutorial, I walk through Google Maps, your homepage, service pages, nearby locations, and citations using real search examples.</p>
+                    <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/H-7eByoP9DY" title="Alex's handyman SEO tutorial: Google Maps, service pages, locations, and citations" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <p><a href="https://www.youtube.com/watch?v=H-7eByoP9DY" target="_blank" rel="noopener">Watch my handyman SEO tutorial on YouTube →</a></p>
+                    <nav class="handyman-video-chapters" aria-label="Handyman SEO video chapters">
+                        <a href="https://www.youtube.com/watch?v=H-7eByoP9DY&amp;t=44s" target="_blank" rel="noopener">0:44 · Search results</a>
+                        <a href="https://www.youtube.com/watch?v=H-7eByoP9DY&amp;t=73s" target="_blank" rel="noopener">1:13 · Google Maps</a>
+                        <a href="https://www.youtube.com/watch?v=H-7eByoP9DY&amp;t=260s" target="_blank" rel="noopener">4:20 · Your website</a>
+                        <a href="https://www.youtube.com/watch?v=H-7eByoP9DY&amp;t=609s" target="_blank" rel="noopener">10:09 · Citations</a>
+                    </nav>
+                    <p>Written by <a href="/about">Alex</a>. Here’s how I’d apply the walkthrough to your own handyman business.</p>
+                </section>
 
                 <p>SEO for handymen often takes several months to produce meaningful results, depending on the market, website, competition, and starting authority. The payoff is durable visibility for searches from homeowners who already need a repair, installation, or maintenance service.</p>
 
@@ -419,6 +526,12 @@
                 <h2>Local SEO for Handyman Services</h2>
 
                 <p><strong>Local SEO for handyman services</strong> connects your business with homeowners searching for help in the neighborhoods you actually serve. The strongest local strategy combines a complete Google Business Profile, useful service-area pages, and a steady flow of honest customer reviews.</p>
+
+                <h3>Look at the search results before changing your site</h3>
+                <p>In the video, I start with what a homeowner actually sees: paid listings, the map results, and the organic website results.</p>
+                <p>Those are different opportunities. I check the Business Profile for Maps and the relevant website pages for organic searches.</p>
+                <p>Search your main service and city, then try a specific job such as furniture assembly or drywall repair.</p>
+                <p>Look at the pages that appear. Are they service businesses, directories, or guides? That helps you decide what your own page needs to answer.</p>
 
                 <h3>Optimize your Google Business Profile</h3>
                 <p>Choose the most accurate primary category, list only services you genuinely provide, keep hours and contact details current, and upload original project photos. If customers do not visit your address, configure the profile as a service-area business and hide the residential address. Link the profile to the most relevant local landing page rather than an unrelated homepage.</p>
@@ -455,13 +568,42 @@
                     <p><strong>Review system:</strong> Ask customers with a genuine experience for honest feedback after a completed job, use a direct review link, and respond professionally. Never offer incentives, pressure customers, or selectively request only positive reviews. Google's <a href="https://support.google.com/contributionpolicy/answer/7400114" target="_blank" rel="noopener">Maps policy</a> prohibits review manipulation.</p>
                 </div>
 
+                <h3>A review follow-up process you can actually keep using</h3>
+                <p>I would make the review request part of finishing the job. Send the customer a direct link once the work is complete.</p>
+                <p>A simple message works: “Thanks for choosing us for your repair. If you have a moment, you can share your experience here: [review link].”</p>
+                <p>An automated reminder can help you stay consistent. Ask customers fairly and give them room to leave honest feedback.</p>
+                <p>There is no magic weekly review target that guarantees a Maps position. Build the habit around your real job volume.</p>
+                <p>Google's <a href="https://support.google.com/business/answer/3474122" target="_blank" rel="noopener">review guidance</a> explains direct links, genuine feedback, and why incentives are prohibited.</p>
+
+                <h3>Set up your address to match how you operate</h3>
+                <p>If you travel to customers and they do not visit your premises, use an eligible service-area profile and hide your address.</p>
+                <p>A customer-facing storefront is not required for that setup. Use your real operating location for verification and follow Google's rules.</p>
+                <p>The important thing is accurate coverage. A bigger service-area setting does not guarantee you will rank across a whole region.</p>
+
                 <h3>Build consistent local citations</h3>
 
                 <p>A citation is an accurate mention of the business name, phone number, website, and—when appropriate—address on another platform. Claim relevant profiles on reputable local directories, trade associations, chambers, and review sites, then correct duplicates and outdated information. Consistency helps customers reach the right business; it should not become a campaign to create hundreds of low-quality listings.</p>
 
                 <p>If customers do not visit the address, configure the profile as a service-area business and hide the address. Google allows one profile for the central office or location unless separately staffed locations genuinely serve distinct areas. Virtual offices are not eligible unless they meet Google's requirements. Review the current <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Business Profile representation guidelines</a>.</p>
 
+                <h3>Choose citation sites your customers can use</h3>
+                <p>When I look at a directory, I ask whether a local homeowner would use it to find a handyman.</p>
+                <p>Check that you can control the profile, keep the details accurate, and understand any lead fees before joining.</p>
+
                 <hr class="post-divider">
+
+                <h2>Give Your Homepage One Clear Local Job</h2>
+                <p>In my Hamilton example, the homepage starts with the main service and location: “Handyman Services in Hamilton.”</p>
+                <p>That tells a visitor what you do and where you work. I would make the title, main heading, and opening copy agree.</p>
+                <div class="handyman-note">
+                    <p><strong>Example homepage direction</strong></p>
+                    <p><strong>Title:</strong> Handyman Services in Hamilton | Your Business Name</p>
+                    <p><strong>H1:</strong> Handyman Services in Hamilton</p>
+                    <p><strong>Opening:</strong> Explain the repairs and installations you handle, your real coverage, and how to request an estimate.</p>
+                </div>
+                <p>Then link to your important services and genuine service areas. Give someone a clear route to the job they need.</p>
+                <p>A recognizable brand domain can support this approach. A service-and-city domain alone does not earn a top ranking.</p>
+                <p>Google's <a href="https://developers.google.com/search/docs/appearance/ranking-systems-guide#exact-match-domain-system" target="_blank" rel="noopener">exact-match domain explanation</a> is useful context when choosing a name.</p>
 
                 <h2>Handyman Keyword Research and Search Intent</h2>
 
@@ -469,39 +611,39 @@
 
                 <h3>Organize keywords by the page that should answer them</h3>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Keyword type</th>
-                            <th>Examples</th>
-                            <th>Best destination</th>
+                <table role="table" aria-label="Handyman keyword types and page destinations">
+                    <thead role="rowgroup">
+                        <tr role="row">
+                            <th scope="col" role="columnheader">Keyword type</th>
+                            <th scope="col" role="columnheader">Examples</th>
+                            <th scope="col" role="columnheader">Best destination</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Core local</strong></td>
-                            <td>handyman near me, handyman in [City]</td>
-                            <td>Homepage or primary city page</td>
+                    <tbody role="rowgroup">
+                        <tr role="row">
+                            <td role="cell" data-label="Keyword type"><strong>Core local</strong></td>
+                            <td role="cell" data-label="Examples">handyman near me, handyman in [City]</td>
+                            <td role="cell" data-label="Best destination">Homepage or primary city page</td>
                         </tr>
-                        <tr>
-                            <td><strong>Service-specific</strong></td>
-                            <td>drywall repair, door installation, furniture assembly</td>
-                            <td>Dedicated service page</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Keyword type"><strong>Service-specific</strong></td>
+                            <td role="cell" data-label="Examples">drywall repair, door installation, furniture assembly</td>
+                            <td role="cell" data-label="Best destination">Dedicated service page</td>
                         </tr>
-                        <tr>
-                            <td><strong>Problem-aware</strong></td>
-                            <td>hole in drywall repair, door will not close</td>
-                            <td>Service page or helpful guide</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Keyword type"><strong>Problem-aware</strong></td>
+                            <td role="cell" data-label="Examples">hole in drywall repair, door will not close</td>
+                            <td role="cell" data-label="Best destination">Service page or helpful guide</td>
                         </tr>
-                        <tr>
-                            <td><strong>Cost and comparison</strong></td>
-                            <td>handyman hourly rate, drywall repair cost</td>
-                            <td>Pricing or educational guide</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Keyword type"><strong>Cost and comparison</strong></td>
+                            <td role="cell" data-label="Examples">handyman hourly rate, drywall repair cost</td>
+                            <td role="cell" data-label="Best destination">Pricing or educational guide</td>
                         </tr>
-                        <tr>
-                            <td><strong>Commercial</strong></td>
-                            <td>handyman services, hire a handyman</td>
-                            <td>Service overview or estimate page</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Keyword type"><strong>Commercial</strong></td>
+                            <td role="cell" data-label="Examples">handyman services, hire a handyman</td>
+                            <td role="cell" data-label="Best destination">Service overview or estimate page</td>
                         </tr>
                     </tbody>
                 </table>
@@ -547,11 +689,31 @@
 
                 <p>Give every indexable page a unique title, one descriptive H1, a logical H2/H3 hierarchy, and a useful meta description. Link with anchor text that describes the destination. Google can use titles, headings, page copy, and links to understand and present a page, so these elements should agree instead of competing with one another. Google's <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener">SEO Starter Guide</a> emphasizes clear, helpful content over tricks.</p>
 
+                <h3>Show the work and make the next step easy</h3>
+                <p>One thing I like in the example website is the use of real project photos and a photo of the person doing the work.</p>
+                <p>That helps a homeowner picture who will arrive and whether you handle the kind of repair they need.</p>
+                <p>For a drywall repair page, I would show the damage, the preparation, and the finished repair, with a short explanation.</p>
+                <ul>
+                    <li>What caused the damage, and what repair was needed?</li>
+                    <li>Did the estimate include sanding, texture matching, and painting?</li>
+                    <li>How many visits did the job require?</li>
+                    <li>What should a homeowner send you before requesting a quote?</li>
+                </ul>
+                <p>The same approach works for furniture assembly, cabinet installation, door modifications, window coverings, and other services you actually provide.</p>
+                <p>Keep a clear phone number and estimate form close to the useful information. Explain what happens after someone gets in touch.</p>
+
                 <hr class="post-divider">
 
                 <h2>3. Create Location-Specific Pages</h2>
 
                 <p>If you serve multiple cities or major neighborhoods, create location pages only where there is real service coverage and enough unique information to help a homeowner choose you.</p>
+
+                <h3>Start with nearby areas you already serve</h3>
+                <p>In the tutorial, I use the Houston area to show how nearby communities can have their own local searches.</p>
+                <p>Sugar Land or Pasadena could be relevant examples for a business that actually works there. Use your own real coverage.</p>
+                <p>I would start with a small, useful set of pages, then check impressions, inquiries, and whether the jobs are worth the travel.</p>
+                <p>Each page needs a reason to exist: local projects, available services, scheduling details, or answers specific to that area.</p>
+                <p>Your homepage and service pages can mention the same city naturally. Give each page a clear purpose and distinct customer question to answer.</p>
 
                 <ul class="offer-list">
                     <li>yoursite.com/handyman/downtown-neighborhood/</li>
@@ -640,37 +802,37 @@
 
                 <h3>Easy Link-Building Tactics</h3>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Source</th>
-                            <th>Strategy</th>
+                <table role="table" aria-label="Local link-building sources and strategies">
+                    <thead role="rowgroup">
+                        <tr role="row">
+                            <th scope="col" role="columnheader">Source</th>
+                            <th scope="col" role="columnheader">Strategy</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Chamber of Commerce</strong></td>
-                            <td>Join and get listed on their directory</td>
+                    <tbody role="rowgroup">
+                        <tr role="row">
+                            <td role="cell" data-label="Source"><strong>Chamber of Commerce</strong></td>
+                            <td role="cell" data-label="Strategy">Join and get listed on their directory</td>
                         </tr>
-                        <tr>
-                            <td><strong>BBB Accreditation</strong></td>
-                            <td>Join only when accreditation supports the business; treat any link as secondary</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Source"><strong>BBB Accreditation</strong></td>
+                            <td role="cell" data-label="Strategy">Join only when accreditation supports the business; treat any link as secondary</td>
                         </tr>
-                        <tr>
-                            <td><strong>Local News/Blogs</strong></td>
-                            <td>Pitch a story: "Home Repair Mistakes Homeowners Make"</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Source"><strong>Local News/Blogs</strong></td>
+                            <td role="cell" data-label="Strategy">Pitch a story: "Home Repair Mistakes Homeowners Make"</td>
                         </tr>
-                        <tr>
-                            <td><strong>Home Service Directories</strong></td>
-                            <td>Claim relevant profiles where customers genuinely research providers</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Source"><strong>Home Service Directories</strong></td>
+                            <td role="cell" data-label="Strategy">Claim relevant profiles where customers genuinely research providers</td>
                         </tr>
-                        <tr>
-                            <td><strong>Real Estate Sites</strong></td>
-                            <td>Get featured on local real estate agent websites</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Source"><strong>Real Estate Sites</strong></td>
+                            <td role="cell" data-label="Strategy">Get featured on local real estate agent websites</td>
                         </tr>
-                        <tr>
-                            <td><strong>Home Warranty Companies</strong></td>
-                            <td>Get approved as recommended vendor</td>
+                        <tr role="row">
+                            <td role="cell" data-label="Source"><strong>Home Warranty Companies</strong></td>
+                            <td role="cell" data-label="Strategy">Get approved as recommended vendor</td>
                         </tr>
                     </tbody>
                 </table>
@@ -751,11 +913,28 @@
 
                 <hr class="post-divider">
 
+                <section class="handyman-seo-faq" aria-labelledby="handyman-seo-faq-title">
+                    <h2 id="handyman-seo-faq-title">Questions I Get About Handyman SEO</h2>
+                    <details><summary>Do I need a storefront to show up in Google Maps?</summary><p>No. Eligible businesses that travel to customers can use a service-area Business Profile.</p><p>If customers do not visit your premises, hide your address and follow Google's verification and representation rules.</p></details>
+                    <details><summary>Should my homepage target handyman services and my main city?</summary><p>That is where I usually start for a local handyman business.</p><p>Make the service and primary area clear, then link to the specific services and nearby areas you genuinely cover.</p></details>
+                    <details><summary>Can my service pages mention the same city as my homepage?</summary><p>Yes. A homepage about general handyman services and a page about drywall repair can both explain coverage in the same city.</p><p>Give each page a distinct purpose and useful details about the job it covers.</p></details>
+                    <details><summary>How many service-area pages should I build?</summary><p>I would start with the areas you can serve profitably and support with useful local information.</p><p>There is no fixed page quota. Expand when demand and real project experience give you something valuable to add.</p></details>
+                    <details><summary>How often should I ask for Google reviews?</summary><p>Make an honest review request part of your completed-job follow-up.</p><p>Use a direct link, ask customers fairly, and avoid incentives. A steady process is more practical than chasing a fixed review count.</p></details>
+                    <details><summary>What would you fix first if my handyman website gets visits but no calls?</summary><p>I would check whether those visits come from the right services and locations.</p><p>Then I would test the phone number and form, review your project proof, and check how quickly inquiries receive a response.</p></details>
+                </section>
+
                 <h2>The Bottom Line</h2>
+
+
 
                 <p>SEO for handymen is a long-term investment in local visibility, useful pages, reputation, and a better customer journey. It can create a durable source of qualified demand, but no ethical provider can guarantee a number-one ranking, a fixed timeline, or free leads forever.</p>
 
                 <p>Start with the fundamentals: optimize the Google Business Profile, map keywords to the right pages, build complete service content, create location pages only where they add value, fix technical barriers, request genuine reviews, and earn relevant local authority.</p>
+
+                <h3>Where I would start this week</h3>
+                <p>Check your Business Profile, homepage, and highest-value service pages first. Make sure each one describes work you can deliver.</p>
+                <p>Then put review follow-up and useful local citations into a routine you can maintain.</p>
+                <p>If you want me to look at the setup, <a href="https://cal.com/alexanderstefanseo/agency">book a call with me</a>. I'm happy to answer your questions.</p>
 
                 <p>For the wider acquisition plan, return to the <a href="/handyman-leads">handyman lead generation hub</a>. If paid search is also part of the mix, the <a href="/google-ads-for-handyman">Google Ads for handyman services guide</a> covers campaign structure, keywords, negative keywords, and management.</p>
 

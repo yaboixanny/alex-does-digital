@@ -58,7 +58,7 @@ const CONTENT_MODIFIED_DATES = {
   'seo-for-towing-companies': '2026-10-12',
   'google-ads-for-electricians': '2026-10-28',
   'seo-for-nursing-homes': '2026-10-13',
-  'seo-for-handyman': '2026-10-14'
+  'seo-for-handyman': '2026-10-28'
 };
 const INDUSTRIES = [
   'appliance-repair', 'handyman', 'towing', 'pool-service', 'wedding-photography',
