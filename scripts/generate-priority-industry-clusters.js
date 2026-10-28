@@ -183,7 +183,7 @@ function guideInfo(d, channel) {
 function guidePage(d, channel) {
   if (channel === 'Google Ads' && d.key === 'electricians') {
     const tutorial = require('./electrician-google-ads-content');
-    return shell({ title: tutorial.title, description: tutorial.description, slug: d.google, category: channel, faq: tutorial.faq, body: tutorial.body(BOOKING) });
+    return shell({ title: tutorial.title, description: tutorial.description, slug: d.google, category: channel, faq: tutorial.faq, body: tutorial.body(BOOKING), styles: tutorial.styles });
   }
   const g=guideInfo(d,channel); const faq=[
     [`Do ${channel} strategies work for ${d.name.toLowerCase()} companies?`,'They can when the service, market, proof, conversion path, follow-up, and measurement are aligned.'],

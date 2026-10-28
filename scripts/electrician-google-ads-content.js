@@ -12,9 +12,8 @@ const faq = [
 ];
 
 function body(booking) {
-  return `<section class="intent-hero"><div class="container intent-hero-grid">
-  <div><span class="post-category-tag">Google Ads</span><h1>Google Ads for Electricians</h1><p class="intent-lede">I’ll walk you through how I set up Google Ads for an electrician: the services to target, the keywords to use, the landing pages to build, and the tracking you need to see what turns into work.</p><div class="intent-actions"><a class="btn btn-primary" href="${booking}">Talk to Alex</a><a class="btn btn-secondary" href="#electrician-google-ads-video">Watch the tutorial</a></div><div class="intent-proof intent-proof-list"><span>Service-specific ads</span><span>Local coverage</span><span>Calls and booked jobs</span></div></div>
-  <aside class="intent-callout"><p class="eyebrow">Where I start</p><h2>Build the campaign around the job.</h2><p>Someone searching for a light-fixture installation should see an ad and a page about that service. Getting that match right is where I start.</p></aside>
+  return `<section class="intent-hero electrician-guide-hero"><div class="container electrician-guide-hero-inner">
+  <span class="post-category-tag">Google Ads</span><h1>Google Ads for Electricians</h1><p class="intent-lede">I’ll walk you through how I set up Google Ads for an electrician: the services to target, the keywords to use, the landing pages to build, and the tracking you need to see what turns into work.</p><div class="intent-actions"><a class="btn btn-primary" href="${booking}">Talk to Alex</a></div>
   </div></section>
   <article class="container intent-article" id="strategy">
     <section class="intent-guide-section intent-guide-video" aria-labelledby="electrician-google-ads-video"><p class="eyebrow">My campaign walkthrough</p><h2 id="electrician-google-ads-video">Watch: How I Set Up Google Ads for Electricians</h2><p>In this tutorial, I use Toronto as the example and build a Search campaign from the ground up. Follow along with your own services and service area.</p><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1Zw2E_iRCq0" title="Alex's Google Ads for electricians setup tutorial" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a href="https://www.youtube.com/watch?v=1Zw2E_iRCq0" target="_blank" rel="noopener">Watch my electrician Google Ads tutorial on YouTube →</a></p></section>
@@ -64,4 +63,6 @@ function body(booking) {
   <section class="intent-cta"><div class="container"><div class="intent-cta-panel"><p class="eyebrow">Get help with your campaign</p><h2>Want Me to Take a Look at Your Google Ads?</h2><p>If you need help with the setup, a landing page, or managing the account, book a call with me. I’m happy to answer your questions and see where I can help.</p><div class="intent-actions"><a class="btn btn-primary" href="${booking}">Talk to Alex</a></div></div></div></section>`;
 }
 
-module.exports = { title, description, faq, body };
+const styles = `.electrician-guide-hero{text-align:center}.electrician-guide-hero .electrician-guide-hero-inner{max-width:960px;margin-inline:auto}.electrician-guide-hero .electrician-guide-hero-inner h1,.electrician-guide-hero .intent-lede{margin-inline:auto}.electrician-guide-hero .intent-actions{justify-content:center}`;
+
+module.exports = { title, description, faq, body, styles };
