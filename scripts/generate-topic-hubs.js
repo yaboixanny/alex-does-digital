@@ -47,6 +47,9 @@ function escapeHtml(value) {
 
 function renderHub(hub) {
   const items = guides.filter(hub.matches);
+  if (hub.slug === 'google-ads-by-industry') {
+    items.push({ slug: 'google-ads-for-dietitians-and-nutritionists', category: 'Google Ads', title: 'Google Ads for Dietitians and Nutritionists', excerpt: 'Explore paid search for nutrition practices, from specialty keywords and landing pages to consultation tracking.' });
+  }
   const cards = items.map(post => `
                 <a class="topic-hub-card" href="/${escapeHtml(post.slug)}">
                     <span>${escapeHtml(post.category === 'Blog' ? hub.eyebrow : post.category)}</span>
